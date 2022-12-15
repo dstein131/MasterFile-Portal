@@ -305,8 +305,11 @@
                     </button>
                     </div>
 
-                    <div class="card-body d-flex justify-content-around align-items-center" style="min-height: 440px" id="pad">
-
+                    <div class="card-body d-flex flex-column justify-content-around align-items-center" style="min-height: 440px" id="pad">
+                        <button type="button" id="reviewBtn" class="btn btn-primary mx-5 mb-3" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
+                        Review
+                    </button>
                         <!-- signature pad -->
                         <div>
                             <form class="signature-pad-form" action="#" method="POST" id="signForm">
@@ -323,10 +326,7 @@
                         <button type="button" class="btn btn-secondary mb-5 mx-5" id="backBtn3">Previous</button>
                         <!-- review all info button -->
                         <!-- <button type="button" class="btn btn-primary" id="reviewBtn">Review</button> -->
-                        <button type="button" id="reviewBtn" class="btn btn-primary mx-5 mb-5" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal">
-                            Review
-                        </button>
+                      
                         <button type="button" class="btn btn-success float-end mb-5 mx-5" id="subBtn">Submit
                         </button>
                     </div>
