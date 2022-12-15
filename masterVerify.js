@@ -122,17 +122,6 @@ console.log(document.getElementById("specialLanguage").value);
 
 
 
-function setInfo(masterFields) {
-    // set the county name
-    document.getElementById("countyName").value = masterFields.countyName;
- 
-    // set the date
-    document.getElementById("countyDate").value = masterFields.dateToday;
-
-    // set the special language
-    document.getElementById("specialLanguage").checked = masterFields.specialLanguage;
-
-}
 
 
 const canvas = document.querySelector('canvas');
@@ -200,7 +189,6 @@ document.getElementById("reviewBtn").addEventListener("click", function() {
         countyAddress: document.getElementById("countyAddress").value,
         countyCity: document.getElementById("countyCity").value,
         countyState: document.getElementById("countyState").value,
-        countyZip: document.getElementById("countyZip").value
     }
     console.log(masterFieldsVerify);
    
@@ -240,5 +228,5 @@ localStorage.setItem("masterFieldsVerify", JSON.stringify(masterFieldsVerify));
 
 
 
-setInfo(masterFields[0]);
+// setInfo(masterFields[0]);
 languageCheck();
