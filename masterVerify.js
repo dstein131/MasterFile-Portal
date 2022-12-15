@@ -187,7 +187,7 @@ document.getElementById("reviewBtn").addEventListener("click", function() {
         commissionPhone: document.getElementById("commissionPhone").value,
         remindEmail: document.getElementById("remindEmail").value,
         docEmail: document.getElementById("docEmail").value,
-        signature: countSig
+        signature: countSig.src
 
     }
 
@@ -247,7 +247,7 @@ document.getElementById("reviewBtn").addEventListener("click", function() {
         <p>Reminder Email: ${masterFieldsVerify.remindEmail}</p>
         <h5>Document Email</h5>
         <p>Document Email: ${masterFieldsVerify.docEmail}</p>
-        <h5>Signature</h5>
+        <h5>Signatures</h5>
         <p>County Official Signature: <img src="${masterFieldsVerify.signature}" alt="signature"></p>
         `
 
