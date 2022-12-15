@@ -255,6 +255,10 @@ document.getElementById("reviewBtn").addEventListener("click", function() {
     // console log the object masterFieldsVerify
     console.log(masterFieldsVerify);
 
+    // add the object masterFieldsVerify to the local storage
+    localStorage.setItem("masterFieldsVerify", JSON.stringify(masterFieldsVerify));
+    
+
 
 
 
