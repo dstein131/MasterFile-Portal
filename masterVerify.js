@@ -432,10 +432,13 @@ document.getElementById("reviewBtn").addEventListener("click", function() {
         <div class="border px-2 py-2 mb-2">
         <h5 class="mt-2">Reminder Email</h5>
         <div>Reminder Email: ${masterFieldsVerify.remindEmail}</div>
+        </div>
+        
+        <div class="border px-2 py-2 mb-2">
         <h5 class="mt-2">Document Email</h5>
         <div>Document Email: ${masterFieldsVerify.docEmail}</div>
-        <h5 class="mt-2">Signatures</h5>
-        <div>County Official Signature: <img src="${masterFieldsVerify.signature}" alt="signature"></div>
+      
+        
         </div>
         `
 
