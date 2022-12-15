@@ -22,7 +22,7 @@ masterFields = [
     }
 ];
 
-
+let countSig = null
 
 // add an event listener for checking the special language checkbox
 function languageCheck() { 
@@ -173,6 +173,7 @@ const handlePointerDown = (event) => {
     image.width = canvas.width;
     image.style.display = 'block';
     form.appendChild(image);
+    countSig = image
     clearPad();
   })
   const clearPad = () => {
@@ -182,6 +183,55 @@ const handlePointerDown = (event) => {
     event.preventDefault();
     clearPad();
   })
+
+
+let masterFieldsVerify = {}  
+// add an event lister to the button id reviewBtn to run the function setInfo
+document.getElementById("reviewBtn").addEventListener("click", function() {
+    // take all the inputs and put them into an object
+    masterFieldsVerify = {
+        countyName: document.getElementById("countyName").value,
+        dateToday: document.getElementById("countyDate").value,
+        specialLanguage: document.getElementById("specialLanguage").checked,
+        countyContact: document.getElementById("countyContact").value,
+        countyEmail: document.getElementById("countyEmail").value,
+        countyPhone: document.getElementById("countyPhone").value,
+        countyFax: document.getElementById("countyFax").value,
+        countyAddress: document.getElementById("countyAddress").value,
+        countyCity: document.getElementById("countyCity").value,
+        countyState: document.getElementById("countyState").value,
+        countyZip: document.getElementById("countyZip").value
+    }
+    console.log(masterFieldsVerify);
+   
+
+    // take the signature and put it into an object
+    masterFieldsVerify.signature = countSig.src;
+
+// add all the items from the object masterFieldsVerify to the dom element id reviewModal
+    document.getElementById("reviewModal").innerHTML = `
+        
+        <p>County Name: ${masterFieldsVerify.countyName}</p>
+        
+        <p>Special Language: ${masterFieldsVerify.specialLanguage}</p>
+        <p>County Contact: ${masterFieldsVerify.countyContact}</p>
+        <p>County Email: ${masterFieldsVerify.countyEmail}</p>
+        <p>County Phone: ${masterFieldsVerify.countyPhone}</p>
+        <p>County Fax: ${masterFieldsVerify.countyFax}</p>
+        <p>County Address: ${masterFieldsVerify.countyAddress}</p>
+        <p>County City: ${masterFieldsVerify.countyCity}</p>
+        <p>County State: ${masterFieldsVerify.countyState}</p>
+        <p>County Zip: ${masterFieldsVerify.countyZip}</p>
+        <p>County Official Signature: <img src="${masterFieldsVerify.signature}" alt="signature"></p>
+        <p>Date: ${masterFieldsVerify.dateToday}</p>
+    </div>`
+  
+   
+
+}
+
+);
+
 
 
 
