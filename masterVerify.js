@@ -164,13 +164,25 @@ document.getElementById("nextBtn3").addEventListener("click", function() {
 
 // add event listener to the button id approveBtn to run the function setInfo
 document.getElementById("approveBtn").addEventListener("click", function() {
-  // make the button id submitBtn active
-  document.getElementById("subBtn").disabled = false;
-  // close the modal
-  $('#approveModal').modal('hide');
+
+  // show the dom element id padCont
+  document.getElementById("padCont").style.display = "block";
 }
 )
 
+// add event listener to the dom id signSub to run the function setInfo
+document.getElementById("signSub").addEventListener("click", function() {
+  // set button with id subBtn to active
+  document.getElementById("subBtn").disabled = false;
+}
+)
+
+// add event listener to the dom id subBtn to run the function downloadMasterFieldsVerify
+document.getElementById("subBtn").addEventListener("click", function() {
+  // run the function downloadMasterFieldsVerify
+  downloadMasterFieldsVerify();
+}
+)
 
 document.getElementById("previousDataModalBody").innerHTML = `
   
@@ -446,5 +458,21 @@ document.getElementById("reviewBtn").addEventListener("click", function() {
 
 }
 );
+
+// convert the object masterFieldsVerify to a downloadable file
+function downloadObjectAsJson(exportObj, exportName) {
+    var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(exportObj));
+    var downloadAnchorNode = document.createElement('a');
+    downloadAnchorNode.setAttribute("href", dataStr);
+    downloadAnchorNode.setAttribute("download", exportName + ".json");
+    document.body.appendChild(downloadAnchorNode); // required for firefox
+    downloadAnchorNode.click();
+    downloadAnchorNode.remove();
+}
+
+// download the object masterFieldsVerify as a json file
+function downloadMasterFieldsVerify() {
+    downloadObjectAsJson(masterFieldsVerify, "masterFieldsVerify");
+}
 
 
