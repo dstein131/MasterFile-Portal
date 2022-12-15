@@ -1,26 +1,100 @@
-// create an object with all the master fields
-masterFields = [
-    {
-        countyName: "Polk County",
-        dateToday: new Date(),
-        specialLanguage: false,
-        specialLanguageText: "Special Language",
-        PayMailAddress: "Pay Mail Address",
-        includeCityZip: true,
-        legalDescription: "Legal Description",
-        sameUpdateAd: true,
-        sriSends: true,
-        paymentCutOffDate: "August 1, 2024",
-        paymentCutOffTime: "11:59 PM",
-        BuyerPaymentOption: "Cash",
-        BuyerPayCutOffTime: "11:59 PM",
-        sepCheck: true,
-        payLocation: "Treasurer",
-        addParcel: true,
-        sellRedeemTogether: true,
-        specialInstructions: "Special Instructions"
-    }
-];
+// create an object called masterFeiields with the following items
+//         countyName        
+//   countyContact       
+//   countyEmail
+//   countyPhone
+//   countyFax
+//  countyAddress
+//   countyCity
+//   countyState
+//   countyZip
+//   audName
+//   audPhone
+//   audContName
+//   audContPhone
+//   audContEmail
+//   treasName
+//   treasPhone
+//   treasEmail
+//   countAtty
+//   countAttyPhone
+//   assessor
+//   assessorPhone
+//   countyClerk
+//   countyClerkPhone
+//   commiss1
+//   commiss2
+//   commiss3
+//   commissionPhone
+//   remindEmail
+//   docEmail
+
+let masterFields = {
+    countyName: "Adams",
+    countyCode: "01",
+    countyContact: "David Stein",
+    countyEmail: "dstein@sriservices.com",
+    countyPhone: "305-984-7004",
+    countyFax: "905-403-3123",
+    countyAddress: "1234 Main St",
+    countyCity: "Test City",
+    countyState: "Indiana",
+    countyZip: "46201",
+    audName: "Gail Smith",
+    audPhone: "555-555-5555",
+    audContName: "Helen Jones",
+    audContPhone: "432-432-4321",
+    audContEmail: "hjones@hmail.com",
+    treasName: "Robert Smith",
+    treasPhone: "432-432-4321",
+    treasEmail: "rsmith@hmail.com",
+    countAtty: "Yvonne Jones",
+    countAttyPhone: "643-643-6432",
+    assessor: "Mary Smith",
+    assessorPhone: "321-321-3210",
+    countyClerk: "Irene Jones",
+    countyClerkPhone: "321-321-3210",
+    commiss1: "Ed Jones",
+    commiss2: "Fred Smith",
+    commiss3: "Tom Roberts",
+    commissionPhone: "754-754-7540",
+    remindEmail: "resind@hmail.com",
+    docEmail: "remind@hmail.com"
+}
+
+// take all the values from the masterFields object and put them in the dom elements that are named the same as the object keys
+document.getElementById("countyName").value = masterFields.countyName;
+document.getElementById("countyCode").value = masterFields.countyCode;
+document.getElementById("countyContact").value = masterFields.countyContact;
+document.getElementById("countyEmail").value = masterFields.countyEmail;
+document.getElementById("countyPhone").value = masterFields.countyPhone;
+document.getElementById("countyFax").value = masterFields.countyFax;
+document.getElementById("countyAddress").value = masterFields.countyAddress;
+document.getElementById("countyCity").value = masterFields.countyCity;
+document.getElementById("countyState").value = masterFields.countyState;
+document.getElementById("countyZip").value = masterFields.countyZip;
+document.getElementById("audName").value = masterFields.audName;
+document.getElementById("audPhone").value = masterFields.audPhone;
+document.getElementById("audContName").value = masterFields.audContName;
+document.getElementById("audContPhone").value = masterFields.audContPhone;
+document.getElementById("audContEmail").value = masterFields.audContEmail;
+document.getElementById("treasName").value = masterFields.treasName;
+document.getElementById("treasPhone").value = masterFields.treasPhone;
+document.getElementById("treasEmail").value = masterFields.treasEmail;
+document.getElementById("countAtty").value = masterFields.countAtty;
+document.getElementById("countAttyPhone").value = masterFields.countAttyPhone;
+document.getElementById("assessor").value = masterFields.assessor;
+document.getElementById("assessorPhone").value = masterFields.assessorPhone;
+document.getElementById("countyClerk").value = masterFields.countyClerk;
+document.getElementById("countyClerkPhone").value = masterFields.countyClerkPhone;
+document.getElementById("commiss1").value = masterFields.commiss1;
+document.getElementById("commiss2").value = masterFields.commiss2;
+document.getElementById("commiss3").value = masterFields.commiss3;
+document.getElementById("commissionPhone").value = masterFields.commissionPhone;
+document.getElementById("remindEmail").value = masterFields.remindEmail;
+document.getElementById("docEmail").value = masterFields.docEmail;
+  
+
 
 
 
