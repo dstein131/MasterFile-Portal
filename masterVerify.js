@@ -212,7 +212,6 @@ document.getElementById("reviewBtn").addEventListener("click", function() {
     document.getElementById("reviewModal").innerHTML = `
         
         <p>County Name: ${masterFieldsVerify.countyName}</p>
-        
         <p>Special Language: ${masterFieldsVerify.specialLanguage}</p>
         <p>County Contact: ${masterFieldsVerify.countyContact}</p>
         <p>County Email: ${masterFieldsVerify.countyEmail}</p>
@@ -224,13 +223,18 @@ document.getElementById("reviewBtn").addEventListener("click", function() {
         <p>County Zip: ${masterFieldsVerify.countyZip}</p>
         <p>County Official Signature: <img src="${masterFieldsVerify.signature}" alt="signature"></p>
         <p>Date: ${masterFieldsVerify.dateToday}</p>
-    </div>`
+    `
   
    
+    // take masterFieldsVerify and put it into local storage
+localStorage.setItem("masterFieldsVerify", JSON.stringify(masterFieldsVerify));
 
 }
 
+
+
 );
+
 
 
 

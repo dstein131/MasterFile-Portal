@@ -32,12 +32,20 @@
                             <input id="countyName" type="text" class="form-control" id="countyName"
                                 placeholder="County Name">
                         </div>
-                        <!--input for county today's date -->
+                        <!--input for county code -->
                         <div class="mb-3">
+                            <label for="countyCode" class="form-label"><small>County Code</small></label>
+                            <input id="countyCode" type="text" class="form-control" id="countyCode"
+                                placeholder="County Code">
+                        </div>
+
+
+                        <!--input for county today's date -->
+                        <!-- <div class="mb-3">
                             <label for="countyDate" class="form-label"><small>Today's Date</small></label>
                             <input id="countyDate" type="date" class="form-control" id="countyDate"
                                 placeholder="Today's Date">
-                        </div>
+                        </div> -->
                         <!-- inout for special language checkbox -->
                         <div class="mb-3">
                             <!-- <div class="form-check">
@@ -128,22 +136,22 @@
             <!-- second card -->
             <div class="card" style="min-width: 800px; display:none;" id="parcelInfo">
                 <div class="card-header text-center">
-                    <b>Parcel Information</b>
+                    <b>Auditor | Treasurer | Attorney</b>
                 </div>
                 <div class="card-body d-flex justify-content-around align-items-center">
                     <!--input for county name -->
                     <div class="col-5">
                         <div class="mb-3">
-                            <label for="countyName" class="form-label  "><small>County Name</small></label>
-                            <input id="countyName" type="text" class="form-control" id="countyName"
+                            <label for="countyName" class="form-label  "><small>Auditor Name</small></label>
+                            <input id="countyName" type="text" class="form-control" id="audName"
                                 placeholder="County Name">
                         </div>
                         <!--input for county today's date -->
-                        <div class="mb-3">
+                        <!-- <div class="mb-3">
                             <label for="countyDate" class="form-label"><small>Today's Date</small></label>
                             <input id="countyDate" type="date" class="form-control" id="countyDate"
                                 placeholder="Today's Date">
-                        </div>
+                        </div> -->
                         <!-- inout for special language checkbox -->
                         <div class="mb-3">
                             <!-- <div class="form-check">
@@ -164,56 +172,59 @@
 
                         <!-- input for county's contact name -->
                         <div class="mb-3">
-                            <label for="countyContact" class="form-label"><small>County Contact Name</small></label>
-                            <input id="countyContact" type="text" class="form-control" id="countyContact"
+                            <label for="countyContact" class="form-label"><small>Auditor Phone</small></label>
+                            <input id="countyContact" type="text" class="form-control" id="audPhone"
                                 placeholder="County Contact Name">
                         </div>
                         <!-- input for county's contact email -->
                         <div class="mb-3">
-                            <label for="countyEmail" class="form-label"><small>County Contact Email</small></label>
-                            <input id="countyEmail" type="email" class="form-control" id="countyEmail"
+                            <label for="countyEmail" class="form-label"><small>Auditor Contact Name</small></label>
+                            <input id="countyEmail" type="email" class="form-control" id="aucContName"
                                 placeholder="County Contact Email">
                         </div>
                         <!-- input for county's contact phone number -->
                         <div class="mb-3">
-                            <label for="countyPhone" class="form-label"><small>County Contact Phone
+                            <label for="countyPhone" class="form-label"><small>Auditor Contact Phone
                                     Number</small></label>
-                            <input id="countyPhone" type="text" class="form-control" id="countyPhone"
+                            <input id="countyPhone" type="text" class="form-control" id="AudContPhone"
                                 placeholder="County Contact Phone Number">
                         </div>
-
-                        <!-- input for county's contact website -->
-                    </div>
-                    <div class="col-5">
-                        <!-- input for county's contact fax number -->
                         <div class="mb-3">
                             <label for="countyFax" class="form-label"><small>County Contact Fax Number</small></label>
                             <input id="countyFax" type="text" class="form-control" id="countyFax"
                                 placeholder="County Contact Fax Number">
                         </div>
+                    </div>
+                    <div class="col-5">
+                        <!-- input for county's contact fax number -->
+                        
                         <!-- input for county's contact mailing address -->
                         <div class="mb-3">
-                            <label for="countyAddress" class="form-label"><small>County Contact Mailing
-                                    Address</small></label>
-                            <input id="countyAddress" type="text" class="form-control" id="countyAddress"
+                            <label for="countyAddress" class="form-label"><small>Treasurer Contant Name</small></label>
+                            <input id="countyAddress" type="text" class="form-control" id="treasName"
                                 placeholder="County Contact Mailing Address">
                         </div>
                         <!-- input for county's contact city -->
                         <div class="mb-3">
-                            <label for="countyCity" class="form-label"><small>County Contact City</small></label>
-                            <input id="countyCity" type="text" class="form-control" id="countyCity"
+                            <label for="countyCity" class="form-label"><small>Treasurer Contant Phone</small></label>
+                            <input id="countyCity" type="text" class="form-control" id="treasPhone"
                                 placeholder="County Contact City">
                         </div>
                         <!-- input for county's contact state -->
                         <div class="mb-3">
-                            <label for="countyState" class="form-label"><small>County Contact State</small></label>
-                            <input id="countyState" type="text" class="form-control" id="countyState"
+                            <label for="countyState" class="form-label"><small>Treasurer Contact Email</small></label>
+                            <input id="countyState" type="text" class="form-control" id="treasEmail"
                                 placeholder="County Contact State">
                         </div>
                         <!-- input for county's contact zip code -->
                         <div class="mb-3">
-                            <label for="countyZip" class="form-label"><small>County Contact Zip Code</small></label>
-                            <input id="countyZip" type="text" class="form-control" id="countyZip"
+                            <label for="countyZip" class="form-label"><small>County Attorney</small></label>
+                            <input id="countyZip" type="text" class="form-control" id="countAtty"
+                                placeholder="County Contact Zip Code">
+                        </div>
+                        <div class="mb-3">
+                            <label for="countyZip" class="form-label"><small>County Phone</small></label>
+                            <input id="countyZip" type="text" class="form-control" id="countAttyPhone"
                                 placeholder="County Contact Zip Code">
                         </div>
                     </div>
@@ -395,6 +406,8 @@
           ...
         </div>
         <div class="modal-footer">
+            <!-- print button -->
+            <button type="button" class="btn btn-primary" id="printBtn">Print</button>
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
           <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
         </div>
