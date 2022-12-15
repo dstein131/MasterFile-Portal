@@ -190,6 +190,9 @@ document.getElementById("reviewBtn").addEventListener("click", function() {
         // signature: countSig.src
 
     }
+       // take the signature and put it into an object
+       masterFieldsVerify.signature = countSig.src;
+       
 
     // add the object masterFieldsVerify to the local storage
     localStorage.setItem("masterFieldsVerify", JSON.stringify(masterFieldsVerify));
