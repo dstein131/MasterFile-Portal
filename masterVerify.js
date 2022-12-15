@@ -159,6 +159,76 @@ document.getElementById("nextBtn3").addEventListener("click", function() {
 )
 
 
+document.getElementById("previousDataModalBody").innerHTML = `
+  
+        <div class="border px-2 py-2 mb-2">
+        <h5>County Information</h5>
+        <div>County Name: ${masterFields.countyName}</div>
+        <div>County Code: ${masterFields.countyCode}</div>
+        <div>County Contact: ${masterFields.countyContact}</div>
+        <div>County Email: ${masterFields.countyEmail}</div>
+        <div>County Phone: ${masterFields.countyPhone}</div>
+        <div>County Fax: ${masterFields.countyFax}</div>
+        <div>County Address: ${masterFields.countyAddress}</div>
+        <div>County City: ${masterFields.countyCity}</div>
+        <div>County State: ${masterFields.countyState}</div>
+        <div>County Zip: ${masterFields.countyZip}</div>
+        </div>
+       
+        <div class="border px-2 py-2 mb-2">
+        <h5 class="mt-2">Auditor Information</h5>
+        <div>Auditor Name: ${masterFields.audName}</div>
+        <div>Auditor Phone: ${masterFields.audPhone}</div>
+        <div>Auditor Contact Name: ${masterFields.audContName}</div>
+        <div>Auditor Contact Phone: ${masterFields.audContPhone}</div>
+        <div>Auditor Contact Email: ${masterFields.audContEmail}</div>
+        </div>
+
+      <div class="border px-2 py-2 mb-2">
+        <h5 class="mt-2">Treasurer Information</h5>
+        <div>Treasurer Name: ${masterFields.treasName}</div>
+        <div>Treasurer Phone: ${masterFields.treasPhone}</div>
+        <div>Treasurer Email: ${masterFields.treasEmail}</div>
+        </div>
+     
+        <div class="border px-2 py-2 mb-2">
+        <h5 class="mt-2">County Attorney Information</h5>
+            
+        <div>County Attorney: ${masterFields.countAtty}</div>
+        <div>County Attorney Phone: ${masterFields.countAttyPhone}</div>
+        </div>
+       
+        <div class="border px-2 py-2 mb-2">
+        <h5 class="mt-2">Assessor Information</h5>
+        <div>Assessor: ${masterFields.assessor}</div>
+        <div>Assessor Phone: ${masterFields.assessorPhone}</div>
+        </div>
+      
+        <div class="border px-2 py-2 mb-2">
+        <h5 class="mt-2">County Clerk Information</h5>
+        <div>County Clerk: ${masterFields.countyClerk}</div>
+        <div>County Clerk Phone: ${masterFields.countyClerkPhone}</div>
+        </div>
+     
+        <div class="border px-2 py-2 mb-2">
+        <h5 class="mt-2">Commissioner Information</h5>
+        <div>Commissioner 1: ${masterFields.commiss1}</div>
+        <div>Commissioner 2: ${masterFields.commiss2}</div>
+        <div>Commissioner 3: ${masterFields.commiss3}</div>
+        <div>Commissioner Phone: ${masterFields.commissionPhone}</div>
+        </div>
+
+        <div class="border px-2 py-2 mb-2">
+        <h5 class="mt-2">Reminder Email</h5>
+        <div>Reminder Email: ${masterFields.remindEmail}</div>
+        </div>
+
+        <div class="border px-2 py-2 mb-2">
+        <h5 class="mt-2">Document Email</h5>
+        <div>Document Email: ${masterFields.docEmail}</div>
+        </div>
+
+        `
 
 
 
@@ -275,7 +345,7 @@ document.getElementById("reviewBtn").addEventListener("click", function() {
     // add the values of the object masterFieldsVerify to the dom id reviewModal
     document.getElementById("reviewModal").innerHTML = `
   
-      
+    <div class="border px-2 py-2 mb-2">
         <h5>County Information</h5>
         <div>County Name: ${masterFieldsVerify.countyName}</div>
         <div>County Code: ${masterFieldsVerify.countyCode}</div>
@@ -287,46 +357,61 @@ document.getElementById("reviewBtn").addEventListener("click", function() {
         <div>County City: ${masterFieldsVerify.countyCity}</div>
         <div>County State: ${masterFieldsVerify.countyState}</div>
         <div>County Zip: ${masterFieldsVerify.countyZip}</div>
+        </div>
        
+        <div class="border px-2 py-2 mb-2">
         <h5 class="mt-2">Auditor Information</h5>
         <div>Auditor Name: ${masterFieldsVerify.audName}</div>
         <div>Auditor Phone: ${masterFieldsVerify.audPhone}</div>
         <div>Auditor Contact Name: ${masterFieldsVerify.audContName}</div>
         <div>Auditor Contact Phone: ${masterFieldsVerify.audContPhone}</div>
         <div>Auditor Contact Email: ${masterFieldsVerify.audContEmail}</div>
-      
+        </div>
+
+
+        <div class="border px-2 py-2 mb-2">
         <h5 class="mt-2">Treasurer Information</h5>
         <div>Treasurer Name: ${masterFieldsVerify.treasName}</div>
         <div>Treasurer Phone: ${masterFieldsVerify.treasPhone}</div>
         <div>Treasurer Email: ${masterFieldsVerify.treasEmail}</div>
-     
+      </div>
 
+      <div class="border px-2 py-2 mb-2">
         <h5 class="mt-2">County Attorney Information</h5>
             
         <div>County Attorney: ${masterFieldsVerify.countAtty}</div>
         <div>County Attorney Phone: ${masterFieldsVerify.countAttyPhone}</div>
+        </div>
        
+        
+        <div class="border px-2 py-2 mb-2">
         <h5 class="mt-2">Assessor Information</h5>
         <div>Assessor: ${masterFieldsVerify.assessor}</div>
         <div>Assessor Phone: ${masterFieldsVerify.assessorPhone}</div>
+        </div>
       
+        <div class="border px-2 py-2 mb-2">
         <h5 class="mt-2">County Clerk Information</h5>
         <div>County Clerk: ${masterFieldsVerify.countyClerk}</div>
         <div>County Clerk Phone: ${masterFieldsVerify.countyClerkPhone}</div>
+        </div>
      
-     
+        <div class="border px-2 py-2 mb-2">
         <h5 class="mt-2">Commissioner Information</h5>
         <div>Commissioner 1: ${masterFieldsVerify.commiss1}</div>
         <div>Commissioner 2: ${masterFieldsVerify.commiss2}</div>
         <div>Commissioner 3: ${masterFieldsVerify.commiss3}</div>
         <div>Commissioner Phone: ${masterFieldsVerify.commissionPhone}</div>
-    
+        </div>
+
+        <div class="border px-2 py-2 mb-2">
         <h5 class="mt-2">Reminder Email</h5>
         <div>Reminder Email: ${masterFieldsVerify.remindEmail}</div>
         <h5 class="mt-2">Document Email</h5>
         <div>Document Email: ${masterFieldsVerify.docEmail}</div>
         <h5 class="mt-2">Signatures</h5>
         <div>County Official Signature: <img src="${masterFieldsVerify.signature}" alt="signature"></div>
+        </div>
         `
 
 
