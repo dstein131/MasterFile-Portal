@@ -186,8 +186,8 @@ document.getElementById("reviewBtn").addEventListener("click", function() {
         commiss3: document.getElementById("commiss3").value,
         commissionPhone: document.getElementById("commissionPhone").value,
         remindEmail: document.getElementById("remindEmail").value,
-        docEmail: document.getElementById("docEmail").value,
-        signature: countSig.src
+        docEmail: document.getElementById("docEmail").value
+        // signature: countSig.src
 
     }
 
