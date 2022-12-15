@@ -187,12 +187,13 @@ document.getElementById("reviewBtn").addEventListener("click", function() {
         commissionPhone: document.getElementById("commissionPhone").value,
         remindEmail: document.getElementById("remindEmail").value,
         docEmail: document.getElementById("docEmail").value
-        // signature: countSig.src
 
     }
-       // take the signature and put it into an object
-       masterFieldsVerify.signature = countSig.src;
-       
+
+  
+    
+
+
 
     // add the object masterFieldsVerify to the local storage
     localStorage.setItem("masterFieldsVerify", JSON.stringify(masterFieldsVerify));
@@ -260,10 +261,6 @@ document.getElementById("reviewBtn").addEventListener("click", function() {
 
     // add the object masterFieldsVerify to the local storage
     localStorage.setItem("masterFieldsVerify", JSON.stringify(masterFieldsVerify));
-
-
-
-
 
 
 
