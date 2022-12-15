@@ -29,6 +29,8 @@
 //   remindEmail
 //   docEmail
 
+
+
 let masterFields = {
     countyName: "Adams",
     countyCode: "01",
@@ -96,6 +98,8 @@ document.getElementById("docEmail").value = masterFields.docEmail;
   
 
 
+// disable the button with the id subBtn
+document.getElementById("subBtn").disabled = true;
 
 
 // add an event listen on the button id nextBtn1 to run the function setInfo
@@ -155,6 +159,13 @@ document.getElementById("nextBtn3").addEventListener("click", function() {
     document.getElementById("test").style.display = "none";
     // show the dom element id countyInfo
     document.getElementById("signature").style.display = "block";
+}
+)
+
+// add event listener to the button id approveBtn to run the function setInfo
+document.getElementById("approveBtn").addEventListener("click", function() {
+  // make the button id submitBtn active
+  document.getElementById("subBtn").disabled = false;
 }
 )
 
