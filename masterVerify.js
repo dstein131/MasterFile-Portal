@@ -166,6 +166,8 @@ document.getElementById("nextBtn3").addEventListener("click", function() {
 document.getElementById("approveBtn").addEventListener("click", function() {
   // make the button id submitBtn active
   document.getElementById("subBtn").disabled = false;
+  // close the modal
+  $('#approveModal').modal('hide');
 }
 )
 
