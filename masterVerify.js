@@ -483,3 +483,7 @@ function downloadMasterFieldsVerifyExcel() {
     downloadObjectAsJson(masterFieldsVerify, "masterFieldsVerify");
 }
 
+
+
+
+// add an event listener to canvas to check if it is blank
