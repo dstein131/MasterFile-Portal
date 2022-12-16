@@ -372,7 +372,7 @@ document.getElementById("reviewBtn").addEventListener("click", function() {
   
     <div class="border px-2 py-2 mb-2">
         <h5>County Information</h5>
-        <div>County Name: ${masterFieldsVerify.countyName}</div>
+        <div >County Name: ${masterFieldsVerify.countyName}</div>
         <div>County Code: ${masterFieldsVerify.countyCode}</div>
         <div>County Contact: ${masterFieldsVerify.countyContact}</div>
         <div>County Email: ${masterFieldsVerify.countyEmail}</div>
@@ -441,6 +441,8 @@ document.getElementById("reviewBtn").addEventListener("click", function() {
         
         </div>
         `
+
+   
 
 
     // console log the object masterFieldsVerify
