@@ -478,4 +478,8 @@ function downloadMasterFieldsVerify() {
     downloadObjectAsJson(masterFieldsVerify, "masterFieldsVerify");
 }
 
+// download the object masterFieldsVerify as an excel file
+function downloadMasterFieldsVerifyExcel() {
+    downloadObjectAsJson(masterFieldsVerify, "masterFieldsVerify");
+}
 
