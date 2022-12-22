@@ -60,19 +60,115 @@
                         <!-- previous data modal button-->
                         <button type="button" class="btn btn-sm btn-outline-info" data-bs-toggle="modal"
                             data-bs-target="#previousDataModal">
-                            Historical Data
+                            Previous Data
                         </button>
                     </div>
                     <div class="card-body d-flex flex-wrap justify-content-around align-items-center"
-                        style="min-height: 440px">
+                        style="min-height: 475px">
                         <!-- tab sections -->
 
                         <div class="tab-content" id="pills-tabContent">
-                            <div class="tab-pane fade show active" id="pills-county" role="tabpanel" aria-labelledby="pills-county-tab">County Info</div>
-                            <div class="tab-pane fade" id="pills-auditor" role="tabpanel" aria-labelledby="pills-auditor-tab">Auditor Info</div>
-                            <div class="tab-pane fade" id="pills-treasurer" role="tabpanel" aria-labelledby="pills-treasurer-tab">Treasurer Info</div>
-                            <div class="tab-pane fade" id="pills-attorney" role="tabpanel" aria-labelledby="pills-attorney-tab">Attorney Info</div>
-                            <div class="tab-pane fade" id="pills-assessor" role="tabpanel" aria-labelledby="pills-assessor-tab">Assessor Info</div>
+                            <!-- county info -->
+                            <div class="tab-pane fade show active" id="pills-county" role="tabpanel" aria-labelledby="pills-county-tab">
+                                <div class="d-flex flex-wrap justify-content-around align-items-center">
+                                    <div class="form-group col-md-6 mx-2 my-2">
+                                        <label for="countyCode"><small> Code</small></label>
+                                        <input type="text" class="form-control" id="countyName" placeholder="County Code">
+                                    </div>
+                                    <div class="form-group col-md-6 mx-2 my-2">
+                                        <label for="countyName"><small>County Name</small></label>
+                                        <input type="text" class="form-control" id="countyName" placeholder="County Name">
+                                        </div>
+                                    <div class="form-group col-md-6 mx-2 my-2">
+                                        <label for="countyStreetAddress"><small>County Street Address</small></label>
+                                        <input type="text" class="form-control" id="countyStreetAddress" placeholder="County Street Address">
+                                    </div>
+                                    <div class="form-group col-md-6 mx-2 my-2">
+                                        <label for="countyCity"><small>County City</small></label>
+                                        <input type="text" class="form-control" id="countyCity" placeholder="County City">
+                                    </div>
+                                    <div class="form-group col-md-6 mx-2 my-2">
+                                        <label for="countyState"><small>County State</small></label>
+                                        <input type="text" class="form-control" id="countyState" placeholder="County State">
+                                    </div>
+                                    <div class="form-group col-md-6 mx-2 my-2">
+                                        <label for="countyZip"><small>County Zip</small></label>
+                                        <input type="text" class="form-control" id="countyZip" placeholder="County Zip">
+                                    </div>
+                                </div>
+                            </div>
+                             <!-- auditor info -->
+                            <div class="tab-pane fade" id="pills-auditor" role="tabpanel" aria-labelledby="pills-auditor-tab">
+                               
+                                <div class="d-flex flex-wrap justify-content-around align-items-center">
+                                    <div class="form-group col-md-6 mx-2 my-2">
+                                        <label for="auditorName"><small>Auditor Name</small></label>
+                                        <input type="text" class="form-control" id="auditorName" placeholder="Auditor Name">
+                                    </div>
+                                    <div class="form-group col-md-6 mx-2 my-2">
+                                        <label for="auditorPhone"><small>Auditor Phone</small></label>
+                                        <input type="text" class="form-control" id="auditorPhone" placeholder="Auditor Phone">
+                                    </div>
+                                    <div class="form-group col-md-6 mx-2 my-2">
+                                        <label for="auditorEmail"><small>Auditor Email</small></label>
+                                        <input type="text" class="form-control" id="auditorEmail" placeholder="Auditor Email">
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="tab-pane fade" id="pills-treasurer" role="tabpanel" aria-labelledby="pills-treasurer-tab">
+                                <div class="d-flex flex-wrap justify-content-around align-items-center">
+
+                                    <div class="form-group col-md-6 mx-2 my-2">
+                                        <label for="treasurerName"><small>Treasurer Name</small></label>
+                                        <input type="text" class="form-control" id="treasurerName" placeholder="Treasurer Name">
+                                    </div>
+                                    <div class="form-group col-md-6 mx-2 my-2">
+                                        <label for="treasurerPhone"><small>Treasurer Phone</small></label>
+                                        <input type="text" class="form-control" id="treasurerPhone" placeholder="Treasurer Phone">
+                                    </div>
+                                    <div class="form-group col-md-6 mx-2 my-2">
+                                        <label for="treasurerEmail"><small>Treasurer Email</small></label>
+                                        <input type="text" class="form-control" id="treasurerEmail" placeholder="Treasurer Email">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="pills-attorney" role="tabpanel" aria-labelledby="pills-attorney-tab">
+                                <div class="d-flex flex-wrap justify-content-around align-items-center">
+                                    <div class="form-group col-md-6 mx-2 my-2">
+                                        <label for="countyAttorneyName"><small>County Attorney Name</small></label>
+                                        <input type="text" class="form-control" id="attorneyName" placeholder="County Attorney Name">
+                                    </div>
+                                    <div class="form-group col-md-6 mx-2 my-2">
+                                        <label for="countyAttorneyPhone"><small>County Attorney Phone</small></label>
+                                        <input type="text" class="form-control" id="attorneyPhone" placeholder="County Attorney Phone">
+                                    </div>
+                                    <div class="form-group col-md-6 mx-2 my-2">
+                                        <label for="countyAttorneyEmail"><small>County Attorney Email</small></label>
+                                        <input type="text" class="form-control" id="attorneyEmail" placeholder="County Attorney Email">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-assessor" role="tabpanel" aria-labelledby="pills-assessor-tab">
+                                <div class="d-flex flex-wrap justify-content-around align-items-center">
+                                    <div class="form-group col-md-6 mx-2 my-2">
+                                        <label for="assessorName"><small>Assessor Name</small></label>
+                                        <input type="text" class="form-control" id="assessorName" placeholder="Assessor Name">
+                                    </div>
+                                    <div class="form-group col-md-6 mx-2 my-2">
+                                        <label for="assessorPhone"><small>Assessor Phone</small></label>
+                                        <input type="text" class="form-control" id="assessorPhone" placeholder="Assessor Phone">
+                                    </div>
+                                    <div class="form-group col-md-6 mx-2 my-2">
+                                        <label for="assessorEmail"><small>Assessor Email</small></label>
+                                        <input type="text" class="form-control" id="assessorEmail" placeholder="Assessor Email">
+                                    </div>
+                                </div>
+
+                            </div>
                             <div class="tab-pane fade" id="pills-commissioner" role="tabpanel" aria-labelledby="pills-commissioner-tab">Commissioner Info</div>
                             <div class="tab-pane fade" id="pills-courthouse" role="tabpanel" aria-labelledby="pills-courthouse-tab">Courthouse Info</div>
                             <div class="tab-pane fade" id="pills-signature" role="tabpanel" aria-labelledby="pills-signature-tab">Sale Info</div>
