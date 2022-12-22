@@ -192,7 +192,7 @@ document.getElementById("reviewBtn").addEventListener("click", function() {
   <h5>Court House Information</h5>
   <div id="verifycourtHouseName">Court House Name: ${masterFieldsVerify.courtHouseName}</div>
   <div id="verifycourtLocation>Presiding Judge: ${masterFieldsVerify.presidingJudge}</div>
-  <did id="verifypresidingJudgePhone">Presiding Judge Phone: ${masterFieldsVerify.presidingJudgePhone}</did>
+  <div id="verifypresidingJudgePhone">Presiding Judge Phone: ${masterFieldsVerify.presidingJudgePhone}</did>
   </div>
 
   <div class="border px-2 py-2 mb-2">
