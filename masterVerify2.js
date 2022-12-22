@@ -43,6 +43,10 @@ let masterFields = {
   
 }
 
+// disable to button id approveBtn
+document.getElementById("approveBtn").disabled = true
+
+
 // set the dom objects matching the masterFields object keys to the values of the the dom element named the same as the key
 for (let key in masterFields) {
   if (document.getElementById(key)) {
@@ -237,10 +241,27 @@ function compareObjects(obj1, obj2) {
     let element = document.getElementById(`verify${key}`);
     element.innerHTML += `<div class="float-end">
     <label for="approve${key}">Approve</label>
-    <input type="checkbox" id="approve${key}" name="approve${key}" value="approve${key} class="ms-5">
+    <input type="checkbox" id="approve${key}" name="approve${key}" value="approve${key} class=" ms-5">
     
     </div>`;
   }
+
+
+// if all the checkboxes are checked then enable the submit button
+  let checkboxes = document.querySelectorAll('input[type="checkbox"]');
+  let submitButton = document.getElementById("approveBtn");
+  checkboxes.forEach((checkbox) => {
+    checkbox.addEventListener("change", (e) => {
+      if (e.target.checked) {
+        submitButton.disabled = false;
+      } else {
+        submitButton.disabled = true;
+      }
+    });
+  }
+  );
+  
+
 
   
 }
