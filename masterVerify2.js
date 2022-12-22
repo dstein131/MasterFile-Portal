@@ -258,13 +258,32 @@ function compareObjects(obj1, obj2) {
         submitButton.disabled = true;
       }
     });
+   
+
+  
   }
+
+
   );
+
+  // if there are no checkboxes then enable the submit button
+  if (checkboxes.length === 0) {
+    submitButton.disabled = false;
+  }
+  
   
 
 
   
 }
+
+// add an event listener to the id approveBtn that hides the dom element reviewBtn and shows the dom element padCont
+document.getElementById("approveBtn").addEventListener("click", (e) => {
+  document.getElementById("reviewBtn").style.display = "none";
+  document.getElementById("padCont").
+  style.display = "block";
+});
+
 
 
 
@@ -284,6 +303,60 @@ compareObjects(masterFields, masterFieldsVerify);
 
 
 )
+
+const canvas = document.querySelector('canvas');
+const form = document.querySelector('.signature-pad-form');
+const clearButton = document.querySelector('.clear-button');
+const ctx = canvas.getContext('2d');
+let writingMode = false;
+
+const handlePointerDown = (event) => {
+    writingMode = true;
+    ctx.beginPath();
+    const [positionX, positionY] = getCursorPosition(event);
+    ctx.moveTo(positionX, positionY);
+  }
+  const handlePointerUp = () => {
+    writingMode = false;
+  }
+  const handlePointerMove = (event) => {
+    if (!writingMode) return
+    const [positionX, positionY] = getCursorPosition(event);
+    ctx.lineTo(positionX, positionY);
+    ctx.stroke();
+  }
+  const getCursorPosition = (event) => {
+    positionX = event.clientX - event.target.getBoundingClientRect().x;
+    positionY = event.clientY - event.target.getBoundingClientRect().y;
+    return [positionX, positionY];
+  }
+  ctx.lineWidth = 3;
+  ctx.lineJoin = ctx.lineCap = 'round';
+
+  canvas.addEventListener('pointerdown', handlePointerDown, {passive: true});
+canvas.addEventListener('pointerup', handlePointerUp, {passive: true});
+canvas.addEventListener('pointermove', handlePointerMove, {passive: true});
+
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const imageURL = canvas.toDataURL();
+    const image = document.createElement('img');
+    image.src = imageURL;
+    image.height = canvas.height;
+    image.width = canvas.width;
+    image.style.display = 'block';
+    form.appendChild(image);
+    countSig = image
+    clearPad();
+  })
+  const clearPad = () => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+  }
+  clearButton.addEventListener('click', (event) => {
+    event.preventDefault();
+    clearPad();
+  })
 
 
 

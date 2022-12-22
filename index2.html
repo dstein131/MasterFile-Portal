@@ -68,7 +68,7 @@
                                     data-bs-target="#pills-sale" type="button" role="tab" aria-controls="pills-contact"
                                     aria-selected="false">Sale</button>
                             </li>
-                        
+
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link" id="pills-website-tab" data-bs-toggle="pill"
                                     data-bs-target="#pills-website" type="button" role="tab"
@@ -86,8 +86,8 @@
                             </li> -->
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link " id="pills-review-tab" data-bs-toggle="pill"
-                                    data-bs-target="#pills-review" type="button" role="tab"
-                                    aria-controls="pills-review" aria-selected="false">Review and Submit</button>
+                                    data-bs-target="#pills-review" type="button" role="tab" aria-controls="pills-review"
+                                    aria-selected="false">Review and Submit</button>
                             </li>
                         </ul>
 
@@ -277,20 +277,28 @@
                             </div>
 
 
-                            <div class="tab-pane fade" id="pills-sale" role="tabpanel"
-                                aria-labelledby="pills-sale-tab">Sale Info</div>
+                            <div class="tab-pane fade" id="pills-sale" role="tabpanel" aria-labelledby="pills-sale-tab">
+                                Sale Info</div>
 
                             <div class="tab-pane fade" id="pills-website" role="tabpanel"
                                 aria-labelledby="pills-website-tab">Website Info</div>
                             <!-- review -->
-                                <div class="tab-pane fade" id="pills-review" role="tabpanel"
+                            <div class="tab-pane fade" id="pills-review" role="tabpanel"
                                 aria-labelledby="pills-review-tab">
-                                <button type="button" id="reviewBtn" class="btn btn-primary mx-5 mb-3" data-bs-toggle="modal"
-                        data-bs-target="#exampleModal">
-                        Review
-                    </button>
-                            
-                                </div>
+                                <button type="button" id="reviewBtn" class="btn btn-primary mx-5 mb-3"
+                                    data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    Review
+                                </button>
+                                <div id="padCont" style="display: none">
+                                    <form class="signature-pad-form" action="#" method="POST" id="signForm">
+                                        <p><b>Signature</b></p>
+                                        <canvas height="100" width="300" class="signature-pad"></canvas>
+                                        <p><a href="#" class="clear-button">Clear</a></p>
+                                        <button id="signSub" class="submit-button" type="submit">Save Signature</button>
+                                    </form>
+                                 </div>
+
+                            </div>
 
                             <div class="tab-pane fade" id="pills-newspaper" role="tabpanel"
                                 aria-labelledby="pills-newspaper-tab">
@@ -368,10 +376,10 @@
                                 </div>
 
 
-                            
+
                             </div>
 
-                            
+
 
 
                         </div>
@@ -383,27 +391,28 @@
         </div>
 
 
-            <!-- review info modal -->
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Please Review the Information</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body" id="reviewModal">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <!-- print button -->
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="approveBtn" disabled>Approve</button>
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        <!-- review info modal -->
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Please Review the Information</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" id="reviewModal">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <!-- print button -->
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="approveBtn"
+                            disabled>Approve</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
 
 
