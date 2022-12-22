@@ -1,36 +1,57 @@
 
 let masterFields = {
-    countyName: "Adams",
-    countyCode: "01",
-    countyContact: "David Stein",
-    countyEmail: "dstein@sriservices.com",
-    countyPhone: "305-984-7004",
-    countyFax: "905-403-3123",
-    countyAddress: "1234 Main St",
-    countyCity: "Test City",
-    countyState: "Indiana",
-    countyZip: "46201",
-    audName: "Gail Smith",
-    audPhone: "555-555-5555",
-    audContName: "Helen Jones",
-    audContPhone: "432-432-4321",
-    audContEmail: "hjones@hmail.com",
-    treasName: "Robert Smith",
-    treasPhone: "432-432-4321",
-    treasEmail: "rsmith@hmail.com",
-    countAtty: "Yvonne Jones",
-    countAttyPhone: "643-643-6432",
-    assessor: "Mary Smith",
-    assessorPhone: "321-321-3210",
-    countyClerk: "Irene Jones",
-    countyClerkPhone: "321-321-3210",
-    commiss1: "Ed Jones",
-    commiss2: "Fred Smith",
-    commiss3: "Tom Roberts",
-    commissionPhone: "754-754-7540",
-    remindEmail: "resind@hmail.com",
-    docEmail: "remind@hmail.com"
+  countyCode: "01",
+  countyName: "Adams",
+  countyStreetAddress: "200 S 3rd St",
+  countyCity: "West Union",
+  countyState: "IA",
+  countyZip: "52175",
+  auditorName: "Jill Smith",
+  auditorPhone: "563-422-1234",
+  auditorEmail: "jsmith@gmail.com",
+  treasurerName: "John Doe",
+  treasurerPhone: "563-422-1234",
+  treasurerEmail: "jdoe@gmail.com",
+  attorneyName: "Bobcat Jones",
+  attorneyPhone: "563-422-1234",
+  attorneyEmail: "Bjones@gmail.com",
+  assessorName: "Mike Davis",
+  assessorPhone: "563-422-1234",
+  assessorEmail: "mdavis@gmail.com",
+  commissioner1Name: "Michael Johnson",
+  commissioner2Name: "Chris Brown",
+  commissioner3Name: "Brad Johnson",
+  commissionerPhone: "563-422-1234",
+  courtHouseName: "Adams County Courthouse",
+  courtLocation: "200 S 3rd St, West Union, IA 52175",
+  presidingJudge: "Judge Smith",
+  presidingJudgePhone: "563-422-1234",
+  newspaper1Name: "West Union Times",
+  newspaper1Contact: "Zachary Smith",
+  newspaper1Phone: "563-422-1234",
+  newspaper1AdFormat: "Full Page",
+  newspaper1LeadTime: "2 Weeks",
+  newspaper1DayAdRuns: "Monday",
+  newspaper1URL: "www.westuniontimes.com",
+  newspaper2Name: "Elkader Register",
+  newspaper2Contact: "Zachary Smith",
+  newspaper2Phone: "563-422-1234",
+  newspaper2AdFormat: "Full Page",
+  newspaper2LeadTime: "2 Weeks",
+  newspaper2DayAdRuns: "Tuesday",
+  newspaper2URL: "www.elkaderregister.com",
+  
 }
+
+// set the dom objects matching the masterFields object keys to the values of the the dom element named the same as the key
+for (let key in masterFields) {
+  if (document.getElementById(key)) {
+    document.getElementById(key).value = masterFields[key]
+  }
+}
+
+
+
 
 document.getElementById("previousDataModalBody").innerHTML = `
   
