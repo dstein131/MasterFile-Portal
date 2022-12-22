@@ -231,6 +231,17 @@ function compareObjects(obj1, obj2) {
     let element = document.getElementById(`verify${key}`);
     element.style.backgroundColor = "yellow";
   }
+
+// add an approal check to the changed dom elements
+  for (let key in differences) {
+    let element = document.getElementById(`verify${key}`);
+    element.innerHTML += `<div class="float-end">
+    <label for="approve${key}">Approve</label>
+    <input type="checkbox" id="approve${key}" name="approve${key}" value="approve${key} class="ms-5">
+    
+    </div>`;
+  }
+
   
 }
 
