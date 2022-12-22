@@ -186,6 +186,13 @@ document.getElementById("reviewBtn").addEventListener("click", function() {
   </div>
 
   <div class="border px-2 py-2 mb-2">
+  <h5>Assessor Information</h5>
+  <div id="verifyassessorName">Assessor Name: ${masterFieldsVerify.assessorName}</div>
+  <div id="verifyassessorPhone">Assessor Phone: ${masterFieldsVerify.assessorPhone}</div>
+  <div id="verifyassessorEmail">Assessor Email: ${masterFieldsVerify.assessorEmail}</div>
+  </div>
+
+  <div class="border px-2 py-2 mb-2">
   <h5>Commissioner Information</h5>
   <div id="verifycommissioner1Name">Commissioner 1 Name: ${masterFieldsVerify.commissioner1Name}</div>
   <div id="verifycommissioner2Name">Commissioner 2 Name: ${masterFieldsVerify.commissioner2Name}</div>
@@ -377,11 +384,16 @@ function downloadObjectAsJson(exportObj, exportName){
     downloadAnchorNode.remove();
 }
 
+
 // add an event listener to the id finalsubbtn that will download the object masterFieldsVerify as a json file
 document.getElementById("finalsubbtn").addEventListener("click", (e) => {
   downloadObjectAsJson(masterFieldsVerify, "masterFieldsVerify");
 }
 )
+
+
+
+
 
 
 
