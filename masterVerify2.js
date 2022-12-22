@@ -57,69 +57,82 @@ document.getElementById("previousDataModalBody").innerHTML = `
   
         <div class="border px-2 py-2 mb-2">
         <h5>County Information</h5>
-        <div>County Name: ${masterFields.countyName}</div>
         <div>County Code: ${masterFields.countyCode}</div>
-        <div>County Contact: ${masterFields.countyContact}</div>
-        <div>County Email: ${masterFields.countyEmail}</div>
-        <div>County Phone: ${masterFields.countyPhone}</div>
-        <div>County Fax: ${masterFields.countyFax}</div>
-        <div>County Address: ${masterFields.countyAddress}</div>
+        <div>County Name: ${masterFields.countyName}</div>
+        <div>County Street Address: ${masterFields.countyStreetAddress}</div>
         <div>County City: ${masterFields.countyCity}</div>
         <div>County State: ${masterFields.countyState}</div>
         <div>County Zip: ${masterFields.countyZip}</div>
         </div>
-       
+
         <div class="border px-2 py-2 mb-2">
-        <h5 class="mt-2">Auditor Information</h5>
-        <div>Auditor Name: ${masterFields.audName}</div>
-        <div>Auditor Phone: ${masterFields.audPhone}</div>
-        <div>Auditor Contact Name: ${masterFields.audContName}</div>
-        <div>Auditor Contact Phone: ${masterFields.audContPhone}</div>
-        <div>Auditor Contact Email: ${masterFields.audContEmail}</div>
+        <h5>Auditor Information</h5>
+        <div>Auditor Name: ${masterFields.auditorName}</div>
+        <div>Auditor Phone: ${masterFields.auditorPhone}</div>
+        <div>Auditor Email: ${masterFields.auditorEmail}</div>
         </div>
 
-      <div class="border px-2 py-2 mb-2">
-        <h5 class="mt-2">Treasurer Information</h5>
-        <div>Treasurer Name: ${masterFields.treasName}</div>
-        <div>Treasurer Phone: ${masterFields.treasPhone}</div>
-        <div>Treasurer Email: ${masterFields.treasEmail}</div>
-        </div>
-     
         <div class="border px-2 py-2 mb-2">
-        <h5 class="mt-2">County Attorney Information</h5>
-            
-        <div>County Attorney: ${masterFields.countAtty}</div>
-        <div>County Attorney Phone: ${masterFields.countAttyPhone}</div>
+        <h5>Treasurer Information</h5>
+        <div>Treasurer Name: ${masterFields.treasurerName}</div>
+        <div>Treasurer Phone: ${masterFields.treasurerPhone}</div>
+        <div>Treasurer Email: ${masterFields.treasurerEmail}</div>
         </div>
-       
+
         <div class="border px-2 py-2 mb-2">
-        <h5 class="mt-2">Assessor Information</h5>
-        <div>Assessor: ${masterFields.assessor}</div>
+        <h5>Attorney Information</h5>
+        <div>Attorney Name: ${masterFields.attorneyName}</div>
+        <div>Attorney Phone: ${masterFields.attorneyPhone}</div>
+        <div>Attorney Email: ${masterFields.attorneyEmail}</div>
+        </div>
+
+        <div class="border px-2 py-2 mb-2">
+        <h5>Assessor Information</h5>
+        <div>Assessor Name: ${masterFields.assessorName}</div>
         <div>Assessor Phone: ${masterFields.assessorPhone}</div>
-        </div>
-      
-        <div class="border px-2 py-2 mb-2">
-        <h5 class="mt-2">County Clerk Information</h5>
-        <div>County Clerk: ${masterFields.countyClerk}</div>
-        <div>County Clerk Phone: ${masterFields.countyClerkPhone}</div>
-        </div>
-     
-        <div class="border px-2 py-2 mb-2">
-        <h5 class="mt-2">Commissioner Information</h5>
-        <div>Commissioner 1: ${masterFields.commiss1}</div>
-        <div>Commissioner 2: ${masterFields.commiss2}</div>
-        <div>Commissioner 3: ${masterFields.commiss3}</div>
-        <div>Commissioner Phone: ${masterFields.commissionPhone}</div>
+        <div>Assessor Email: ${masterFields.assessorEmail}</div>
         </div>
 
         <div class="border px-2 py-2 mb-2">
-        <h5 class="mt-2">Reminder Email</h5>
-        <div>Reminder Email: ${masterFields.remindEmail}</div>
+        <h5>Commissioner Information</h5>
+        <div>Commissioner 1 Name: ${masterFields.commissioner1Name}</div>
+        <div>Commissioner 2 Name: ${masterFields.commissioner2Name}</div>
+        <div>Commissioner 3 Name: ${masterFields.commissioner3Name}</div>
+        <div>Commissioner Phone: ${masterFields.commissionerPhone}</div>
         </div>
 
         <div class="border px-2 py-2 mb-2">
-        <h5 class="mt-2">Document Email</h5>
-        <div>Document Email: ${masterFields.docEmail}</div>
+        <h5>Court House Information</h5>
+        <div>Court House Name: ${masterFields.courtHouseName}</div>
+        <div>Court Location: ${masterFields.courtLocation}</div>
+        <div>Presiding Judge: ${masterFields.presidingJudge}</div>
+        <div>Presiding Judge Phone: ${masterFields.presidingJudgePhone}</div>
         </div>
 
-        `
+        <div class="border px-2 py-2 mb-2">
+        <h5>Newspaper 1 Information</h5>
+        <div>Newspaper 1 Name: ${masterFields.newspaper1Name}</div>
+        <div>Newspaper 1 Contact: ${masterFields.newspaper1Contact}</div>
+        <div>Newspaper 1 Phone: ${masterFields.newspaper1Phone}</div>
+        <div>Newspaper 1 Ad Format: ${masterFields.newspaper1AdFormat}</div>
+        <div>Newspaper 1 Lead Time: ${masterFields.newspaper1LeadTime}</div>
+        <div>Newspaper 1 Day Ad Runs: ${masterFields.newspaper1DayAdRuns}</div>
+        <div>Newspaper 1 URL: ${masterFields.newspaper1URL}</div>
+        </div>
+
+        <div class="border px-2 py-2 mb-2">
+        <h5>Newspaper 2 Information</h5>
+        <div>Newspaper 2 Name: ${masterFields.newspaper2Name}</div>
+        <div>Newspaper 2 Contact: ${masterFields.newspaper2Contact}</div>
+        <div>Newspaper 2 Phone: ${masterFields.newspaper2Phone}</div>
+        <div>Newspaper 2 Ad Format: ${masterFields.newspaper2AdFormat}</div>
+        <div>Newspaper 2 Lead Time: ${masterFields.newspaper2LeadTime}</div>
+        <div>Newspaper 2 Day Ad Runs: ${masterFields.newspaper2DayAdRuns}</div>
+        <div>Newspaper 2 URL: ${masterFields.newspaper2URL}</div>
+        </div>
+
+`
+
+
+       
+        
