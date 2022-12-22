@@ -52,7 +52,7 @@ for (let key in masterFields) {
 
 
 
-
+// previous data modal filler //
 document.getElementById("previousDataModalBody").innerHTML = `
   
         <div class="border px-2 py-2 mb-2">
@@ -132,6 +132,130 @@ document.getElementById("previousDataModalBody").innerHTML = `
         </div>
 
 `
+
+
+let masterFieldsVerify = {}
+
+// add an event listener to the button with the id of "reviewBtn" that will set the masterFieldsVerify object to the values of the dom elements with the same id as the key
+
+document.getElementById("reviewBtn").addEventListener("click", function() {
+  for (let key in masterFields) {
+    if (document.getElementById(key)) {
+      masterFieldsVerify[key] = document.getElementById(key).value
+    }
+  }
+  console.log(masterFieldsVerify)
+
+  // add the values of the masterFieldsVerify object to the dom element id "reviewModal" //
+  document.getElementById("reviewModal").innerHTML = `
+  
+  <div class="border px-2 py-2 mb-2">
+  <h5>County Information</h5>
+  <div id="verifycountyCode">County Code: ${masterFieldsVerify.countyCode}</div>
+  <div id="verifycountyName">County Name: ${masterFieldsVerify.countyName}</div>
+  <div id="verifycountyStreetAddress">County Street Address: ${masterFieldsVerify.countyStreetAddress}</div>
+  <div id="verifycountyCity">County City: ${masterFieldsVerify.countyCity}</div>
+  <div id="verifycountyState">County State: ${masterFieldsVerify.countyState}</div>
+  <div id="verifycountyZip">County Zip: ${masterFieldsVerify.countyZip}</div>
+  </div>
+
+  <div class="border px-2 py-2 mb-2">
+  <h5>Auditor Information</h5>
+  <div id="verifyauditorName">Auditor Name: ${masterFieldsVerify.auditorName}</div>
+  <div id="verifyauditorPhone">Auditor Phone: ${masterFieldsVerify.auditorPhone}</div>
+  <div id="verifyauditorEmail">Auditor Email: ${masterFieldsVerify.auditorEmail}</div>
+  </div>
+
+  <div class="border px-2 py-2 mb-2">
+  <h5>Treasurer Information</h5>
+  <div id="verifytreasurerName">Treasurer Name: ${masterFieldsVerify.treasurerName}</div>
+  <div id="verifytreasurerPhone">Treasurer Phone: ${masterFieldsVerify.treasurerPhone}</div>
+  <div id="verifytreasurerEmail">Treasurer Email: ${masterFieldsVerify.treasurerEmail}</div>
+  </div>
+
+  <div class="border px-2 py-2 mb-2">
+  <h5>Attorney Information</h5>
+  <div id="verifyattorneyName">Attorney Name: ${masterFieldsVerify.attorneyName}</div>
+  <div id="verifyattorneyPhone">Attorney Phone: ${masterFieldsVerify.attorneyPhone}</div>
+  <div id="verifyattorneyEmail">Attorney Email: ${masterFieldsVerify.attorneyEmail}</div>
+  </div>
+
+  <div class="border px-2 py-2 mb-2">
+  <h5>Commissioner Information</h5>
+  <div id="verifycommissioner1Name">Commissioner 1 Name: ${masterFieldsVerify.commissioner1Name}</div>
+  <div id="verifycommissioner2Name">Commissioner 2 Name: ${masterFieldsVerify.commissioner2Name}</div>
+  <div id="verifycommissioner3Name">Commissioner 3 Name: ${masterFieldsVerify.commissioner3Name}</div>
+  <div id="verifycommissionerPhone">Commissioner Phone: ${masterFieldsVerify.commissionerPhone}</div>
+  </div>
+
+  <div class="border px-2 py-2 mb-2">
+  <h5>Court House Information</h5>
+  <div id="verifycourtHouseName">Court House Name: ${masterFieldsVerify.courtHouseName}</div>
+  <div id="verifycourtLocation>Presiding Judge: ${masterFieldsVerify.presidingJudge}</div>
+  <did id="verifypresidingJudgePhone">Presiding Judge Phone: ${masterFieldsVerify.presidingJudgePhone}</did>
+  </div>
+
+  <div class="border px-2 py-2 mb-2">
+  <h5>Newspaper 1 Information</h5>
+  <div id="verifynewspaper1Name">Newspaper 1 Name: ${masterFieldsVerify.newspaper1Name}</div>
+  <div id="verifynewspaper1Contact">Newspaper 1 Contact: ${masterFieldsVerify.newspaper1Contact}</div>
+  <div id="verifynewspaper1Phone">Newspaper 1 Phone: ${masterFieldsVerify.newspaper1Phone}</div>
+  <div id="verifynewspaper1AdFormat">Newspaper 1 Ad Format: ${masterFieldsVerify.newspaper1AdFormat}</div>
+  <div id="verifynewspaper1LeadTime">Newspaper 1 Lead Time: ${masterFieldsVerify.newspaper1LeadTime}</div>
+  <div id="verifynewspaper1DayAdRuns">Newspaper 1 Day Ad Runs: ${masterFieldsVerify.newspaper1DayAdRuns}</div>
+  <div id="verifynewspaper1URL">Newspaper 1 URL: ${masterFieldsVerify.newspaper1URL}</div>
+  </div>
+
+  <div class="border px-2 py-2 mb-2">
+  <h5>Newspaper 2 Information</h5>
+  <div id="verifyewspaper2Name">Newspaper 2 Name: ${masterFieldsVerify.newspaper2Name}</div>
+  <div id="verifynewspaper2Contact">Newspaper 2 Contact: ${masterFieldsVerify.newspaper2Contact}</div>
+  <div id="verifynewspaper2Phone">Newspaper 2 Phone: ${masterFieldsVerify.newspaper2Phone}</div>
+  <div id="verifynewspaper2AdFormat">Newspaper 2 Ad Format: ${masterFieldsVerify.newspaper2AdFormat}</div>
+  <div id="verifynewspaper2LeadTime">Newspaper 2 Lead Time: ${masterFieldsVerify.newspaper2LeadTime}</div>
+  <div id="verifynewspaper2DayAdRuns">Newspaper 2 Day Ad Runs: ${masterFieldsVerify.newspaper2DayAdRuns}</div>
+  <div id="verifynewspaper2URL">Newspaper 2 URL: ${masterFieldsVerify.newspaper2URL}</div>
+  </div>
+  `;
+
+// compare the two objects masterFields and masterFieldsVerify and return the differences
+function compareObjects(obj1, obj2) {
+  let differences = {};
+  for (let key in obj1) {
+    if (obj1[key] !== obj2[key]) {
+      differences[key] = obj2[key];
+    }
+  }
+  // take all values from different and highlight the dom element which is the id of verify + key
+  for (let key in differences) {
+    let element = document.getElementById(`verify${key}`);
+    element.style.backgroundColor = "yellow";
+  }
+  
+}
+
+
+
+
+
+
+
+compareObjects(masterFields, masterFieldsVerify);
+
+
+
+
+
+
+}
+
+
+
+)
+
+
+
+
 
 
        
