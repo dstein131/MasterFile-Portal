@@ -278,17 +278,22 @@
 
 
                             <div class="tab-pane fade" id="pills-sale" role="tabpanel" aria-labelledby="pills-sale-tab">
-                                Sale Info</div>
+                                Sale Info
+                            </div>
 
                             <div class="tab-pane fade" id="pills-website" role="tabpanel"
-                                aria-labelledby="pills-website-tab">Website Info</div>
+                                aria-labelledby="pills-website-tab">Website Info
+                            </div>
+
                             <!-- review -->
                             <div class="tab-pane fade" id="pills-review" role="tabpanel"
                                 aria-labelledby="pills-review-tab">
-                                <button type="button" id="reviewBtn" class="btn btn-primary mx-5 mb-3"
-                                    data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                    Review
-                                </button>
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <button type="button" id="reviewBtn" class="btn btn-primary mx-5 mb-3"
+                                        data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        Review
+                                    </button>
+                                </div>
                                 <div id="padCont" style="display: none">
                                     <form class="signature-pad-form" action="#" method="POST" id="signForm">
                                         <p><b>Signature</b></p>
@@ -296,8 +301,16 @@
                                         <p><a href="#" class="clear-button">Clear</a></p>
                                         <button id="signSub" class="submit-button" type="submit">Save Signature</button>
                                     </form>
-                                 </div>
+                                </div>
+                                <!-- submit button -->
+                                <div class="d-flex justify-content-center">
+                                    <button type="button" id="finalsubbtn" class="btn btn-success mx-5 mb-3"
+                                        style="display: none">
+                                        Submit
+                                    </button>
 
+
+                                </div>
                             </div>
 
                             <div class="tab-pane fade" id="pills-newspaper" role="tabpanel"
@@ -329,7 +342,8 @@
                                             placeholder="Newspaper 1 Lead Time">
                                     </div>
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-                                        <label for="newspaper1DayAdRuns"><small>Newspaper 1 Day Ad Runs</small></label>
+                                        <label for="newspaper1DayAdRuns"><small>Newspaper 1 Day Ad
+                                                Runs</small></label>
                                         <input type="text" class="form-control" id="newspaper1DayAdRuns"
                                             placeholder="Newspaper 1 Day Ad Runs">
                                     </div>
@@ -364,7 +378,8 @@
                                             placeholder="Newspaper 2 Lead Time">
                                     </div>
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-                                        <label for="newspaper2DayAdRuns"><small>Newspaper 2 Day Ad Runs</small></label>
+                                        <label for="newspaper2DayAdRuns"><small>Newspaper 2 Day Ad
+                                                Runs</small></label>
                                         <input type="text" class="form-control" id="newspaper2DayAdRuns"
                                             placeholder="Newspaper 2 Day Ad Runs">
                                     </div>
@@ -382,68 +397,69 @@
 
 
 
+
+
+
                         </div>
-
-
                     </div>
                 </div>
             </div>
-        </div>
 
 
-        <!-- review info modal -->
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Please Review the Information</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body" id="reviewModal">
-                        ...
-                    </div>
-                    <div class="modal-footer">
-                        <!-- print button -->
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="approveBtn"
-                            disabled>Approve</button>
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
-        <!-- previous data modal -->
-        <!-- Modal -->
-        <div class="modal fade" id="previousDataModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Previous Data</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body" id="previousDataModalBody">
-                        ...Ooops, something went wrong. Apologies for the inconvenience.
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+            <!-- review info modal -->
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Please Review the Information</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body" id="reviewModal">
+                            ...
+                        </div>
+                        <div class="modal-footer">
+                            <!-- print button -->
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="approveBtn"
+                                disabled>Approve</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+
+
+
+            <!-- previous data modal -->
+            <!-- Modal -->
+            <div class="modal fade" id="previousDataModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Previous Data</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body" id="previousDataModalBody">
+                            ...Ooops, something went wrong. Apologies for the inconvenience.
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
 
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-            crossorigin="anonymous"></script>
-        <script src="/masterVerify2.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+                crossorigin="anonymous"></script>
+            <script src="/masterVerify2.js"></script>
     </body>
 
 </html>

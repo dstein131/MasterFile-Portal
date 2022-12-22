@@ -47,6 +47,7 @@ let masterFields = {
 document.getElementById("approveBtn").disabled = true
 
 
+
 // set the dom objects matching the masterFields object keys to the values of the the dom element named the same as the key
 for (let key in masterFields) {
   if (document.getElementById(key)) {
@@ -270,7 +271,7 @@ function compareObjects(obj1, obj2) {
   if (checkboxes.length === 0) {
     submitButton.disabled = false;
   }
-  
+
   
 
 
@@ -286,6 +287,11 @@ document.getElementById("approveBtn").addEventListener("click", (e) => {
 
 
 
+
+// add an event listener to the button signSub that shows the dom element finalsubbutn
+document.getElementById("signSub").addEventListener("click", (e) => {
+  document.getElementById("finalsubbtn").style.display = "block";
+});
 
 
 
@@ -359,6 +365,23 @@ canvas.addEventListener('pointermove', handlePointerMove, {passive: true});
   })
 
 
+
+  // create a function that will take the object masterFieldsVerify, convert it to a json object then download it
+function downloadObjectAsJson(exportObj, exportName){
+    var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(exportObj));
+    var downloadAnchorNode = document.createElement('a');
+    downloadAnchorNode.setAttribute("href",     dataStr);
+    downloadAnchorNode.setAttribute("download", exportName + ".json");
+    document.body.appendChild(downloadAnchorNode); // required for firefox
+    downloadAnchorNode.click();
+    downloadAnchorNode.remove();
+}
+
+// add an event listener to the id finalsubbtn that will download the object masterFieldsVerify as a json file
+document.getElementById("finalsubbtn").addEventListener("click", (e) => {
+  downloadObjectAsJson(masterFieldsVerify, "masterFieldsVerify");
+}
+)
 
 
 
