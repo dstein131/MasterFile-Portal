@@ -367,7 +367,8 @@ document.getElementById("reviewBtn").addEventListener("click", function() {
     // add the object masterFieldsVerify to the local storage
     localStorage.setItem("masterFieldsVerify", JSON.stringify(masterFieldsVerify));
 
-    // add the values of the object masterFieldsVerify to the dom id reviewModal
+  
+
     document.getElementById("reviewModal").innerHTML = `
   
     <div class="border px-2 py-2 mb-2">
@@ -442,6 +443,8 @@ document.getElementById("reviewBtn").addEventListener("click", function() {
         </div>
         `
 
+      
+
    
 
 
@@ -450,7 +453,6 @@ document.getElementById("reviewBtn").addEventListener("click", function() {
 
     // add the object masterFieldsVerify to the local storage
     localStorage.setItem("masterFieldsVerify", JSON.stringify(masterFieldsVerify));
-
 
 
 
@@ -477,11 +479,6 @@ function downloadObjectAsJson(exportObj, exportName) {
 
 // download the object masterFieldsVerify as a json file
 function downloadMasterFieldsVerify() {
-    downloadObjectAsJson(masterFieldsVerify, "masterFieldsVerify");
-}
-
-// download the object masterFieldsVerify as an excel file
-function downloadMasterFieldsVerifyExcel() {
     downloadObjectAsJson(masterFieldsVerify, "masterFieldsVerify");
 }
 
