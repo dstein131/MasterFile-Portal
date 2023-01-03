@@ -38,14 +38,16 @@ let masterFields = {
   presidingJudgeLastName: "Smith",
   presidingJudgePhone: "563-422-1234",
   newspaper1Name: "West Union Times",
-  newspaper1Contact: "Zachary Smith",
+  newspaper1ContactFirstName: "Zach",
+  newspaper1ContactLastName: "Wylde", 
   newspaper1Phone: "563-422-1234",
   newspaper1AdFormat: "Full Page",
   newspaper1LeadTime: "2 Weeks",
   newspaper1DayAdRuns: "Monday",
   newspaper1URL: "www.westuniontimes.com",
   newspaper2Name: "Elkader Register",
-  newspaper2Contact: "Zachary Smith",
+  newspaper2ContactFirstName: "Zachary",
+  newspaper2ContactLastName: "Smith",
   newspaper2Phone: "563-422-1234",
   newspaper2AdFormat: "Full Page",
   newspaper2LeadTime: "2 Weeks",
@@ -65,7 +67,7 @@ let masterFields = {
   addcont2title: null,
   addcont2phone: null,
   addcont2email: null,
-  
+
   
 }
 
