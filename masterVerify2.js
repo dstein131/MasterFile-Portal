@@ -62,11 +62,11 @@ let masterFields = {
   addcont1title: "Deputy",
   addcont1phone: "563-422-1234",
   addcont1email: "depjoe@gmail.com",
-  addcont2firstname: null,
-  addcont2lastname: null,
-  addcont2title: null,
-  addcont2phone: null,
-  addcont2email: null,
+  addcont2firstname: "Jane",
+  addcont2lastname: "Doe",
+  addcont2title: "Sheriff",
+  addcont2phone: "563-422-1234",
+  addcont2email: "jdoe@hmail.biz",
 
   
 }
@@ -321,7 +321,7 @@ document.getElementById("reviewBtn").addEventListener("click", function() {
   <div class="border px-2 py-2 mb-2">
   <h5>Newspaper 1 Information</h5>
   <div id="verifynewspaper1Name">Newspaper 1 Name: ${masterFieldsVerify.newspaper1Name}</div>
-  <div id="verifynewspaper1ContactFirstName">Newspaper 1 Contact First Name: ${masterFieldsVerify.newspaper1ContactLastName}</div>
+  <div id="verifynewspaper1ContactFirstName">Newspaper 1 Contact First Name: ${masterFieldsVerify.newspaper1ContactFirstName}</div>
   <div id="verifynewspaper1ContactLastName">Newspaper 1 Contact Last Name: ${masterFieldsVerify.newspaper1ContactLastName}</div>
   <div id="verifynewspaper1Phone">Newspaper 1 Phone: ${masterFieldsVerify.newspaper1Phone}</div>
   <div id="verifynewspaper1AdFormat">Newspaper 1 Ad Format: ${masterFieldsVerify.newspaper1AdFormat}</div>
@@ -341,6 +341,20 @@ document.getElementById("reviewBtn").addEventListener("click", function() {
   <div id="verifynewspaper2DayAdRuns">Newspaper 2 Day Ad Runs: ${masterFieldsVerify.newspaper2DayAdRuns}</div>
   <div id="verifynewspaper2URL">Newspaper 2 URL: ${masterFieldsVerify.newspaper2URL}</div>
   </div>
+
+  <div class="border px-2 py-2 mb-2">
+  <h5>Additional Contact Information</h5>
+  <div id="verifyaddcont1firstname">Additional Contact 1 First Name: ${masterFieldsVerify.addcont1firstname}</div>
+  <div id="verifyaddcont1lastname">Additional Contact 1 Last Name: ${masterFieldsVerify.addcont1lastname}</div>
+  <div id="verifyaddcont1title">Additional Contact 1 Title: ${masterFieldsVerify.addcont1title}</div>
+  <div id="verifyaddcont1phone">Additional Contact 1 Phone: ${masterFieldsVerify.addcont1phone}</div>
+  <div id="verifyaddcont1email">Additional Contact 1 Email: ${masterFieldsVerify.addcont1email}</div>
+  <div id="verifyaddcont2firstname">Additional Contact 2 First Name: ${masterFieldsVerify.addcont2firstname}</div>
+  <div id="verifyaddcont2lastname">Additional Contact 2 Last Name: ${masterFieldsVerify.addcont2lastname}</div>
+  <div id="verifyaddcont2title">Additional Contact 2 Title: ${masterFieldsVerify.addcont2title}</div>
+  <div id="verifyaddcont2phone">Additional Contact 2 Phone: ${masterFieldsVerify.addcont2phone}</div>
+  <div id="verifyaddcont2email">Additional Contact 2 Email: ${masterFieldsVerify.addcont2email}</div>
+
   `;
 
 
