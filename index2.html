@@ -24,7 +24,7 @@
             </div>
 
             <div class="d-flex align-items-center justify-content-center flex-wrap flex-row">
-                <div class="card" style="width: 800px;" id="countyInfo">
+                <div class="card" style="width: 850px;" id="countyInfo">
                     <div class="card-header d-flex flex-row align-items-center justify-content-between">
                         <!-- buttons -->
                         <ul class="nav nav-pills btn-sm" id="pills-tab" role="tablist">
@@ -79,6 +79,11 @@
                                     data-bs-target="#pills-newspaper" type="button" role="tab"
                                     aria-controls="pills-newspaper" aria-selected="false">Newspaper</button>
                             </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-addcont-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-addcont" type="button" role="tab"
+                                    aria-controls="pills-addcont" aria-selected="false">Additional Contacts</button>
+                            </li>
                             <!-- <li class="nav-item" role="presentation">
                                 <button class="nav-link" id="pills-ftp-tab" data-bs-toggle="pill"
                                     data-bs-target="#pills-ftp" type="button" role="tab" aria-controls="pills-ftp"
@@ -92,14 +97,15 @@
                         </ul>
 
                         <!-- previous data modal button-->
-                        <button type="button" class="btn btn-sm btn-outline-info" id="predatamodalbut" data-bs-toggle="modal"
-                            data-bs-target="#previousDataModal">
+                        <button type="button" class="btn btn-sm btn-outline-info" id="predatamodalbut"
+                            data-bs-toggle="modal" data-bs-target="#previousDataModal">
                             Previous Data
                         </button>
-                 
-                      
+
+
                         <!-- clear button -->
-                        <button type="button" class="btn btn-sm btn-outline-danger ms-2" id="clearBtn" style="height: 52px">
+                        <button type="button" class="btn btn-sm btn-outline-danger ms-2" id="clearBtn"
+                            style="height: 52px">
                             Clear & Reset
                     </div>
                     <div class="card-body d-flex flex-wrap justify-content-around align-items-center"
@@ -254,12 +260,14 @@
                                 aria-labelledby="pills-commissioner-tab">
                                 <div class="d-flex flex-wrap justify-content-around align-items-center">
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-                                        <label for="commissioner1FirstName"><small>Commissioner 1 First Name</small></label>
+                                        <label for="commissioner1FirstName"><small>Commissioner 1 First
+                                                Name</small></label>
                                         <input type="text" class="form-control" id="commissioner1FirstName"
                                             placeholder="Commissioner 1 First Name">
                                     </div>
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-                                        <label for="commissioner1LastName"><small>Commissioner 1 Last Name</small></label>
+                                        <label for="commissioner1LastName"><small>Commissioner 1 Last
+                                                Name</small></label>
                                         <input type="text" class="form-control" id="commissioner1LastName"
                                             placeholder="Commissioner 1 Last Name">
                                     </div>
@@ -269,12 +277,14 @@
                                             placeholder="Commissioner 1 Phone">
                                     </div>
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-                                        <label for="commissioner2FirstName"><small>Commissioner 2 First Name</small></label>
+                                        <label for="commissioner2FirstName"><small>Commissioner 2 First
+                                                Name</small></label>
                                         <input type="text" class="form-control" id="commissioner2FirstName"
                                             placeholder="Commissioner 2 First Name">
                                     </div>
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-                                        <label for="commissioner2LastName"><small>Commissioner 2 Last Name</small></label>
+                                        <label for="commissioner2LastName"><small>Commissioner 2 Last
+                                                Name</small></label>
                                         <input type="text" class="form-control" id="commissioner2LastName"
                                             placeholder="Commissioner 2 Last Name">
                                     </div>
@@ -284,12 +294,14 @@
                                             placeholder="Commissioner 2 Phone">
                                     </div>
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-                                        <label for="commissioner2FirstName"><small>Commissioner 3 First Name</small></label>
+                                        <label for="commissioner2FirstName"><small>Commissioner 3 First
+                                                Name</small></label>
                                         <input type="text" class="form-control" id="commissioner3FirstName"
                                             placeholder="Commissioner 3 First Name">
                                     </div>
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-                                        <label for="commissioner2LastName"><small>Commissioner 3 Last Name</small></label>
+                                        <label for="commissioner2LastName"><small>Commissioner 3 Last
+                                                Name</small></label>
                                         <input type="text" class="form-control" id="commissioner3LastName"
                                             placeholder="Commissioner 3 Last Name">
                                     </div>
@@ -325,12 +337,14 @@
                                             placeholder="Court Location">
                                     </div>
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-                                        <label for="presidingJudgeFirstName"><small>Presiding Judge First Name</small></label>
+                                        <label for="presidingJudgeFirstName"><small>Presiding Judge First
+                                                Name</small></label>
                                         <input type="text" class="form-control" id="presidingJudgeFirstName"
                                             placeholder="Presiding Judge First Name">
                                     </div>
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-                                        <label for="presidingJudgeLastName"><small>Presiding Judge Last Name</small></label>
+                                        <label for="presidingJudgeLastName"><small>Presiding Judge Last
+                                                Name</small></label>
                                         <input type="text" class="form-control" id="presidingJudgeLastName"
                                             placeholder="Presiding Judge Last Name">
                                     </div>
@@ -348,13 +362,14 @@
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
                                         <label for="saleMethod"><small>Sale Method</small></label>
                                         <select id="saleMethod" class="form-control">
-                                            <option selected >Choose...</option>
+                                            <option selected>Choose...</option>
                                             <option value="Online">Online</option>
                                             <option value="Live">Live</option>
                                         </select>
                                     </div>
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-                                        <label for="salelocation" id="salelocationlabel"><small>Sale Location</small></label>
+                                        <label for="salelocation" id="salelocationlabel"><small>Sale
+                                                Location</small></label>
                                         <input type="text" class="form-control" id="salelocation"
                                             placeholder="Sale Location">
                                     </div>
@@ -363,27 +378,94 @@
                                         <label for="salestartdatetime"><small>Sale Start Date/Time</small></label>
                                         <input type="datetime-local" class="form-control" id="salestartdatetime"
                                             placeholder="Sale Start Date/Time">
-                                       
+
                                     </div>
-                                    <div class="form-group col-md-6 mx-2 my-2" id="enddatediv" style="width: 300px; display: none;">
-                                        <label for="saleenddatetime"><small>Sale End Date/Time (if online)</small></label>
+                                    <div class="form-group col-md-6 mx-2 my-2" id="enddatediv"
+                                        style="width: 300px; display: none;">
+                                        <label for="saleenddatetime"><small>Sale End Date/Time (if
+                                                online)</small></label>
                                         <input type="datetime-local" class="form-control" id="saleenddatetime"
                                             placeholder="Sale End Date/Time">
                                     </div>
-                                    <!-- online sale checkbox -->
-                                    
 
-                                    <!-- <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-                                        <label for="countyAttorneyEmail"><small>County Attorney Email</small></label>
-                                        <input type="text" class="form-control" id="attorneyEmail"
-                                            placeholder="County Attorney Email">
-                                    </div> -->
                                 </div>
                             </div>
 
                             <div class="tab-pane fade" id="pills-website" role="tabpanel"
                                 aria-labelledby="pills-website-tab">Website Info
                             </div>
+
+                            <div class="tab-pane fade" id="pills-addcont" role="tabpenel"
+                                aria-labelledby="pills-addcont-tab">
+
+                                <div class="d-flex flex-wrap justify-content-around align-items-center">
+                                    <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
+                                        <label for="addcont1firstname"><small>Additional Contact 1 First
+                                                Name</small></label>
+                                        <input type="text" class="form-control" id="addcont1firstname"
+                                            placeholder="Additional Contact 1 First Name">
+                                    </div>
+                                    <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
+                                        <label for="addcont1lastname"><small>Additional Contact 1 Last
+                                                Name</small></label>
+                                        <input type="text" class="form-control" id="addcont1lastname"
+                                            placeholder="Additional Contact 1 Last Name">
+                                    </div>
+                                    <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
+                                        <label for="addcont1title"><small>Additional Contact 1 Title</small></label>
+                                        <input type="text" class="form-control" id="addcont1title"
+                                            placeholder="Additional Contact 1 Title">
+                                    </div>
+                                        
+
+                                    <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
+                                        <label for="addcont1phone"><small>Additional Contact 1 Phone</small></label>
+                                        <input type="text" class="form-control" id="addcont1phone"
+                                            placeholder="Additional Contact 1 Phone">
+                                    </div>
+                                    <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
+                                        <label for="addcont1email"><small>Additional Contact 1 Email</small></label>
+                                        <input type="text" class="form-control" id="addcont1email"
+                                            placeholder="Additional Contact 1 Email">
+                                            
+                                    </div>
+                                    <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
+                                        <label for="addcont2firstname"><small>Additional Contact 2 First
+                                                Name</small></label>
+                                        <input type="text" class="form-control" id="addcont2firstname"
+                                            placeholder="Additional Contact 2 First Name">
+                                    </div>
+                                    <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
+                                        <label for="addcont2lastname"><small>Additional Contact 2 Last
+                                                Name</small></label>
+                                        <input type="text" class="form-control" id="addcont2lastname"
+                                            placeholder="Additional Contact 2 Last Name">
+                                    </div>
+                                    <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
+                                        <label for="addcont2title"><small>Additional Contact 2 Title</small></label>
+                                        <input type="text" class="form-control" id="addcont2title"
+                                            placeholder="Additional Contact 2 Title">
+                                    </div>
+                                        
+
+                                    <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
+                                        <label for="addcont2phone"><small>Additional Contact 2 Phone</small></label>
+                                        <input type="text" class="form-control" id="addcont2phone"
+                                            placeholder="Additional Contact 2 Phone">
+                                    </div>
+                                    <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
+                                        <label for="addcont2email"><small>Additional Contact 2 Email</small></label>
+                                        <input type="text" class="form-control" id="addcont2email"
+                                            placeholder="Additional Contact 2 Email">
+                                            
+                                    </div>
+                                </div>
+
+
+
+
+                            </div>
+
 
                             <!-- review -->
                             <div class="tab-pane fade" id="pills-review" role="tabpanel"

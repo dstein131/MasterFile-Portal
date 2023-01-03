@@ -55,6 +55,17 @@ let masterFields = {
   salestartdatetime: "2023-01-01T12:43:44",
   saleenddatetime: "2023-05-01T14:04:03",
   salelocation: "200 S 3rd St, West Union, IA 52175",
+  addcont1firstname: "John",
+  addcont1lastname: "Doe",
+  addcont1title: "Deputy",
+  addcont1phone: "563-422-1234",
+  addcont1email: "depjoe@gmail.com",
+  addcont2firstname: null,
+  addcont2lastname: null,
+  addcont2title: null,
+  addcont2phone: null,
+  addcont2email: null,
+  
   
 }
 
@@ -189,6 +200,20 @@ document.getElementById("previousDataModalBody").innerHTML = `
         <div>Newspaper 2 Day Ad Runs: ${masterFields.newspaper2DayAdRuns}</div>
         <div>Newspaper 2 URL: ${masterFields.newspaper2URL}</div>
         </div>
+
+        <div class="border px-2 py-2 mb-2">
+        <h5>Additional Contact Info</h5>
+        <div>Additional Contact 1 First Name: ${masterFields.addcont1firstname}</div>
+        <div>Additional Contact 1 Last Name: ${masterFields.addcont1lastname}</div>
+        <div>Additional Contact 1 Title: ${masterFields.addcont1title}</div>
+        <div>Additional Contact 1 Phone: ${masterFields.addcont1phone}</div>
+        <div>Additional Contact 1 Email: ${masterFields.addcont1email}</div>
+        <div>Additional Contact 2 First Name: ${masterFields.addcont2firstname}</div>
+        <div>Additional Contact 2 Last Name: ${masterFields.addcont2lastname}</div>
+        <div>Additional Contact 2 Title: ${masterFields.addcont2title}</div>
+        <div>Additional Contact 2 Phone: ${masterFields.addcont2phone}</div>
+        <div>Additional Contact 2 Email: ${masterFields.addcont2email}</div>
+ 
 
 `
 
