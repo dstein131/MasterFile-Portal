@@ -6,25 +6,36 @@ let masterFields = {
   countyCity: "West Union",
   countyState: "IA",
   countyZip: "52175",
-  auditorName: "Jill Smith",
+  auditorFirstName: "Jill",
+  auditorLastName: "Smith",
   auditorPhone: "563-422-1234",
   auditorEmail: "jsmith@gmail.com",
-  treasurerName: "John Doe",
+  treasurerFirstName: "John",
+  treasurerLastName: "Doe",
   treasurerPhone: "563-422-1234",
   treasurerEmail: "jdoe@gmail.com",
-  attorneyName: "Bobcat Jones",
+  attorneyFirstName: "Bobcat",
+  attorneyLastName: "Jones",
   attorneyPhone: "563-422-1234",
   attorneyEmail: "Bjones@gmail.com",
-  assessorName: "Mike Davis",
+  assessorFirstName: "Mike",
+  assessorLastName: "Davis",
   assessorPhone: "563-422-1234",
   assessorEmail: "mdavis@gmail.com",
-  commissioner1Name: "Michael Johnson",
-  commissioner2Name: "Chris Brown",
-  commissioner3Name: "Brad Johnson",
-  commissionerPhone: "563-422-1234",
+  commissioner1FirstName: "Michael",
+  commissioner1LastName: "Johnson",
+  commissioner1Phone: "563-422-1234",
+  commissioner2FirstName: "Griffin",
+  commissioner2LastName: "Anderson",
+  commissioner2Phone: "563-422-1234",
+  commissioner3FirstName: "David",
+  commissioner3LastName: "Reed",
+  commissioner3Phone: "563-422-1234",
   courtHouseName: "Adams County Courthouse",
   courtLocation: "200 S 3rd St, West Union, IA 52175",
-  presidingJudge: "Judge Smith",
+  courtType: "Circuit",
+  presidingJudgeFirstName: "Albert",
+  presidingJudgeLastName: "Smith",
   presidingJudgePhone: "563-422-1234",
   newspaper1Name: "West Union Times",
   newspaper1Contact: "Zachary Smith",
@@ -40,6 +51,9 @@ let masterFields = {
   newspaper2LeadTime: "2 Weeks",
   newspaper2DayAdRuns: "Tuesday",
   newspaper2URL: "www.elkaderregister.com",
+  saleMethod: "Online",
+  salestartdatetime: "2023-01-01T12:43:44",
+  saleenddatetime: "2023-05-01T14:04:03"
   
 }
 
@@ -55,7 +69,12 @@ for (let key in masterFields) {
   }
 }
 
+// set the sales start date and time to the value of the masterFields object
+// document.getElementById("salestartdatetime").value = masterFields.salestartedatetime
 
+
+let saleStart = new Date(masterFields.salestartdatetime).toLocaleString(('en-US'))
+let saleEnd = new Date(masterFields.saleenddatetime).toLocaleString(('en-US'))
 
 // previous data modal filler //
 document.getElementById("previousDataModalBody").innerHTML = `
@@ -72,46 +91,64 @@ document.getElementById("previousDataModalBody").innerHTML = `
 
         <div class="border px-2 py-2 mb-2">
         <h5>Auditor Information</h5>
-        <div>Auditor Name: ${masterFields.auditorName}</div>
+        <div>Auditor First Name: ${masterFields.auditorFirstName}</div>
+        <div>Auditor Last Name: ${masterFields.auditorLastName}</div>
         <div>Auditor Phone: ${masterFields.auditorPhone}</div>
         <div>Auditor Email: ${masterFields.auditorEmail}</div>
         </div>
 
         <div class="border px-2 py-2 mb-2">
         <h5>Treasurer Information</h5>
-        <div>Treasurer Name: ${masterFields.treasurerName}</div>
+        <div>Treasurer First Name: ${masterFields.treasurerFirstName}</div>
+        <div>Treasurer Last Name: ${masterFields.treasurerLastName}</div>
         <div>Treasurer Phone: ${masterFields.treasurerPhone}</div>
         <div>Treasurer Email: ${masterFields.treasurerEmail}</div>
         </div>
 
         <div class="border px-2 py-2 mb-2">
         <h5>Attorney Information</h5>
-        <div>Attorney Name: ${masterFields.attorneyName}</div>
+        <div>Attorney First Name: ${masterFields.attorneyFirstName}</div>
+        <div>Attorney Last Name: ${masterFields.attorneyLastName}</div>
         <div>Attorney Phone: ${masterFields.attorneyPhone}</div>
         <div>Attorney Email: ${masterFields.attorneyEmail}</div>
         </div>
 
         <div class="border px-2 py-2 mb-2">
         <h5>Assessor Information</h5>
-        <div>Assessor Name: ${masterFields.assessorName}</div>
+        <div>Assessor First Name: ${masterFields.assessorFirstName}</div>
+        <div>Assessor Last Name: ${masterFields.assessorLastName}</div>
         <div>Assessor Phone: ${masterFields.assessorPhone}</div>
         <div>Assessor Email: ${masterFields.assessorEmail}</div>
         </div>
 
         <div class="border px-2 py-2 mb-2">
         <h5>Commissioner Information</h5>
-        <div>Commissioner 1 Name: ${masterFields.commissioner1Name}</div>
-        <div>Commissioner 2 Name: ${masterFields.commissioner2Name}</div>
-        <div>Commissioner 3 Name: ${masterFields.commissioner3Name}</div>
-        <div>Commissioner Phone: ${masterFields.commissionerPhone}</div>
+        <div>Commissioner 1 First Name: ${masterFields.commissioner1FirstName}</div>
+        <div>Commissioner 1 Last Name: ${masterFields.commissioner1LastName}</div>
+        <div>Commissioner 1 Phone: ${masterFields.commissioner1Phone}</div>
+        <div>Commissioner 2 First Name: ${masterFields.commissioner2FirstName}</div>
+        <div>Commissioner 2 Last Name: ${masterFields.commissioner2LastName}</div>
+        <div>Commissioner 2 Phone: ${masterFields.commissioner2Phone}</div>
+        <div>Commissioner 3 First Name: ${masterFields.commissioner3FirstName}</div>
+        <div>Commissioner 3 Last Name: ${masterFields.commissioner3LastName}</div>
+        <div>Commissioner 3 Phone: ${masterFields.commissioner3Phone}</div>
         </div>
 
         <div class="border px-2 py-2 mb-2">
         <h5>Court House Information</h5>
         <div>Court House Name: ${masterFields.courtHouseName}</div>
+        <div>Court Type: ${masterFields.courtType}</div>
         <div>Court Location: ${masterFields.courtLocation}</div>
-        <div>Presiding Judge: ${masterFields.presidingJudge}</div>
+        <div>Presiding Judge First Name: ${masterFields.presidingJudgeFirstName}</div>
+        <div>Presiding Judge Last Name: ${masterFields.presidingJudgeLastName}</div>
         <div>Presiding Judge Phone: ${masterFields.presidingJudgePhone}</div>
+        </div>
+
+        <div class="border px-2 py-2 mb-2">
+        <h5>Sale Information</h5>
+        <div>Sale Method: ${masterFields.saleMethod}</div>
+        <div>Sale Start Date: ${masterFields.salestartdatetime}</div>
+        <div>Sale End Date: ${masterFields.saleenddatetime}</div>
         </div>
 
         <div class="border px-2 py-2 mb-2">
@@ -151,6 +188,12 @@ document.getElementById("reviewBtn").addEventListener("click", function() {
   }
   console.log(masterFieldsVerify)
 
+//  let saleStart = new Date(masterFieldsVerify.salestartdatetime).toLocaleString(('en-US'))
+//   let saleEnd = new Date(masterFieldsVerify.saleenddatetime).toLocaleString(('en-US'))
+
+
+
+
   // add the values of the masterFieldsVerify object to the dom element id "reviewModal" //
   document.getElementById("reviewModal").innerHTML = `
   
@@ -166,45 +209,64 @@ document.getElementById("reviewBtn").addEventListener("click", function() {
 
   <div class="border px-2 py-2 mb-2">
   <h5>Auditor Information</h5>
-  <div id="verifyauditorName">Auditor Name: ${masterFieldsVerify.auditorName}</div>
+  <div id="verifyauditorFirstName">Auditor Name: ${masterFieldsVerify.auditorFirstName}</div>
+  <div id="verifyauditorLastName">Auditor Name: ${masterFieldsVerify.auditorLastName}</div>
   <div id="verifyauditorPhone">Auditor Phone: ${masterFieldsVerify.auditorPhone}</div>
   <div id="verifyauditorEmail">Auditor Email: ${masterFieldsVerify.auditorEmail}</div>
   </div>
 
   <div class="border px-2 py-2 mb-2">
   <h5>Treasurer Information</h5>
-  <div id="verifytreasurerName">Treasurer Name: ${masterFieldsVerify.treasurerName}</div>
+  <div id="verifytreasurerFirstName">Treasurer Name: ${masterFieldsVerify.treasurerFirstName}</div>
+  <div id="verifytreasurerLastName">Treasurer Name: ${masterFieldsVerify.treasurerLastName}</div>
   <div id="verifytreasurerPhone">Treasurer Phone: ${masterFieldsVerify.treasurerPhone}</div>
   <div id="verifytreasurerEmail">Treasurer Email: ${masterFieldsVerify.treasurerEmail}</div>
   </div>
 
   <div class="border px-2 py-2 mb-2">
   <h5>Attorney Information</h5>
-  <div id="verifyattorneyName">Attorney Name: ${masterFieldsVerify.attorneyName}</div>
+  <div id="verifyattorneyFirstName">Attorney Name: ${masterFieldsVerify.attorneyFirstName}</div>
+  <div id="verifyattorneyLastName">Attorney Name: ${masterFieldsVerify.attorneyLastName}</div>
   <div id="verifyattorneyPhone">Attorney Phone: ${masterFieldsVerify.attorneyPhone}</div>
   <div id="verifyattorneyEmail">Attorney Email: ${masterFieldsVerify.attorneyEmail}</div>
   </div>
 
   <div class="border px-2 py-2 mb-2">
   <h5>Assessor Information</h5>
-  <div id="verifyassessorName">Assessor Name: ${masterFieldsVerify.assessorName}</div>
+  <div id="verifyassessorFirstName">Assessor Name: ${masterFieldsVerify.assessorFirstName}</div>
+  <div id="verifyassessorLastName">Assessor Name: ${masterFieldsVerify.assessorLastName}</div>
   <div id="verifyassessorPhone">Assessor Phone: ${masterFieldsVerify.assessorPhone}</div>
   <div id="verifyassessorEmail">Assessor Email: ${masterFieldsVerify.assessorEmail}</div>
   </div>
 
   <div class="border px-2 py-2 mb-2">
   <h5>Commissioner Information</h5>
-  <div id="verifycommissioner1Name">Commissioner 1 Name: ${masterFieldsVerify.commissioner1Name}</div>
-  <div id="verifycommissioner2Name">Commissioner 2 Name: ${masterFieldsVerify.commissioner2Name}</div>
-  <div id="verifycommissioner3Name">Commissioner 3 Name: ${masterFieldsVerify.commissioner3Name}</div>
-  <div id="verifycommissionerPhone">Commissioner Phone: ${masterFieldsVerify.commissionerPhone}</div>
+  <div id="verifycommissioner1FirstName">Commissioner 1 Name: ${masterFieldsVerify.commissioner1FirstName}</div>
+  <div id="verifycommissioner1LastName">Commissioner 1 Name: ${masterFieldsVerify.commissioner1LastName}</div>
+  <div id="verifycommissioner1Phone">Commissioner 1 Phone: ${masterFieldsVerify.commissioner1Phone}</div>
+  <div id="verifycommissioner2FirstName">Commissioner 2 Name: ${masterFieldsVerify.commissioner2FirstName}</div>
+  <div id="verifycommissioner2LastName">Commissioner 2 Name: ${masterFieldsVerify.commissioner2LastName}</div>
+  <div id="verifycommissioner2Phone">Commissioner 2 Phone: ${masterFieldsVerify.commissioner2Phone}</div>
+  <div id="verifycommissioner3FirstName">Commissioner 3 Name: ${masterFieldsVerify.commissioner3FirstName}</div>
+  <div id="verifycommissioner3LastName">Commissioner 3 Name: ${masterFieldsVerify.commissioner3LastName}</div>
+  <div id="verifycommissioner3Phone">Commissioner 3 Phone: ${masterFieldsVerify.commissioner3Phone}</div>
   </div>
 
   <div class="border px-2 py-2 mb-2">
   <h5>Court House Information</h5>
   <div id="verifycourtHouseName">Court House Name: ${masterFieldsVerify.courtHouseName}</div>
-  <div id="verifycourtLocation>Presiding Judge: ${masterFieldsVerify.presidingJudge}</div>
+  <div id="verifycourtType">Court Type: ${masterFieldsVerify.courtType}</div>
+  <div id="verifycourtLocation">Court Location: ${masterFieldsVerify.courtLocation}</div>
+  <div id="verifypresidingJudgeFirstName">Presiding Judge First Name: ${masterFieldsVerify.presidingJudgeFirstName}</div>
+  <div id="verifypresidingJudgeLastName">Presiding Judge Last Name: ${masterFieldsVerify.presidingJudgeLastName}</div>
   <div id="verifypresidingJudgePhone">Presiding Judge Phone: ${masterFieldsVerify.presidingJudgePhone}</div>
+  </div>
+
+  <div class="border px-2 py-2 mb-2">
+  <h5>Sale Information</h5>
+  <div id="verifysaleMethod">Sale Method: ${masterFieldsVerify.saleMethod}</div>
+  <div id="verifysalestartdatetime">Sale Start Date/Time: ${masterFieldsVerify.salestartdatetime}</div>
+  <div id="verifysaleenddatetime">Sale End Date/Time: ${masterFieldsVerify.saleenddatetime}</div>
   </div>
 
   <div class="border px-2 py-2 mb-2">
@@ -237,6 +299,7 @@ function compareObjects(obj1, obj2) {
     if (obj1[key] !== obj2[key]) {
       differences[key] = obj2[key];
     }
+    console.log(differences)
   }
   // take all values from different and highlight the dom element which is the id of verify + key
   for (let key in differences) {
@@ -256,36 +319,59 @@ function compareObjects(obj1, obj2) {
 
 
 
+// ad an event edit button the the changed dom elements that opens the edit modal
+  for (let key in differences) {
+    let element = document.getElementById(`verify${key}`);
+    element.innerHTML += `<div class="float-end">
+    <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#edit${key}Modal" id="edit${key}">Edit</button>
+    </div>`;
+  }
 
-// if all the checkboxes are checked then enable the submit button
-  // let checkboxes = document.querySelectorAll('input[type="checkbox"]');
-  // let submitButton = document.getElementById("approveBtn");
-  // checkboxes.forEach((checkbox) => {
-  //   checkbox.addEventListener("change", (e) => {
-  //     if (e.target.checked) {
-  //       submitButton.disabled = false;
-  //     } else {
-  //       submitButton.disabled = true;
-  //     }
-  //   });
-   
+// create a modal for each changed dom element with the id of edit + key + Modal
+  for (let key in differences) {
+    let element = document.getElementById(`verify${key}`);
+    element.innerHTML += `<div class="modal fade
+    " id="edit${key}Modal" tabindex="-1" aria-labelledby="edit${key}ModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="edit${key}ModalLabel">Edit ${key}</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        <div class="mb-3">
+        <label for="edit${key}" class="form-label">Edit ${key}</label>
+        <input type="text" class="form-control" id="edit${key}" value="${differences[key]}">
+      </div>
 
-  
-  // }
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="edit${key}Sub">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>`;
 
+  }
+  // create an event listner for each save button id of edit + key + Sub that saves the changes to the masterFieldsVerify object
+  for (let key in differences) {
+    document.getElementById(`edit${key}Sub`).addEventListener("click", (e) => {
+      let element = document.getElementById(`edit${key}`);
+      masterFieldsVerify[key] = element.value;
+      console.log(masterFieldsVerify);
+    });
+    
+  }
 
- 
-
-  // if there are no checkboxes then enable the submit button
-  // if (checkboxes.length === 0) {
-  //   submitButton.disabled = false;
-  // }
-
-  
 
 
   
 }
+
+
+
+  
 
 // add an event listener to the id approveBtn that hides the dom element reviewBtn and shows the dom element padCont
 document.getElementById("approveBtn").addEventListener("click", (e) => {
@@ -303,18 +389,10 @@ document.getElementById("signSub").addEventListener("click", (e) => {
 });
 
 
-
-
-
 compareObjects(masterFields, masterFieldsVerify);
 
 
-
-
-
-
 }
-
 
 
 )
@@ -466,3 +544,4 @@ document.getElementById("clearBtn").addEventListener("click", (e) => {
 
 )
   
+
