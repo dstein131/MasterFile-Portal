@@ -247,7 +247,7 @@ function compareObjects(obj1, obj2) {
 // add an approal check to the changed dom elements
   for (let key in differences) {
     let element = document.getElementById(`verify${key}`);
-    element.innerHTML += `<div class="float-end">
+    element.innerHTML += `<div class="float-end checkcont">
     <label for="approve${key}">Approve</label>
     <input type="checkbox" id="approve${key}" name="approve${key}" value="approve${key} class=" ms-5">
     
@@ -428,4 +428,37 @@ document.getElementById("reviewBtn").addEventListener("click", (e) => {
 
 
        
-        
+
+
+// create clear function that will revert the dom to its original state
+function clear() {
+  // hide the dom element padCont
+  document.getElementById("padCont").style.display = "none";
+  // hide the dom element finalsubbtn
+  document.getElementById("finalsubbtn").style.display = "none";
+// set the input fields back to their original values
+for (let key in masterFields) {
+  if (document.getElementById(key)) {
+    document.getElementById(key).value = masterFields[key]
+  }
+}
+// clear out the masterFieldsVerify object
+masterFieldsVerify = {};
+// remove all elements with the classname checkcont
+let checkcont = document.getElementsByClassName("checkcont");
+while (checkcont.length > 0) {
+  checkcont[0].parentNode.removeChild(checkcont[0]);
+}
+
+
+
+}
+
+  
+// add an event listener to the id clearBtn that will call the clear function
+document.getElementById("clearBtn").addEventListener("click", (e) => {
+  clear();
+}
+
+)
+  
