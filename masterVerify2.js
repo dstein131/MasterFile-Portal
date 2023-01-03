@@ -184,7 +184,8 @@ document.getElementById("previousDataModalBody").innerHTML = `
         <div class="border px-2 py-2 mb-2">
         <h5>Newspaper 1 Information</h5>
         <div>Newspaper 1 Name: ${masterFields.newspaper1Name}</div>
-        <div>Newspaper 1 Contact: ${masterFields.newspaper1Contact}</div>
+        <div>Newspaper 1 Contact First Name: ${masterFields.newspaper1ContactFirstName}</div>
+        <div>Newspaper 1 Contact Last Name: ${masterFields.newspaper1ContactLastName}</div>
         <div>Newspaper 1 Phone: ${masterFields.newspaper1Phone}</div>
         <div>Newspaper 1 Ad Format: ${masterFields.newspaper1AdFormat}</div>
         <div>Newspaper 1 Lead Time: ${masterFields.newspaper1LeadTime}</div>
@@ -195,7 +196,8 @@ document.getElementById("previousDataModalBody").innerHTML = `
         <div class="border px-2 py-2 mb-2">
         <h5>Newspaper 2 Information</h5>
         <div>Newspaper 2 Name: ${masterFields.newspaper2Name}</div>
-        <div>Newspaper 2 Contact: ${masterFields.newspaper2Contact}</div>
+        <div>Newspaper 2 Contact First Name: ${masterFields.newspaper2ContactFirstName}</div>
+        <div>Newspaper 2 Contact Last Name: ${masterFields.newspaper2ContactLastName}</div>
         <div>Newspaper 2 Phone: ${masterFields.newspaper2Phone}</div>
         <div>Newspaper 2 Ad Format: ${masterFields.newspaper2AdFormat}</div>
         <div>Newspaper 2 Lead Time: ${masterFields.newspaper2LeadTime}</div>
@@ -319,7 +321,8 @@ document.getElementById("reviewBtn").addEventListener("click", function() {
   <div class="border px-2 py-2 mb-2">
   <h5>Newspaper 1 Information</h5>
   <div id="verifynewspaper1Name">Newspaper 1 Name: ${masterFieldsVerify.newspaper1Name}</div>
-  <div id="verifynewspaper1Contact">Newspaper 1 Contact: ${masterFieldsVerify.newspaper1Contact}</div>
+  <div id="verifynewspaper1Contact">Newspaper 1 Contact First Name: ${masterFieldsVerify.newspaper1ContactFirstName}</div>
+  <div id="verifynewspaper1Contact">Newspaper 1 Contact Last Name: ${masterFieldsVerify.newspaper1ContactLastName}</div>
   <div id="verifynewspaper1Phone">Newspaper 1 Phone: ${masterFieldsVerify.newspaper1Phone}</div>
   <div id="verifynewspaper1AdFormat">Newspaper 1 Ad Format: ${masterFieldsVerify.newspaper1AdFormat}</div>
   <div id="verifynewspaper1LeadTime">Newspaper 1 Lead Time: ${masterFieldsVerify.newspaper1LeadTime}</div>
@@ -330,7 +333,8 @@ document.getElementById("reviewBtn").addEventListener("click", function() {
   <div class="border px-2 py-2 mb-2">
   <h5>Newspaper 2 Information</h5>
   <div id="verifyewspaper2Name">Newspaper 2 Name: ${masterFieldsVerify.newspaper2Name}</div>
-  <div id="verifynewspaper2Contact">Newspaper 2 Contact: ${masterFieldsVerify.newspaper2Contact}</div>
+  <div id="verifynewspaper2Contact">Newspaper 2 Contact First Name: ${masterFieldsVerify.newspaper2ContactFirstName}</div>
+  <div id="verifynewspaper2Contact">Newspaper 2 Contact Last Name: ${masterFieldsVerify.newspaper2ContactLastName}</div>
   <div id="verifynewspaper2Phone">Newspaper 2 Phone: ${masterFieldsVerify.newspaper2Phone}</div>
   <div id="verifynewspaper2AdFormat">Newspaper 2 Ad Format: ${masterFieldsVerify.newspaper2AdFormat}</div>
   <div id="verifynewspaper2LeadTime">Newspaper 2 Lead Time: ${masterFieldsVerify.newspaper2LeadTime}</div>
