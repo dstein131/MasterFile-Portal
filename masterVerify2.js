@@ -255,29 +255,31 @@ function compareObjects(obj1, obj2) {
   }
 
 
+
+
 // if all the checkboxes are checked then enable the submit button
-  let checkboxes = document.querySelectorAll('input[type="checkbox"]');
-  let submitButton = document.getElementById("approveBtn");
-  checkboxes.forEach((checkbox) => {
-    checkbox.addEventListener("change", (e) => {
-      if (e.target.checked) {
-        submitButton.disabled = false;
-      } else {
-        submitButton.disabled = true;
-      }
-    });
+  // let checkboxes = document.querySelectorAll('input[type="checkbox"]');
+  // let submitButton = document.getElementById("approveBtn");
+  // checkboxes.forEach((checkbox) => {
+  //   checkbox.addEventListener("change", (e) => {
+  //     if (e.target.checked) {
+  //       submitButton.disabled = false;
+  //     } else {
+  //       submitButton.disabled = true;
+  //     }
+  //   });
    
 
   
-  }
+  // }
 
 
-  );
+ 
 
   // if there are no checkboxes then enable the submit button
-  if (checkboxes.length === 0) {
-    submitButton.disabled = false;
-  }
+  // if (checkboxes.length === 0) {
+  //   submitButton.disabled = false;
+  // }
 
   
 
@@ -391,11 +393,38 @@ document.getElementById("finalsubbtn").addEventListener("click", (e) => {
 }
 )
 
+// add an event listner to the body for each time a checkbox is clicked
+document.body.addEventListener("click", (e) => {
+  if (e.target.type === "checkbox") {
+     // create an array of all the checkboxes
+    let checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    // create a variable to hold the number of checked checkboxes
+    let checked = 0;
+    // loop through the checkboxes and if they are checked add 1 to the checked variable
+    checkboxes.forEach((checkbox) => {
+      if (checkbox.checked) {
+        checked++;
+      }
+    }
+    )
+    // if the number of checked checkboxes is equal to the number of checkboxes then enable the submit button
+    if (checked === checkboxes.length) {
+      document.getElementById("approveBtn").disabled = false;
+    }
+  }
+}
+)
 
 
 
-
-
+// add an event listen to the id reviewBtn that when clicked, if there are no checkboxes then enable the submit button
+document.getElementById("reviewBtn").addEventListener("click", (e) => {
+  let checkboxes = document.querySelectorAll('input[type="checkbox"]');
+  if (checkboxes.length === 0) {
+    document.getElementById("approveBtn").disabled = false;
+  }
+}
+)
 
 
        
