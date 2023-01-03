@@ -58,6 +58,21 @@ let masterFields = {
   
 }
 
+if (masterFields.saleMethod === "Online") {
+  document.getElementById("enddatediv").style.display = "block";
+}
+
+document.getElementById("saleMethod").addEventListener("change", (e) => {
+  // if the value of saleMethod is "Online" then show the dom element id enddatediv, else hide it
+  if (document.getElementById("saleMethod").value === "Online") {
+    document.getElementById("enddatediv").style.display = "block";
+  }
+  else {
+    document.getElementById("enddatediv").style.display = "none";
+  }
+}
+);
+
 // disable to button id approveBtn
 document.getElementById("approveBtn").disabled = true
 
@@ -178,6 +193,8 @@ document.getElementById("previousDataModalBody").innerHTML = `
 `
 
 
+
+
 let masterFieldsVerify = {}
 
 // add an event listener to the button with the id of "reviewBtn" that will set the masterFieldsVerify object to the values of the dom elements with the same id as the key
@@ -294,6 +311,8 @@ document.getElementById("reviewBtn").addEventListener("click", function() {
   <div id="verifynewspaper2URL">Newspaper 2 URL: ${masterFieldsVerify.newspaper2URL}</div>
   </div>
   `;
+
+
 
 // compare the two objects masterFields and masterFieldsVerify and return the differences
 function compareObjects(obj1, obj2) {
