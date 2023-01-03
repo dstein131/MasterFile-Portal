@@ -386,54 +386,8 @@ function compareObjects(obj1, obj2) {
 
 
 
-// ad an event edit button the the changed dom elements that opens the edit modal
-  for (let key in differences) {
-    let element = document.getElementById(`verify${key}`);
-    element.innerHTML += `<div class="float-end">
-    <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#edit${key}Modal" id="edit${key}">Edit</button>
-    </div>`;
-  }
-
-// create a modal for each changed dom element with the id of edit + key + Modal
-  for (let key in differences) {
-    let element = document.getElementById(`verify${key}`);
-    element.innerHTML += `<div class="modal fade
-    " id="edit${key}Modal" tabindex="-1" aria-labelledby="edit${key}ModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="edit${key}ModalLabel">Edit ${key}</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-        <div class="mb-3">
-        <label for="edit${key}" class="form-label">Edit ${key}</label>
-        <input type="text" class="form-control" id="edit${key}" value="${differences[key]}">
-      </div>
-
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" id="edit${key}Sub">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div>`;
-
-  }
-  // create an event listner for each save button id of edit + key + Sub that saves the changes to the masterFieldsVerify object
-  for (let key in differences) {
-    document.getElementById(`edit${key}Sub`).addEventListener("click", (e) => {
-      let element = document.getElementById(`edit${key}`);
-      masterFieldsVerify[key] = element.value;
-      console.log(masterFieldsVerify);
-    });
-    
-  }
 
 
-
-  
 }
 
 
