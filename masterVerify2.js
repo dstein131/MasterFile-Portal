@@ -453,6 +453,8 @@ while (checkcont.length > 0) {
 // show the review button
 document.getElementById("reviewBtn").style.display = "block";
 
+// navigate to the tab id pills-home-tab
+document.getElementById("pills-home-tab").click();
 
 }
 
