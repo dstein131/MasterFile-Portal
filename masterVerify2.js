@@ -450,6 +450,8 @@ while (checkcont.length > 0) {
   checkcont[0].parentNode.removeChild(checkcont[0]);
 }
 
+// show the review button
+document.getElementById("reviewBtn").style.display = "block";
 
 
 }
