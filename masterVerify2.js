@@ -53,7 +53,8 @@ let masterFields = {
   newspaper2URL: "www.elkaderregister.com",
   saleMethod: "Online",
   salestartdatetime: "2023-01-01T12:43:44",
-  saleenddatetime: "2023-05-01T14:04:03"
+  saleenddatetime: "2023-05-01T14:04:03",
+  salelocation: "200 S 3rd St, West Union, IA 52175",
   
 }
 
@@ -149,6 +150,7 @@ document.getElementById("previousDataModalBody").innerHTML = `
         <div>Sale Method: ${masterFields.saleMethod}</div>
         <div>Sale Start Date: ${masterFields.salestartdatetime}</div>
         <div>Sale End Date: ${masterFields.saleenddatetime}</div>
+        <div>Sale Location: ${masterFields.salelocation}</div>
         </div>
 
         <div class="border px-2 py-2 mb-2">
@@ -267,6 +269,7 @@ document.getElementById("reviewBtn").addEventListener("click", function() {
   <div id="verifysaleMethod">Sale Method: ${masterFieldsVerify.saleMethod}</div>
   <div id="verifysalestartdatetime">Sale Start Date/Time: ${masterFieldsVerify.salestartdatetime}</div>
   <div id="verifysaleenddatetime">Sale End Date/Time: ${masterFieldsVerify.saleenddatetime}</div>
+  <div id="verifysalelocation">Sale Location: ${masterFieldsVerify.salelocation}</div>
   </div>
 
   <div class="border px-2 py-2 mb-2">
@@ -299,7 +302,7 @@ function compareObjects(obj1, obj2) {
     if (obj1[key] !== obj2[key]) {
       differences[key] = obj2[key];
     }
-    console.log(differences)
+   
   }
   // take all values from different and highlight the dom element which is the id of verify + key
   for (let key in differences) {
