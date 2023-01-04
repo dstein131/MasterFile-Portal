@@ -704,4 +704,24 @@ document.getElementById("addnewsBtn").addEventListener("click", () => {
 }
 )
 
+// make an array of different light background colors
+let lightColors = ["#f8f9fa", "#e9ecef", "#dee2e6", "#faf9f2", "#f2f7f3", "#e6eff7", "#f2edf5", "#f2f2eb", "#e8ebea"];
+
+
+
+function changeColor() {
+  // loop through all the elements with the class name of nav-link and create an array of them
+  let navLinks = document.getElementsByClassName("nav-link");
+  // for each navLink add an event listener 
+  for (let i = 0; i < navLinks.length; i++) {
+    navLinks[i].addEventListener("click", () => {
+      // set a background random color from the lightColors array to the dom id cardBody
+      document.getElementById("cardBody").style.backgroundColor = lightColors[Math.floor(Math.random() * lightColors.length)];
+    })
+  }
+}
+
+changeColor();
+
+
 
