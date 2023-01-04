@@ -647,3 +647,58 @@ document.getElementById("addcontBtn").addEventListener("click", (e) => {
 )
 
 
+// add an event listern to the id addnewsBtn that will add a new container to the dom with the id newscontwrapper
+// add the numinical id's for each id of each input field
+// add a delete button to each container thats deletes the container
+
+document.getElementById("addnewsBtn").addEventListener("click", () => {
+  let newscontwrapper = document.getElementById("newscontwrapper");
+  let newscont = document.createElement("div");
+  newscont.setAttribute("id", `newscont${newscontwrapper.childElementCount + 1}`);
+  newscont.className = "addcont d-flex flex-wrap flex-row justify-content-center align-items-center border border-dark mb-3";
+  newscont.innerHTML = `
+  
+  
+  <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
+  <label for="news${newscontwrapper.childElementCount + 1}Name">News ${newscontwrapper.childElementCount + 1} Name </label>
+  <input type="text" class="form-control" id="news${newscontwrapper.childElementCount + 1}Name" placeholder="Newspaper ${newscontwrapper.childElementCount + 1} Name">
+</div>
+<div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
+  <label for="news${newscontwrapper.childElementCount + 1}FirstName">News ${newscontwrapper.childElementCount + 1} First Name </label>
+  <input type="text" class="form-control" id="news${newscontwrapper.childElementCount + 1}FirstName" placeholder="Newspaper ${newscontwrapper.childElementCount + 1} First Name">
+</div>
+<div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
+  <label for="news${newscontwrapper.childElementCount + 1}LastName">News ${newscontwrapper.childElementCount + 1} Last Name </label>
+  <input type="text" class="form-control" id="news${newscontwrapper.childElementCount + 1}LastName" placeholder="Newspaper ${newscontwrapper.childElementCount + 1} Last Name">
+</div>
+<div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
+  <label for="news${newscontwrapper.childElementCount + 1}Phone">News ${newscontwrapper.childElementCount + 1} Phone </label>
+  <input type="text" class="form-control" id="news${newscontwrapper.childElementCount + 1}Phone" placeholder="Newspaper ${newscontwrapper.childElementCount + 1} Phone">
+</div>
+<div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
+  <label for="news${newscontwrapper.childElementCount + 1}AdFormat">News ${newscontwrapper.childElementCount + 1} Ad Format </label>
+  <input type="text" class="form-control" id="news${newscontwrapper.childElementCount + 1}AdFormat" placeholder="Newspaper ${newscontwrapper.childElementCount + 1} Ad Format">
+</div>
+<div class="form-group col-md-6 mx-2 my-2" style="width: 300px">  
+  <label for="news${newscontwrapper.childElementCount + 1}LeadTime">News ${newscontwrapper.childElementCount + 1} Lead Time </label>
+  <input type="text" class="form-control" id="news${newscontwrapper.childElementCount + 1}LeadTime" placeholder="Newspaper ${newscontwrapper.childElementCount + 1} Lead Time">
+</div>
+<div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
+  <label for="news${newscontwrapper.childElementCount + 1}DayAdRuns">News ${newscontwrapper.childElementCount + 1} Day Ad Runs </label>
+  <input type="text" class="form-control" id="news${newscontwrapper.childElementCount + 1}DayAdRuns" placeholder="Newspaper ${newscontwrapper.childElementCount + 1} Day Ad Runs">
+</div>
+<div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
+  <label for="news${newscontwrapper.childElementCount + 1}URL">News ${newscontwrapper.childElementCount + 1} URL </label>
+  <input type="text" class="form-control" id="news${newscontwrapper.childElementCount + 1}URL" placeholder="Newspaper ${newscontwrapper.childElementCount + 1} URL">
+</div>
+<button type="button" class="btn btn-danger" id="deleteBtn${newscontwrapper.childElementCount + 1}">Delete News ${newscontwrapper.childElementCount + 1}</button>
+`;
+  newscontwrapper.appendChild(newscont);
+  document.getElementById(`deleteBtn${newscontwrapper.childElementCount}`).addEventListener("click", (e) => {
+    e.target.parentNode.remove();
+  }
+  )
+}
+)
+
+
