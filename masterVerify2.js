@@ -564,5 +564,86 @@ document.getElementById("clearBtn").addEventListener("click", (e) => {
 }
 
 )
+
+
   
+// add an event listener to the id saleMethod that if it's value is "Online" then set the value of the id's saleStreetAddress, saleCity, saleState, saleZip to the value of "Online - Zeus"
+
+document.getElementById("saleMethod").addEventListener("change", (e) => {
+  if (e.target.value === "Online") {
+    document.getElementById("saleStreetAddress").value = "Online - Zeus";
+    document.getElementById("saleCity").value = "Online - Zeus";
+    document.getElementById("saleState").value = "Online - Zeus";
+    document.getElementById("saleZip").value = "Online - Zeus";
+  }
+}
+)
+
+// add an event listen to the id addcontBtn that will add a new container to the dom id addcontwrapper
+// add the numinical id's for each id of each input field
+// add a delete button to each container thats deletes addcont${addcontwrapper.childElementCount + 1}
+
+document.getElementById("addcontBtn").addEventListener("click", (e) => {
+  let addcontwrapper = document.getElementById("addcontwrapper");
+  let addcont = document.createElement("div");
+  addcont.id = `addcont${addcontwrapper.childElementCount + 1}`;
+  addcont.className = "addcont d-flex flex-wrap flex-row justify-content-center align-items-center border border-dark mb-3";
+  addcont.innerHTML = `
+  
+  
+  <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
+  <label for="additionalContact${addcontwrapper.childElementCount + 1}FirstName">Additional Contact ${addcontwrapper.childElementCount + 1} First Name </label>
+  <input type="text" class="form-control" id="additionalContact${addcontwrapper.childElementCount + 1}FirstName" placeholder="Additional Contact 1 ${addcontwrapper.childElementCount + 1} FirstName">
+</div>
+<div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
+  <label for="additionalContact${addcontwrapper.childElementCount + 1}LastName">Additional Contact ${addcontwrapper.childElementCount + 1} Last Name </label>
+  <input type="text" class="form-control" id="additionalContact${addcontwrapper.childElementCount + 1}LastName" placeholder="Additional Contact ${addcontwrapper.childElementCount + 1} Last Name">
+</div>
+<div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
+  <label for="additionalContact${addcontwrapper.childElementCount + 1}Phone">Additional Contact ${addcontwrapper.childElementCount + 1} Phone </label>
+  <input type="text" class="form-control" id="additionalContact${addcontwrapper.childElementCount + 1}Phone" placeholder="Additional Contact ${addcontwrapper.childElementCount + 1} Phone">
+</div>
+<div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
+  <label for="additionalContact${addcontwrapper.childElementCount + 1}Email">Additional Contact ${addcontwrapper.childElementCount + 1} Email </label>
+  <input type="text" class="form-control" id="additionalContact${addcontwrapper.childElementCount + 1}Email" placeholder="Additional Contact ${addcontwrapper.childElementCount + 1} Email">
+</div>
+<div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
+  <label for="additionalContact${addcontwrapper.childElementCount + 1}Title">Additional Contact ${addcontwrapper.childElementCount + 1} Title </label>
+  <input type="text" class="form-control" id="additionalContact${addcontwrapper.childElementCount + 1}Title" placeholder="Additional Contact ${addcontwrapper.childElementCount + 1} Title">
+</div>
+<div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
+  <label for="additionalContact${addcontwrapper.childElementCount + 1}Department">Additional Contact ${addcontwrapper.childElementCount + 1} Department </label>
+  <input type="text" class="form-control" id="additionalContact${addcontwrapper.childElementCount + 1}Department" placeholder="Additional Contact ${addcontwrapper.childElementCount + 1} Department">
+</div>
+<div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
+  <label for="additionalContact${addcontwrapper.childElementCount + 1}StreetAddress">Additional Contact ${addcontwrapper.childElementCount + 1} Street Address </label>
+  <input type="text" class="form-control" id="additionalContact${addcontwrapper.childElementCount + 1}StreetAddress" placeholder="Additional Contact ${addcontwrapper.childElementCount + 1} Street Address">
+</div>
+<div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
+  <label for="additionalContact${addcontwrapper.childElementCount + 1}City">Additional Contact ${addcontwrapper.childElementCount + 1} City </label>
+  <input type="text" class="form-control" id="additionalContact${addcontwrapper.childElementCount + 1}City" placeholder="Additional Contact ${addcontwrapper.childElementCount + 1} City">
+</div>
+<div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
+  <label for="additionalContact${addcontwrapper.childElementCount + 1}State">Additional Contact ${addcontwrapper.childElementCount + 1} State </label>
+  <input type="text" class="form-control" id="additionalContact${addcontwrapper.childElementCount + 1}State" placeholder="Additional Contact ${addcontwrapper.childElementCount + 1} State">
+</div>
+<div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
+  <label for="additionalContact${addcontwrapper.childElementCount + 1}Zip">Additional Contact ${addcontwrapper.childElementCount + 1} Zip </label>
+  <input type="text" class="form-control" id="additionalContact${addcontwrapper.childElementCount + 1}Zip" placeholder="Additional Contact ${addcontwrapper.childElementCount + 1} Zip">
+</div>
+<div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
+  <label for="additionalContact${addcontwrapper.childElementCount + 1}Notes">Additional Contact ${addcontwrapper.childElementCount + 1} Notes </label>
+  <input type="text" class="form-control" id="additionalContact${addcontwrapper.childElementCount + 1}Notes" placeholder="Additional Contact ${addcontwrapper.childElementCount + 1} Notes">
+</div>
+
+<button type="button" class="btn btn-danger" id="deleteBtn${addcontwrapper.childElementCount + 1}">Delete Contact ${addcontwrapper.childElementCount + 1}</button>
+`;
+  addcontwrapper.appendChild(addcont);
+  document.getElementById(`deleteBtn${addcontwrapper.childElementCount}`).addEventListener("click", (e) => {
+    e.target.parentNode.remove();
+  }
+  )
+}
+)
+
 
