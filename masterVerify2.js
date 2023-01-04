@@ -635,12 +635,13 @@ document.getElementById("addcontBtn").addEventListener("click", (e) => {
   <label for="additionalContact${addcontwrapper.childElementCount + 1}Notes">Additional Contact ${addcontwrapper.childElementCount + 1} Notes </label>
   <input type="text" class="form-control" id="additionalContact${addcontwrapper.childElementCount + 1}Notes" placeholder="Additional Contact ${addcontwrapper.childElementCount + 1} Notes">
 </div>
-
+<div class="w-100 d-flex flex-wrap flex-row justify-content-center align-items-center mb-2">
 <button type="button" class="btn btn-danger" id="deleteBtn${addcontwrapper.childElementCount + 1}">Delete Contact ${addcontwrapper.childElementCount + 1}</button>
-`;
+
+</div>`;
   addcontwrapper.appendChild(addcont);
   document.getElementById(`deleteBtn${addcontwrapper.childElementCount}`).addEventListener("click", (e) => {
-    e.target.parentNode.remove();
+    e.target.parentNode.parentNode.remove();
   }
   )
 }
@@ -691,11 +692,13 @@ document.getElementById("addnewsBtn").addEventListener("click", () => {
   <label for="news${newscontwrapper.childElementCount + 1}URL">News ${newscontwrapper.childElementCount + 1} URL </label>
   <input type="text" class="form-control" id="news${newscontwrapper.childElementCount + 1}URL" placeholder="Newspaper ${newscontwrapper.childElementCount + 1} URL">
 </div>
-<button type="button" class="btn btn-danger" id="deleteBtn${newscontwrapper.childElementCount + 1}">Delete News ${newscontwrapper.childElementCount + 1}</button>
+<div class="w-100 d-flex flex-wrap flex-row justify-content-center align-items-center mb-2">
+<button type="button" class="btn btn-danger \ " id="deleteBtn${newscontwrapper.childElementCount + 1}">Delete News ${newscontwrapper.childElementCount + 1}</button>
+</div>
 `;
   newscontwrapper.appendChild(newscont);
   document.getElementById(`deleteBtn${newscontwrapper.childElementCount}`).addEventListener("click", (e) => {
-    e.target.parentNode.remove();
+    e.target.parentNode.parentNode.remove();
   }
   )
 }
