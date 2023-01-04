@@ -64,6 +64,11 @@
                                     aria-controls="pills-contact" aria-selected="false">Court</button>
                             </li>
                             <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-sheriff-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-sheriff" type="button" role="tab"
+                                    aria-controls="pills-contact" aria-selected="false">Sheriff</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
                                 <button class="nav-link" id="pills-sale-tab" data-bs-toggle="pill"
                                     data-bs-target="#pills-sale" type="button" role="tab" aria-controls="pills-contact"
                                     aria-selected="false">Sale</button>
@@ -110,18 +115,17 @@
                         <!-- clear button -->
                         <button type="button" class="btn btn-sm btn-outline-danger ms-2" id="clearBtn"
                             style="height: 52px">
-                            Clear & Reset
+                            Reset
                     </div>
                     <div class="card-body d-flex flex-wrap justify-content-around align-items-center" id="cardBody"
-                        style="min-height: 610px">
+                        style="min-height: 140px">
                         <!-- tab sections -->
 
                         <div class="tab-content" id="pills-tabContent">
                             <!-- county info -->
                             <div class="tab-pane fade show active" id="pills-county" role="tabpanel"
-                                aria-labelledby="pills-county-tab"
-                                
-                                >
+                                aria-labelledby="pills-county-tab">
+                                <h2 class="text-center mb-3">County Information</h2>
                                 <div class="d-flex flex-row flex-wrap justify-content-around align-items-center">
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
                                         <label for="countyCode"><small> Code</small></label>
@@ -158,7 +162,7 @@
                             <!-- auditor info -->
                             <div class="tab-pane fade" id="pills-auditor" role="tabpanel"
                                 aria-labelledby="pills-auditor-tab">
-
+                                <h2 class="text-center mb-3">Auditor Information</h2>
                                 <div class="d-flex flex-wrap justify-content-around align-items-center">
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
                                         <label for="auditorFirstName"><small>Auditor First Name</small></label>
@@ -207,6 +211,7 @@
 
                             <div class="tab-pane fade" id="pills-treasurer" role="tabpanel"
                                 aria-labelledby="pills-treasurer-tab">
+                                <h2 class="text-center mb-3">Treasurer Information</h2>
                                 <div class="d-flex flex-wrap justify-content-around align-items-center">
 
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
@@ -255,6 +260,7 @@
 
                             <div class="tab-pane fade" id="pills-attorney" role="tabpanel"
                                 aria-labelledby="pills-attorney-tab">
+                                <h2 class="text-center mb-3">Attorney Information</h2>
                                 <div class="d-flex flex-wrap justify-content-around align-items-center">
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
                                         <label for="attorneyFirstName"><small>Attorney First Name</small></label>
@@ -297,12 +303,13 @@
                                         <input type="text" class="form-control" id="attorneyZip"
                                             placeholder="Attorney Zip">
                                     </div>
-                                    
+
 
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="pills-assessor" role="tabpanel"
                                 aria-labelledby="pills-assessor-tab">
+                                <h2 class="text-center mb-3">Assessor Information</h2>
                                 <div class="d-flex flex-wrap justify-content-around align-items-center">
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
                                         <label for="assessorFirstName"><small>Assessor First Name</small></label>
@@ -352,6 +359,7 @@
                             </div>
                             <div class="tab-pane fade" id="pills-commissioner" role="tabpanel"
                                 aria-labelledby="pills-commissioner-tab">
+                                <h2 class="text-center mb-3">Commissioner Information</h2>
                                 <div class="d-flex flex-wrap justify-content-around align-items-center">
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
                                         <label for="commissioner1FirstName"><small>Commissioner 1 First
@@ -488,6 +496,7 @@
                             </div>
                             <div class="tab-pane fade" id="pills-courthouse" role="tabpanel"
                                 aria-labelledby="pills-courthouse-tab">
+                                <h2 class="text-center">Courthouse Information</h2>
                                 <div class="d-flex flex-wrap justify-content-around align-items-center">
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
                                         <label for="courtHouseName"><small>Courthouse Name</small></label>
@@ -551,7 +560,9 @@
 
 
                             <div class="tab-pane fade" id="pills-sale" role="tabpanel" aria-labelledby="pills-sale-tab">
+                                <h2 class="text-center">Sale Information</h2>
                                 <div class="d-flex flex-wrap justify-content-around align-items-center">
+                                 
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
                                         <label for="saleMethod"><small>Sale Method</small></label>
                                         <select id="saleMethod" class="form-control">
@@ -602,9 +613,57 @@
                             <div class="tab-pane fade" id="pills-website" role="tabpanel"
                                 aria-labelledby="pills-website-tab">Website Info
                             </div>
+                            <div class="tab-pane fade" id="pills-sheriff" role="tabpanel"
+                                aria-labelledby="pills-sheriff-tab">
+                                <h2 class="text-center">Sheriff Information</h2>
+                                <div class="d-flex flex-wrap justify-content-around align-items-center">
+                                    <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
+                                        <label for="sheriffFirstName"><small>Sheriff First Name</small></label>
+                                        <input type="text" class="form-control" id="sheriffFirstName"
+                                            placeholder="Sheriff First Name">
+                                    </div>
+                                    <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
+                                        <label for="sheriffLastName"><small>Sheriff Last Name</small></label>
+                                        <input type="text" class="form-control" id="sheriffLastName"
+                                            placeholder="Sheriff Last Name">
+                                    </div>
+                                    <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
+                                        <label for="sheriffPhone"><small>Sheriff Phone</small></label>
+                                        <input type="text" class="form-control" id="sheriffPhone"
+                                            placeholder="Sheriff Phone">
+                                    </div>
+                                    <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
+                                        <label for="sheriffEmail"><small>Sheriff Email</small></label>
+                                        <input type="text" class="form-control" id="sheriffEmail"
+                                            placeholder="Sheriff Email">
+                                    </div>
+                                    <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
+                                        <label for="sheriffStreetAddress"><small>Sheriff Street Address</small></label>
+                                        <input type="text" class="form-control" id="sheriffStreetAddress"
+                                            placeholder="Sheriff Street Address">
+                                    </div>
+                                    <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
+                                        <label for="sheriffCity"><small>Sheriff City</small></label>
+                                        <input type="text" class="form-control" id="sheriffCity"
+                                            placeholder="Sheriff City">
+                                    </div>
+                                    <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
+                                        <label for="sheriffState"><small>Sheriff State</small></label>
+                                        <input type="text" class="form-control" id="sheriffState"
+                                            placeholder="Sheriff State">
+                                    </div>
+                                    <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
+                                        <label for="sheriffZip"><small>Sheriff Zip</small></label>
+                                        <input type="text" class="form-control" id="sheriffZip"
+                                            placeholder="Sheriff Zip">
+                                    </div>
+                                </div>
+
+                            </div>
 
                             <div class="tab-pane fade" id="pills-clerk" role="tabpanel"
                                 aria-labelledby="pills-clerk-tab">
+                                <h2 class="text-center">Clerk Information</h2>
 
                                 <div class="d-flex flex-wrap justify-content-around align-items-center">
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
@@ -666,6 +725,7 @@
 
                             <div class="tab-pane fade" id="pills-addcont" role="tabpenel"
                                 aria-labelledby="pills-addcont-tab">
+                                <h2 class="text-center">Additional Contact Information</h2>
                                 <!-- a button to add additional contacts -->
                                 <div class="d-flex align-items-center justify-content-center">
                                     <button type="button" id="addcontBtn" class="btn btn-outline-success mb-3">
@@ -675,36 +735,7 @@
 
                                 <div class="d-flex flex-wrap flex-column justify-content-center align-items-center"
                                     id="addcontwrapper">
-                                    <!-- <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-                                        <label for="addcont1firstname"><small>Additional Contact 1 First
-                                                Name</small></label>
-                                        <input type="text" class="form-control" id="addcont1firstname"
-                                            placeholder="Additional Contact 1 First Name">
-                                    </div>
-                                    <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-                                        <label for="addcont1lastname"><small>Additional Contact 1 Last
-                                                Name</small></label>
-                                        <input type="text" class="form-control" id="addcont1lastname"
-                                            placeholder="Additional Contact 1 Last Name">
-                                    </div>
-                                    <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-                                        <label for="addcont1title"><small>Additional Contact 1 Title</small></label>
-                                        <input type="text" class="form-control" id="addcont1title"
-                                            placeholder="Additional Contact 1 Title">
-                                    </div>
-                                        
-
-                                    <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-                                        <label for="addcont1phone"><small>Additional Contact 1 Phone</small></label>
-                                        <input type="text" class="form-control" id="addcont1phone"
-                                            placeholder="Additional Contact 1 Phone">
-                                    </div>
-                                    <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-                                        <label for="addcont1email"><small>Additional Contact 1 Email</small></label>
-                                        <input type="text" class="form-control" id="addcont1email"
-                                            placeholder="Additional Contact 1 Email">
-                                            
-                                    </div> -->
+                                 
 
 
                                 </div>
@@ -718,6 +749,7 @@
                             <!-- review -->
                             <div class="tab-pane fade" id="pills-review" role="tabpanel"
                                 aria-labelledby="pills-review-tab">
+                                <h2 class="text-center">Review</h2>
                                 <div class="d-flex justify-content-center align-items-center">
                                     <button type="button" id="reviewBtn" class="btn btn-primary mx-5 mb-3"
                                         data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -745,15 +777,17 @@
 
                             <div class="tab-pane fade" id="pills-newspaper" role="tabpanel"
                                 aria-labelledby="pills-newspaper-tab">
+                                <h2 class="text-center">Newspaper Information</h2>
                                 <div class="d-flex align-items-center justify-content-center">
-                                <button type="button" id="addnewsBtn" class="btn btn-outline-success mb-3">
-                                    Add Newspaper
-                                </button>
-                            </div>
+                                    <button type="button" id="addnewsBtn" class="btn btn-outline-success mb-3">
+                                        Add Newspaper
+                                    </button>
+                                </div>
                                 <div class="d-flex flex-wrap flex-column justify-content-around align-items-center"
                                     id="newscontwrapper">
-                                   
-                                    <div id="newscont1" class="d-flex flex-wrap flex-row justify-content-center align-items-center border border-dark mb-3">
+
+                                    <div id="newscont1"
+                                        class="d-flex flex-wrap flex-row justify-content-center align-items-center border border-dark mb-3">
                                         <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
                                             <label for="newspaper1Name"><small>Newspaper 1 Name</small></label>
                                             <input type="text" class="form-control" id="newspaper1Name"
@@ -798,80 +832,82 @@
                                             <input type="text" class="form-control" id="newspaper1URL"
                                                 placeholder="Newspaper 1 URL">
                                         </div>
-                              
-                                    
+
+
+                                    </div>
+
+
+
                                 </div>
 
 
 
+
+
+
+
                             </div>
-
-
-
-
-
-
-
                         </div>
                     </div>
                 </div>
-            </div>
 
 
-            <!-- review info modal -->
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Please Review the Information</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body" id="reviewModal">
-                            ...
-                        </div>
-                        <div class="modal-footer">
-                            <!-- print button -->
-                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="approveBtn"
-                                disabled>Approve</button>
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
-            <!-- previous data modal -->
-            <!-- Modal -->
-            <div class="modal fade" id="previousDataModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Previous Data</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body" id="previousDataModalBody">
-                            ...Ooops, something went wrong. Apologies for the inconvenience.
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                <!-- review info modal -->
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Please Review the Information</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body" id="reviewModal">
+                                ...
+                            </div>
+                            <div class="modal-footer">
+                                <!-- print button -->
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="approveBtn"
+                                    disabled>Approve</button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+
+
+
+                <!-- previous data modal -->
+                <!-- Modal -->
+                <div class="modal fade" id="previousDataModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Previous Data</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body" id="previousDataModalBody">
+                                ...Ooops, something went wrong. Apologies for the inconvenience.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
 
 
 
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-                integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-                crossorigin="anonymous"></script>
-            <script src="/masterVerify2.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+                    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+                    crossorigin="anonymous"></script>
+                <script src="/masterVerify2.js"></script>
     </body>
 
 </html>
