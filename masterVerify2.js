@@ -592,47 +592,47 @@ document.getElementById("addcontBtn").addEventListener("click", (e) => {
   
   
   <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-  <label for="additionalContact${addcontwrapper.childElementCount + 1}FirstName">Additional Contact ${addcontwrapper.childElementCount + 1} First Name </label>
+  <label for="additionalContact${addcontwrapper.childElementCount + 1}FirstName"><small>Additional Contact ${addcontwrapper.childElementCount + 1} First Name</small> </label>
   <input type="text" class="form-control" id="additionalContact${addcontwrapper.childElementCount + 1}FirstName" placeholder="Additional Contact 1 ${addcontwrapper.childElementCount + 1} FirstName">
 </div>
 <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-  <label for="additionalContact${addcontwrapper.childElementCount + 1}LastName">Additional Contact ${addcontwrapper.childElementCount + 1} Last Name </label>
+  <label for="additionalContact${addcontwrapper.childElementCount + 1}LastName"><small>Additional Contact ${addcontwrapper.childElementCount + 1} Last Name</small> </label>
   <input type="text" class="form-control" id="additionalContact${addcontwrapper.childElementCount + 1}LastName" placeholder="Additional Contact ${addcontwrapper.childElementCount + 1} Last Name">
 </div>
 <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-  <label for="additionalContact${addcontwrapper.childElementCount + 1}Phone">Additional Contact ${addcontwrapper.childElementCount + 1} Phone </label>
+  <label for="additionalContact${addcontwrapper.childElementCount + 1}Phone"><small>Additional Contact ${addcontwrapper.childElementCount + 1} Phone </small></label>
   <input type="text" class="form-control" id="additionalContact${addcontwrapper.childElementCount + 1}Phone" placeholder="Additional Contact ${addcontwrapper.childElementCount + 1} Phone">
 </div>
 <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-  <label for="additionalContact${addcontwrapper.childElementCount + 1}Email">Additional Contact ${addcontwrapper.childElementCount + 1} Email </label>
+  <label for="additionalContact${addcontwrapper.childElementCount + 1}Email"><small>Additional Contact ${addcontwrapper.childElementCount + 1} Email </small></label>
   <input type="text" class="form-control" id="additionalContact${addcontwrapper.childElementCount + 1}Email" placeholder="Additional Contact ${addcontwrapper.childElementCount + 1} Email">
 </div>
 <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-  <label for="additionalContact${addcontwrapper.childElementCount + 1}Title">Additional Contact ${addcontwrapper.childElementCount + 1} Title </label>
+  <label for="additionalContact${addcontwrapper.childElementCount + 1}Title"><small>Additional Contact ${addcontwrapper.childElementCount + 1} Title</small> </label>
   <input type="text" class="form-control" id="additionalContact${addcontwrapper.childElementCount + 1}Title" placeholder="Additional Contact ${addcontwrapper.childElementCount + 1} Title">
 </div>
 <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-  <label for="additionalContact${addcontwrapper.childElementCount + 1}Department">Additional Contact ${addcontwrapper.childElementCount + 1} Department </label>
+  <label for="additionalContact${addcontwrapper.childElementCount + 1}Department"><small>Additional Contact ${addcontwrapper.childElementCount + 1} Department </small></label>
   <input type="text" class="form-control" id="additionalContact${addcontwrapper.childElementCount + 1}Department" placeholder="Additional Contact ${addcontwrapper.childElementCount + 1} Department">
 </div>
 <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-  <label for="additionalContact${addcontwrapper.childElementCount + 1}StreetAddress">Additional Contact ${addcontwrapper.childElementCount + 1} Street Address </label>
+  <label for="additionalContact${addcontwrapper.childElementCount + 1}StreetAddress"><small>Additional Contact ${addcontwrapper.childElementCount + 1} Street Address </small></label>
   <input type="text" class="form-control" id="additionalContact${addcontwrapper.childElementCount + 1}StreetAddress" placeholder="Additional Contact ${addcontwrapper.childElementCount + 1} Street Address">
 </div>
 <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-  <label for="additionalContact${addcontwrapper.childElementCount + 1}City">Additional Contact ${addcontwrapper.childElementCount + 1} City </label>
+  <label for="additionalContact${addcontwrapper.childElementCount + 1}City"><small>Additional Contact ${addcontwrapper.childElementCount + 1} City</small> </label>
   <input type="text" class="form-control" id="additionalContact${addcontwrapper.childElementCount + 1}City" placeholder="Additional Contact ${addcontwrapper.childElementCount + 1} City">
 </div>
 <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-  <label for="additionalContact${addcontwrapper.childElementCount + 1}State">Additional Contact ${addcontwrapper.childElementCount + 1} State </label>
+  <label for="additionalContact${addcontwrapper.childElementCount + 1}State"><small>Additional Contact ${addcontwrapper.childElementCount + 1} State</small> </label>
   <input type="text" class="form-control" id="additionalContact${addcontwrapper.childElementCount + 1}State" placeholder="Additional Contact ${addcontwrapper.childElementCount + 1} State">
 </div>
 <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-  <label for="additionalContact${addcontwrapper.childElementCount + 1}Zip">Additional Contact ${addcontwrapper.childElementCount + 1} Zip </label>
+  <label for="additionalContact${addcontwrapper.childElementCount + 1}Zip"><small>Additional Contact ${addcontwrapper.childElementCount + 1} Zip</small> </label>
   <input type="text" class="form-control" id="additionalContact${addcontwrapper.childElementCount + 1}Zip" placeholder="Additional Contact ${addcontwrapper.childElementCount + 1} Zip">
 </div>
 <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-  <label for="additionalContact${addcontwrapper.childElementCount + 1}Notes">Additional Contact ${addcontwrapper.childElementCount + 1} Notes </label>
+  <label for="additionalContact${addcontwrapper.childElementCount + 1}Notes"><small>Additional Contact ${addcontwrapper.childElementCount + 1} Notes </small></label>
   <input type="text" class="form-control" id="additionalContact${addcontwrapper.childElementCount + 1}Notes" placeholder="Additional Contact ${addcontwrapper.childElementCount + 1} Notes">
 </div>
 <div class="w-100 d-flex flex-wrap flex-row justify-content-center align-items-center mb-2">
@@ -661,35 +661,35 @@ document.getElementById("addnewsBtn").addEventListener("click", () => {
   
   
   <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-  <label for="news${newscontwrapper.childElementCount + 1}Name">News ${newscontwrapper.childElementCount + 1} Name </label>
+  <label for="news${newscontwrapper.childElementCount + 1}Name"><small>Newspaper ${newscontwrapper.childElementCount + 1} Name</small> </label>
   <input type="text" class="form-control" id="news${newscontwrapper.childElementCount + 1}Name" placeholder="Newspaper ${newscontwrapper.childElementCount + 1} Name">
 </div>
 <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-  <label for="news${newscontwrapper.childElementCount + 1}FirstName">News ${newscontwrapper.childElementCount + 1} First Name </label>
+  <label for="news${newscontwrapper.childElementCount + 1}FirstName"><small>Newspaper ${newscontwrapper.childElementCount + 1} First Name</small> </label>
   <input type="text" class="form-control" id="news${newscontwrapper.childElementCount + 1}FirstName" placeholder="Newspaper ${newscontwrapper.childElementCount + 1} First Name">
 </div>
 <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-  <label for="news${newscontwrapper.childElementCount + 1}LastName">News ${newscontwrapper.childElementCount + 1} Last Name </label>
+  <label for="news${newscontwrapper.childElementCount + 1}LastName"><small>Newspaper ${newscontwrapper.childElementCount + 1} Last Name</small> </label>
   <input type="text" class="form-control" id="news${newscontwrapper.childElementCount + 1}LastName" placeholder="Newspaper ${newscontwrapper.childElementCount + 1} Last Name">
 </div>
 <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-  <label for="news${newscontwrapper.childElementCount + 1}Phone">News ${newscontwrapper.childElementCount + 1} Phone </label>
+  <label for="news${newscontwrapper.childElementCount + 1}Phone"><small>Newspaper ${newscontwrapper.childElementCount + 1} Phone</small> </label>
   <input type="text" class="form-control" id="news${newscontwrapper.childElementCount + 1}Phone" placeholder="Newspaper ${newscontwrapper.childElementCount + 1} Phone">
 </div>
 <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-  <label for="news${newscontwrapper.childElementCount + 1}AdFormat">News ${newscontwrapper.childElementCount + 1} Ad Format </label>
+  <label for="news${newscontwrapper.childElementCount + 1}AdFormat"><small>Newspaper ${newscontwrapper.childElementCount + 1} Ad Format</small> </label>
   <input type="text" class="form-control" id="news${newscontwrapper.childElementCount + 1}AdFormat" placeholder="Newspaper ${newscontwrapper.childElementCount + 1} Ad Format">
 </div>
 <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">  
-  <label for="news${newscontwrapper.childElementCount + 1}LeadTime">News ${newscontwrapper.childElementCount + 1} Lead Time </label>
+  <label for="news${newscontwrapper.childElementCount + 1}LeadTime"><small>Newspaper ${newscontwrapper.childElementCount + 1} Lead Time</small> </label>
   <input type="text" class="form-control" id="news${newscontwrapper.childElementCount + 1}LeadTime" placeholder="Newspaper ${newscontwrapper.childElementCount + 1} Lead Time">
 </div>
 <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-  <label for="news${newscontwrapper.childElementCount + 1}DayAdRuns">News ${newscontwrapper.childElementCount + 1} Day Ad Runs </label>
+  <label for="news${newscontwrapper.childElementCount + 1}DayAdRuns"><small>Newspaper ${newscontwrapper.childElementCount + 1} Day Ad Runs</small> </label>
   <input type="text" class="form-control" id="news${newscontwrapper.childElementCount + 1}DayAdRuns" placeholder="Newspaper ${newscontwrapper.childElementCount + 1} Day Ad Runs">
 </div>
 <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-  <label for="news${newscontwrapper.childElementCount + 1}URL">News ${newscontwrapper.childElementCount + 1} URL </label>
+  <label for="news${newscontwrapper.childElementCount + 1}URL"><small>Newspaper ${newscontwrapper.childElementCount + 1} URL</small> </label>
   <input type="text" class="form-control" id="news${newscontwrapper.childElementCount + 1}URL" placeholder="Newspaper ${newscontwrapper.childElementCount + 1} URL">
 </div>
 <div class="w-100 d-flex flex-wrap flex-row justify-content-center align-items-center mb-2">
