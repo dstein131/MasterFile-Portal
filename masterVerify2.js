@@ -693,7 +693,7 @@ document.getElementById("addnewsBtn").addEventListener("click", () => {
   <input type="text" class="form-control" id="news${newscontwrapper.childElementCount + 1}URL" placeholder="Newspaper ${newscontwrapper.childElementCount + 1} URL">
 </div>
 <div class="w-100 d-flex flex-wrap flex-row justify-content-center align-items-center mb-2">
-<button type="button" class="btn btn-danger \ " id="deleteBtn${newscontwrapper.childElementCount + 1}">Delete News ${newscontwrapper.childElementCount + 1}</button>
+<button type="button" class="btn btn-danger \ " id="deleteBtn${newscontwrapper.childElementCount + 1}">Delete Newspaper ${newscontwrapper.childElementCount + 1}</button>
 </div>
 `;
   newscontwrapper.appendChild(newscont);
