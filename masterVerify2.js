@@ -1,4 +1,5 @@
 
+
 let masterFields = {
   countyCode: "01",
   countyName: "Adams",
@@ -90,14 +91,6 @@ let masterFields = {
   newspaper1LeadTime: "2 Weeks",
   newspaper1DayAdRuns: "Monday",
   newspaper1URL: "www.westuniontimes.com",
-  newspaper2Name: "",
-  newspaper2ContactFirstName: "",
-  newspaper2ContactLastName: "",
-  newspaper2Phone: "",
-  newspaper2AdFormat: "",
-  newspaper2LeadTime: "",
-  newspaper2DayAdRuns: "",
-  newspaper2URL: "www.elkaderregister.com",
   saleMethod: "Online",
   salestartdatetime: "2023-01-01T12:43:44",
   saleenddatetime: "2023-05-01T14:04:03",
@@ -105,16 +98,6 @@ let masterFields = {
   saleCity: "West Union",
   saleState: "IA",
   saleZip: "52175",
-  addcont1firstname: "",
-  addcont1lastname: "",
-  addcont1title: "",
-  addcont1phone: "",
-  addcont1email: "",
-  addcont2firstname: "",
-  addcont2lastname: "",
-  addcont2title: "",
-  addcont2phone: "",
-  addcont2email: "",
   sheriffFirstName: "Jane",
   sheriffLastName: "Doe",
   sheriffPhone: "563-422-1234",
@@ -138,6 +121,13 @@ let masterFields = {
   paymentState: "IA",
   paymentZip: "52175",
   paymentCutoffDateTime: "2023-01-01T12:43:44",
+  unsoldBatch: "",
+  dynamicEnding: "",
+  numBatches: "",
+  unsoldStartBatch: "",
+  unsoldEndBatch: "",
+  withinMinutes: "",
+  extendMinutes: "",
 }
 
 let batchAmount = 0;
@@ -168,9 +158,6 @@ for (let key in masterFields) {
 }
 
 // set the sales start date and time to the value of the masterFields object
-// document.getElementById("salestartdatetime").value = masterFields.salestartedatetime
-
-
 let saleStart = new Date(masterFields.salestartdatetime).toLocaleString(('en-US'))
 let saleEnd = new Date(masterFields.saleenddatetime).toLocaleString(('en-US'))
 
@@ -286,6 +273,7 @@ document.getElementById("previousDataModalBody").innerHTML = `
         <div>Additional Contact 2 Title: ${masterFields.addcont2title}</div>
         <div>Additional Contact 2 Phone: ${masterFields.addcont2phone}</div>
         <div>Additional Contact 2 Email: ${masterFields.addcont2email}</div>
+        </div>
 `
 
 let masterFieldsVerify = {}
@@ -373,9 +361,6 @@ document.getElementById("reviewBtn").addEventListener("click", function() {
   <div id="verifycommissioner1City">Commissioner 1 City: ${masterFieldsVerify.commissioner1City}</div>
   <div id="verifycommissioner1State">Commissioner 1 State: ${masterFieldsVerify.commissioner1State}</div>
   <div id="verifycommissioner1Zip">Commissioner 1 Zip: ${masterFieldsVerify.commissioner1Zip}</div>
-
-  
-
   </div>
 
   <div class="border px-2 py-2 mb-2">
@@ -388,7 +373,6 @@ document.getElementById("reviewBtn").addEventListener("click", function() {
   <div id="verifycommissioner2City">Commissioner 2 City: ${masterFieldsVerify.commissioner2City}</div>
   <div id="verifycommissioner2State">Commissioner 2 State: ${masterFieldsVerify.commissioner2State}</div>
   <div id="verifycommissioner2Zip">Commissioner 2 Zip: ${masterFieldsVerify.commissioner2Zip}</div>
-
   </div>
 
   <div class="border px-2 py-2 mb-2">
@@ -401,7 +385,6 @@ document.getElementById("reviewBtn").addEventListener("click", function() {
   <div id="verifycommissioner3City">Commissioner 3 City: ${masterFieldsVerify.commissioner3City}</div>
   <div id="verifycommissioner3State">Commissioner 3 State: ${masterFieldsVerify.commissioner3State}</div>
   <div id="verifycommissioner3Zip">Commissioner 3 Zip: ${masterFieldsVerify.commissioner3Zip}</div>
-
   </div>
 
   <div class="border px-2 py-2 mb-2">
@@ -412,7 +395,6 @@ document.getElementById("reviewBtn").addEventListener("click", function() {
   <div id="verifycourtCity">Court City: ${masterFieldsVerify.courtCity}</div>
   <div id="verifycourtState">Court State: ${masterFieldsVerify.courtState}</div>
   <div id="verifycourtZip">Court Zip: ${masterFieldsVerify.courtZip}</div>
-  
   </div>
 
   <div class="border px-2 py-2 mb-2">
@@ -422,7 +404,6 @@ document.getElementById("reviewBtn").addEventListener("click", function() {
   <div id="verifypresidingJudgePhone">Presiding Judge Phone: ${masterFieldsVerify.presidingJudgePhone}</div>
   <div id="verifypresidingJudgeEmail">Presiding Judge Email: ${masterFieldsVerify.presidingJudgeEmail}</div>
   </div>
-
 
   <div class="border px-2 py-2 mb-2">
   <h5>Clerk Information</h5>
@@ -479,6 +460,16 @@ document.getElementById("reviewBtn").addEventListener("click", function() {
   </div>
 
   <div class="border px-2 py-2 mb-2">
+  <h5>Sale Options</h5>
+  <div id="verifydynamicEndings">Dynamic Endings: ${masterFieldsVerify.dynamicEnding}</div>
+  <div id="verifywithinMinutes">Within Minutes: ${masterFieldsVerify.withinMinutes}</div>
+  <div id="verifyextendMinutes">Extend Minutes: ${masterFieldsVerify.extendMinutes}</div>
+  <div id="verifyunsoldBatch">Unsold Batch: ${masterFieldsVerify.unsoldBatch}</div>
+  <div id="verifyunsoldStartBatch">Unsold Batch Start: ${masterFieldsVerify.unsoldStartBatch}</div>
+  <div id="verifyunsoldEndBatch">Unsold Batch End: ${masterFieldsVerify.unsoldEndBatch}</div>
+  </div>
+
+  <div class="border px-2 py-2 mb-2">
   <h5>Website Information</h5>
   <div id="verifycompSys">Computer System: ${masterFieldsVerify.compSys}</div>
   <div id="verifycountyWebUrl">County Web URL: ${masterFieldsVerify.countyWebUrl}</div>
@@ -496,33 +487,6 @@ document.getElementById("reviewBtn").addEventListener("click", function() {
   <div id="verifynewspaper1DayAdRuns">Newspaper 1 Day Ad Runs: ${masterFieldsVerify.newspaper1DayAdRuns}</div>
   <div id="verifynewspaper1URL">Newspaper 1 URL: ${masterFieldsVerify.newspaper1URL}</div>
   </div>
-
-  <div class="border px-2 py-2 mb-2" id="news2div">
-  <h5>Newspaper 2 Information</h5>
-  <div id="verifyewspaper2Name">Newspaper 2 Name: ${masterFieldsVerify.newspaper2Name}</div>
-  <div id="verifynewspaper2ContactFirstName">Newspaper 2 Contact First Name: ${masterFieldsVerify.newspaper2ContactFirstName}</div>
-  <div id="verifynewspaper2ContactLastName">Newspaper 2 Contact Last Name: ${masterFieldsVerify.newspaper2ContactLastName}</div>
-  <div id="verifynewspaper2Phone">Newspaper 2 Phone: ${masterFieldsVerify.newspaper2Phone}</div>
-  <div id="verifynewspaper2AdFormat">Newspaper 2 Ad Format: ${masterFieldsVerify.newspaper2AdFormat}</div>
-  <div id="verifynewspaper2LeadTime">Newspaper 2 Lead Time: ${masterFieldsVerify.newspaper2LeadTime}</div>
-  <div id="verifynewspaper2DayAdRuns">Newspaper 2 Day Ad Runs: ${masterFieldsVerify.newspaper2DayAdRuns}</div>
-  <div id="verifynewspaper2URL">Newspaper 2 URL: ${masterFieldsVerify.newspaper2URL}</div>
-  </div>
-
-  <div class="border px-2 py-2 mb-2" id="addcont1div">
-  <h5>Additional Contact Information</h5>
-  <div id="verifyaddcont1firstname">Additional Contact 1 First Name: ${masterFieldsVerify.addcont1firstname}</div>
-  <div id="verifyaddcont1lastname">Additional Contact 1 Last Name: ${masterFieldsVerify.addcont1lastname}</div>
-  <div id="verifyaddcont1title">Additional Contact 1 Title: ${masterFieldsVerify.addcont1title}</div>
-  <div id="verifyaddcont1phone">Additional Contact 1 Phone: ${masterFieldsVerify.addcont1phone}</div>
-  <div id="verifyaddcont1email">Additional Contact 1 Email: ${masterFieldsVerify.addcont1email}</div>
-  <div id="verifyaddcont2firstname">Additional Contact 2 First Name: ${masterFieldsVerify.addcont2firstname}</div>
-  <div id="verifyaddcont2lastname">Additional Contact 2 Last Name: ${masterFieldsVerify.addcont2lastname}</div>
-  <div id="verifyaddcont2title">Additional Contact 2 Title: ${masterFieldsVerify.addcont2title}</div>
-  <div id="verifyaddcont2phone">Additional Contact 2 Phone: ${masterFieldsVerify.addcont2phone}</div>
-  <div id="verifyaddcont2email">Additional Contact 2 Email: ${masterFieldsVerify.addcont2email}</div>
-  </div>
-
   `;
 
 // compare the two objects masterFields and masterFieldsVerify and return the differences
@@ -533,6 +497,9 @@ function compareObjects(obj1, obj2) {
       differences[key] = obj2[key];
     }   
   }
+
+  console.log(differences)
+  console.error(differences)
 
  // if a value in the differences object is undefined then remove it from the differences object
   for (let key in differences) {
@@ -555,6 +522,13 @@ function compareObjects(obj1, obj2) {
     <input type="checkbox" id="approve${key}" name="approve${key}" value="approve${key} class=" ms-5">
     </div>`;
   }
+
+// if there are no keys in the differences object then enable to dom element approveBtn
+  if (Object.keys(differences).length === 0) {
+    document.getElementById("approveBtn").disabled = false;
+  }
+  
+
 }
 
 // add an event listener to the id approveBtn that hides the dom element reviewBtn and shows the dom element padCont
