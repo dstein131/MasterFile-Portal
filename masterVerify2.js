@@ -840,6 +840,16 @@ document.getElementById("unsoldBatch").addEventListener("change", (e) => {
   }
 })
 
+// add an event listener to the id dynamicEnding and show the dom id dynamicDiv if the target is checked
+
+document.getElementById("dynamicEnding").addEventListener("change", (e) => {
+  if (e.target.checked) {
+    document.getElementById("dynamicDiv").style.display = "block";
+  } else {
+    document.getElementById("dynamicDiv").style.display = "none";
+  }
+})
+
 
 
 
