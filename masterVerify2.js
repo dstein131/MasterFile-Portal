@@ -110,11 +110,11 @@ let masterFields = {
   addcont1title: "Deputy",
   addcont1phone: "563-422-1234",
   addcont1email: "depjoe@gmail.com",
-  addcont2firstname: "Jane",
-  addcont2lastname: "Doe",
-  addcont2title: "Sheriff",
-  addcont2phone: "563-422-1234",
-  addcont2email: "jdoe@hmail.biz",
+  addcont2firstname: "",
+  addcont2lastname: "",
+  addcont2title: "",
+  addcont2phone: "",
+  addcont2email: "",
   sheriffFirstName: "Jane",
   sheriffLastName: "Doe",
   sheriffPhone: "563-422-1234",
@@ -427,7 +427,7 @@ document.getElementById("reviewBtn").addEventListener("click", function() {
   <h5>Court House Information</h5>
   <div id="verifycourtHouseName">Court House Name: ${masterFieldsVerify.courtHouseName}</div>
   <div id="verifycourtType">Court Type: ${masterFieldsVerify.courtType}</div>
-  <div id="verifycourtStreetAddress">Court Street Address: ${masterFieldsVerify.courtStreetAddress}</div>
+  <div id="verifycourtSteetAddress">Court Street Address: ${masterFieldsVerify.courtSteetAddress}</div>
   <div id="verifycourtCity">Court City: ${masterFieldsVerify.courtCity}</div>
   <div id="verifycourtState">Court State: ${masterFieldsVerify.courtState}</div>
   <div id="verifycourtZip">Court Zip: ${masterFieldsVerify.courtZip}</div>
@@ -440,6 +440,45 @@ document.getElementById("reviewBtn").addEventListener("click", function() {
   <div id="verifypresidingJudgeLastName">Presiding Judge Last Name: ${masterFieldsVerify.presidingJudgeLastName}</div>
   <div id="verifypresidingJudgePhone">Presiding Judge Phone: ${masterFieldsVerify.presidingJudgePhone}</div>
   <div id="verifypresidingJudgeEmail">Presiding Judge Email: ${masterFieldsVerify.presidingJudgeEmail}</div>
+  </div>
+
+
+  <div class="border px-2 py-2 mb-2">
+  <h5>Clerk Information</h5>
+  <div id="verifyclerkFirstName">Clerk First Name: ${masterFieldsVerify.clerkFirstName}</div>
+  <div id="verifyclerkLastName">Clerk Last Name: ${masterFieldsVerify.clerkLastName}</div>
+  <div id="verifyclerkPhone">Clerk Phone: ${masterFieldsVerify.clerkPhone}</div>
+  <div id="verifyclerkEmail">Clerk Email: ${masterFieldsVerify.clerkEmail}</div>
+  <div id="verifyclerkStreetAddress">Clerk Street Address: ${masterFieldsVerify.clerkStreetAddress}</div>
+  <div id="verifyclerkCity">Clerk City: ${masterFieldsVerify.clerkCity}</div>
+  <div id="verifyclerkState">Clerk State: ${masterFieldsVerify.clerkState}</div>
+  <div id="verifyclerkZip">Clerk Zip: ${masterFieldsVerify.clerkZip}</div>
+  </div>
+
+  <div class="border px-2 py-2 mb-2">
+  <h5>Sheriff Information</h5>
+  <div id="verifysheriffFirstName">Sheriff First Name: ${masterFieldsVerify.sheriffFirstName}</div>
+  <div id="verifysheriffLastName">Sheriff Last Name: ${masterFieldsVerify.sheriffLastName}</div>
+  <div id="verifysheriffPhone">Sheriff Phone: ${masterFieldsVerify.sheriffPhone}</div>
+  <div id="verifysheriffEmail">Sheriff Email: ${masterFieldsVerify.sheriffEmail}</div>
+  <div id="verifysheriffStreetAddress">Sheriff Street Address: ${masterFieldsVerify.sheriffStreetAddress}</div>
+  <div id="verifysheriffCity">Sheriff City: ${masterFieldsVerify.sheriffCity}</div>
+  <div id="verifysheriffState">Sheriff State: ${masterFieldsVerify.sheriffState}</div>
+  <div id="verifysheriffZip">Sheriff Zip: ${masterFieldsVerify.sheriffZip}</div>
+  </div>
+
+  <div class="border px-2 py-2 mb-2">
+  <h5>Sherrif's Additional Contact Information</h5>
+  <div id="verifysheriffAddContactFirstName">Sheriff's Additional Contact First Name: ${masterFieldsVerify.sheriffAddContactFirstName}</div>
+  <div id="verifysheriffAddContactLastName">Sheriff's Additional Contact Last Name: ${masterFieldsVerify.sheriffAddContactLastName}</div>
+  <div id="verifysheriffAddContactTitle">Sheriff's Additional Contact Title: ${masterFieldsVerify.sheriffAddContactTitle}</div>
+  <div id="verifysheriffAddContactOrganization">Sheriff's Additional Contact Organization: ${masterFieldsVerify.sheriffAddContactOrganization}</div>
+  <div id="verifysheriffAddContactPhone">Sheriff's Additional Contact Phone: ${masterFieldsVerify.sheriffAddContactPhone}</div>
+  <div id="verifysheriffAddContactEmail">Sheriff's Additional Contact Email: ${masterFieldsVerify.sheriffAddContactEmail}</div>
+  <div id="verifysheriffAddContactStreetAddress">Sheriff's Additional Contact Street Address: ${masterFieldsVerify.sheriffAddContactStreetAddress}</div>
+  <div id="verifysheriffAddContactCity">Sheriff's Additional Contact City: ${masterFieldsVerify.sheriffAddContactCity}</div>
+  <div id="verifysheriffAddContactState">Sheriff's Additional Contact State: ${masterFieldsVerify.sheriffAddContactState}</div>
+  <div id="verifysheriffAddContactZip">Sheriff's Additional Contact Zip: ${masterFieldsVerify.sheriffAddContactZip}</div>
   </div>
 
   <div class="border px-2 py-2 mb-2">
