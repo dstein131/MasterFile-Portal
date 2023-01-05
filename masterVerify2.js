@@ -569,6 +569,12 @@ function compareObjects(obj1, obj2) {
     }
   }
 
+    // take all values from different and highlight the dom element which is the id of verify + key
+    for (let key in differences) {
+      let element = document.getElementById(`verify${key}`);
+      element.style.backgroundColor = "yellow";
+    }
+
 // add an approal check to the changed dom elements
   for (let key in differences) {
     let element = document.getElementById(`verify${key}`);
