@@ -133,6 +133,12 @@ let masterFields = {
   sheriffAddContactCity: "West Union",
   sheriffAddContactState: "IA",
   sheriffAddContactZip: "52175",
+  paymentStreetAddress: "200 S 3rd St",
+  paymentCity: "West Union",
+  paymentState: "IA",
+  paymentZip: "52175",
+  paymentCutoffDateTime: "2023-01-01T12:43:44",
+
 
 
 
@@ -491,6 +497,11 @@ document.getElementById("reviewBtn").addEventListener("click", function() {
   <div id="verifysaleCity">Sale City: ${masterFieldsVerify.saleCity}</div>
   <div id="verifysaleState">Sale State: ${masterFieldsVerify.saleState}</div>
   <div id="verifysaleZip">Sale Zip: ${masterFieldsVerify.saleZip}</div>
+  <div id="verifypaymentStreetAddress">Payment Street Address: ${masterFieldsVerify.paymentStreetAddress}</div>
+  <div id="verifypaymentCity">Payment City: ${masterFieldsVerify.paymentCity}</div>
+  <div id="verifypaymentState">Payment State: ${masterFieldsVerify.paymentState}</div>
+  <div id="verifypaymentZip">Payment Zip: ${masterFieldsVerify.paymentZip}</div>
+  <div id="verifypaymentCutoffDateTime">Payment Cutoff Date/Time: ${masterFieldsVerify.paymentCutoffDateTime}</div>
   </div>
 
   <div class="border px-2 py-2 mb-2">
