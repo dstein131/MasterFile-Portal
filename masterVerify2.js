@@ -90,13 +90,13 @@ let masterFields = {
   newspaper1LeadTime: "2 Weeks",
   newspaper1DayAdRuns: "Monday",
   newspaper1URL: "www.westuniontimes.com",
-  newspaper2Name: "Elkader Register",
-  newspaper2ContactFirstName: "Zachary",
-  newspaper2ContactLastName: "Smith",
-  newspaper2Phone: "563-422-1234",
-  newspaper2AdFormat: "Full Page",
-  newspaper2LeadTime: "2 Weeks",
-  newspaper2DayAdRuns: "Tuesday",
+  newspaper2Name: "",
+  newspaper2ContactFirstName: "",
+  newspaper2ContactLastName: "",
+  newspaper2Phone: "",
+  newspaper2AdFormat: "",
+  newspaper2LeadTime: "",
+  newspaper2DayAdRuns: "",
   newspaper2URL: "www.elkaderregister.com",
   saleMethod: "Online",
   salestartdatetime: "2023-01-01T12:43:44",
@@ -105,11 +105,11 @@ let masterFields = {
   saleCity: "West Union",
   saleState: "IA",
   saleZip: "52175",
-  addcont1firstname: "John",
-  addcont1lastname: "Doe",
-  addcont1title: "Deputy",
-  addcont1phone: "563-422-1234",
-  addcont1email: "depjoe@gmail.com",
+  addcont1firstname: "",
+  addcont1lastname: "",
+  addcont1title: "",
+  addcont1phone: "",
+  addcont1email: "",
   addcont2firstname: "",
   addcont2lastname: "",
   addcont2title: "",
@@ -304,6 +304,7 @@ document.getElementById("reviewBtn").addEventListener("click", function() {
       masterFieldsVerify[key] = document.getElementById(key).value
     }
   }
+  console.log(masterFields)
   console.log(masterFieldsVerify)
 
 // loop through the drop and grab the value of all class "form-control" and add them to the testObj object //
@@ -312,7 +313,7 @@ document.getElementById("reviewBtn").addEventListener("click", function() {
   for (let i = 0; i < drop.length; i++) {
     testObj[drop[i].id] = drop[i].value
   }
-  console.log(testObj)
+  
 
 
 //  let saleStart = new Date(masterFieldsVerify.salestartdatetime).toLocaleString(('en-US'))
@@ -553,12 +554,19 @@ function compareObjects(obj1, obj2) {
     if (obj1[key] !== obj2[key]) {
       differences[key] = obj2[key];
     }
+
+  // if key in the differences object does not exist in the masterFields object then remove it from the differences object
+    if (!masterFields.hasOwnProperty(key)) {
+      delete differences[key];
+    }
+    console.log(differences)
    
   }
-  // take all values from different and highlight the dom element which is the id of verify + key
+ // if a value in the differences object is undefined then remove it from the differences object
   for (let key in differences) {
-    let element = document.getElementById(`verify${key}`);
-    element.style.backgroundColor = "yellow";
+    if (differences[key] === undefined) {
+      delete differences[key];
+    }
   }
 
 // add an approal check to the changed dom elements
