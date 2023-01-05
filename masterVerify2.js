@@ -587,10 +587,10 @@ document.getElementById("addcontBtn").addEventListener("click", (e) => {
   let addcontwrapper = document.getElementById("addcontwrapper");
   let addcont = document.createElement("div");
   addcont.id = `addcont${addcontwrapper.childElementCount + 1}`;
-  addcont.className = "addcont d-flex flex-wrap flex-row justify-content-center align-items-center border border-dark mb-3";
+  addcont.className = "addcont d-flex flex-wrap flex-row justify-content-evenly align-items-center border border-dark py-3 mb-3";
   addcont.innerHTML = `
   
-  
+  <h5 class="text-center w-100">Additional Contact ${addcontwrapper.childElementCount + 1}</h5>
   <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
   <label for="additionalContact${addcontwrapper.childElementCount + 1}FirstName"><small>Additional Contact ${addcontwrapper.childElementCount + 1} First Name</small> </label>
   <input type="text" class="form-control" id="additionalContact${addcontwrapper.childElementCount + 1}FirstName" placeholder="Additional Contact 1 ${addcontwrapper.childElementCount + 1} FirstName">
@@ -656,10 +656,10 @@ document.getElementById("addnewsBtn").addEventListener("click", () => {
   let newscontwrapper = document.getElementById("newscontwrapper");
   let newscont = document.createElement("div");
   newscont.setAttribute("id", `newscont${newscontwrapper.childElementCount + 1}`);
-  newscont.className = "addcont d-flex flex-wrap flex-row justify-content-center align-items-center border border-dark mb-3";
+  newscont.className = "addcont d-flex flex-wrap flex-row justify-content-evenly align-items-center border border-dark py-3 mb-3";
   newscont.innerHTML = `
   
-  
+  <h5 class="text-center w-100">Newspaper ${newscontwrapper.childElementCount + 1}</h5>
   <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
   <label for="news${newscontwrapper.childElementCount + 1}Name"><small>Newspaper ${newscontwrapper.childElementCount + 1} Name</small> </label>
   <input type="text" class="form-control" id="news${newscontwrapper.childElementCount + 1}Name" placeholder="Newspaper ${newscontwrapper.childElementCount + 1} Name">
