@@ -508,6 +508,13 @@ document.getElementById("reviewBtn").addEventListener("click", function() {
   </div>
 
   <div class="border px-2 py-2 mb-2">
+  <h5>Website Information</h5>
+  <div id="verifycompSys">Computer System: ${masterFieldsVerify.compSys}</div>
+  <div id="verifycountyWebUrl">County Web URL: ${masterFieldsVerify.countyWebUrl}</div>
+  </div>
+
+
+  <div class="border px-2 py-2 mb-2">
   <h5>Newspaper 1 Information</h5>
   <div id="verifynewspaper1Name">Newspaper 1 Name: ${masterFieldsVerify.newspaper1Name}</div>
   <div id="verifynewspaper1ContactFirstName">Newspaper 1 Contact First Name: ${masterFieldsVerify.newspaper1ContactFirstName}</div>
