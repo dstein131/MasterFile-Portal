@@ -705,7 +705,7 @@ document.getElementById("addnewsBtn").addEventListener("click", () => {
 )
 
 // make an array of different light background colors
-let lightColors = ["#f8f9fa", "#eefff8", "#e9ecef", "#ffeeee", "#fff5ee", "#dee2e6", "#eefcff", "#e6eff7", "#f2edf5", "#f2f2eb", "#e8ebea", "#fcffee", "#fffaee"];
+// let lightColors = ["#f8f9fa", "#eefff8", "#e9ecef", "#ffeeee", "#fff5ee", "#dee2e6", "#eefcff", "#e6eff7", "#f2edf5", "#f2f2eb", "#e8ebea", "#fcffee", "#fffaee"];
 
 
 
