@@ -292,44 +292,21 @@ document.getElementById("previousDataModalBody").innerHTML = `
         <div>Additional Contact 2 Title: ${masterFields.addcont2title}</div>
         <div>Additional Contact 2 Phone: ${masterFields.addcont2phone}</div>
         <div>Additional Contact 2 Email: ${masterFields.addcont2email}</div>
- 
-
 `
 
-
-
-
 let masterFieldsVerify = {}
-let testObj = {}
 let newValues = {}
 
-// add an event listener to the button with the id of "reviewBtn" that will set the masterFieldsVerify object to the values of the dom elements with the same id as the key
-
+// add an event listener to the button with the id of "reviewBtn" that will set the masterFieldsVerify object to the values of the dom elements with the same id as the keys in the masterFieldsVerify object //
 document.getElementById("reviewBtn").addEventListener("click", function() {
-  // for (let key in masterFields) {
-  //   if (document.getElementById(key)) {
-  //     masterFieldsVerify[key] = document.getElementById(key).value
-  //   }
-  // }
-  // console.log(masterFields)
-  // console.log(masterFieldsVerify)
-
-// loop through the drop and grab the value of all class "form-control" and add them to the testObj object //
-// *** this works without knowing what the original object keys are *** //
   let drop = document.getElementsByClassName("master-input")
   for (let i = 0; i < drop.length; i++) {
     masterFieldsVerify[drop[i].id] = drop[i].value
   }
-
   console.log(masterFieldsVerify)
   
 
-
-//  let saleStart = new Date(masterFieldsVerify.salestartdatetime).toLocaleString(('en-US'))
-//   let saleEnd = new Date(masterFieldsVerify.saleenddatetime).toLocaleString(('en-US'))
-
-
-
+  // *** REVIEW MODAL *** //
 
   // add the values of the masterFieldsVerify object to the dom element id "reviewModal" //
   document.getElementById("reviewModal").innerHTML = `
@@ -554,39 +531,15 @@ document.getElementById("reviewBtn").addEventListener("click", function() {
 
   `;
 
-// if the additional contact 1 first name is empty then remove the addcont1div from the dom
-  if (!masterFieldsVerify.addcont1firstname) {
-    let element = document.getElementById("addcont1div");
-    element.remove();
-  }
-
-// if the verifynewspaper2contactfirstname is empty then remove the news2div from the dom
-  if (!masterFieldsVerify.newspaper2ContactFirstName) {
-    let element = document.getElementById("news2div");
-    element.remove();
-  }
-  
-
-
 // compare the two objects masterFields and masterFieldsVerify and return the differences
 function compareObjects(obj1, obj2) {
   let differences = {};
   for (let key in obj1) {
     if (obj1[key] !== obj2[key]) {
       differences[key] = obj2[key];
-    }
-
-  // if key in the differences object does not exist in the masterFields object then move it to the newValues object and delete it from the differences object
-    if (!masterFields.hasOwnProperty(key)) {
-      newValues[key] = obj2[key];
-      delete differences[key];
-    }
-
-   
-    
+    }   
   }
 
-   
  // if a value in the differences object is undefined then remove it from the differences object
   for (let key in differences) {
     if (differences[key] === undefined) {
@@ -606,19 +559,9 @@ function compareObjects(obj1, obj2) {
     element.innerHTML += `<div class="float-end checkcont">
     <label for="approve${key}">Approve</label>
     <input type="checkbox" id="approve${key}" name="approve${key}" value="approve${key} class=" ms-5">
-    
     </div>`;
   }
-
-
-
-
-
 }
-
-
-
-  
 
 // add an event listener to the id approveBtn that hides the dom element reviewBtn and shows the dom element padCont
 document.getElementById("approveBtn").addEventListener("click", (e) => {
@@ -627,22 +570,17 @@ document.getElementById("approveBtn").addEventListener("click", (e) => {
   style.display = "block";
 });
 
-
-
-
 // add an event listener to the button signSub that shows the dom element finalsubbutn
 document.getElementById("signSub").addEventListener("click", (e) => {
   document.getElementById("finalsubbtn").style.display = "block";
 });
 
-
 compareObjects(masterFields, masterFieldsVerify);
-
-
 }
-
-
 )
+
+
+// ********** SIGNATURE PAD ********** 
 
 const canvas = document.querySelector('canvas');
 const form = document.querySelector('.signature-pad-form');
@@ -700,6 +638,7 @@ canvas.addEventListener('pointermove', handlePointerMove, {passive: true});
 
 
 
+// ********** DOWNLOAD JSON FILE **********
   // create a function that will take the object masterFieldsVerify, convert it to a json object then download it
 function downloadObjectAsJson(exportObj, exportName){
     var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(exportObj));
@@ -710,7 +649,6 @@ function downloadObjectAsJson(exportObj, exportName){
     downloadAnchorNode.click();
     downloadAnchorNode.remove();
 }
-
 
 // add an event listener to the id finalsubbtn that will download the object masterFieldsVerify as a json file
 document.getElementById("finalsubbtn").addEventListener("click", (e) => {
@@ -740,8 +678,6 @@ document.body.addEventListener("click", (e) => {
 }
 )
 
-
-
 // add an event listen to the id reviewBtn that when clicked, if there are no checkboxes then enable the submit button
 document.getElementById("reviewBtn").addEventListener("click", (e) => {
   let checkboxes = document.querySelectorAll('input[type="checkbox"]');
@@ -750,10 +686,6 @@ document.getElementById("reviewBtn").addEventListener("click", (e) => {
   }
 }
 )
-
-
-       
-
 
 // create clear function that will revert the dom to its original state
 function clear() {
@@ -929,41 +861,3 @@ document.getElementById("addnewsBtn").addEventListener("click", () => {
   )
 }
 )
-
-// make an array of different light background colors
-// let lightColors = ["#f8f9fa", "#eefff8", "#e9ecef", "#ffeeee", "#fff5ee", "#dee2e6", "#eefcff", "#e6eff7", "#f2edf5", "#f2f2eb", "#e8ebea", "#fcffee", "#fffaee"];
-
-
-
-// function changeColor() {
-//   // loop through all the elements with the class name of nav-link and create an array of them
-//   let navLinks = document.getElementsByClassName("nav-link");
-//   // for each navLink add an event listener 
-//   for (let i = 0; i < navLinks.length; i++) {
-//     navLinks[i].addEventListener("click", () => {
-//       // set a background random color from the lightColors array to the dom id cardBody
-//       document.getElementById("cardBody").style.backgroundColor = lightColors[Math.floor(Math.random() * lightColors.length)];
-//     })
-//   }
-// }
-
-// changeColor();
-
-
-// // asign a different color from the array light colors as bs-data-color to each nav-link
-// let navLinks = document.getElementsByClassName("nav-link");
-// for (let i = 0; i < navLinks.length; i++) {
-//   navLinks[i].setAttribute("bs-data-color", lightColors[i]);
-// }
-
-// function backgroundChange() {
-//  // add an event listener to each of the nav-links that changes the background color of the dom id cardBody to the bs-data-color of the nav-link
-//   let navLinks = document.getElementsByClassName("nav-link");
-//   for (let i = 0; i < navLinks.length; i++) {
-//     navLinks[i].addEventListener("click", () => {
-//       document.getElementById("cardBody").style.backgroundColor = navLinks[i].getAttribute("bs-data-color");
-//     })
-//   }
-// }
-
-// backgroundChange();
