@@ -138,13 +138,9 @@ let masterFields = {
   paymentState: "IA",
   paymentZip: "52175",
   paymentCutoffDateTime: "2023-01-01T12:43:44",
-
-
-
-
-
-  
 }
+
+let batchAmount = 0;
 
 if (masterFields.saleMethod === "Online") {
   document.getElementById("enddatediv").style.display = "block";
@@ -163,8 +159,6 @@ document.getElementById("saleMethod").addEventListener("change", (e) => {
 
 // disable to button id approveBtn
 document.getElementById("approveBtn").disabled = true
-
-
 
 // set the dom objects matching the masterFields object keys to the values of the the dom element named the same as the key
 for (let key in masterFields) {
@@ -804,6 +798,55 @@ document.getElementById("addcontBtn").addEventListener("click", (e) => {
   )
 }
 )
+
+
+
+// add an event listner to the id numBatches and take it's value and store it in the variable batchAmount
+
+document.getElementById("numBatches").addEventListener("change", (e) => {
+  
+  batchAmount = e.target.value;
+  // clear all content from the id batchDiv
+  document.getElementById("batchDiv").innerHTML = "";
+  // create start and stop time and render it to the dom id batchDiv for each number of batchAmount
+  for (let i = 0; i < batchAmount; i++) {
+    let batchDiv = document.getElementById("batchDiv");
+    let batch = document.createElement("div");
+    batch.setAttribute("id", `batch${i + 1}`);
+    batch.className = "batch mt-2 d-flex flex-wrap flex-row justify-content-evenly align-items-center border border-dark py-3 mb-3";
+    batch.innerHTML = `
+    <h5 class="text-center w-100">Batch ${i + 1}</h5>
+    <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
+      <label for="batch${i + 1}StartTime"><small>Batch ${i + 1} Start Time</small> </label>
+      <input type="text" class="form-control master-input" id="batch${i + 1}StartTime" placeholder="Batch ${i + 1} Start Time">
+    </div>
+    <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
+      <label for="batch${i + 1}StopTime"><small>Batch ${i + 1} Stop Time</small> </label>
+      <input type="text" class="form-control master-input" id="batch${i + 1}StopTime" placeholder="Batch ${i + 1} Stop Time">
+    </div>`;
+    batchDiv.appendChild(batch);
+  }
+
+})
+
+// add an event listen to id unsoldBatch and show the dom id unsoldBatchDiv if the target is checked
+// hide the dom id unsoldBatchDiv if the target is not checked
+
+document.getElementById("unsoldBatch").addEventListener("change", (e) => {
+  if (e.target.checked) {
+    document.getElementById("unsoldbatchesdiv").style.display = "block";
+  } else {
+    document.getElementById("unsoldbatchesdiv").style.display = "none";
+  }
+})
+
+
+
+
+
+
+
+
 
 
 // add an event listern to the id addnewsBtn that will add a new container to the dom with the id newscontwrapper
