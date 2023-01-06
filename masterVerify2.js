@@ -322,10 +322,6 @@ document.getElementById("reviewBtn").addEventListener("click", function() {
   
   }
 
- 
-
-    
-  
   addMasterFields()
 
   // *** REVIEW MODAL *** //
@@ -944,5 +940,5 @@ document.getElementById("addnewsBtn").addEventListener("click", () => {
 )
 
 
-// create a function that loops through masterFieldsVerify and adds them to the dom element id newTest
+
 
