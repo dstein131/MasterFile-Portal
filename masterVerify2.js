@@ -143,6 +143,15 @@ if (masterFields.saleMethod === "Online") {
 // add an event listener to all master-input class elements
 document.querySelectorAll(".master-input").forEach((el) => {
   el.addEventListener("change", (e) => {
+    // if the value of the input is equal to the value of the masterFields key with the same name, remove the badge next to the label
+    if (e.target.value === masterFields[e.target.id]) {
+      let label = document.querySelector(`label[for="${e.target.id}"]`);
+      let span = label.querySelector("span");
+      label.removeChild(span);
+    }
+
+    else {
+
     // add a span after the inputs associated label
     let label = document.querySelector(`label[for="${e.target.id}"]`);
     // add a span after the label
@@ -150,9 +159,9 @@ document.querySelectorAll(".master-input").forEach((el) => {
     span.innerHTML = `<span class="badge ms-2 mb-1 bg-warning text-dark">Changed</span>`
     label.appendChild(span);
   }
-  )
-}
-);
+  })
+})
+
 
 
 
@@ -925,8 +934,6 @@ document.getElementById("dynamicEnding").addEventListener("change", (e) => {
     document.getElementById("dynamicDiv").style.display = "none";
   }
 })
-
-
 
 
 
