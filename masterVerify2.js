@@ -804,11 +804,11 @@ document.getElementById("numBatches").addEventListener("change", (e) => {
     <h5 class="text-center w-100">Batch ${i + 1}</h5>
     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
       <label for="batch${i + 1}StartTime"><small>Batch ${i + 1} Start Time</small> </label>
-      <input type="date-time local" class="form-control master-input" id="batch${i + 1}StartTime" placeholder="Batch ${i + 1} Start Time">
+      <input type="datetime-local" class="form-control master-input" id="batch${i + 1}StartTime" placeholder="Batch ${i + 1} Start Time">
     </div>
     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
       <label for="batch${i + 1}StopTime"><small>Batch ${i + 1} Stop Time</small> </label>
-      <input type="date-time local" class="form-control master-input" id="batch${i + 1}StopTime" placeholder="Batch ${i + 1} Stop Time">
+      <input type="datetime-local" class="form-control master-input" id="batch${i + 1}StopTime" placeholder="Batch ${i + 1} Stop Time">
     </div>`;
     batchDiv.appendChild(batch);
   }
