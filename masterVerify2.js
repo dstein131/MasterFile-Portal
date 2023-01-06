@@ -148,6 +148,11 @@ document.querySelectorAll(".master-input").forEach((el) => {
       let label = document.querySelector(`label[for="${e.target.id}"]`);
       let span = label.querySelector("span");
       label.removeChild(span);
+      // check if there are any more spans next to the label if so, remove them using while loop
+      while (label.querySelector("span")) {
+        let span = label.querySelector("span");
+        label.removeChild(span);
+      }
     }
 
     else {
