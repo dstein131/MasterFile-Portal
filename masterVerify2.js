@@ -799,6 +799,7 @@ document.getElementById("numBatches").addEventListener("change", (e) => {
     let batchDiv = document.getElementById("batchDiv");
     let batch = document.createElement("div");
     batch.setAttribute("id", `batch${i + 1}`);
+    batch.setAttribute("style", "background-color: #e3ecff")
     batch.className = "batch mt-2 d-flex flex-wrap flex-row justify-content-evenly align-items-center border border-dark py-3 mb-3";
     batch.innerHTML = `
     <h5 class="text-center w-100">Batch ${i + 1}</h5>
