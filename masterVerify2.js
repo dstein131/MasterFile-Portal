@@ -132,6 +132,9 @@ let masterFields = {
 
 let batchAmount = 0;
 
+let addContAmount = 0;
+let newsCont = 1
+
 if (masterFields.saleMethod === "Online") {
   document.getElementById("enddatediv").style.display = "block";
 }
@@ -488,6 +491,9 @@ document.getElementById("reviewBtn").addEventListener("click", function() {
   </div>
   `;
 
+
+
+
 // compare the two objects masterFields and masterFieldsVerify and return the differences
 function compareObjects(obj1, obj2) {
   let differences = {};
@@ -713,6 +719,7 @@ document.getElementById("saleMethod").addEventListener("change", (e) => {
 document.getElementById("addcontBtn").addEventListener("click", (e) => {
   let addcontwrapper = document.getElementById("addcontwrapper");
   let addcont = document.createElement("div");
+  newsCont++;
   addcont.id = `addcont${addcontwrapper.childElementCount + 1}`;
   addcont.className = "addcont d-flex flex-wrap flex-row justify-content-evenly align-items-center border border-dark py-3 mb-3";
   addcont.innerHTML = `
@@ -771,6 +778,10 @@ document.getElementById("addcontBtn").addEventListener("click", (e) => {
     e.target.parentNode.parentNode.remove();
   }
   )
+
+
+
+
 }
 )
 
@@ -793,11 +804,11 @@ document.getElementById("numBatches").addEventListener("change", (e) => {
     <h5 class="text-center w-100">Batch ${i + 1}</h5>
     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
       <label for="batch${i + 1}StartTime"><small>Batch ${i + 1} Start Time</small> </label>
-      <input type="text" class="form-control master-input" id="batch${i + 1}StartTime" placeholder="Batch ${i + 1} Start Time">
+      <input type="date-time local" class="form-control master-input" id="batch${i + 1}StartTime" placeholder="Batch ${i + 1} Start Time">
     </div>
     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
       <label for="batch${i + 1}StopTime"><small>Batch ${i + 1} Stop Time</small> </label>
-      <input type="text" class="form-control master-input" id="batch${i + 1}StopTime" placeholder="Batch ${i + 1} Stop Time">
+      <input type="date-time local" class="form-control master-input" id="batch${i + 1}StopTime" placeholder="Batch ${i + 1} Stop Time">
     </div>`;
     batchDiv.appendChild(batch);
   }
