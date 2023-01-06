@@ -287,246 +287,261 @@ document.getElementById("reviewBtn").addEventListener("click", function() {
   }
   console.log(masterFieldsVerify)
 
-  function addMasterFields() {
-    // loops through masterFieldsVerify and adds them to the dom element id newTest
-    // compares the value of masterFieldsVerify to the value of masterFields
-    // if there is an item that does exists in masterfieldsVerify but not masterfields, make the background of the div green
-    // if the values are different, make the background of the div yellow
+  // function addMasterFields() {
+  //   // loops through masterFieldsVerify and adds them to the dom element id newTest
+  //   // compares the value of masterFieldsVerify to the value of masterFields
+  //   // if there is an item that does exists in masterfieldsVerify but not masterfields, make the background of the div green
+  //   // if the values are different, make the background of the div yellow
 
-    // sort masterfieldsVerify by key
-    masterFieldsVerify = Object.keys(masterFieldsVerify)
-      .sort()
-      .reduce((r, k) => ((r[k] = masterFieldsVerify[k]), r), {})
-    console.log(masterFieldsVerify)
+  //   // sort masterfieldsVerify by key
+  //   masterFieldsVerify = Object.keys(masterFieldsVerify)
+  //     .sort()
+  //     .reduce((r, k) => ((r[k] = masterFieldsVerify[k]), r), {})
+  //   console.log(masterFieldsVerify)
 
 
-    // clear the dom element id "reviewModal" 
-    document.getElementById("reviewModal").innerHTML = ""
+  //   // clear the dom element id "reviewModal" 
+  //   document.getElementById("reviewModal").innerHTML = ""
 
-    for (let key in masterFieldsVerify) {
-      if (masterFieldsVerify[key] === masterFields[key]) {
-        document.getElementById("reviewModal").innerHTML += `
-        <div class="border px-2 py-2 mb-2">
-        <div>${key}: ${masterFieldsVerify[key]}</div>
-        </div>
-        `
-      } else {
-        document.getElementById("reviewModal").innerHTML += `
-        <div class="border px-2 py-2 mb-2" style="background-color: yellow;">
-        <div>${key}: ${masterFieldsVerify[key]}</div>
-        </div>
-        `
-      }
-    }
+  //   for (let key in masterFieldsVerify) {
+  //     if (masterFieldsVerify[key] === masterFields[key]) {
+  //       document.getElementById("reviewModal").innerHTML += `
+  //       <div class="border px-2 py-2 mb-2">
+  //       <div>${key}: ${masterFieldsVerify[key]}</div>
+  //       </div>
+  //       `
+  //     } else {
+  //       document.getElementById("reviewModal").innerHTML += `
+  //       <div class="border px-2 py-2 mb-2" style="background-color: yellow;">
+  //       <div>${key}: ${masterFieldsVerify[key]}</div>
+  //       </div>
+  //       `
+  //     }
+  //   }
 
   
-  }
+  // }
 
-  addMasterFields()
+  // addMasterFields()
 
   // *** REVIEW MODAL *** //
 
   // add the values of the masterFieldsVerify object to the dom element id "reviewModal" //
-  // document.getElementById("reviewModal").innerHTML = `
+  document.getElementById("reviewModal").innerHTML = `
   
-  // <div class="border px-2 py-2 mb-2">
-  // <h5>County Information</h5>
-  // <div id="verifycountyCode">County Code: ${masterFieldsVerify.countyCode}</div>
-  // <div id="verifycountyName">County Name: ${masterFieldsVerify.countyName}</div>
-  // <div id="verifycountyStreetAddress">County Street Address: ${masterFieldsVerify.countyStreetAddress}</div>
-  // <div id="verifycountyCity">County City: ${masterFieldsVerify.countyCity}</div>
-  // <div id="verifycountyState">County State: ${masterFieldsVerify.countyState}</div>
-  // <div id="verifycountyZip">County Zip: ${masterFieldsVerify.countyZip}</div>
-  // </div>
+  <div class="border px-2 py-2 mb-2">
+  <h5>County Information</h5>
+  <div id="verifycountyCode">County Code: ${masterFieldsVerify.countyCode}</div>
+  <div id="verifycountyName">County Name: ${masterFieldsVerify.countyName}</div>
+  <div id="verifycountyStreetAddress">County Street Address: ${masterFieldsVerify.countyStreetAddress}</div>
+  <div id="verifycountyCity">County City: ${masterFieldsVerify.countyCity}</div>
+  <div id="verifycountyState">County State: ${masterFieldsVerify.countyState}</div>
+  <div id="verifycountyZip">County Zip: ${masterFieldsVerify.countyZip}</div>
+  </div>
 
-  // <div class="border px-2 py-2 mb-2">
-  // <h5>Auditor Information</h5>
-  // <div id="verifyauditorFirstName">Auditor Name: ${masterFieldsVerify.auditorFirstName}</div>
-  // <div id="verifyauditorLastName">Auditor Name: ${masterFieldsVerify.auditorLastName}</div>
-  // <div id="verifyauditorPhone">Auditor Phone: ${masterFieldsVerify.auditorPhone}</div>
-  // <div id="verifyauditorEmail">Auditor Email: ${masterFieldsVerify.auditorEmail}</div>
-  // <div id="verifyauditorStreetAddress">Auditor Street Address: ${masterFieldsVerify.auditorStreetAddress}</div>
-  // <div id="verifyauditorCity">Auditor City: ${masterFieldsVerify.auditorCity}</div>
-  // <div id="verifyauditorState">Auditor State: ${masterFieldsVerify.auditorState}</div>
-  // <div id="verifyauditorZip">Auditor Zip: ${masterFieldsVerify.auditorZip}</div>
-  // </div>
+  <div class="border px-2 py-2 mb-2">
+  <h5>Auditor Information</h5>
+  <div id="verifyauditorFirstName">Auditor Name: ${masterFieldsVerify.auditorFirstName}</div>
+  <div id="verifyauditorLastName">Auditor Name: ${masterFieldsVerify.auditorLastName}</div>
+  <div id="verifyauditorPhone">Auditor Phone: ${masterFieldsVerify.auditorPhone}</div>
+  <div id="verifyauditorEmail">Auditor Email: ${masterFieldsVerify.auditorEmail}</div>
+  <div id="verifyauditorStreetAddress">Auditor Street Address: ${masterFieldsVerify.auditorStreetAddress}</div>
+  <div id="verifyauditorCity">Auditor City: ${masterFieldsVerify.auditorCity}</div>
+  <div id="verifyauditorState">Auditor State: ${masterFieldsVerify.auditorState}</div>
+  <div id="verifyauditorZip">Auditor Zip: ${masterFieldsVerify.auditorZip}</div>
+  </div>
 
-  // <div class="border px-2 py-2 mb-2">
-  // <h5>Treasurer Information</h5>
-  // <div id="verifytreasurerFirstName">Treasurer Name: ${masterFieldsVerify.treasurerFirstName}</div>
-  // <div id="verifytreasurerLastName">Treasurer Name: ${masterFieldsVerify.treasurerLastName}</div>
-  // <div id="verifytreasurerPhone">Treasurer Phone: ${masterFieldsVerify.treasurerPhone}</div>
-  // <div id="verifytreasurerEmail">Treasurer Email: ${masterFieldsVerify.treasurerEmail}</div>
-  // <div id="verifytreasurerStreetAddress">Treasurer Street Address: ${masterFieldsVerify.treasurerStreetAddress}</div>
-  // <div id="verifytreasurerCity">Treasurer City: ${masterFieldsVerify.treasurerCity}</div>
-  // <div id="verifytreasurerState">Treasurer State: ${masterFieldsVerify.treasurerState}</div>
-  // <div id="verifytreasurerZip">Treasurer Zip: ${masterFieldsVerify.treasurerZip}</div>
-  // </div>
+  <div class="border px-2 py-2 mb-2">
+  <h5>Treasurer Information</h5>
+  <div id="verifytreasurerFirstName">Treasurer Name: ${masterFieldsVerify.treasurerFirstName}</div>
+  <div id="verifytreasurerLastName">Treasurer Name: ${masterFieldsVerify.treasurerLastName}</div>
+  <div id="verifytreasurerPhone">Treasurer Phone: ${masterFieldsVerify.treasurerPhone}</div>
+  <div id="verifytreasurerEmail">Treasurer Email: ${masterFieldsVerify.treasurerEmail}</div>
+  <div id="verifytreasurerStreetAddress">Treasurer Street Address: ${masterFieldsVerify.treasurerStreetAddress}</div>
+  <div id="verifytreasurerCity">Treasurer City: ${masterFieldsVerify.treasurerCity}</div>
+  <div id="verifytreasurerState">Treasurer State: ${masterFieldsVerify.treasurerState}</div>
+  <div id="verifytreasurerZip">Treasurer Zip: ${masterFieldsVerify.treasurerZip}</div>
+  </div>
 
-  // <div class="border px-2 py-2 mb-2" id="attverdiv">
-  // <h5>Attorney Information</h5>
-  // <div id="verifyattorneyFirstName">Attorney Name: ${masterFieldsVerify.attorneyFirstName}</div>
-  // <div id="verifyattorneyLastName">Attorney Name: ${masterFieldsVerify.attorneyLastName}</div>
-  // <div id="verifyattorneyPhone">Attorney Phone: ${masterFieldsVerify.attorneyPhone}</div>
-  // <div id="verifyattorneyEmail">Attorney Email: ${masterFieldsVerify.attorneyEmail}</div>
-  // <div id="verifyattorneyStreetAddress">Attorney Street Address: ${masterFieldsVerify.attorneyStreetAddress}</div>
-  // <div id="verifyattorneyCity">Attorney City: ${masterFieldsVerify.attorneyCity}</div>
-  // <div id="verifyattorneyState">Attorney State: ${masterFieldsVerify.attorneyState}</div>
-  // <div id="verifyattorneyZip">Attorney Zip: ${masterFieldsVerify.attorneyZip}</div>
-  // </div>
+  <div class="border px-2 py-2 mb-2" id="attverdiv">
+  <h5>Attorney Information</h5>
+  <div id="verifyattorneyFirstName">Attorney Name: ${masterFieldsVerify.attorneyFirstName}</div>
+  <div id="verifyattorneyLastName">Attorney Name: ${masterFieldsVerify.attorneyLastName}</div>
+  <div id="verifyattorneyPhone">Attorney Phone: ${masterFieldsVerify.attorneyPhone}</div>
+  <div id="verifyattorneyEmail">Attorney Email: ${masterFieldsVerify.attorneyEmail}</div>
+  <div id="verifyattorneyStreetAddress">Attorney Street Address: ${masterFieldsVerify.attorneyStreetAddress}</div>
+  <div id="verifyattorneyCity">Attorney City: ${masterFieldsVerify.attorneyCity}</div>
+  <div id="verifyattorneyState">Attorney State: ${masterFieldsVerify.attorneyState}</div>
+  <div id="verifyattorneyZip">Attorney Zip: ${masterFieldsVerify.attorneyZip}</div>
+  </div>
 
-  // <div class="border px-2 py-2 mb-2">
-  // <h5>Assessor Information</h5>
-  // <div id="verifyassessorFirstName">Assessor Name: ${masterFieldsVerify.assessorFirstName}</div>
-  // <div id="verifyassessorLastName">Assessor Name: ${masterFieldsVerify.assessorLastName}</div>
-  // <div id="verifyassessorPhone">Assessor Phone: ${masterFieldsVerify.assessorPhone}</div>
-  // <div id="verifyassessorEmail">Assessor Email: ${masterFieldsVerify.assessorEmail}</div>
-  // <div id="verifyassessorStreetAddress">Assessor Street Address: ${masterFieldsVerify.assessorStreetAddress}</div>
-  // <div id="verifyassessorCity">Assessor City: ${masterFieldsVerify.assessorCity}</div>
-  // <div id="verifyassessorState">Assessor State: ${masterFieldsVerify.assessorState}</div>
-  // <div id="verifyassessorZip">Assessor Zip: ${masterFieldsVerify.assessorZip}</div>
-  // </div>
+  <div class="border px-2 py-2 mb-2">
+  <h5>Assessor Information</h5>
+  <div id="verifyassessorFirstName">Assessor Name: ${masterFieldsVerify.assessorFirstName}</div>
+  <div id="verifyassessorLastName">Assessor Name: ${masterFieldsVerify.assessorLastName}</div>
+  <div id="verifyassessorPhone">Assessor Phone: ${masterFieldsVerify.assessorPhone}</div>
+  <div id="verifyassessorEmail">Assessor Email: ${masterFieldsVerify.assessorEmail}</div>
+  <div id="verifyassessorStreetAddress">Assessor Street Address: ${masterFieldsVerify.assessorStreetAddress}</div>
+  <div id="verifyassessorCity">Assessor City: ${masterFieldsVerify.assessorCity}</div>
+  <div id="verifyassessorState">Assessor State: ${masterFieldsVerify.assessorState}</div>
+  <div id="verifyassessorZip">Assessor Zip: ${masterFieldsVerify.assessorZip}</div>
+  </div>
 
-  // <div class="border px-2 py-2 mb-2">
-  // <h5>Commissioner 1 Information</h5>
-  // <div id="verifycommissioner1FirstName">Commissioner 1 Name: ${masterFieldsVerify.commissioner1FirstName}</div>
-  // <div id="verifycommissioner1LastName">Commissioner 1 Name: ${masterFieldsVerify.commissioner1LastName}</div>
-  // <div id="verifycommissioner1Phone">Commissioner 1 Phone: ${masterFieldsVerify.commissioner1Phone}</div>
-  // <div id="verifycommissioner1Email">Commissioner 1 Email: ${masterFieldsVerify.commissioner1Email}</div>
-  // <div id="verifycommissioner1StreetAddress">Commissioner 1 Street Address: ${masterFieldsVerify.commissioner1StreetAddress}</div>
-  // <div id="verifycommissioner1City">Commissioner 1 City: ${masterFieldsVerify.commissioner1City}</div>
-  // <div id="verifycommissioner1State">Commissioner 1 State: ${masterFieldsVerify.commissioner1State}</div>
-  // <div id="verifycommissioner1Zip">Commissioner 1 Zip: ${masterFieldsVerify.commissioner1Zip}</div>
-  // </div>
+  <div class="border px-2 py-2 mb-2">
+  <h5>Commissioner 1 Information</h5>
+  <div id="verifycommissioner1FirstName">Commissioner 1 Name: ${masterFieldsVerify.commissioner1FirstName}</div>
+  <div id="verifycommissioner1LastName">Commissioner 1 Name: ${masterFieldsVerify.commissioner1LastName}</div>
+  <div id="verifycommissioner1Phone">Commissioner 1 Phone: ${masterFieldsVerify.commissioner1Phone}</div>
+  <div id="verifycommissioner1Email">Commissioner 1 Email: ${masterFieldsVerify.commissioner1Email}</div>
+  <div id="verifycommissioner1StreetAddress">Commissioner 1 Street Address: ${masterFieldsVerify.commissioner1StreetAddress}</div>
+  <div id="verifycommissioner1City">Commissioner 1 City: ${masterFieldsVerify.commissioner1City}</div>
+  <div id="verifycommissioner1State">Commissioner 1 State: ${masterFieldsVerify.commissioner1State}</div>
+  <div id="verifycommissioner1Zip">Commissioner 1 Zip: ${masterFieldsVerify.commissioner1Zip}</div>
+  </div>
 
-  // <div class="border px-2 py-2 mb-2">
-  // <h5>Commissioner 2 Information</h5>
-  // <div id="verifycommissioner2FirstName">Commissioner 2 Name: ${masterFieldsVerify.commissioner2FirstName}</div>
-  // <div id="verifycommissioner2LastName">Commissioner 2 Name: ${masterFieldsVerify.commissioner2LastName}</div>
-  // <div id="verifycommissioner2Phone">Commissioner 2 Phone: ${masterFieldsVerify.commissioner2Phone}</div>
-  // <div id="verifycommissioner2Email">Commissioner 2 Email: ${masterFieldsVerify.commissioner2Email}</div>
-  // <div id="verifycommissioner2StreetAddress">Commissioner 2 Street Address: ${masterFieldsVerify.commissioner2StreetAddress}</div>
-  // <div id="verifycommissioner2City">Commissioner 2 City: ${masterFieldsVerify.commissioner2City}</div>
-  // <div id="verifycommissioner2State">Commissioner 2 State: ${masterFieldsVerify.commissioner2State}</div>
-  // <div id="verifycommissioner2Zip">Commissioner 2 Zip: ${masterFieldsVerify.commissioner2Zip}</div>
-  // </div>
+  <div class="border px-2 py-2 mb-2">
+  <h5>Commissioner 2 Information</h5>
+  <div id="verifycommissioner2FirstName">Commissioner 2 Name: ${masterFieldsVerify.commissioner2FirstName}</div>
+  <div id="verifycommissioner2LastName">Commissioner 2 Name: ${masterFieldsVerify.commissioner2LastName}</div>
+  <div id="verifycommissioner2Phone">Commissioner 2 Phone: ${masterFieldsVerify.commissioner2Phone}</div>
+  <div id="verifycommissioner2Email">Commissioner 2 Email: ${masterFieldsVerify.commissioner2Email}</div>
+  <div id="verifycommissioner2StreetAddress">Commissioner 2 Street Address: ${masterFieldsVerify.commissioner2StreetAddress}</div>
+  <div id="verifycommissioner2City">Commissioner 2 City: ${masterFieldsVerify.commissioner2City}</div>
+  <div id="verifycommissioner2State">Commissioner 2 State: ${masterFieldsVerify.commissioner2State}</div>
+  <div id="verifycommissioner2Zip">Commissioner 2 Zip: ${masterFieldsVerify.commissioner2Zip}</div>
+  </div>
 
-  // <div class="border px-2 py-2 mb-2">
-  // <h5>Commissioner 3 Information</h5>
-  // <div id="verifycommissioner3FirstName">Commissioner 3 Name: ${masterFieldsVerify.commissioner3FirstName}</div>
-  // <div id="verifycommissioner3LastName">Commissioner 3 Name: ${masterFieldsVerify.commissioner3LastName}</div>
-  // <div id="verifycommissioner3Phone">Commissioner 3 Phone: ${masterFieldsVerify.commissioner3Phone}</div>
-  // <div id="verifycommissioner3Email">Commissioner 3 Email: ${masterFieldsVerify.commissioner3Email}</div>
-  // <div id="verifycommissioner3StreetAddress">Commissioner 3 Street Address: ${masterFieldsVerify.commissioner3StreetAddress}</div>
-  // <div id="verifycommissioner3City">Commissioner 3 City: ${masterFieldsVerify.commissioner3City}</div>
-  // <div id="verifycommissioner3State">Commissioner 3 State: ${masterFieldsVerify.commissioner3State}</div>
-  // <div id="verifycommissioner3Zip">Commissioner 3 Zip: ${masterFieldsVerify.commissioner3Zip}</div>
-  // </div>
+  <div class="border px-2 py-2 mb-2">
+  <h5>Commissioner 3 Information</h5>
+  <div id="verifycommissioner3FirstName">Commissioner 3 Name: ${masterFieldsVerify.commissioner3FirstName}</div>
+  <div id="verifycommissioner3LastName">Commissioner 3 Name: ${masterFieldsVerify.commissioner3LastName}</div>
+  <div id="verifycommissioner3Phone">Commissioner 3 Phone: ${masterFieldsVerify.commissioner3Phone}</div>
+  <div id="verifycommissioner3Email">Commissioner 3 Email: ${masterFieldsVerify.commissioner3Email}</div>
+  <div id="verifycommissioner3StreetAddress">Commissioner 3 Street Address: ${masterFieldsVerify.commissioner3StreetAddress}</div>
+  <div id="verifycommissioner3City">Commissioner 3 City: ${masterFieldsVerify.commissioner3City}</div>
+  <div id="verifycommissioner3State">Commissioner 3 State: ${masterFieldsVerify.commissioner3State}</div>
+  <div id="verifycommissioner3Zip">Commissioner 3 Zip: ${masterFieldsVerify.commissioner3Zip}</div>
+  </div>
 
-  // <div class="border px-2 py-2 mb-2">
-  // <h5>Court House Information</h5>
-  // <div id="verifycourtHouseName">Court House Name: ${masterFieldsVerify.courtHouseName}</div>
-  // <div id="verifycourtType">Court Type: ${masterFieldsVerify.courtType}</div>
-  // <div id="verifycourtSteetAddress">Court Street Address: ${masterFieldsVerify.courtSteetAddress}</div>
-  // <div id="verifycourtCity">Court City: ${masterFieldsVerify.courtCity}</div>
-  // <div id="verifycourtState">Court State: ${masterFieldsVerify.courtState}</div>
-  // <div id="verifycourtZip">Court Zip: ${masterFieldsVerify.courtZip}</div>
-  // </div>
+  <div class="border px-2 py-2 mb-2">
+  <h5>Court House Information</h5>
+  <div id="verifycourtHouseName">Court House Name: ${masterFieldsVerify.courtHouseName}</div>
+  <div id="verifycourtType">Court Type: ${masterFieldsVerify.courtType}</div>
+  <div id="verifycourtSteetAddress">Court Street Address: ${masterFieldsVerify.courtSteetAddress}</div>
+  <div id="verifycourtCity">Court City: ${masterFieldsVerify.courtCity}</div>
+  <div id="verifycourtState">Court State: ${masterFieldsVerify.courtState}</div>
+  <div id="verifycourtZip">Court Zip: ${masterFieldsVerify.courtZip}</div>
+  </div>
 
-  // <div class="border px-2 py-2 mb-2">
-  // <h5>Presiding Judge Information</h5>
-  // <div id="verifypresidingJudgeFirstName">Presiding Judge First Name: ${masterFieldsVerify.presidingJudgeFirstName}</div>
-  // <div id="verifypresidingJudgeLastName">Presiding Judge Last Name: ${masterFieldsVerify.presidingJudgeLastName}</div>
-  // <div id="verifypresidingJudgePhone">Presiding Judge Phone: ${masterFieldsVerify.presidingJudgePhone}</div>
-  // <div id="verifypresidingJudgeEmail">Presiding Judge Email: ${masterFieldsVerify.presidingJudgeEmail}</div>
-  // </div>
+  <div class="border px-2 py-2 mb-2">
+  <h5>Presiding Judge Information</h5>
+  <div id="verifypresidingJudgeFirstName">Presiding Judge First Name: ${masterFieldsVerify.presidingJudgeFirstName}</div>
+  <div id="verifypresidingJudgeLastName">Presiding Judge Last Name: ${masterFieldsVerify.presidingJudgeLastName}</div>
+  <div id="verifypresidingJudgePhone">Presiding Judge Phone: ${masterFieldsVerify.presidingJudgePhone}</div>
+  <div id="verifypresidingJudgeEmail">Presiding Judge Email: ${masterFieldsVerify.presidingJudgeEmail}</div>
+  </div>
 
-  // <div class="border px-2 py-2 mb-2">
-  // <h5>Clerk Information</h5>
-  // <div id="verifyclerkFirstName">Clerk First Name: ${masterFieldsVerify.clerkFirstName}</div>
-  // <div id="verifyclerkLastName">Clerk Last Name: ${masterFieldsVerify.clerkLastName}</div>
-  // <div id="verifyclerkPhone">Clerk Phone: ${masterFieldsVerify.clerkPhone}</div>
-  // <div id="verifyclerkEmail">Clerk Email: ${masterFieldsVerify.clerkEmail}</div>
-  // <div id="verifyclerkStreetAddress">Clerk Street Address: ${masterFieldsVerify.clerkStreetAddress}</div>
-  // <div id="verifyclerkCity">Clerk City: ${masterFieldsVerify.clerkCity}</div>
-  // <div id="verifyclerkState">Clerk State: ${masterFieldsVerify.clerkState}</div>
-  // <div id="verifyclerkZip">Clerk Zip: ${masterFieldsVerify.clerkZip}</div>
-  // </div>
+  <div class="border px-2 py-2 mb-2">
+  <h5>Clerk Information</h5>
+  <div id="verifyclerkFirstName">Clerk First Name: ${masterFieldsVerify.clerkFirstName}</div>
+  <div id="verifyclerkLastName">Clerk Last Name: ${masterFieldsVerify.clerkLastName}</div>
+  <div id="verifyclerkPhone">Clerk Phone: ${masterFieldsVerify.clerkPhone}</div>
+  <div id="verifyclerkEmail">Clerk Email: ${masterFieldsVerify.clerkEmail}</div>
+  <div id="verifyclerkStreetAddress">Clerk Street Address: ${masterFieldsVerify.clerkStreetAddress}</div>
+  <div id="verifyclerkCity">Clerk City: ${masterFieldsVerify.clerkCity}</div>
+  <div id="verifyclerkState">Clerk State: ${masterFieldsVerify.clerkState}</div>
+  <div id="verifyclerkZip">Clerk Zip: ${masterFieldsVerify.clerkZip}</div>
+  </div>
 
-  // <div class="border px-2 py-2 mb-2">
-  // <h5>Sheriff Information</h5>
-  // <div id="verifysheriffFirstName">Sheriff First Name: ${masterFieldsVerify.sheriffFirstName}</div>
-  // <div id="verifysheriffLastName">Sheriff Last Name: ${masterFieldsVerify.sheriffLastName}</div>
-  // <div id="verifysheriffPhone">Sheriff Phone: ${masterFieldsVerify.sheriffPhone}</div>
-  // <div id="verifysheriffEmail">Sheriff Email: ${masterFieldsVerify.sheriffEmail}</div>
-  // <div id="verifysheriffStreetAddress">Sheriff Street Address: ${masterFieldsVerify.sheriffStreetAddress}</div>
-  // <div id="verifysheriffCity">Sheriff City: ${masterFieldsVerify.sheriffCity}</div>
-  // <div id="verifysheriffState">Sheriff State: ${masterFieldsVerify.sheriffState}</div>
-  // <div id="verifysheriffZip">Sheriff Zip: ${masterFieldsVerify.sheriffZip}</div>
-  // </div>
+  <div class="border px-2 py-2 mb-2">
+  <h5>Sheriff Information</h5>
+  <div id="verifysheriffFirstName">Sheriff First Name: ${masterFieldsVerify.sheriffFirstName}</div>
+  <div id="verifysheriffLastName">Sheriff Last Name: ${masterFieldsVerify.sheriffLastName}</div>
+  <div id="verifysheriffPhone">Sheriff Phone: ${masterFieldsVerify.sheriffPhone}</div>
+  <div id="verifysheriffEmail">Sheriff Email: ${masterFieldsVerify.sheriffEmail}</div>
+  <div id="verifysheriffStreetAddress">Sheriff Street Address: ${masterFieldsVerify.sheriffStreetAddress}</div>
+  <div id="verifysheriffCity">Sheriff City: ${masterFieldsVerify.sheriffCity}</div>
+  <div id="verifysheriffState">Sheriff State: ${masterFieldsVerify.sheriffState}</div>
+  <div id="verifysheriffZip">Sheriff Zip: ${masterFieldsVerify.sheriffZip}</div>
+  </div>
 
-  // <div class="border px-2 py-2 mb-2">
-  // <h5>Sherrif's Additional Contact Information</h5>
-  // <div id="verifysheriffAddContactFirstName">Sheriff's Additional Contact First Name: ${masterFieldsVerify.sheriffAddContactFirstName}</div>
-  // <div id="verifysheriffAddContactLastName">Sheriff's Additional Contact Last Name: ${masterFieldsVerify.sheriffAddContactLastName}</div>
-  // <div id="verifysheriffAddContactTitle">Sheriff's Additional Contact Title: ${masterFieldsVerify.sheriffAddContactTitle}</div>
-  // <div id="verifysheriffAddContactOrganization">Sheriff's Additional Contact Organization: ${masterFieldsVerify.sheriffAddContactOrganization}</div>
-  // <div id="verifysheriffAddContactPhone">Sheriff's Additional Contact Phone: ${masterFieldsVerify.sheriffAddContactPhone}</div>
-  // <div id="verifysheriffAddContactEmail">Sheriff's Additional Contact Email: ${masterFieldsVerify.sheriffAddContactEmail}</div>
-  // <div id="verifysheriffAddContactStreetAddress">Sheriff's Additional Contact Street Address: ${masterFieldsVerify.sheriffAddContactStreetAddress}</div>
-  // <div id="verifysheriffAddContactCity">Sheriff's Additional Contact City: ${masterFieldsVerify.sheriffAddContactCity}</div>
-  // <div id="verifysheriffAddContactState">Sheriff's Additional Contact State: ${masterFieldsVerify.sheriffAddContactState}</div>
-  // <div id="verifysheriffAddContactZip">Sheriff's Additional Contact Zip: ${masterFieldsVerify.sheriffAddContactZip}</div>
-  // </div>
+  <div class="border px-2 py-2 mb-2">
+  <h5>Sherrif's Additional Contact Information</h5>
+  <div id="verifysheriffAddContactFirstName">Sheriff's Additional Contact First Name: ${masterFieldsVerify.sheriffAddContactFirstName}</div>
+  <div id="verifysheriffAddContactLastName">Sheriff's Additional Contact Last Name: ${masterFieldsVerify.sheriffAddContactLastName}</div>
+  <div id="verifysheriffAddContactTitle">Sheriff's Additional Contact Title: ${masterFieldsVerify.sheriffAddContactTitle}</div>
+  <div id="verifysheriffAddContactOrganization">Sheriff's Additional Contact Organization: ${masterFieldsVerify.sheriffAddContactOrganization}</div>
+  <div id="verifysheriffAddContactPhone">Sheriff's Additional Contact Phone: ${masterFieldsVerify.sheriffAddContactPhone}</div>
+  <div id="verifysheriffAddContactEmail">Sheriff's Additional Contact Email: ${masterFieldsVerify.sheriffAddContactEmail}</div>
+  <div id="verifysheriffAddContactStreetAddress">Sheriff's Additional Contact Street Address: ${masterFieldsVerify.sheriffAddContactStreetAddress}</div>
+  <div id="verifysheriffAddContactCity">Sheriff's Additional Contact City: ${masterFieldsVerify.sheriffAddContactCity}</div>
+  <div id="verifysheriffAddContactState">Sheriff's Additional Contact State: ${masterFieldsVerify.sheriffAddContactState}</div>
+  <div id="verifysheriffAddContactZip">Sheriff's Additional Contact Zip: ${masterFieldsVerify.sheriffAddContactZip}</div>
+  </div>
 
-  // <div class="border px-2 py-2 mb-2">
-  // <h5>Sale Information</h5>
-  // <div id="verifysaleMethod">Sale Method: ${masterFieldsVerify.saleMethod}</div>
-  // <div id="verifysalestartdatetime">Sale Start Date/Time: ${masterFieldsVerify.salestartdatetime}</div>
-  // <div id="verifysaleenddatetime">Sale End Date/Time: ${masterFieldsVerify.saleenddatetime}</div>
-  // <div id="verifysaleStreetAddress">Sale Street Address: ${masterFieldsVerify.saleStreetAddress}</div>
-  // <div id="verifysaleCity">Sale City: ${masterFieldsVerify.saleCity}</div>
-  // <div id="verifysaleState">Sale State: ${masterFieldsVerify.saleState}</div>
-  // <div id="verifysaleZip">Sale Zip: ${masterFieldsVerify.saleZip}</div>
-  // <div id="verifypaymentStreetAddress">Payment Street Address: ${masterFieldsVerify.paymentStreetAddress}</div>
-  // <div id="verifypaymentCity">Payment City: ${masterFieldsVerify.paymentCity}</div>
-  // <div id="verifypaymentState">Payment State: ${masterFieldsVerify.paymentState}</div>
-  // <div id="verifypaymentZip">Payment Zip: ${masterFieldsVerify.paymentZip}</div>
-  // <div id="verifypaymentCutoffDateTime">Payment Cutoff Date/Time: ${masterFieldsVerify.paymentCutoffDateTime}</div>
-  // </div>
+  <div class="border px-2 py-2 mb-2">
+  <h5>Sale Information</h5>
+  <div id="verifysaleMethod">Sale Method: ${masterFieldsVerify.saleMethod}</div>
+  <div id="verifysalestartdatetime">Sale Start Date/Time: ${masterFieldsVerify.salestartdatetime}</div>
+  <div id="verifysaleenddatetime">Sale End Date/Time: ${masterFieldsVerify.saleenddatetime}</div>
+  <div id="verifysaleStreetAddress">Sale Street Address: ${masterFieldsVerify.saleStreetAddress}</div>
+  <div id="verifysaleCity">Sale City: ${masterFieldsVerify.saleCity}</div>
+  <div id="verifysaleState">Sale State: ${masterFieldsVerify.saleState}</div>
+  <div id="verifysaleZip">Sale Zip: ${masterFieldsVerify.saleZip}</div>
+  <div id="verifypaymentStreetAddress">Payment Street Address: ${masterFieldsVerify.paymentStreetAddress}</div>
+  <div id="verifypaymentCity">Payment City: ${masterFieldsVerify.paymentCity}</div>
+  <div id="verifypaymentState">Payment State: ${masterFieldsVerify.paymentState}</div>
+  <div id="verifypaymentZip">Payment Zip: ${masterFieldsVerify.paymentZip}</div>
+  <div id="verifypaymentCutoffDateTime">Payment Cutoff Date/Time: ${masterFieldsVerify.paymentCutoffDateTime}</div>
+  </div>
 
-  // <div class="border px-2 py-2 mb-2">
-  // <h5>Sale Options</h5>
-  // <div id="verifydynamicEndings">Dynamic Endings: ${masterFieldsVerify.dynamicEnding}</div>
-  // <div id="verifywithinMinutes">Within Minutes: ${masterFieldsVerify.withinMinutes}</div>
-  // <div id="verifyextendMinutes">Extend Minutes: ${masterFieldsVerify.extendMinutes}</div>
-  // <div id="verifyunsoldBatch">Unsold Batch: ${masterFieldsVerify.unsoldBatch}</div>
-  // <div id="verifyunsoldStartBatch">Unsold Batch Start: ${masterFieldsVerify.unsoldStartBatch}</div>
-  // <div id="verifyunsoldEndBatch">Unsold Batch End: ${masterFieldsVerify.unsoldEndBatch}</div>
-  // </div>
+  <div class="border px-2 py-2 mb-2">
+  <h5>Sale Options</h5>
+  <div id="verifydynamicEndings">Dynamic Endings: ${masterFieldsVerify.dynamicEnding}</div>
+  <div id="verifywithinMinutes">Within Minutes: ${masterFieldsVerify.withinMinutes}</div>
+  <div id="verifyextendMinutes">Extend Minutes: ${masterFieldsVerify.extendMinutes}</div>
+  <div id="verifyunsoldBatch">Unsold Batch: ${masterFieldsVerify.unsoldBatch}</div>
+  <div id="verifyunsoldStartBatch">Unsold Batch Start: ${masterFieldsVerify.unsoldStartBatch}</div>
+  <div id="verifyunsoldEndBatch">Unsold Batch End: ${masterFieldsVerify.unsoldEndBatch}</div>
+  </div>
 
-  // <div class="border px-2 py-2 mb-2">
-  // <h5>Website Information</h5>
-  // <div id="verifycompSys">Computer System: ${masterFieldsVerify.compSys}</div>
-  // <div id="verifycountyWebUrl">County Web URL: ${masterFieldsVerify.countyWebUrl}</div>
-  // </div>
-
-
-  // <div class="border px-2 py-2 mb-2">
-  // <h5>Newspaper 1 Information</h5>
-  // <div id="verifynewspaper1Name">Newspaper 1 Name: ${masterFieldsVerify.newspaper1Name}</div>
-  // <div id="verifynewspaper1ContactFirstName">Newspaper 1 Contact First Name: ${masterFieldsVerify.newspaper1ContactFirstName}</div>
-  // <div id="verifynewspaper1ContactLastName">Newspaper 1 Contact Last Name: ${masterFieldsVerify.newspaper1ContactLastName}</div>
-  // <div id="verifynewspaper1Phone">Newspaper 1 Phone: ${masterFieldsVerify.newspaper1Phone}</div>
-  // <div id="verifynewspaper1AdFormat">Newspaper 1 Ad Format: ${masterFieldsVerify.newspaper1AdFormat}</div>
-  // <div id="verifynewspaper1LeadTime">Newspaper 1 Lead Time: ${masterFieldsVerify.newspaper1LeadTime}</div>
-  // <div id="verifynewspaper1DayAdRuns">Newspaper 1 Day Ad Runs: ${masterFieldsVerify.newspaper1DayAdRuns}</div>
-  // <div id="verifynewspaper1URL">Newspaper 1 URL: ${masterFieldsVerify.newspaper1URL}</div>
-  // </div>
+  <div class="border px-2 py-2 mb-2">
+  <h5>Website Information</h5>
+  <div id="verifycompSys">Computer System: ${masterFieldsVerify.compSys}</div>
+  <div id="verifycountyWebUrl">County Web URL: ${masterFieldsVerify.countyWebUrl}</div>
+  </div>
 
 
+  <div class="border px-2 py-2 mb-2">
+  <h5>Newspaper 1 Information</h5>
+  <div id="verifynewspaper1Name">Newspaper 1 Name: ${masterFieldsVerify.newspaper1Name}</div>
+  <div id="verifynewspaper1ContactFirstName">Newspaper 1 Contact First Name: ${masterFieldsVerify.newspaper1ContactFirstName}</div>
+  <div id="verifynewspaper1ContactLastName">Newspaper 1 Contact Last Name: ${masterFieldsVerify.newspaper1ContactLastName}</div>
+  <div id="verifynewspaper1Phone">Newspaper 1 Phone: ${masterFieldsVerify.newspaper1Phone}</div>
+  <div id="verifynewspaper1AdFormat">Newspaper 1 Ad Format: ${masterFieldsVerify.newspaper1AdFormat}</div>
+  <div id="verifynewspaper1LeadTime">Newspaper 1 Lead Time: ${masterFieldsVerify.newspaper1LeadTime}</div>
+  <div id="verifynewspaper1DayAdRuns">Newspaper 1 Day Ad Runs: ${masterFieldsVerify.newspaper1DayAdRuns}</div>
+  <div id="verifynewspaper1URL">Newspaper 1 URL: ${masterFieldsVerify.newspaper1URL}</div>
+  </div>
 
-  // `;
+  <div id="newItems" style="background-color: yellow" >
+  
+  </div>
+
+
+
+  `;
+
+  // if there are keys in the masterFieldsVerify object that are not in the masterFields object then add append them to the dom id "reviewModal"
+  for (let key in masterFieldsVerify) {
+    if (!masterFields.hasOwnProperty(key)) {
+      let element = document.getElementById("newItems");
+      element.className = "border my-2 mb-2"
+      element.innerHTML += `<div  id="verify${key}"><b>ADDING: </b> ${key}: ${masterFieldsVerify[key]}</div>`;
+    }
+  }
+
+
 
 
 
