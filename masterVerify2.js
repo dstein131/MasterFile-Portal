@@ -141,6 +141,21 @@ if (masterFields.saleMethod === "Online") {
 }
 
 
+// add an event listener to all the master-input class elements that on change turns the background of the input to yellow
+document.querySelectorAll(".master-input").forEach((el) => {
+  el.addEventListener("change", (e) => {
+    e.target.style.backgroundColor = "yellow";
+    //
+    // add a bootstrap tooltip to the input element
+    new bootstrap.Tooltip(e.target, {
+      title: "This field has been changed",
+      placement: "top",
+      trigger: "manual",  // this is the key to prevent the tooltip from showing on page load
+    });
+
+  });
+});
+
 document.getElementById("saleMethod").addEventListener("change", (e) => {
   // if the value of saleMethod is "Online" then show the dom element id enddatediv, else hide it
   if (document.getElementById("saleMethod").value === "Online") {
