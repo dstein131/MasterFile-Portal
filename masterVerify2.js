@@ -764,7 +764,7 @@ document.getElementById("addcontBtn").addEventListener("click", (e) => {
   <h5 class="text-center w-100">Additional Contact ${addcontwrapper.childElementCount + 1}</h5>
   <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
   <label for="additionalContact${addcontwrapper.childElementCount + 1}FirstName"><small>Additional Contact ${addcontwrapper.childElementCount + 1} First Name</small> </label>
-  <input type="text" class="form-control master-input" id="additionalContact${addcontwrapper.childElementCount + 1}FirstName" placeholder="Additional Contact 1 ${addcontwrapper.childElementCount + 1} FirstName">
+  <input type="text" class="form-control master-input" id="additionalContact${addcontwrapper.childElementCount + 1}FirstName" placeholder="Additional Contact ${addcontwrapper.childElementCount + 1} FirstName">
 </div>
 <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
   <label for="additionalContact${addcontwrapper.childElementCount + 1}LastName"><small>Additional Contact ${addcontwrapper.childElementCount + 1} Last Name</small> </label>
