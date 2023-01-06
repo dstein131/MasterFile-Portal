@@ -141,20 +141,7 @@ if (masterFields.saleMethod === "Online") {
 }
 
 
-// add an event listener to all the master-input class elements that on change turns the background of the input to yellow
-document.querySelectorAll(".master-input").forEach((el) => {
-  el.addEventListener("change", (e) => {
-    e.target.style.backgroundColor = "yellow";
-    //
-    // add a bootstrap tooltip to the input element
-    new bootstrap.Tooltip(e.target, {
-      title: "This field has been changed",
-      placement: "top",
-      trigger: "manual",  // this is the key to prevent the tooltip from showing on page load
-    });
 
-  });
-});
 
 document.getElementById("saleMethod").addEventListener("change", (e) => {
   // if the value of saleMethod is "Online" then show the dom element id enddatediv, else hide it
@@ -539,7 +526,7 @@ document.getElementById("reviewBtn").addEventListener("click", function() {
   <div id="verifynewspaper1URL">Newspaper 1 URL: ${masterFieldsVerify.newspaper1URL}</div>
   </div>
 
-  <div id="newItems" style="background-color: yellow" >
+  <div id="newItems"  >
   <h5 id="newItemsReview" style="display:none" class="ps-2 pt-2" >New Items</h5>
   
   </div>
@@ -566,7 +553,7 @@ document.getElementById("reviewBtn").addEventListener("click", function() {
       }
 
       element.className = "border my-2 mb-2"
-      element.innerHTML += `<div class="ps-2 id="verify${key}">${newLabel}: ${masterFieldsVerify[key]}</div>`;
+      element.innerHTML += `<div style="background-color: yellow" class="ps-2 id="verify${key}">${newLabel}: ${masterFieldsVerify[key]} <span class="badge float-end bg-secondary">New</span></div>`;
     }
   }
 
@@ -598,6 +585,8 @@ function compareObjects(obj1, obj2) {
     for (let key in differences) {
       let element = document.getElementById(`verify${key}`);
       element.style.backgroundColor = "yellow";
+      // add a badge to the end of the dom element
+      element.innerHTML += `<span class="badge float-end bg-danger">Changed</span>`
     }
 
 // // add an approal check to the changed dom elements
