@@ -525,6 +525,7 @@ document.getElementById("reviewBtn").addEventListener("click", function() {
   </div>
 
   <div id="newItems" style="background-color: yellow" >
+  <h5 id="newItemsReview" style="display:none" class="ps-2 pt-2" >New Items</h5>
   
   </div>
 
@@ -536,8 +537,21 @@ document.getElementById("reviewBtn").addEventListener("click", function() {
   for (let key in masterFieldsVerify) {
     if (!masterFields.hasOwnProperty(key)) {
       let element = document.getElementById("newItems");
+      let newLabel = "";
+      // show the id newItemsReview
+      document.getElementById("newItemsReview").style.display = "block";
+
+      labels = document.getElementsByTagName("label");
+
+     // take the label associated with the input that is the same name as the key and add it to the newLabel variable
+      for (let i = 0; i < labels.length; i++) {
+        if (labels[i].htmlFor === key) {
+          newLabel = labels[i].innerText;
+        }
+      }
+
       element.className = "border my-2 mb-2"
-      element.innerHTML += `<div  id="verify${key}"><b>ADDING: </b> ${key}: ${masterFieldsVerify[key]}</div>`;
+      element.innerHTML += `<div class="ps-2 id="verify${key}">${newLabel}: ${masterFieldsVerify[key]}</div>`;
     }
   }
 
