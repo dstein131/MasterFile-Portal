@@ -293,6 +293,13 @@ document.getElementById("reviewBtn").addEventListener("click", function() {
     // if there is an item that does exists in masterfieldsVerify but not masterfields, make the background of the div green
     // if the values are different, make the background of the div yellow
 
+    // sort masterfieldsVerify by key
+    masterFieldsVerify = Object.keys(masterFieldsVerify)
+      .sort()
+      .reduce((r, k) => ((r[k] = masterFieldsVerify[k]), r), {})
+    console.log(masterFieldsVerify)
+
+
     // clear the dom element id "reviewModal" 
     document.getElementById("reviewModal").innerHTML = ""
 
@@ -311,6 +318,8 @@ document.getElementById("reviewBtn").addEventListener("click", function() {
         `
       }
     }
+
+  
   }
 
  
