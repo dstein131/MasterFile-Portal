@@ -581,7 +581,7 @@ document.getElementById("reviewBtn").addEventListener("click", function() {
       }
 
       element.className = "border my-2 mb-2"
-      element.innerHTML += `<div style="background-color: yellow" class="ps-2 id="verify${key}">${newLabel}: ${masterFieldsVerify[key]} <span class="badge float-end bg-secondary">New</span></div>`;
+      element.innerHTML += `<div style="background-color: lightyellow" class="ps-2 id="verify${key}">${newLabel}: ${masterFieldsVerify[key]} <span class="badge float-end bg-secondary">New</span></div>`;
     }
   }
 
@@ -612,7 +612,7 @@ function compareObjects(obj1, obj2) {
     // take all values from different and highlight the dom element which is the id of verify + key
     for (let key in differences) {
       let element = document.getElementById(`verify${key}`);
-      element.style.backgroundColor = "yellow";
+      element.style.backgroundColor = "lightyellow";
       // add a badge to the end of the dom element
       element.innerHTML += `<span class="badge float-end bg-danger">Changed</span>`
     }
