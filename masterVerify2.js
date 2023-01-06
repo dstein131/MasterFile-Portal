@@ -140,6 +140,20 @@ if (masterFields.saleMethod === "Online") {
   document.getElementById("enddatediv").style.display = "block";
 }
 
+// add an event listener to all master-input class elements
+document.querySelectorAll(".master-input").forEach((el) => {
+  el.addEventListener("change", (e) => {
+    // add a span after the inputs associated label
+    let label = document.querySelector(`label[for="${e.target.id}"]`);
+    // add a span after the label
+    let span = document.createElement("span");
+    span.innerHTML = `<span class="badge ms-2 mb-1 bg-warning text-dark">Changed</span>`
+    label.appendChild(span);
+  }
+  )
+}
+);
+
 
 
 
@@ -734,6 +748,11 @@ document.getElementById("reviewBtn").addEventListener("click", (e) => {
 
 // create clear function that will revert the dom to its original state
 function clear() {
+  // remove all elements with the classname badge
+  let badge = document.getElementsByClassName("badge");
+  while (badge.length > 0) {
+    badge[0].parentNode.removeChild(badge[0]);
+  }
   // hide the dom element padCont
   document.getElementById("padCont").style.display = "none";
   // hide the dom element finalsubbtn
