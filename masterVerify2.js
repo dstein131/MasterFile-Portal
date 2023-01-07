@@ -827,7 +827,7 @@ document.getElementById("addcontBtn").addEventListener("click", (e) => {
   addcont.className = "addcont d-flex flex-wrap flex-row justify-content-evenly align-items-center border border-dark py-3 mb-3";
   addcont.innerHTML = `
   
-  <h5 class="text-center w-100">Additional Contact ${addcontwrapper.childElementCount + 1}</h5>
+  <h5 class="text-center w-100">Additional Contact ${addcontwrapper.childElementCount + 1} <span class="badge bg-secondary">New</span></h5>
   <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
   <label for="additionalContact${addcontwrapper.childElementCount + 1}FirstName"><small>Additional Contact ${addcontwrapper.childElementCount + 1} First Name</small> </label>
   <input type="text" class="form-control master-input" id="additionalContact${addcontwrapper.childElementCount + 1}FirstName" placeholder="Additional Contact ${addcontwrapper.childElementCount + 1} FirstName">
@@ -958,7 +958,7 @@ document.getElementById("addnewsBtn").addEventListener("click", () => {
   newscont.className = "addcont d-flex flex-wrap flex-row justify-content-evenly align-items-center border border-dark py-3 mb-3";
   newscont.innerHTML = `
   
-  <h5 class="text-center w-100">Newspaper ${newscontwrapper.childElementCount + 1}</h5>
+  <h5 class="text-center w-100">Newspaper ${newscontwrapper.childElementCount + 1} <span class="badge bg-secondary">New</span></h5>
   <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
   <label for="news${newscontwrapper.childElementCount + 1}Name"><small>Newspaper ${newscontwrapper.childElementCount + 1} Name</small> </label>
   <input type="text" class="form-control master-input" id="news${newscontwrapper.childElementCount + 1}Name" placeholder="Newspaper ${newscontwrapper.childElementCount + 1} Name">
