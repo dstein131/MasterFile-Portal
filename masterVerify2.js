@@ -94,10 +94,10 @@ let masterFields = {
   saleMethod: "Online",
   salestartdatetime: "2023-01-01T12:43:44",
   saleenddatetime: "2023-05-01T14:04:03",
-  saleStreetAddress: "200 S 3rd St",
-  saleCity: "West Union",
-  saleState: "IA",
-  saleZip: "52175",
+  saleStreetAddress: "Online - Zeus",
+  saleCity: "Online - Zeus",
+  saleState: "Online - Zeus",
+  saleZip: "Online - Zeus",
   sheriffFirstName: "Jane",
   sheriffLastName: "Doe",
   sheriffPhone: "563-422-1234",
@@ -145,10 +145,6 @@ const states = {
   }
 }
 
-// hide the id initCont
-document.getElementById("initCont").style.display = "none";
-
-
 
 let batchAmount = 0;
 let masterFieldsVerify = {}
@@ -156,9 +152,7 @@ let newValues = {}
 let addContAmount = 0;
 let newsCont = 1
 
-if (masterFields.saleMethod === "Online") {
-  document.getElementById("enddatediv").style.display = "block";
-}
+
 
 // add an event listener to all master-input class elements
 document.querySelectorAll(".master-input").forEach((el) => {
@@ -637,36 +631,6 @@ function compareObjects(obj1, obj2) {
       element.innerHTML += `<span class="badge float-end bg-danger">Changed</span>`
     }
 
-// // add an approal check to the changed dom elements
-//     let checkCount = 0;
-
-//   for (let key in differences) {
-//     let element = document.getElementById(`verify${key}`);
-//     element.innerHTML += `<div class="float-end checkcont">
-//     <label for="approve${key}">Approve</label>
-//     <input type="checkbox" id="approve${key}" name="approve${key}" value="approve${key} class="approve-check ms-5">
-//     </div>`;
-//     checkCount++;
-//     // console the value of the checkbox
-//     console.log(checkCount)
-//   }
-
-//   // if the amount of checkboxes that are checked is equal to checkCount then enable the dom element approveBtn
-//   document.querySelectorAll(".approve-check").forEach((item) => {
-//     item.addEventListener("change", (e) => {
-//       if (document.querySelectorAll(".approve-check:checked").length === checkCount) {
-//         document.getElementById("approveBtn").disabled = false;
-//       } else {
-//         document.getElementById("approveBtn").disabled = true;
-//       }
-//     });
-//   });
-
-// // if there are no keys in the differences object then enable to dom element approveBtn
-//   if (Object.keys(differences).length === 0) {
-//     document.getElementById("approveBtn").disabled = false;
-//   }
-
 
 }
 
@@ -832,8 +796,21 @@ document.getElementById("saleMethod").addEventListener("change", (e) => {
     document.getElementById("saleState").value = "Online - Zeus";
     document.getElementById("saleZip").value = "Online - Zeus";
   }
+  else {
+    document.getElementById("saleStreetAddress").value = "";
+    document.getElementById("saleCity").value = "";
+    document.getElementById("saleState").value = "";
+    document.getElementById("saleZip").value = "";
+  }
 }
 )
+
+
+if (masterFields.saleMethod === "Online") {
+  document.getElementById("enddatediv").style.display = "block";
+}
+
+
 
 // add an event listen to the id addcontBtn that will add a new container to the dom id addcontwrapper
 // add the numinical id's for each id of each input field
