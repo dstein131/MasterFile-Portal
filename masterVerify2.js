@@ -175,9 +175,12 @@ document.querySelectorAll(".master-input").forEach((el) => {
     let label = document.querySelector(`label[for="${e.target.id}"]`);
     // add a span after the label
     let span = document.createElement("span");
+    // if there are no spans next to the label, add the span with the badge class
+    if (!label.querySelector("span")) {
     span.innerHTML = `<span class="badge ms-2 mb-1 bg-warning text-dark">Changed</span>`
     label.appendChild(span);
   }
+}
   })
 })
 
