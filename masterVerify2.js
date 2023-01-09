@@ -737,18 +737,46 @@ function downloadObjectAsJson(exportObj, exportName){
     downloadAnchorNode.remove();
 }
 
+// export to excel and download
+
+function exportWS() {
+  var wb = XLSX.utils.book_new();
+  wb.Props = {
+    Title: "Master Fields",
+    Subject: "Master Fields",
+  }
+  wb.SheetNames.push("Master Fields");
+  var ws_data = [
+    ["Field", "Value"]
+  ];
+  for (let key in masterFieldsVerify) {
+    ws_data.push([key, masterFieldsVerify[key]])
+  }
+  var ws = XLSX.utils.aoa_to_sheet(ws_data);
+  wb.Sheets["Master Fields"] = ws;
+  var wbout = XLSX.write(wb, {
+    bookType: 'xlsx',
+    bookSST: true,
+    type: 'binary'
+  });
+  saveAs(new Blob([s2ab(wbout)], {
+    type: "application/octet-stream"
+  }), 'Master Fields.xlsx');
+}
+
+
+
 // add an event listener to the id finalsubbtn that will download the object masterFieldsVerify as a json file
 document.getElementById("finalsubbtn").addEventListener("click", (e) => {
   downloadObjectAsJson(masterFieldsVerify, "masterFieldsVerify");
+  exportWS();
 }
 )
 
-// count all the elements with the classname approve-check
-let countCheck = document.getElementsByClassName("approve-check").length;
 
 
 
-
+ 
 
 
 // add an event listen to the id reviewBtn that when clicked, if there are no checkboxes then enable the submit button
