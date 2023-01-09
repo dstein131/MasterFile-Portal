@@ -1017,7 +1017,7 @@ document.querySelectorAll(".nav-link").forEach((item) => {
    // if the id is pills-review-tab then change the color to green, text to white, and add a checkmark icon
     if (item.id === "pills-review-tab") {
         item.classList.add("bg-success", "text-white");
-        item.innerHTML = `<i class="fas fa-check"></i> Review`;
+       
     }
   }
 )
