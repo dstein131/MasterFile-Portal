@@ -190,7 +190,7 @@ document.querySelectorAll(".master-input").forEach((el) => {
     let span = document.createElement("span");
     // if there are no spans next to the label, add the span with the badge class
     if (!label.querySelector("span")) {
-    span.innerHTML = `<span class="badge ms-2 mb-1 bg-warning text-dark">Changed</span>`
+    span.innerHTML = `<span class="badge ms-2 mb-1 mt-0 py-0 px-0 bg-warning text-dark">Changed</span>`
     label.appendChild(span);
   }
 }
