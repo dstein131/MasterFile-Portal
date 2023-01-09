@@ -586,11 +586,13 @@
                             <div class="d-flex flex-wrap justify-content-around align-items-center">
 
                                 <div
-                                    class="d-flex flex-column flex-wrap border border-secondary rounded w-100 mx-5 py-3 px-3 bg-light">
+                                    class="d-flex flex-column flex-wrap border border-secondary rounded w-100 mx-5 py-3 px-3 bg-light"
+                                    stle="min-height: 240px">
                                     <div class="w-100 text-center mb-1">Sale Options
                                     </div>
 
-                                    <div class="d-flex flex-row px-2 flex-wrap align-items-center justify-content-around">
+                                    <div class="d-flex flex-row px-2 flex-wrap align-items-center justify-content-evenly"
+                                    style="min-height: 240px">
                                         <div style="width: 150px">
                                             <div id="dynamicDiv" style="display: none;" class="border py-2 px-2">
                                                 <h6 class="text-center">Dynamic</h6>
@@ -634,9 +636,9 @@
                                         </div>
                                         <div style="width: 150px" class="d-flex px-2 flex-column align-items-center justify-content-center ">
 
-                                            <div id="unsoldbatchesdiv" style="display: none" class="border py-2 px-2">
+                                            <div id="unsoldbatchesdiv" style="display: none" class="border py-2 p1-2">
                                                 <h6 class="text-center">Unsold Batches</h6>
-                                                <div class="form-group" id="unsoldStartBatchDiv">
+                                                <div class="form-group mx-2 my-2" id="unsoldStartBatchDiv" style="width: 225px;">
                                                     <label for="unsoldStartBatch"
                                                         id="unsoldStartBatchlabel"><small>Unsold
                                                             Batch
@@ -644,7 +646,7 @@
                                                     <input type="datetime-local" class="form-control master-input"
                                                         id="unsoldStartBatch">
                                                 </div>
-                                                <div class="form-group" id="unsoldEndBatchDiv">
+                                                <div class="form-group mx-2 my-2" id="unsoldEndBatchDiv" style="width: 225px;">
                                                     <label for="unsoldEndBatch" id="unsoldEndBatchlabel"><small>Unsold
                                                             Batch
                                                             End</small></label>
