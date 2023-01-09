@@ -1011,8 +1011,12 @@ document.getElementById("logoutBtn").addEventListener("click", () => {
 }
 )
 
+/// adding outlines to the pills as per brad's request
+document.querySelectorAll(".nav-link").forEach((item) => {
+    item.classList.add("border", "px-3", "py-1", "mx-1", "my-1");
+  }
 
-
+)
 
 
 
