@@ -1005,6 +1005,11 @@ document.getElementById("addnewsBtn").addEventListener("click", () => {
 
 
 
+// add event listner to the logout btn to redirect to index.html
+document.getElementById("logoutBtn").addEventListener("click", () => {
+  window.location.href = "index.html";
+}
+)
 
 
 
