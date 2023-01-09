@@ -152,6 +152,16 @@ let newValues = {}
 let addContAmount = 0;
 let newsCont = 1
 
+/// adding outlines to the pills as per brad's request
+document.querySelectorAll(".nav-link").forEach((item) => {
+  item.classList.add("border", "px-3", "py-1", "mx-1", "my-1");
+ // if the id is pills-review-tab then change the color to green, text to white, and add a checkmark icon
+  if (item.id === "pills-review-tab") {
+      item.classList.add("bg-success", "text-white");
+     
+  }
+}
+)
 
 
 // add an event listener to all master-input class elements
@@ -1011,15 +1021,5 @@ document.getElementById("logoutBtn").addEventListener("click", () => {
 }
 )
 
-/// adding outlines to the pills as per brad's request
-document.querySelectorAll(".nav-link").forEach((item) => {
-    item.classList.add("border", "px-3", "py-1", "mx-1", "my-1");
-   // if the id is pills-review-tab then change the color to green, text to white, and add a checkmark icon
-    if (item.id === "pills-review-tab") {
-        item.classList.add("bg-success", "text-white");
-       
-    }
-  }
-)
 
 
