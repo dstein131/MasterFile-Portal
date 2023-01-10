@@ -1631,6 +1631,23 @@ function treasSignPad() {
   });
 }
 
+// add event listner to treasCanvas
+treasCanvas.addEventListener("beginStroke", (e) => {
+  // if it is a mobile or tablet device stop scrolling on the body
+  if (isMobile) {
+    document.body.style.overflow = "hidden";
+  }
+});
+
+// add event listner to treasCanvas
+treasCanvas.addEventListener("endStroke", (e) => {
+  // if it is a mobile or tablet device stop scrolling on the body
+  if (isMobile) {
+    document.body.style.overflow = "auto";
+  }
+});
+
+
 treasSignPad();
 
 audSignPad();
