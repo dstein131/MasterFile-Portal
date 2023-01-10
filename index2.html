@@ -16,7 +16,6 @@
             height: 100%;
 
         }
-
     </style>
 </head>
 
@@ -237,11 +236,14 @@
                                     </div>
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
                                         <div id="audPadCont">
-                                            <div class="signature-pad-form"  id="signForm">
+                                            <div class="signature-pad-form" id="signForm">
                                                 <p class="text-center"><b>Signature</b></p>
-                                                <canvas id="audCanvas" height="100" width="300" class="border border-dark signature-pad" id="audPad"></canvas>
-                                                <div class="d-flex flex-row w-100 mt-2 align-items-center justify-content-between">
-                                                    <button id="audClearBtn" class="btn btn-small btn-outline-secondary">Clear</button>
+                                                <canvas id="audCanvas" height="100" width="300"
+                                                    class="border border-dark signature-pad" id="audPad"></canvas>
+                                                <div
+                                                    class="d-flex flex-row w-100 mt-2 align-items-center justify-content-between">
+                                                    <button id="audClearBtn"
+                                                        class="btn btn-small btn-outline-secondary">Clear</button>
                                                     <button class="btn btn-primary" id="signAudSub">Submit</button>
                                                 </div>
                                             </div>
@@ -306,35 +308,46 @@
                                     </div>
                                 </div>
 
+
+
+                                <!-- collect signature button -->
                                 <div class="d-flex flex-wrap justify-content-center align-items-center">
-                                    <button type="button" class="btn btn-primary mb-3" id="collectTreasSignature">Collect
+                                    <button type="button" class="btn btn-primary mb-3"
+                                        id="collectTreasSignature">Collect
                                         Signature</button>
                                 </div>
 
                                 <div id="treasSigDiv"
                                     class="d-flex flex-wrap flex-row justify-content-evenly align-items-center border border-dark rounded py-3 mb-3"
-                                   >
+                                    style="display: none !important ">
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-                                        <label for="treasurerSignatureName"><small>Treasurer Signature
+                                        <label for="treasurerSignatureName"><small>treasurer Signature
                                                 Name</small></label>
                                         <input type="text" class="form-control master-input" id="treasurerSignatureName"
                                             placeholder="treasurer Signature Name">
                                     </div>
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-                                        <label for="treasurerSignatureTitle"><small>Treasurer Signature
+                                        <label for="treasurerSignatureTitle"><small>treasurer Signature
                                                 Title</small></label>
-                                        <input type="text" class="form-control master-input" id="treasurerSignatureTitle"
-                                            placeholder="treasurer Signature Title">
+                                        <input type="text" class="form-control master-input"
+                                            id="treasurerSignatureTitle" placeholder="treasurer Signature Title">
                                     </div>
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-                                        <div id="padCont2">
-                                            <form class="signature-pad-form" action="#" method="POST" id="signForm">
+                                        <div id="treasPadCont">
+                                            <div class="signature-pad-form" id="signForm">
                                                 <p class="text-center"><b>Signature</b></p>
-                                                <canvas height="100" width="300" class="signature-pad"></canvas>
-                                                <p><a href="#" class="clear-button">Clear</a></p>
-                                                <button id="signSub2" class="submit-button" type="submit">Save
-                                                    Signature</button>
-                                            </form>
+                                                <canvas id="treasCanvas" height="100" width="300"
+                                                    class="border border-dark signature-pad" id="treasPad"></canvas>
+                                                <div
+                                                    class="d-flex flex-row w-100 mt-2 align-items-center justify-content-between">
+                                                    <button id="treasClearBtn"
+                                                        class="btn btn-small btn-outline-secondary">Clear</button>
+                                                    <button class="btn btn-primary" id="signTreasSub">Submit</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="treasSigImgCont">
+
                                         </div>
                                     </div>
                                 </div>

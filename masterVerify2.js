@@ -930,117 +930,7 @@ document.getElementById("reviewBtn").addEventListener("click", function () {
   compareObjects(masterFields, masterFieldsVerify);
 });
 
-// // ********** SIGNATURE PAD **********
 
-// const canvas = document.querySelector('canvas');
-// const form = document.querySelector('.signature-pad-form');
-// const clearButton = document.querySelector('.clear-button');
-// const ctx = canvas.getContext('2d');
-// let writingMode = false;
-
-// const handlePointerDown = (event) => {
-//     writingMode = true;
-//     ctx.beginPath();
-//     const [positionX, positionY] = getCursorPosition(event);
-//     ctx.moveTo(positionX, positionY);
-//   }
-//   const handlePointerUp = () => {
-//     writingMode = false;
-//   }
-//   const handlePointerMove = (event) => {
-//     if (!writingMode) return
-//     const [positionX, positionY] = getCursorPosition(event);
-//     ctx.lineTo(positionX, positionY);
-//     ctx.stroke();
-//   }
-//   const getCursorPosition = (event) => {
-//     positionX = event.clientX - event.target.getBoundingClientRect().x;
-//     positionY = event.clientY - event.target.getBoundingClientRect().y;
-//     return [positionX, positionY];
-//   }
-//   ctx.lineWidth = 3;
-//   ctx.lineJoin = ctx.lineCap = 'round';
-
-//   canvas.addEventListener('pointerdown', handlePointerDown, {passive: true});
-// canvas.addEventListener('pointerup', handlePointerUp, {passive: true});
-// canvas.addEventListener('pointermove', handlePointerMove, {passive: true});
-
-//   form.addEventListener('submit', (event) => {
-//     event.preventDefault();
-//     const imageURL = canvas.toDataURL();
-//     const image = document.createElement('img');
-//     image.src = imageURL;
-//     image.height = canvas.height;
-//     image.width = canvas.width;
-//     image.style.display = 'block';
-//     form.appendChild(image);
-//     countSig = image
-//     clearPad();
-//   })
-//   const clearPad = () => {
-//     ctx.clearRect(0, 0, canvas.width, canvas.height);
-//   }
-//   clearButton.addEventListener('click', (event) => {
-//     event.preventDefault();
-//     clearPad();
-//   })
-
-// // ********** END SIGNATURE PAD **********
-
-// // ********** AUDITOR SIGNATURE PAD **********
-
-// const canvas2 = document.querySelector('canvas2');
-// const form2 = document.querySelector('.signature-pad-form2');
-// const clearButton2 = document.querySelector('.clear-button2');
-// const ctx2 = canvas2.getContext('2d');
-// let writingMode2 = false;
-
-// const handlePointerDown2 = (event) => {
-//     writingMode2 = true;
-//     ctx2.beginPath();
-//     const [positionX, positionY] = getCursorPosition2(event);
-//     ctx2.moveTo(positionX, positionY);
-//   }
-//   const handlePointerUp2 = () => {
-//     writingMode2 = false;
-//   }
-//   const handlePointerMove2 = (event) => {
-//     if (!writingMode2) return
-//     const [positionX, positionY] = getCursorPosition2(event);
-//     ctx2.lineTo(positionX, positionY);
-//     ctx2.stroke();
-//   }
-//   const getCursorPosition2 = (event) => {
-//     positionX = event.clientX - event.target.getBoundingClientRect().x;
-//     positionY = event.clientY - event.target.getBoundingClientRect().y;
-//     return [positionX, positionY];
-//   }
-//   ctx2.lineWidth = 3;
-//   ctx2.lineJoin = ctx2.lineCap = 'round';
-
-//   canvas2.addEventListener('pointerdown', handlePointerDown2, {passive: true});
-// canvas2.addEventListener('pointerup', handlePointerUp2, {passive: true});
-// canvas2.addEventListener('pointermove', handlePointerMove2, {passive: true});
-
-//   form2.addEventListener('submit', (event) => {
-//     event.preventDefault();
-//     const imageURL = canvas2.toDataURL();
-//     const image = document.createElement('img');
-//     image.src = imageURL;
-//     image.height = canvas2.height;
-//     image.width = canvas2.width;
-//     image.style.display = 'block';
-//     form2.appendChild(image);
-//     countSig2 = image
-//     clearPad2();
-//   })
-//   const clearPad2 = () => {
-//     ctx2.clearRect(0, 0, canvas2.width, canvas2.height);
-//   }
-//   clearButton2.addEventListener('click', (event) => {
-//     event.preventDefault();
-//     clearPad2();
-//   })
 
 // ********** DOWNLOAD JSON FILE **********
 // create a function that will take the object masterFieldsVerify, convert it to a json object then download it
@@ -1488,6 +1378,21 @@ document.getElementById("collectAudSignature").addEventListener("click", () => {
   }
 });
 
+// add event listner to the id collectTreasSignature that shows the element id treasSigDiv
+document.getElementById("collectTreasSignature").addEventListener("click", () => {
+  holder = document.getElementById("treasSigDiv");
+  // if the element is hidden
+  if (holder.style.display === "none") {
+    // show the element
+    holder.style.display = "block";
+  } else {
+    // set holder to display none with the !important tag
+    holder.style.cssText = 'display:none !important';
+
+  }
+});
+
+
 // new signature pad test //
 
 function audSignPad() {
@@ -1604,6 +1509,52 @@ function audSignPad() {
   });
 
 }
+
+function treasSignPad() {
+  const treasCanvas = document.getElementById("treasCanvas");
+  const treasSignaturePad = new SignaturePad(treasCanvas);
+  const treasClearBtn = document.getElementById("treasClearBtn");
+  const treasSaveBtn = document.getElementById("signTreasSub");
+
+  treasClearBtn.addEventListener("click", (e) => {
+    treasSignaturePad.clear();
+  });
+
+  treasSaveBtn.addEventListener("click", (e) => {
+    // if there is is a signature in the canvas
+    if (treasSignaturePad.isEmpty() === false) {
+      // save the signature as a data url
+      const treasSigData = treasSignaturePad.toDataURL("image/png");
+
+      // save the data URL to local storage
+      localStorage.setItem("treasSigData", treasSigData);
+
+      // convert treasSigData to an image and append it to id treasPadCont
+      const treasSigImg = document.createElement("img");
+      treasSigImg.src = treasSigData;
+      document.getElementById("treasSigImgCont").appendChild(treasSigImg);
+
+      // hide the signature pad
+      document.getElementById("treasPadCont").style.display = "none";
+
+      // download the signature as a png
+      // create a link element
+      const treasSigLink = document.createElement("a");
+      // set the link href to the treasSigData
+      treasSigLink.href = treasSigData;
+      // set the link download attribute to the file name
+      treasSigLink.download = "treasSig.png";
+      // append the link to the body
+      document.body.appendChild(treasSigLink);
+      // click the link
+      treasSigLink.click();
+      // remove the link from the body
+      document.body.removeChild(treasSigLink);
+    }
+  });
+}
+
+treasSignPad();
 
 audSignPad();
 
