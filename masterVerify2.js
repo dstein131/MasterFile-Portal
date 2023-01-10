@@ -1476,7 +1476,16 @@ document.getElementById("logoutBtn").addEventListener("click", () => {
 
 // add event listner to id collectAudSignature that shows the element id audSigDiv
 document.getElementById("collectAudSignature").addEventListener("click", () => {
-  document.getElementById("audSigDiv").style.display = "block";
+  holder = document.getElementById("audSigDiv");
+  // if the element is hidden
+  if (holder.style.display === "none") {
+    // show the element
+    holder.style.display = "block";
+  } else {
+    // set holder to display none with the !important tag
+    holder.style.cssText = 'display:none !important';
+
+  }
 });
 
 // new signature pad test //
@@ -1496,6 +1505,10 @@ function audSignPad() {
     if (audSignaturePad.isEmpty() === false) {
      // save the signature as a data url
       const audSigData = audSignaturePad.toDataURL("image/png");
+
+      // save the data URL to local storage
+      localStorage.setItem("audSigData", audSigData);
+
 
       // // *** THIS SENDS THE SIGNATURE TO THE SERVER ***
 
@@ -1528,15 +1541,28 @@ function audSignPad() {
       // convert audSigData to an image and append it to id audPadCont 
       const audSigImg = document.createElement("img");
       audSigImg.src = audSigData;
-      document.getElementById("audPadCont").appendChild(audSigImg);
+      document.getElementById("augSigImgCont").appendChild(audSigImg);
+
       // hide the signature pad
+      document.getElementById("audPadCont").style.display = "none";
 
-
-
+      // *** THIS DOWNLOADS THE SIGNATURE ***
+      // download the signature as a png
+      // create a link element
+      const audSigLink = document.createElement("a");
+      // set the link href to the audSigData
+      audSigLink.href = audSigData;
+      // set the link download attribute to the file name
+      audSigLink.download = "audSig.png";
+      // append the link to the body
+      document.body.appendChild(audSigLink);
+      // click the link
+      audSigLink.click();
+      // remove the link from the body
+      document.body.removeChild(audSigLink);
     }
   });
-   
-  
+
 }
 
 audSignPad();

@@ -240,9 +240,14 @@
                                             <div class="signature-pad-form"  id="signForm">
                                                 <p class="text-center"><b>Signature</b></p>
                                                 <canvas id="audCanvas" height="100" width="300" class="border border-dark signature-pad" id="audPad"></canvas>
-                                                <p id="audClearBtn" class="clear-button">Clear</p>
-                                                <button class="btn btn-primary" id="signAudSub">Submit</button>
+                                                <div class="d-flex flex-row w-100 mt-2 align-items-center justify-content-between">
+                                                    <button id="audClearBtn" class="btn btn-small btn-outline-secondary">Clear</button>
+                                                    <button class="btn btn-primary" id="signAudSub">Submit</button>
+                                                </div>
                                             </div>
+                                        </div>
+                                        <div id="augSigImgCont">
+
                                         </div>
                                     </div>
                                 </div>
@@ -302,11 +307,11 @@
                                 </div>
 
                                 <div class="d-flex flex-wrap justify-content-center align-items-center">
-                                    <button type="button" class="btn btn-primary mb-3" id="collectAudSignature">Collect
+                                    <button type="button" class="btn btn-primary mb-3" id="collectTreasSignature">Collect
                                         Signature</button>
                                 </div>
 
-                                <div id="audSigDiv"
+                                <div id="treasSigDiv"
                                     class="d-flex flex-wrap flex-row justify-content-evenly align-items-center border border-dark rounded py-3 mb-3"
                                    >
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
