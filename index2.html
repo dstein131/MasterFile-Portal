@@ -164,9 +164,8 @@
                             </div>
                         </div>
                         <!-- auditor info -->
-                        <div class="tab-pane fade" id="pills-auditor" role="tabpanel"
-                            aria-labelledby="pills-auditor-tab">
-
+                        <div class="tab-pane fade" id="pills-auditor" role="tabpanel" aria-labelledby="pills-auditor-tab">
+                        
                             <div class="d-flex flex-wrap justify-content-around align-items-center">
                                 <div
                                     class="d-flex flex-wrap flex-row justify-content-evenly align-items-center border border-dark rounded py-3 mb-3">
@@ -183,13 +182,11 @@
                                     </div>
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
                                         <label for="auditorPhone"><small>Auditor Phone</small></label>
-                                        <input type="text" class="form-control master-input" id="auditorPhone"
-                                            placeholder="Auditor Phone">
+                                        <input type="text" class="form-control master-input" id="auditorPhone" placeholder="Auditor Phone">
                                     </div>
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
                                         <label for="auditorEmail"><small>Auditor Email</small></label>
-                                        <input type="text" class="form-control master-input" id="auditorEmail"
-                                            placeholder="Auditor Email">
+                                        <input type="text" class="form-control master-input" id="auditorEmail" placeholder="Auditor Email">
                                     </div>
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
                                         <label for="auditorStreetAddress"><small>Auditor Street
@@ -199,18 +196,15 @@
                                     </div>
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
                                         <label for="auditorCity"><small>Auditor City</small></label>
-                                        <input type="text" class="form-control master-input" id="auditorCity"
-                                            placeholder="Auditor City">
+                                        <input type="text" class="form-control master-input" id="auditorCity" placeholder="Auditor City">
                                     </div>
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
                                         <label for="auditorState"><small>Auditor State</small></label>
-                                        <input type="text" class="form-control master-input" id="auditorState"
-                                            placeholder="Auditor State">
+                                        <input type="text" class="form-control master-input" id="auditorState" placeholder="Auditor State">
                                     </div>
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
                                         <label for="auditorZip"><small>Auditor Zip</small></label>
-                                        <input type="text" class="form-control master-input" id="auditorZip"
-                                            placeholder="Auditor Zip">
+                                        <input type="text" class="form-control master-input" id="auditorZip" placeholder="Auditor Zip">
                                     </div>
                                 </div>
                                 <!-- collect signature button -->
@@ -218,43 +212,51 @@
                                     <button type="button" class="btn btn-primary mb-3" id="collectAudSignature">Collect
                                         Signature</button>
                                 </div>
-
-                                <div id="audSigDiv"
-                                    class="d-flex flex-wrap flex-row justify-content-evenly align-items-center border border-dark rounded py-3 mb-3"
-                                    style="display: none !important ">
-                                    <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-                                        <label for="auditorSignatureName"><small>Auditor Signature
-                                                Name</small></label>
-                                        <input type="text" class="form-control master-input" id="auditorSignatureName"
-                                            placeholder="Auditor Signature Name">
-                                    </div>
-                                    <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-                                        <label for="auditorSignatureTitle"><small>Auditor Signature
-                                                Title</small></label>
-                                        <input type="text" class="form-control master-input" id="auditorSignatureTitle"
-                                            placeholder="Auditor Signature Title">
+                        
+                                <div id="audSigDiv" style="display: none !important "
+                                    class=" border border-dark rounded py-3 mb-3 d-flex flex-column align-items-center justify-content-around">
+                                    <div class="d-flex flex-wrap flex-row justify-content-evenly align-items-center">
+                        
+                                        <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
+                                            <label for="auditorSignatureFirstName"><small>Auditor Signature First
+                                                    Name</small></label>
+                                            <input type="text" class="form-control master-input" id="auditorSignatureFirstName"
+                                                placeholder="Auditor Signature First Name">
+                                        </div>
+                                        <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
+                                            <label for="auditorSignatureLastName"><small>Auditor Signature Last
+                                                    Name</small></label>
+                                            <input type="text" class="form-control master-input" id="auditorSignatureLastName"
+                                                
+                                                placeholder="Auditor Signature Last Name">
+                                        </div>
+                                        
+                                        <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
+                                            <label for="auditorSignatureTitle"><small>Auditor Signature
+                                                    Title</small></label>
+                                            <input type="text" class="form-control master-input" id="auditorSignatureTitle"
+                                                placeholder="Auditor Signature Title">
+                                        </div>
                                     </div>
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
                                         <div id="audPadCont">
                                             <div class="signature-pad-form" id="signForm">
                                                 <p class="text-center"><b>Signature</b></p>
-                                                <canvas id="audCanvas" height="100" width="300"
-                                                    class="border border-dark signature-pad" id="audPad"></canvas>
-                                                <div
-                                                    class="d-flex flex-row w-100 mt-2 align-items-center justify-content-between">
-                                                    <button id="audClearBtn"
-                                                        class="btn btn-small btn-outline-secondary">Clear</button>
+                                                <canvas id="audCanvas" height="100" width="300" class="border border-dark signature-pad"
+                                                    id="audPad"></canvas>
+                                                <div class="d-flex flex-row w-100 mt-2 align-items-center justify-content-between">
+                                                    <button id="audClearBtn" class="btn btn-small btn-outline-secondary">Clear</button>
                                                     <button class="btn btn-primary" id="signAudSub">Submit</button>
                                                 </div>
                                             </div>
                                         </div>
                                         <div id="augSigImgCont">
-
+                        
                                         </div>
                                     </div>
                                 </div>
-
-
+                        
+                        
                             </div>
                         </div>
                         <!-- end auditor tab -->
@@ -317,39 +319,45 @@
                                         Signature</button>
                                 </div>
 
-                                <div id="treasSigDiv"
-                                    class="d-flex flex-wrap flex-row justify-content-evenly align-items-center border border-dark rounded py-3 mb-3"
-                                    style="display: none !important ">
-                                    <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-                                        <label for="treasurerSignatureName"><small>Treasurer Signature
-                                                Name</small></label>
-                                        <input type="text" class="form-control master-input" id="treasurerSignatureName"
-                                            placeholder="Treasurer Signature Name">
-                                    </div>
-                                    <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-                                        <label for="treasurerSignatureTitle"><small>Treasurer Signature
-                                                Title</small></label>
-                                        <input type="text" class="form-control master-input"
-                                            id="treasurerSignatureTitle" placeholder="Treasurer Signature Title">
+                                <div id="treasSigDiv" style="display: none !important " class=" border border-dark rounded py-3 mb-3 d-flex flex-column align-items-center justify-content-around">
+                                    <div class="d-flex flex-wrap flex-row justify-content-evenly align-items-center">
+                                
+                                        <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
+                                            <label for="treasurerSignatureFirstName"><small>Treasurer Signature First
+                                                    Name</small></label>
+                                            <input type="text" class="form-control master-input" id="treasurerSignatureFirstName"
+                                                placeholder="Treasurer Signature First Name">
+                                        </div>
+                                        <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
+                                            <label for="treasurerSignatureLastName"><small>Treasurer Signature Last
+                                                    Name</small></label>
+                                            <input type="text" class="form-control master-input" id="treasurerSignatureLastName"
+                                                placeholder="Treasurer Signature Last Name">
+                                        </div>
+                                        <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
+                                            <label for="treasurerSignatureTitle"><small>Treasurer Signature
+                                                    Title</small></label>
+                                            <input type="text" class="form-control master-input" id="treasurerSignatureTitle"
+                                                placeholder="Treasurer Signature Title">
+                                        </div>
                                     </div>
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
                                         <div id="treasPadCont">
                                             <div class="signature-pad-form" id="signForm">
                                                 <p class="text-center"><b>Signature</b></p>
-                                                <canvas id="treasCanvas" height="100" width="300"
-                                                    class="border border-dark signature-pad" id="treasPad"></canvas>
-                                                <div
-                                                    class="d-flex flex-row w-100 mt-2 align-items-center justify-content-between">
-                                                    <button id="treasClearBtn"
-                                                        class="btn btn-small btn-outline-secondary">Clear</button>
+                                                <canvas id="treasCanvas" height="100" width="300" class="border border-dark signature-pad"
+                                                    id="treasPad"></canvas>
+                                                <div class="d-flex flex-row w-100 mt-2 align-items-center justify-content-between">
+                                                    <button id="treasClearBtn" class="btn btn-small btn-outline-secondary">Clear</button>
                                                     <button class="btn btn-primary" id="signTreasSub">Submit</button>
                                                 </div>
                                             </div>
                                         </div>
                                         <div id="treasSigImgCont">
-
+                                
                                         </div>
                                     </div>
+                                </div>
                                 </div>
 
 
