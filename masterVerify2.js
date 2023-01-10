@@ -1634,7 +1634,7 @@ function treasSignPad() {
 // add event listner to treasCanvas
 treasCanvas.addEventListener("beginStroke", (e) => {
   // if it is a mobile or tablet device stop scrolling on the body
-  if (isMobile) {
+  if (window.innerWidth < 992) {
     document.body.style.overflow = "hidden";
   }
 });
@@ -1642,7 +1642,7 @@ treasCanvas.addEventListener("beginStroke", (e) => {
 // add event listner to treasCanvas
 treasCanvas.addEventListener("endStroke", (e) => {
   // if it is a mobile or tablet device stop scrolling on the body
-  if (isMobile) {
+  if (window.innerWidth < 992) {
     document.body.style.overflow = "auto";
   }
 });
