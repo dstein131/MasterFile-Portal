@@ -1524,20 +1524,20 @@ function audSignPad() {
       // hide the signature pad
       document.getElementById("audPadCont").style.display = "none";
 
-      // *** THIS DOWNLOADS THE SIGNATURE ***
-      // download the signature as a png
-      // create a link element
-      const audSigLink = document.createElement("a");
-      // set the link href to the audSigData
-      audSigLink.href = audSigData;
-      // set the link download attribute to the file name
-      audSigLink.download = "audSig.png";
-      // append the link to the body
-      document.body.appendChild(audSigLink);
-      // click the link
-      audSigLink.click();
-      // remove the link from the body
-      document.body.removeChild(audSigLink);
+      // // *** THIS DOWNLOADS THE SIGNATURE ***
+      // // download the signature as a png
+      // // create a link element
+      // const audSigLink = document.createElement("a");
+      // // set the link href to the audSigData
+      // audSigLink.href = audSigData;
+      // // set the link download attribute to the file name
+      // audSigLink.download = "audSig.png";
+      // // append the link to the body
+      // document.body.appendChild(audSigLink);
+      // // click the link
+      // audSigLink.click();
+      // // remove the link from the body
+      // document.body.removeChild(audSigLink);
     }
   });
 }
@@ -1569,19 +1569,19 @@ function treasSignPad() {
       // hide the signature pad
       document.getElementById("treasPadCont").style.display = "none";
 
-      // download the signature as a png
-      // create a link element
-      const treasSigLink = document.createElement("a");
-      // set the link href to the treasSigData
-      treasSigLink.href = treasSigData;
-      // set the link download attribute to the file name
-      treasSigLink.download = "treasSig.png";
-      // append the link to the body
-      document.body.appendChild(treasSigLink);
-      // click the link
-      treasSigLink.click();
-      // remove the link from the body
-      document.body.removeChild(treasSigLink);
+      // // download the signature as a png
+      // // create a link element
+      // const treasSigLink = document.createElement("a");
+      // // set the link href to the treasSigData
+      // treasSigLink.href = treasSigData;
+      // // set the link download attribute to the file name
+      // treasSigLink.download = "treasSig.png";
+      // // append the link to the body
+      // document.body.appendChild(treasSigLink);
+      // // click the link
+      // treasSigLink.click();
+      // // remove the link from the body
+      // document.body.removeChild(treasSigLink);
     }
   });
 }
