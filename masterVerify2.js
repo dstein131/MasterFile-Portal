@@ -440,12 +440,12 @@ let newValues = {};
 let addContAmount = 0;
 let newsCont = 1;
 
-// clear audSigData and tresSigData from local storage if it exists
+// clear audSigData and treasSigData from local storage if it exists
 if (localStorage.getItem("audSigData")) {
   localStorage.removeItem("audSigData");
 }
-if (localStorage.getItem("tresSigData")) {
-  localStorage.removeItem("tresSigData");
+if (localStorage.getItem("treasSigData")) {
+  localStorage.removeItem("treasSigData");
 }
 
 /// adding outlines to the pills as per brad's request
@@ -885,14 +885,14 @@ document.getElementById("reviewBtn").addEventListener("click", function () {
     ).innerHTML += `<div style="background-color: lightyellow" class="ps-2 pt-2" >Auditor Signature: </div><img src="${audSigData}" alt="Auditor Signature" class="img-fluid" />`;
   }
 
-  // if tresSigData exists in local storage then add it to the dom id "newItems"
-  if (localStorage.getItem("tresSigData")) {
-    // convert the tresSigData from a string to an image
-    let tresSigData = localStorage.getItem("tresSigData");
+  // if treasSigData exists in local storage then add it to the dom id "newItems"
+  if (localStorage.getItem("treasSigData")) {
+    // convert the treasSigData from a string to an image
+    let treasSigData = localStorage.getItem("treasSigData");
     // append the image to the id newItems review with the label "Treasurer Signature"
     document.getElementById(
       "newItems"
-    ).innerHTML += `<div style="background-color: lightyellow" class="ps-2 pt-2" >Treasurer Signature: </div><img src="${tresSigData}" alt="Treasurer Signature" class="img-fluid" />`;
+    ).innerHTML += `<div style="background-color: lightyellow" class="ps-2 pt-2" >Treasurer Signature: </div><img src="${treasSigData}" alt="Treasurer Signature" class="img-fluid" />`;
   }
 
   // if there are keys in the masterFieldsVerify object that are not in the masterFields object then add append them to the dom id "reviewModal"
@@ -992,8 +992,8 @@ function clear() {
   if (localStorage.getItem("audSigData")) {
     localStorage.removeItem("audSigData");
   }
-  if (localStorage.getItem("tresSigData")) {
-    localStorage.removeItem("tresSigData");
+  if (localStorage.getItem("treasSigData")) {
+    localStorage.removeItem("treasSigData");
   }
 
   // remove all elements with the classname badge
@@ -1001,8 +1001,7 @@ function clear() {
   while (badge.length > 0) {
     badge[0].parentNode.removeChild(badge[0]);
   }
-  // hide the dom element padCont
-  document.getElementById("padCont").style.display = "none";
+
   // hide the dom element finalsubbtn
   document.getElementById("finalsubbtn").style.display = "none";
   // set the input fields back to their original values
