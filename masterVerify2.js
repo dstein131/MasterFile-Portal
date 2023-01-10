@@ -440,6 +440,14 @@ let newValues = {};
 let addContAmount = 0;
 let newsCont = 1;
 
+// clear audSigData and tresSigData from local storage if it exists
+if (localStorage.getItem("audSigData")) {
+  localStorage.removeItem("audSigData");
+}
+if (localStorage.getItem("tresSigData")) {
+  localStorage.removeItem("tresSigData");
+}
+
 /// adding outlines to the pills as per brad's request
 document.querySelectorAll(".nav-link").forEach((item) => {
   item.classList.add("border", "px-3", "py-1", "mx-1", "my-1");
@@ -502,7 +510,6 @@ let saleEnd = new Date(masterFields.saleenddatetime).toLocaleString("en-US");
 
 // previous data modal filler //
 document.getElementById("previousDataModalBody").innerHTML = `
-  
         <div class="border px-2 py-2 mb-2">
         <h5>County Information</h5>
         <div>County Code: ${masterFields.countyCode}</div>
@@ -683,6 +690,7 @@ document.getElementById("reviewBtn").addEventListener("click", function () {
   <div id="verifyauditorCity">Auditor City: ${masterFieldsVerify.auditorCity}</div>
   <div id="verifyauditorState">Auditor State: ${masterFieldsVerify.auditorState}</div>
   <div id="verifyauditorZip">Auditor Zip: ${masterFieldsVerify.auditorZip}</div>
+ 
   </div>
 
   <div class="border px-2 py-2 mb-2">
@@ -867,9 +875,29 @@ document.getElementById("reviewBtn").addEventListener("click", function () {
 
   `;
 
+  // if audSigData exists in local storage then add it to the dom id "newItems"
+  if (localStorage.getItem("audSigData")) {
+    // convert the audSigData from a string to an image
+    let audSigData = localStorage.getItem("audSigData");
+    // append the image to the id newItems review with the label "Auditor Signature"
+    document.getElementById(
+      "newItems"
+    ).innerHTML += `<div style="background-color: lightyellow" class="ps-2 pt-2" >Auditor Signature: </div><img src="${audSigData}" alt="Auditor Signature" class="img-fluid" />`;
+  }
+
+  // if tresSigData exists in local storage then add it to the dom id "newItems"
+  if (localStorage.getItem("tresSigData")) {
+    // convert the tresSigData from a string to an image
+    let tresSigData = localStorage.getItem("tresSigData");
+    // append the image to the id newItems review with the label "Treasurer Signature"
+    document.getElementById(
+      "newItems"
+    ).innerHTML += `<div style="background-color: lightyellow" class="ps-2 pt-2" >Treasurer Signature: </div><img src="${tresSigData}" alt="Treasurer Signature" class="img-fluid" />`;
+  }
+
   // if there are keys in the masterFieldsVerify object that are not in the masterFields object then add append them to the dom id "reviewModal"
   for (let key in masterFieldsVerify) {
-    if (!masterFields.hasOwnProperty(key)) {
+    if (!masterFields.hasOwnProperty(key) && masterFieldsVerify[key] !== "") {
       let element = document.getElementById("newItems");
       let newLabel = "";
       // show the id newItemsReview
@@ -888,6 +916,8 @@ document.getElementById("reviewBtn").addEventListener("click", function () {
       element.innerHTML += `<div style="background-color: lightyellow" class="ps-2 id="verify${key}">${newLabel}: ${masterFieldsVerify[key]} <span class="badge float-end bg-secondary">New</span></div>`;
     }
   }
+
+  // if there is an audd
 
   // compare the two objects masterFields and masterFieldsVerify and return the differences
   function compareObjects(obj1, obj2) {
@@ -930,8 +960,6 @@ document.getElementById("reviewBtn").addEventListener("click", function () {
   compareObjects(masterFields, masterFieldsVerify);
 });
 
-
-
 // ********** DOWNLOAD JSON FILE **********
 // create a function that will take the object masterFieldsVerify, convert it to a json object then download it
 function downloadObjectAsJson(exportObj, exportName) {
@@ -961,6 +989,13 @@ document.getElementById("reviewBtn").addEventListener("click", (e) => {
 
 // create clear function that will revert the dom to its original state
 function clear() {
+  if (localStorage.getItem("audSigData")) {
+    localStorage.removeItem("audSigData");
+  }
+  if (localStorage.getItem("tresSigData")) {
+    localStorage.removeItem("tresSigData");
+  }
+
   // remove all elements with the classname badge
   let badge = document.getElementsByClassName("badge");
   while (badge.length > 0) {
@@ -1373,25 +1408,24 @@ document.getElementById("collectAudSignature").addEventListener("click", () => {
     holder.style.display = "block";
   } else {
     // set holder to display none with the !important tag
-    holder.style.cssText = 'display:none !important';
-
+    holder.style.cssText = "display:none !important";
   }
 });
 
 // add event listner to the id collectTreasSignature that shows the element id treasSigDiv
-document.getElementById("collectTreasSignature").addEventListener("click", () => {
-  holder = document.getElementById("treasSigDiv");
-  // if the element is hidden
-  if (holder.style.display === "none") {
-    // show the element
-    holder.style.display = "block";
-  } else {
-    // set holder to display none with the !important tag
-    holder.style.cssText = 'display:none !important';
-
-  }
-});
-
+document
+  .getElementById("collectTreasSignature")
+  .addEventListener("click", () => {
+    holder = document.getElementById("treasSigDiv");
+    // if the element is hidden
+    if (holder.style.display === "none") {
+      // show the element
+      holder.style.display = "block";
+    } else {
+      // set holder to display none with the !important tag
+      holder.style.cssText = "display:none !important";
+    }
+  });
 
 // new signature pad test //
 
@@ -1408,12 +1442,11 @@ function audSignPad() {
   audSaveBtn.addEventListener("click", (e) => {
     // if there is is a signature in the canvas
     if (audSignaturePad.isEmpty() === false) {
-     // save the signature as a data url
+      // save the signature as a data url
       const audSigData = audSignaturePad.toDataURL("image/png");
 
       // save the data URL to local storage
       localStorage.setItem("audSigData", audSigData);
-
 
       // // *** THIS SENDS THE SIGNATURE TO THE SERVER ***
 
@@ -1444,46 +1477,46 @@ function audSignPad() {
       // *** END OF SERVER SEND ***
 
       // *** BEHOLD ADDITIONAL SIGNATURE PAD FUNCTIONALITY ***
-      
-          //       // Returns signature image as data URL (see https://mdn.io/todataurl for the list of possible parameters)
-          // signaturePad.toDataURL(); // save image as PNG
-          // signaturePad.toDataURL("image/jpeg"); // save image as JPEG
-          // signaturePad.toDataURL("image/jpeg", 0.5); // save image as JPEG with 0.5 image quality
-          // signaturePad.toDataURL("image/svg+xml"); // save image as SVG data url
 
-          // // Return svg string without converting to base64
-          // signaturePad.toSVG(); // "<svg...</svg>"
-          // signaturePad.toSVG({includeBackgroundColor: true}); // add background color to svg output
+      //       // Returns signature image as data URL (see https://mdn.io/todataurl for the list of possible parameters)
+      // signaturePad.toDataURL(); // save image as PNG
+      // signaturePad.toDataURL("image/jpeg"); // save image as JPEG
+      // signaturePad.toDataURL("image/jpeg", 0.5); // save image as JPEG with 0.5 image quality
+      // signaturePad.toDataURL("image/svg+xml"); // save image as SVG data url
 
-          // // Draws signature image from data URL (mostly uses https://mdn.io/drawImage under-the-hood)
-          // // NOTE: This method does not populate internal data structure that represents drawn signature. Thus, after using #fromDataURL, #toData won't work properly.
-          // signaturePad.fromDataURL("data:image/png;base64,iVBORw0K...");
+      // // Return svg string without converting to base64
+      // signaturePad.toSVG(); // "<svg...</svg>"
+      // signaturePad.toSVG({includeBackgroundColor: true}); // add background color to svg output
 
-          // // Draws signature image from data URL and alters it with the given options
-          // signaturePad.fromDataURL("data:image/png;base64,iVBORw0K...", { ratio: 1, width: 400, height: 200, xOffset: 100, yOffset: 50 });
+      // // Draws signature image from data URL (mostly uses https://mdn.io/drawImage under-the-hood)
+      // // NOTE: This method does not populate internal data structure that represents drawn signature. Thus, after using #fromDataURL, #toData won't work properly.
+      // signaturePad.fromDataURL("data:image/png;base64,iVBORw0K...");
 
-          // // Returns signature image as an array of point groups
-          // const data = signaturePad.toData();
+      // // Draws signature image from data URL and alters it with the given options
+      // signaturePad.fromDataURL("data:image/png;base64,iVBORw0K...", { ratio: 1, width: 400, height: 200, xOffset: 100, yOffset: 50 });
 
-          // // Draws signature image from an array of point groups
-          // signaturePad.fromData(data);
+      // // Returns signature image as an array of point groups
+      // const data = signaturePad.toData();
 
-          // // Draws signature image from an array of point groups, without clearing your existing image (clear defaults to true if not provided)
-          // signaturePad.fromData(data, { clear: false });
+      // // Draws signature image from an array of point groups
+      // signaturePad.fromData(data);
 
-          // // Clears the canvas
-          // signaturePad.clear();
+      // // Draws signature image from an array of point groups, without clearing your existing image (clear defaults to true if not provided)
+      // signaturePad.fromData(data, { clear: false });
 
-          // // Returns true if canvas is empty, otherwise returns false
-          // signaturePad.isEmpty();
+      // // Clears the canvas
+      // signaturePad.clear();
 
-          // // Unbinds all event handlers
-          // signaturePad.off();
+      // // Returns true if canvas is empty, otherwise returns false
+      // signaturePad.isEmpty();
 
-          // // Rebinds all event handlers
-          // signaturePad.on();
+      // // Unbinds all event handlers
+      // signaturePad.off();
 
-      // convert audSigData to an image and append it to id audPadCont 
+      // // Rebinds all event handlers
+      // signaturePad.on();
+
+      // convert audSigData to an image and append it to id audPadCont
       const audSigImg = document.createElement("img");
       audSigImg.src = audSigData;
       document.getElementById("augSigImgCont").appendChild(audSigImg);
@@ -1507,7 +1540,6 @@ function audSignPad() {
       document.body.removeChild(audSigLink);
     }
   });
-
 }
 
 function treasSignPad() {
