@@ -996,6 +996,12 @@ function clear() {
     localStorage.removeItem("treasSigData");
   }
 
+// show the dom id audPadCont 
+  document.getElementById("audPadCont").style.display = "block";
+  // show the dom id treasPadCont
+  document.getElementById("treasPadCont").style.display = "block";
+  
+
 
 // remove all elements with the classname "masterfile - signature"
   let masterfileSignature = document.getElementsByClassName(
@@ -1458,24 +1464,7 @@ function audSignPad() {
   const audSignaturePad = new SignaturePad(audCanvas);
   const audClearBtn = document.getElementById("audClearBtn");
   const audSaveBtn = document.getElementById("signAudSub");
-  audSignaturePad.addEventListener("beginStroke", () => {
-
-
-    // stop the page from scrolling when the user is drawing
-    // only if the page in mobile or tablet mode
-   
-    if (window.innerWidth < 992) {
-      document.body.style.overflow = "hidden";
-    }
-  });
-
-  audSignaturePad.addEventListener("endStroke", () => {
-    // allow the page to scroll again
-    // only if the page in mobile or tablet mode
-    if (window.innerWidth < 992) {
-      document.body.style.overflow = "auto";
-    }
-  });
+  
 
   
 
@@ -1570,7 +1559,9 @@ function audSignPad() {
       audSigImg.className = "masterfile - signature";
       document.getElementById("augSigImgCont").appendChild(audSigImg);
 
-      
+      // clear the signature pad
+      audSignaturePad.clear();
+
 
       // hide the signature pad
       document.getElementById("audPadCont").style.display = "none";
@@ -1618,6 +1609,8 @@ function treasSignPad() {
       treasSigImg.className = "masterfile - signature";
       document.getElementById("treasSigImgCont").appendChild(treasSigImg);
 
+      // clear the signature pad
+      treasSignaturePad.clear();
       // hide the signature pad
       document.getElementById("treasPadCont").style.display = "none";
 
