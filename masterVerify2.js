@@ -1,5 +1,3 @@
-
-
 let masterFields = {
   countyCode: "01",
   countyName: "Adams",
@@ -85,7 +83,7 @@ let masterFields = {
   presidingJudgeEmail: "judge@judgeymcjudge.gov",
   newspaper1Name: "West Union Times",
   newspaper1ContactFirstName: "Zach",
-  newspaper1ContactLastName: "Wylde", 
+  newspaper1ContactLastName: "Wylde",
   newspaper1Phone: "563-422-1234",
   newspaper1AdFormat: "Full Page",
   newspaper1LeadTime: "2 Weeks",
@@ -128,41 +126,328 @@ let masterFields = {
   unsoldEndBatch: "",
   withinMinutes: "",
   extendMinutes: "",
-}
+};
 
 const states = {
   Indiana: {
-    counties: ["Adams", "Allen", "Bartholomew", "Benton", "Blackford", "Boone", "Brown", "Carroll", "Cass", "Clark", "Clay", "Clinton", "Crawford", "Daviess", "Dearborn", "Decatur", "DeKalb", "Delaware", "Dubois", "Elkhart", "Fayette", "Floyd", "Fountain", "Franklin", "Fulton", "Gibson", "Grant", "Greene", "Hamilton", "Hancock", "Harrison", "Hendricks", "Henry", "Howard", "Huntington", "Jackson", "Jasper", "Jay", "Jefferson", "Jennings", "Johnson", "Knox", "Kosciusko", "LaGrange", "LaPorte", "Lake", "Lawrence", "Madison", "Marion", "Marshall", "Martin", "Miami", "Monroe", "Montgomery", "Morgan", "Newton", "Noble", "Ohio", "Orange", "Owen", "Parke", "Perry", "Pike", "Porter", "Posey", "Pulaski", "Putnam", "Randolph", "Ripley", "Rush", "St. Joseph", "Scott", "Shelby", "Spencer", "Starke", "Steuben", "Sullivan", "Switzerland", "Tippecanoe", "Tipton", "Union", "Vanderburgh", "Vermillion", "Vigo", "Wabash", "Warren", "Warrick", "Washington", "Wayne", "Wells", "White", "Whitley"]
+    counties: [
+      "Adams",
+      "Allen",
+      "Bartholomew",
+      "Benton",
+      "Blackford",
+      "Boone",
+      "Brown",
+      "Carroll",
+      "Cass",
+      "Clark",
+      "Clay",
+      "Clinton",
+      "Crawford",
+      "Daviess",
+      "Dearborn",
+      "Decatur",
+      "DeKalb",
+      "Delaware",
+      "Dubois",
+      "Elkhart",
+      "Fayette",
+      "Floyd",
+      "Fountain",
+      "Franklin",
+      "Fulton",
+      "Gibson",
+      "Grant",
+      "Greene",
+      "Hamilton",
+      "Hancock",
+      "Harrison",
+      "Hendricks",
+      "Henry",
+      "Howard",
+      "Huntington",
+      "Jackson",
+      "Jasper",
+      "Jay",
+      "Jefferson",
+      "Jennings",
+      "Johnson",
+      "Knox",
+      "Kosciusko",
+      "LaGrange",
+      "LaPorte",
+      "Lake",
+      "Lawrence",
+      "Madison",
+      "Marion",
+      "Marshall",
+      "Martin",
+      "Miami",
+      "Monroe",
+      "Montgomery",
+      "Morgan",
+      "Newton",
+      "Noble",
+      "Ohio",
+      "Orange",
+      "Owen",
+      "Parke",
+      "Perry",
+      "Pike",
+      "Porter",
+      "Posey",
+      "Pulaski",
+      "Putnam",
+      "Randolph",
+      "Ripley",
+      "Rush",
+      "St. Joseph",
+      "Scott",
+      "Shelby",
+      "Spencer",
+      "Starke",
+      "Steuben",
+      "Sullivan",
+      "Switzerland",
+      "Tippecanoe",
+      "Tipton",
+      "Union",
+      "Vanderburgh",
+      "Vermillion",
+      "Vigo",
+      "Wabash",
+      "Warren",
+      "Warrick",
+      "Washington",
+      "Wayne",
+      "Wells",
+      "White",
+      "Whitley",
+    ],
   },
   Florida: {
-    counties: ["Alachua", "Baker", "Bay", "Bradford", "Brevard", "Broward", "Calhoun", "Charlotte", "Citrus", "Clay", "Collier", "Columbia", "DeSoto", "Dixie", "Duval", "Escambia", "Flagler", "Franklin", "Gadsden", "Gilchrist", "Glades", "Gulf", "Hamilton", "Hardee", "Hendry", "Hernando", "Highlands", "Hillsborough", "Holmes", "Indian River", "Jackson", "Jefferson", "Lafayette", "Lake", "Lee", "Leon", "Levy", "Liberty", "Madison", "Manatee", "Marion", "Martin", "Miami-Dade", "Monroe", "Nassau", "Okaloosa", "Okeechobee", "Orange", "Osceola", "Palm Beach", "Pasco", "Pinellas", "Polk", "Putnam", "Santa Rosa", "Sarasota", "Seminole", "St. Johns", "St. Lucie", "Sumter", "Suwannee", "Taylor", "Union", "Volusia", "Wakulla", "Walton", "Washington"]
+    counties: [
+      "Alachua",
+      "Baker",
+      "Bay",
+      "Bradford",
+      "Brevard",
+      "Broward",
+      "Calhoun",
+      "Charlotte",
+      "Citrus",
+      "Clay",
+      "Collier",
+      "Columbia",
+      "DeSoto",
+      "Dixie",
+      "Duval",
+      "Escambia",
+      "Flagler",
+      "Franklin",
+      "Gadsden",
+      "Gilchrist",
+      "Glades",
+      "Gulf",
+      "Hamilton",
+      "Hardee",
+      "Hendry",
+      "Hernando",
+      "Highlands",
+      "Hillsborough",
+      "Holmes",
+      "Indian River",
+      "Jackson",
+      "Jefferson",
+      "Lafayette",
+      "Lake",
+      "Lee",
+      "Leon",
+      "Levy",
+      "Liberty",
+      "Madison",
+      "Manatee",
+      "Marion",
+      "Martin",
+      "Miami-Dade",
+      "Monroe",
+      "Nassau",
+      "Okaloosa",
+      "Okeechobee",
+      "Orange",
+      "Osceola",
+      "Palm Beach",
+      "Pasco",
+      "Pinellas",
+      "Polk",
+      "Putnam",
+      "Santa Rosa",
+      "Sarasota",
+      "Seminole",
+      "St. Johns",
+      "St. Lucie",
+      "Sumter",
+      "Suwannee",
+      "Taylor",
+      "Union",
+      "Volusia",
+      "Wakulla",
+      "Walton",
+      "Washington",
+    ],
   },
   Louisiana: {
-    counties: ["Acadia", "Allen", "Ascension", "Assumption", "Avoyelles", "Beauregard", "Bienville", "Bossier", "Caddo", "Calcasieu", "Caldwell", "Cameron", "Catahoula", "Claiborne", "Concordia", "De Soto", "East Baton Rouge", "East Carroll", "East Feliciana", "Evangeline", "Franklin", "Grant", "Iberia", "Iberville", "Jackson", "Jefferson", "Jefferson Davis", "Lafayette", "Lafourche", "LaSalle", "Lincoln", "Livingston", "Madison", "Morehouse", "Natchitoches", "Orleans", "Ouachita", "Plaquemines", "Pointe Coupee", "Rapides", "Red River", "Richland", "Sabine", "St. Bernard", "St. Charles", "St. Helena", "St. James", "St. John the Baptist", "St. Landry", "St. Martin", "St. Mary", "St. Tammany", "Tangipahoa", "Tensas", "Terrebonne", "Union", "Vermilion", "Vernon", "Washington", "Webster", "West Baton Rouge", "West Carroll", "West Feliciana", "Winn"]
+    counties: [
+      "Acadia",
+      "Allen",
+      "Ascension",
+      "Assumption",
+      "Avoyelles",
+      "Beauregard",
+      "Bienville",
+      "Bossier",
+      "Caddo",
+      "Calcasieu",
+      "Caldwell",
+      "Cameron",
+      "Catahoula",
+      "Claiborne",
+      "Concordia",
+      "De Soto",
+      "East Baton Rouge",
+      "East Carroll",
+      "East Feliciana",
+      "Evangeline",
+      "Franklin",
+      "Grant",
+      "Iberia",
+      "Iberville",
+      "Jackson",
+      "Jefferson",
+      "Jefferson Davis",
+      "Lafayette",
+      "Lafourche",
+      "LaSalle",
+      "Lincoln",
+      "Livingston",
+      "Madison",
+      "Morehouse",
+      "Natchitoches",
+      "Orleans",
+      "Ouachita",
+      "Plaquemines",
+      "Pointe Coupee",
+      "Rapides",
+      "Red River",
+      "Richland",
+      "Sabine",
+      "St. Bernard",
+      "St. Charles",
+      "St. Helena",
+      "St. James",
+      "St. John the Baptist",
+      "St. Landry",
+      "St. Martin",
+      "St. Mary",
+      "St. Tammany",
+      "Tangipahoa",
+      "Tensas",
+      "Terrebonne",
+      "Union",
+      "Vermilion",
+      "Vernon",
+      "Washington",
+      "Webster",
+      "West Baton Rouge",
+      "West Carroll",
+      "West Feliciana",
+      "Winn",
+    ],
   },
   Colorado: {
-    counties: ["Adams", "Alamosa", "Arapahoe", "Archuleta", "Baca", "Bent", "Boulder", "Broomfield", "Chaffee", "Cheyenne", "Clear Creek", "Conejos", "Costilla", "Crowley", "Custer", "Delta", "Denver", "Dolores", "Douglas", "Eagle", "El Paso", "Elbert", "Fremont", "Garfield", "Gilpin", "Grand", "Gunnison", "Hinsdale", "Huerfano", "Jackson", "Jefferson", "Kiowa", "Kit Carson", "Lake", "La Plata", "Larimer", "Las Animas", "Lincoln", "Logan", "Mesa", "Mineral", "Moffat", "Montezuma", "Montrose", "Morgan", "Otero", "Ouray", "Park", "Phillips", "Pitkin", "Prowers", "Pueblo", "Rio Blanco", "Rio Grande", "Routt", "Saguache", "San Juan", "San Miguel", "Sedgwick", "Summit", "Teller", "Washington", "Weld", "Yuma"]
-  }
-}
-
+    counties: [
+      "Adams",
+      "Alamosa",
+      "Arapahoe",
+      "Archuleta",
+      "Baca",
+      "Bent",
+      "Boulder",
+      "Broomfield",
+      "Chaffee",
+      "Cheyenne",
+      "Clear Creek",
+      "Conejos",
+      "Costilla",
+      "Crowley",
+      "Custer",
+      "Delta",
+      "Denver",
+      "Dolores",
+      "Douglas",
+      "Eagle",
+      "El Paso",
+      "Elbert",
+      "Fremont",
+      "Garfield",
+      "Gilpin",
+      "Grand",
+      "Gunnison",
+      "Hinsdale",
+      "Huerfano",
+      "Jackson",
+      "Jefferson",
+      "Kiowa",
+      "Kit Carson",
+      "Lake",
+      "La Plata",
+      "Larimer",
+      "Las Animas",
+      "Lincoln",
+      "Logan",
+      "Mesa",
+      "Mineral",
+      "Moffat",
+      "Montezuma",
+      "Montrose",
+      "Morgan",
+      "Otero",
+      "Ouray",
+      "Park",
+      "Phillips",
+      "Pitkin",
+      "Prowers",
+      "Pueblo",
+      "Rio Blanco",
+      "Rio Grande",
+      "Routt",
+      "Saguache",
+      "San Juan",
+      "San Miguel",
+      "Sedgwick",
+      "Summit",
+      "Teller",
+      "Washington",
+      "Weld",
+      "Yuma",
+    ],
+  },
+};
 
 let batchAmount = 0;
-let masterFieldsVerify = {}
-let newValues = {}
+let masterFieldsVerify = {};
+let newValues = {};
 let addContAmount = 0;
-let newsCont = 1
+let newsCont = 1;
 
 /// adding outlines to the pills as per brad's request
 document.querySelectorAll(".nav-link").forEach((item) => {
   item.classList.add("border", "px-3", "py-1", "mx-1", "my-1");
- // if the id is pills-review-tab then change the color to green, text to white, and add a checkmark icon
+  // if the id is pills-review-tab then change the color to green, text to white, and add a checkmark icon
   if (item.id === "pills-review-tab") {
-      item.classList.add("bg-success", "text-white");
-     
+    item.classList.add("bg-success", "text-white");
   }
-}
-)
-
+});
 
 // add an event listener to all master-input class elements
 document.querySelectorAll(".master-input").forEach((el) => {
@@ -173,54 +458,47 @@ document.querySelectorAll(".master-input").forEach((el) => {
       let span = label.querySelector("span");
       // if there is a span next to the label, remove it
       if (span) {
-      label.removeChild(span);
-    }
+        label.removeChild(span);
+      }
       // check if there are any more spans next to the label if so, remove them using while loop
       while (label.querySelector("span")) {
         let span = label.querySelector("span");
         label.removeChild(span);
       }
+    } else {
+      // add a span after the inputs associated label
+      let label = document.querySelector(`label[for="${e.target.id}"]`);
+      // add a span after the label
+      let span = document.createElement("span");
+      // if there are no spans next to the label, add the span with the badge class
+      if (!label.querySelector("span")) {
+        span.innerHTML = `<span class="badge ms-2 mb-1 mt-0 py-0 px-0 bg-warning text-dark">Changed</span>`;
+        label.appendChild(span);
+      }
     }
-
-    else {
-
-    // add a span after the inputs associated label
-    let label = document.querySelector(`label[for="${e.target.id}"]`);
-    // add a span after the label
-    let span = document.createElement("span");
-    // if there are no spans next to the label, add the span with the badge class
-    if (!label.querySelector("span")) {
-    span.innerHTML = `<span class="badge ms-2 mb-1 mt-0 py-0 px-0 bg-warning text-dark">Changed</span>`
-    label.appendChild(span);
-  }
-}
-  })
-})
-
-
-
-
+  });
+});
 
 document.getElementById("saleMethod").addEventListener("change", (e) => {
   // if the value of saleMethod is "Online" then show the dom element id enddatediv, else hide it
   if (document.getElementById("saleMethod").value === "Online") {
     document.getElementById("enddatediv").style.display = "block";
-  }
-  else {
+  } else {
     document.getElementById("enddatediv").style.display = "none";
   }
-}
-);
+});
 // set the dom objects matching the masterFields object keys to the values of the the dom element named the same as the key
 for (let key in masterFields) {
   if (document.getElementById(key)) {
-    document.getElementById(key).value = masterFields[key]
+    document.getElementById(key).value = masterFields[key];
   }
 }
 
 // set the sales start date and time to the value of the masterFields object
-let saleStart = new Date(masterFields.salestartdatetime).toLocaleString(('en-US'))
-let saleEnd = new Date(masterFields.saleenddatetime).toLocaleString(('en-US'))
+let saleStart = new Date(masterFields.salestartdatetime).toLocaleString(
+  "en-US"
+);
+let saleEnd = new Date(masterFields.saleenddatetime).toLocaleString("en-US");
 
 // previous data modal filler //
 document.getElementById("previousDataModalBody").innerHTML = `
@@ -335,17 +613,15 @@ document.getElementById("previousDataModalBody").innerHTML = `
         <div>Additional Contact 2 Phone: ${masterFields.addcont2phone}</div>
         <div>Additional Contact 2 Email: ${masterFields.addcont2email}</div>
         </div>
-`
-
-
+`;
 
 // add an event listener to the button with the id of "reviewBtn" that will set the masterFieldsVerify object to the values of the dom elements with the same id as the keys in the masterFieldsVerify object //
-document.getElementById("reviewBtn").addEventListener("click", function() {
-  let drop = document.getElementsByClassName("master-input")
+document.getElementById("reviewBtn").addEventListener("click", function () {
+  let drop = document.getElementsByClassName("master-input");
   for (let i = 0; i < drop.length; i++) {
-    masterFieldsVerify[drop[i].id] = drop[i].value
+    masterFieldsVerify[drop[i].id] = drop[i].value;
   }
-  console.log(masterFieldsVerify)
+  console.log(masterFieldsVerify);
 
   // function addMasterFields() {
   //   // loops through masterFieldsVerify and adds them to the dom element id newTest
@@ -359,8 +635,7 @@ document.getElementById("reviewBtn").addEventListener("click", function() {
   //     .reduce((r, k) => ((r[k] = masterFieldsVerify[k]), r), {})
   //   console.log(masterFieldsVerify)
 
-
-  //   // clear the dom element id "reviewModal" 
+  //   // clear the dom element id "reviewModal"
   //   document.getElementById("reviewModal").innerHTML = ""
 
   //   for (let key in masterFieldsVerify) {
@@ -379,7 +654,6 @@ document.getElementById("reviewBtn").addEventListener("click", function() {
   //     }
   //   }
 
-  
   // }
 
   // addMasterFields()
@@ -603,181 +877,189 @@ document.getElementById("reviewBtn").addEventListener("click", function() {
 
       labels = document.getElementsByTagName("label");
 
-     // take the label associated with the input that is the same name as the key and add it to the newLabel variable
+      // take the label associated with the input that is the same name as the key and add it to the newLabel variable
       for (let i = 0; i < labels.length; i++) {
         if (labels[i].htmlFor === key) {
           newLabel = labels[i].innerText;
         }
       }
 
-      element.className = "border my-2 mb-2"
+      element.className = "border my-2 mb-2";
       element.innerHTML += `<div style="background-color: lightyellow" class="ps-2 id="verify${key}">${newLabel}: ${masterFieldsVerify[key]} <span class="badge float-end bg-secondary">New</span></div>`;
     }
   }
 
-
-
-
-
-
-// compare the two objects masterFields and masterFieldsVerify and return the differences
-function compareObjects(obj1, obj2) {
-  let differences = {};
-  for (let key in obj1) {
-    if (obj1[key] !== obj2[key]) {
-      differences[key] = obj2[key];
-    }   
-  }
-
-  console.log(differences)
-  
-
- // if a value in the differences object is undefined then remove it from the differences object
-  for (let key in differences) {
-    if (differences[key] === undefined) {
-      delete differences[key];
+  // compare the two objects masterFields and masterFieldsVerify and return the differences
+  function compareObjects(obj1, obj2) {
+    let differences = {};
+    for (let key in obj1) {
+      if (obj1[key] !== obj2[key]) {
+        differences[key] = obj2[key];
+      }
     }
-  }
+
+    console.log(differences);
+
+    // if a value in the differences object is undefined then remove it from the differences object
+    for (let key in differences) {
+      if (differences[key] === undefined) {
+        delete differences[key];
+      }
+    }
 
     // take all values from different and highlight the dom element which is the id of verify + key
     for (let key in differences) {
       let element = document.getElementById(`verify${key}`);
       element.style.backgroundColor = "lightyellow";
       // add a badge to the end of the dom element
-      element.innerHTML += `<span class="badge float-end bg-danger">Changed</span>`
+      element.innerHTML += `<span class="badge float-end bg-danger">Changed</span>`;
     }
+  }
 
+  // add an event listener to the id approveBtn that hides the dom element reviewBtn and shows the dom element padCont
+  document.getElementById("approveBtn").addEventListener("click", (e) => {
+    document.getElementById("reviewBtn").style.display = "none";
+    document.getElementById("padCont").style.display = "block";
+  });
 
-}
+  // add an event listener to the button signSub that shows the dom element finalsubbutn
+  document.getElementById("signSub").addEventListener("click", (e) => {
+    document.getElementById("finalsubbtn").style.display = "block";
+  });
 
-// add an event listener to the id approveBtn that hides the dom element reviewBtn and shows the dom element padCont
-document.getElementById("approveBtn").addEventListener("click", (e) => {
-  document.getElementById("reviewBtn").style.display = "none";
-  document.getElementById("padCont").
-  style.display = "block";
+  compareObjects(masterFields, masterFieldsVerify);
 });
 
-// add an event listener to the button signSub that shows the dom element finalsubbutn
-document.getElementById("signSub").addEventListener("click", (e) => {
-  document.getElementById("finalsubbtn").style.display = "block";
-});
+// // ********** SIGNATURE PAD **********
 
-compareObjects(masterFields, masterFieldsVerify);
-}
-)
+// const canvas = document.querySelector('canvas');
+// const form = document.querySelector('.signature-pad-form');
+// const clearButton = document.querySelector('.clear-button');
+// const ctx = canvas.getContext('2d');
+// let writingMode = false;
 
+// const handlePointerDown = (event) => {
+//     writingMode = true;
+//     ctx.beginPath();
+//     const [positionX, positionY] = getCursorPosition(event);
+//     ctx.moveTo(positionX, positionY);
+//   }
+//   const handlePointerUp = () => {
+//     writingMode = false;
+//   }
+//   const handlePointerMove = (event) => {
+//     if (!writingMode) return
+//     const [positionX, positionY] = getCursorPosition(event);
+//     ctx.lineTo(positionX, positionY);
+//     ctx.stroke();
+//   }
+//   const getCursorPosition = (event) => {
+//     positionX = event.clientX - event.target.getBoundingClientRect().x;
+//     positionY = event.clientY - event.target.getBoundingClientRect().y;
+//     return [positionX, positionY];
+//   }
+//   ctx.lineWidth = 3;
+//   ctx.lineJoin = ctx.lineCap = 'round';
 
-// ********** SIGNATURE PAD ********** 
+//   canvas.addEventListener('pointerdown', handlePointerDown, {passive: true});
+// canvas.addEventListener('pointerup', handlePointerUp, {passive: true});
+// canvas.addEventListener('pointermove', handlePointerMove, {passive: true});
 
-const canvas = document.querySelector('canvas');
-const form = document.querySelector('.signature-pad-form');
-const clearButton = document.querySelector('.clear-button');
-const ctx = canvas.getContext('2d');
-let writingMode = false;
+//   form.addEventListener('submit', (event) => {
+//     event.preventDefault();
+//     const imageURL = canvas.toDataURL();
+//     const image = document.createElement('img');
+//     image.src = imageURL;
+//     image.height = canvas.height;
+//     image.width = canvas.width;
+//     image.style.display = 'block';
+//     form.appendChild(image);
+//     countSig = image
+//     clearPad();
+//   })
+//   const clearPad = () => {
+//     ctx.clearRect(0, 0, canvas.width, canvas.height);
+//   }
+//   clearButton.addEventListener('click', (event) => {
+//     event.preventDefault();
+//     clearPad();
+//   })
 
-const handlePointerDown = (event) => {
-    writingMode = true;
-    ctx.beginPath();
-    const [positionX, positionY] = getCursorPosition(event);
-    ctx.moveTo(positionX, positionY);
-  }
-  const handlePointerUp = () => {
-    writingMode = false;
-  }
-  const handlePointerMove = (event) => {
-    if (!writingMode) return
-    const [positionX, positionY] = getCursorPosition(event);
-    ctx.lineTo(positionX, positionY);
-    ctx.stroke();
-  }
-  const getCursorPosition = (event) => {
-    positionX = event.clientX - event.target.getBoundingClientRect().x;
-    positionY = event.clientY - event.target.getBoundingClientRect().y;
-    return [positionX, positionY];
-  }
-  ctx.lineWidth = 3;
-  ctx.lineJoin = ctx.lineCap = 'round';
+// // ********** END SIGNATURE PAD **********
 
-  canvas.addEventListener('pointerdown', handlePointerDown, {passive: true});
-canvas.addEventListener('pointerup', handlePointerUp, {passive: true});
-canvas.addEventListener('pointermove', handlePointerMove, {passive: true});
+// // ********** AUDITOR SIGNATURE PAD **********
 
+// const canvas2 = document.querySelector('canvas2');
+// const form2 = document.querySelector('.signature-pad-form2');
+// const clearButton2 = document.querySelector('.clear-button2');
+// const ctx2 = canvas2.getContext('2d');
+// let writingMode2 = false;
 
-  form.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const imageURL = canvas.toDataURL();
-    const image = document.createElement('img');
-    image.src = imageURL;
-    image.height = canvas.height;
-    image.width = canvas.width;
-    image.style.display = 'block';
-    form.appendChild(image);
-    countSig = image
-    clearPad();
-  })
-  const clearPad = () => {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-  }
-  clearButton.addEventListener('click', (event) => {
-    event.preventDefault();
-    clearPad();
-  })
+// const handlePointerDown2 = (event) => {
+//     writingMode2 = true;
+//     ctx2.beginPath();
+//     const [positionX, positionY] = getCursorPosition2(event);
+//     ctx2.moveTo(positionX, positionY);
+//   }
+//   const handlePointerUp2 = () => {
+//     writingMode2 = false;
+//   }
+//   const handlePointerMove2 = (event) => {
+//     if (!writingMode2) return
+//     const [positionX, positionY] = getCursorPosition2(event);
+//     ctx2.lineTo(positionX, positionY);
+//     ctx2.stroke();
+//   }
+//   const getCursorPosition2 = (event) => {
+//     positionX = event.clientX - event.target.getBoundingClientRect().x;
+//     positionY = event.clientY - event.target.getBoundingClientRect().y;
+//     return [positionX, positionY];
+//   }
+//   ctx2.lineWidth = 3;
+//   ctx2.lineJoin = ctx2.lineCap = 'round';
 
+//   canvas2.addEventListener('pointerdown', handlePointerDown2, {passive: true});
+// canvas2.addEventListener('pointerup', handlePointerUp2, {passive: true});
+// canvas2.addEventListener('pointermove', handlePointerMove2, {passive: true});
 
+//   form2.addEventListener('submit', (event) => {
+//     event.preventDefault();
+//     const imageURL = canvas2.toDataURL();
+//     const image = document.createElement('img');
+//     image.src = imageURL;
+//     image.height = canvas2.height;
+//     image.width = canvas2.width;
+//     image.style.display = 'block';
+//     form2.appendChild(image);
+//     countSig2 = image
+//     clearPad2();
+//   })
+//   const clearPad2 = () => {
+//     ctx2.clearRect(0, 0, canvas2.width, canvas2.height);
+//   }
+//   clearButton2.addEventListener('click', (event) => {
+//     event.preventDefault();
+//     clearPad2();
+//   })
 
 // ********** DOWNLOAD JSON FILE **********
-  // create a function that will take the object masterFieldsVerify, convert it to a json object then download it
-function downloadObjectAsJson(exportObj, exportName){
-    var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(exportObj));
-    var downloadAnchorNode = document.createElement('a');
-    downloadAnchorNode.setAttribute("href",     dataStr);
-    downloadAnchorNode.setAttribute("download", exportName + ".json");
-    document.body.appendChild(downloadAnchorNode); // required for firefox
-    downloadAnchorNode.click();
-    downloadAnchorNode.remove();
+// create a function that will take the object masterFieldsVerify, convert it to a json object then download it
+function downloadObjectAsJson(exportObj, exportName) {
+  var dataStr =
+    "data:text/json;charset=utf-8," +
+    encodeURIComponent(JSON.stringify(exportObj));
+  var downloadAnchorNode = document.createElement("a");
+  downloadAnchorNode.setAttribute("href", dataStr);
+  downloadAnchorNode.setAttribute("download", exportName + ".json");
+  document.body.appendChild(downloadAnchorNode); // required for firefox
+  downloadAnchorNode.click();
+  downloadAnchorNode.remove();
 }
-
-// export to excel and download
-
-function exportWS() {
-  var wb = XLSX.utils.book_new();
-  wb.Props = {
-    Title: "Master Fields",
-    Subject: "Master Fields",
-  }
-  wb.SheetNames.push("Master Fields");
-  var ws_data = [
-    ["Field", "Value"]
-  ];
-  for (let key in masterFieldsVerify) {
-    ws_data.push([key, masterFieldsVerify[key]])
-  }
-  var ws = XLSX.utils.aoa_to_sheet(ws_data);
-  wb.Sheets["Master Fields"] = ws;
-  var wbout = XLSX.write(wb, {
-    bookType: 'xlsx',
-    bookSST: true,
-    type: 'binary'
-  });
-  saveAs(new Blob([s2ab(wbout)], {
-    type: "application/octet-stream"
-  }), 'Master Fields.xlsx');
-}
-
-
 
 // add an event listener to the id finalsubbtn that will download the object masterFieldsVerify as a json file
 document.getElementById("finalsubbtn").addEventListener("click", (e) => {
   downloadObjectAsJson(masterFieldsVerify, "masterFieldsVerify");
-  exportWS();
-}
-)
-
-
-
-
- 
-
+});
 
 // add an event listen to the id reviewBtn that when clicked, if there are no checkboxes then enable the submit button
 document.getElementById("reviewBtn").addEventListener("click", (e) => {
@@ -785,8 +1067,7 @@ document.getElementById("reviewBtn").addEventListener("click", (e) => {
   if (checkboxes.length === 0) {
     document.getElementById("approveBtn").disabled = false;
   }
-}
-)
+});
 
 // create clear function that will revert the dom to its original state
 function clear() {
@@ -799,38 +1080,32 @@ function clear() {
   document.getElementById("padCont").style.display = "none";
   // hide the dom element finalsubbtn
   document.getElementById("finalsubbtn").style.display = "none";
-// set the input fields back to their original values
-for (let key in masterFields) {
-  if (document.getElementById(key)) {
-    document.getElementById(key).value = masterFields[key]
+  // set the input fields back to their original values
+  for (let key in masterFields) {
+    if (document.getElementById(key)) {
+      document.getElementById(key).value = masterFields[key];
+    }
   }
-}
-// clear out the masterFieldsVerify object
-masterFieldsVerify = {};
-// remove all elements with the classname checkcont
-let checkcont = document.getElementsByClassName("checkcont");
-while (checkcont.length > 0) {
-  checkcont[0].parentNode.removeChild(checkcont[0]);
-}
+  // clear out the masterFieldsVerify object
+  masterFieldsVerify = {};
+  // remove all elements with the classname checkcont
+  let checkcont = document.getElementsByClassName("checkcont");
+  while (checkcont.length > 0) {
+    checkcont[0].parentNode.removeChild(checkcont[0]);
+  }
 
-// show the review button
-document.getElementById("reviewBtn").style.display = "block";
+  // show the review button
+  document.getElementById("reviewBtn").style.display = "block";
 
-// navigate to the tab id pills-home-tab
-document.getElementById("pills-home-tab").click();
-
+  // navigate to the tab id pills-home-tab
+  document.getElementById("pills-home-tab").click();
 }
 
-  
 // add an event listener to the id clearBtn that will call the clear function
 document.getElementById("clearBtn").addEventListener("click", (e) => {
   clear();
-}
+});
 
-)
-
-
-  
 // add an event listener to the id saleMethod that if it's value is "Online" then set the value of the id's saleStreetAddress, saleCity, saleState, saleZip to the value of "Online - Zeus"
 
 document.getElementById("saleMethod").addEventListener("change", (e) => {
@@ -839,22 +1114,17 @@ document.getElementById("saleMethod").addEventListener("change", (e) => {
     document.getElementById("saleCity").value = "Online - Zeus";
     document.getElementById("saleState").value = "Online - Zeus";
     document.getElementById("saleZip").value = "Online - Zeus";
-  }
-  else {
+  } else {
     document.getElementById("saleStreetAddress").value = "";
     document.getElementById("saleCity").value = "";
     document.getElementById("saleState").value = "";
     document.getElementById("saleZip").value = "";
   }
-}
-)
-
+});
 
 if (masterFields.saleMethod === "Online") {
   document.getElementById("enddatediv").style.display = "block";
 }
-
-
 
 // add an event listen to the id addcontBtn that will add a new container to the dom id addcontwrapper
 // add the numinical id's for each id of each input field
@@ -865,76 +1135,162 @@ document.getElementById("addcontBtn").addEventListener("click", (e) => {
   let addcont = document.createElement("div");
   newsCont++;
   addcont.id = `addcont${addcontwrapper.childElementCount + 1}`;
-  addcont.className = "addcont d-flex flex-wrap flex-row justify-content-evenly align-items-center border border-dark py-3 mb-3";
+  addcont.className =
+    "addcont d-flex flex-wrap flex-row justify-content-evenly align-items-center border border-dark py-3 mb-3";
   addcont.innerHTML = `
   
-  <h5 class="text-center w-100">Additional Contact ${addcontwrapper.childElementCount + 1} <span class="badge bg-secondary">New</span></h5>
+  <h5 class="text-center w-100">Additional Contact ${
+    addcontwrapper.childElementCount + 1
+  } <span class="badge bg-secondary">New</span></h5>
   <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-  <label for="additionalContact${addcontwrapper.childElementCount + 1}FirstName"><small>Additional Contact ${addcontwrapper.childElementCount + 1} First Name</small> </label>
-  <input type="text" class="form-control master-input" id="additionalContact${addcontwrapper.childElementCount + 1}FirstName" placeholder="Additional Contact ${addcontwrapper.childElementCount + 1} FirstName">
+  <label for="additionalContact${
+    addcontwrapper.childElementCount + 1
+  }FirstName"><small>Additional Contact ${
+    addcontwrapper.childElementCount + 1
+  } First Name</small> </label>
+  <input type="text" class="form-control master-input" id="additionalContact${
+    addcontwrapper.childElementCount + 1
+  }FirstName" placeholder="Additional Contact ${
+    addcontwrapper.childElementCount + 1
+  } FirstName">
 </div>
 <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-  <label for="additionalContact${addcontwrapper.childElementCount + 1}LastName"><small>Additional Contact ${addcontwrapper.childElementCount + 1} Last Name</small> </label>
-  <input type="text" class="form-control master-input" id="additionalContact${addcontwrapper.childElementCount + 1}LastName" placeholder="Additional Contact ${addcontwrapper.childElementCount + 1} Last Name">
+  <label for="additionalContact${
+    addcontwrapper.childElementCount + 1
+  }LastName"><small>Additional Contact ${
+    addcontwrapper.childElementCount + 1
+  } Last Name</small> </label>
+  <input type="text" class="form-control master-input" id="additionalContact${
+    addcontwrapper.childElementCount + 1
+  }LastName" placeholder="Additional Contact ${
+    addcontwrapper.childElementCount + 1
+  } Last Name">
 </div>
 <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-  <label for="additionalContact${addcontwrapper.childElementCount + 1}Phone"><small>Additional Contact ${addcontwrapper.childElementCount + 1} Phone </small></label>
-  <input type="text" class="form-control master-input" id="additionalContact${addcontwrapper.childElementCount + 1}Phone" placeholder="Additional Contact ${addcontwrapper.childElementCount + 1} Phone">
+  <label for="additionalContact${
+    addcontwrapper.childElementCount + 1
+  }Phone"><small>Additional Contact ${
+    addcontwrapper.childElementCount + 1
+  } Phone </small></label>
+  <input type="text" class="form-control master-input" id="additionalContact${
+    addcontwrapper.childElementCount + 1
+  }Phone" placeholder="Additional Contact ${
+    addcontwrapper.childElementCount + 1
+  } Phone">
 </div>
 <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-  <label for="additionalContact${addcontwrapper.childElementCount + 1}Email"><small>Additional Contact ${addcontwrapper.childElementCount + 1} Email </small></label>
-  <input type="text" class="form-control master-input" id="additionalContact${addcontwrapper.childElementCount + 1}Email" placeholder="Additional Contact ${addcontwrapper.childElementCount + 1} Email">
+  <label for="additionalContact${
+    addcontwrapper.childElementCount + 1
+  }Email"><small>Additional Contact ${
+    addcontwrapper.childElementCount + 1
+  } Email </small></label>
+  <input type="text" class="form-control master-input" id="additionalContact${
+    addcontwrapper.childElementCount + 1
+  }Email" placeholder="Additional Contact ${
+    addcontwrapper.childElementCount + 1
+  } Email">
 </div>
 <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-  <label for="additionalContact${addcontwrapper.childElementCount + 1}Title"><small>Additional Contact ${addcontwrapper.childElementCount + 1} Title</small> </label>
-  <input type="text" class="form-control master-input" id="additionalContact${addcontwrapper.childElementCount + 1}Title" placeholder="Additional Contact ${addcontwrapper.childElementCount + 1} Title">
+  <label for="additionalContact${
+    addcontwrapper.childElementCount + 1
+  }Title"><small>Additional Contact ${
+    addcontwrapper.childElementCount + 1
+  } Title</small> </label>
+  <input type="text" class="form-control master-input" id="additionalContact${
+    addcontwrapper.childElementCount + 1
+  }Title" placeholder="Additional Contact ${
+    addcontwrapper.childElementCount + 1
+  } Title">
 </div>
 <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-  <label for="additionalContact${addcontwrapper.childElementCount + 1}Department"><small>Additional Contact ${addcontwrapper.childElementCount + 1} Department </small></label>
-  <input type="text" class="form-control master-input" id="additionalContact${addcontwrapper.childElementCount + 1}Department" placeholder="Additional Contact ${addcontwrapper.childElementCount + 1} Department">
+  <label for="additionalContact${
+    addcontwrapper.childElementCount + 1
+  }Department"><small>Additional Contact ${
+    addcontwrapper.childElementCount + 1
+  } Department </small></label>
+  <input type="text" class="form-control master-input" id="additionalContact${
+    addcontwrapper.childElementCount + 1
+  }Department" placeholder="Additional Contact ${
+    addcontwrapper.childElementCount + 1
+  } Department">
 </div>
 <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-  <label for="additionalContact${addcontwrapper.childElementCount + 1}StreetAddress"><small>Additional Contact ${addcontwrapper.childElementCount + 1} Street Address </small></label>
-  <input type="text" class="form-control master-input" id="additionalContact${addcontwrapper.childElementCount + 1}StreetAddress" placeholder="Additional Contact ${addcontwrapper.childElementCount + 1} Street Address">
+  <label for="additionalContact${
+    addcontwrapper.childElementCount + 1
+  }StreetAddress"><small>Additional Contact ${
+    addcontwrapper.childElementCount + 1
+  } Street Address </small></label>
+  <input type="text" class="form-control master-input" id="additionalContact${
+    addcontwrapper.childElementCount + 1
+  }StreetAddress" placeholder="Additional Contact ${
+    addcontwrapper.childElementCount + 1
+  } Street Address">
 </div>
 <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-  <label for="additionalContact${addcontwrapper.childElementCount + 1}City"><small>Additional Contact ${addcontwrapper.childElementCount + 1} City</small> </label>
-  <input type="text" class="form-control master-input" id="additionalContact${addcontwrapper.childElementCount + 1}City" placeholder="Additional Contact ${addcontwrapper.childElementCount + 1} City">
+  <label for="additionalContact${
+    addcontwrapper.childElementCount + 1
+  }City"><small>Additional Contact ${
+    addcontwrapper.childElementCount + 1
+  } City</small> </label>
+  <input type="text" class="form-control master-input" id="additionalContact${
+    addcontwrapper.childElementCount + 1
+  }City" placeholder="Additional Contact ${
+    addcontwrapper.childElementCount + 1
+  } City">
 </div>
 <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-  <label for="additionalContact${addcontwrapper.childElementCount + 1}State"><small>Additional Contact ${addcontwrapper.childElementCount + 1} State</small> </label>
-  <input type="text" class="form-control master-input" id="additionalContact${addcontwrapper.childElementCount + 1}State" placeholder="Additional Contact ${addcontwrapper.childElementCount + 1} State">
+  <label for="additionalContact${
+    addcontwrapper.childElementCount + 1
+  }State"><small>Additional Contact ${
+    addcontwrapper.childElementCount + 1
+  } State</small> </label>
+  <input type="text" class="form-control master-input" id="additionalContact${
+    addcontwrapper.childElementCount + 1
+  }State" placeholder="Additional Contact ${
+    addcontwrapper.childElementCount + 1
+  } State">
 </div>
 <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-  <label for="additionalContact${addcontwrapper.childElementCount + 1}Zip"><small>Additional Contact ${addcontwrapper.childElementCount + 1} Zip</small> </label>
-  <input type="text" class="form-control master-input" id="additionalContact${addcontwrapper.childElementCount + 1}Zip" placeholder="Additional Contact ${addcontwrapper.childElementCount + 1} Zip">
+  <label for="additionalContact${
+    addcontwrapper.childElementCount + 1
+  }Zip"><small>Additional Contact ${
+    addcontwrapper.childElementCount + 1
+  } Zip</small> </label>
+  <input type="text" class="form-control master-input" id="additionalContact${
+    addcontwrapper.childElementCount + 1
+  }Zip" placeholder="Additional Contact ${
+    addcontwrapper.childElementCount + 1
+  } Zip">
 </div>
 <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-  <label for="additionalContact${addcontwrapper.childElementCount + 1}Notes"><small>Additional Contact ${addcontwrapper.childElementCount + 1} Notes </small></label>
-  <input type="text" class="form-control master-input" id="additionalContact${addcontwrapper.childElementCount + 1}Notes" placeholder="Additional Contact ${addcontwrapper.childElementCount + 1} Notes">
+  <label for="additionalContact${
+    addcontwrapper.childElementCount + 1
+  }Notes"><small>Additional Contact ${
+    addcontwrapper.childElementCount + 1
+  } Notes </small></label>
+  <input type="text" class="form-control master-input" id="additionalContact${
+    addcontwrapper.childElementCount + 1
+  }Notes" placeholder="Additional Contact ${
+    addcontwrapper.childElementCount + 1
+  } Notes">
 </div>
 <div class="w-100 d-flex flex-wrap flex-row justify-content-center align-items-center mb-2">
-<button type="button" class="btn btn-danger" id="deleteBtn${addcontwrapper.childElementCount + 1}">Delete Contact ${addcontwrapper.childElementCount + 1}</button>
+<button type="button" class="btn btn-danger" id="deleteBtn${
+    addcontwrapper.childElementCount + 1
+  }">Delete Contact ${addcontwrapper.childElementCount + 1}</button>
 
 </div>`;
   addcontwrapper.appendChild(addcont);
-  document.getElementById(`deleteBtn${addcontwrapper.childElementCount}`).addEventListener("click", (e) => {
-    e.target.parentNode.parentNode.remove();
-  }
-  )
-
-
-
-
-}
-)
-
-
+  document
+    .getElementById(`deleteBtn${addcontwrapper.childElementCount}`)
+    .addEventListener("click", (e) => {
+      e.target.parentNode.parentNode.remove();
+    });
+});
 
 // add an event listner to the id numBatches and take it's value and store it in the variable batchAmount
 
 document.getElementById("numBatches").addEventListener("change", (e) => {
-  
   batchAmount = e.target.value;
   // clear all content from the id batchDiv
   document.getElementById("batchDiv").innerHTML = "";
@@ -943,22 +1299,30 @@ document.getElementById("numBatches").addEventListener("change", (e) => {
     let batchDiv = document.getElementById("batchDiv");
     let batch = document.createElement("div");
     batch.setAttribute("id", `batch${i + 1}`);
-    batch.setAttribute("style", "background-color: #e3ecff")
-    batch.className = "batch mt-2 d-flex flex-wrap flex-row justify-content-evenly align-items-center border border-dark py-3 mb-3";
+    batch.setAttribute("style", "background-color: #e3ecff");
+    batch.className =
+      "batch mt-2 d-flex flex-wrap flex-row justify-content-evenly align-items-center border border-dark py-3 mb-3";
     batch.innerHTML = `
     <h5 class="text-center w-100">Batch ${i + 1}</h5>
     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-      <label for="batch${i + 1}StartTime"><small>Batch ${i + 1} Start Time</small> </label>
-      <input type="datetime-local" class="form-control master-input" id="batch${i + 1}StartTime" placeholder="Batch ${i + 1} Start Time">
+      <label for="batch${i + 1}StartTime"><small>Batch ${
+      i + 1
+    } Start Time</small> </label>
+      <input type="datetime-local" class="form-control master-input" id="batch${
+        i + 1
+      }StartTime" placeholder="Batch ${i + 1} Start Time">
     </div>
     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-      <label for="batch${i + 1}StopTime"><small>Batch ${i + 1} Stop Time</small> </label>
-      <input type="datetime-local" class="form-control master-input" id="batch${i + 1}StopTime" placeholder="Batch ${i + 1} Stop Time">
+      <label for="batch${i + 1}StopTime"><small>Batch ${
+      i + 1
+    } Stop Time</small> </label>
+      <input type="datetime-local" class="form-control master-input" id="batch${
+        i + 1
+      }StopTime" placeholder="Batch ${i + 1} Stop Time">
     </div>`;
     batchDiv.appendChild(batch);
   }
-
-})
+});
 
 // add an event listen to id unsoldBatch and show the dom id unsoldBatchDiv if the target is checked
 // hide the dom id unsoldBatchDiv if the target is not checked
@@ -969,7 +1333,7 @@ document.getElementById("unsoldBatch").addEventListener("change", (e) => {
   } else {
     document.getElementById("unsoldbatchesdiv").style.display = "none";
   }
-})
+});
 
 // add an event listener to the id dynamicEnding and show the dom id dynamicDiv if the target is checked
 
@@ -979,14 +1343,7 @@ document.getElementById("dynamicEnding").addEventListener("change", (e) => {
   } else {
     document.getElementById("dynamicDiv").style.display = "none";
   }
-})
-
-
-
-
-
-
-
+});
 
 // add an event listern to the id addnewsBtn that will add a new container to the dom with the id newscontwrapper
 // add the numinical id's for each id of each input field
@@ -995,62 +1352,193 @@ document.getElementById("dynamicEnding").addEventListener("change", (e) => {
 document.getElementById("addnewsBtn").addEventListener("click", () => {
   let newscontwrapper = document.getElementById("newscontwrapper");
   let newscont = document.createElement("div");
-  newscont.setAttribute("id", `newscont${newscontwrapper.childElementCount + 1}`);
-  newscont.className = "addcont d-flex flex-wrap flex-row justify-content-evenly align-items-center border border-dark py-3 mb-3";
+  newscont.setAttribute(
+    "id",
+    `newscont${newscontwrapper.childElementCount + 1}`
+  );
+  newscont.className =
+    "addcont d-flex flex-wrap flex-row justify-content-evenly align-items-center border border-dark py-3 mb-3";
   newscont.innerHTML = `
   
-  <h5 class="text-center w-100">Newspaper ${newscontwrapper.childElementCount + 1} <span class="badge bg-secondary">New</span></h5>
+  <h5 class="text-center w-100">Newspaper ${
+    newscontwrapper.childElementCount + 1
+  } <span class="badge bg-secondary">New</span></h5>
   <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-  <label for="news${newscontwrapper.childElementCount + 1}Name"><small>Newspaper ${newscontwrapper.childElementCount + 1} Name</small> </label>
-  <input type="text" class="form-control master-input" id="news${newscontwrapper.childElementCount + 1}Name" placeholder="Newspaper ${newscontwrapper.childElementCount + 1} Name">
+  <label for="news${
+    newscontwrapper.childElementCount + 1
+  }Name"><small>Newspaper ${
+    newscontwrapper.childElementCount + 1
+  } Name</small> </label>
+  <input type="text" class="form-control master-input" id="news${
+    newscontwrapper.childElementCount + 1
+  }Name" placeholder="Newspaper ${newscontwrapper.childElementCount + 1} Name">
 </div>
 <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-  <label for="news${newscontwrapper.childElementCount + 1}FirstName"><small>Newspaper ${newscontwrapper.childElementCount + 1} First Name</small> </label>
-  <input type="text" class="form-control master-input" id="news${newscontwrapper.childElementCount + 1}FirstName" placeholder="Newspaper ${newscontwrapper.childElementCount + 1} First Name">
+  <label for="news${
+    newscontwrapper.childElementCount + 1
+  }FirstName"><small>Newspaper ${
+    newscontwrapper.childElementCount + 1
+  } First Name</small> </label>
+  <input type="text" class="form-control master-input" id="news${
+    newscontwrapper.childElementCount + 1
+  }FirstName" placeholder="Newspaper ${
+    newscontwrapper.childElementCount + 1
+  } First Name">
 </div>
 <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-  <label for="news${newscontwrapper.childElementCount + 1}LastName"><small>Newspaper ${newscontwrapper.childElementCount + 1} Last Name</small> </label>
-  <input type="text" class="form-control master-input" id="news${newscontwrapper.childElementCount + 1}LastName" placeholder="Newspaper ${newscontwrapper.childElementCount + 1} Last Name">
+  <label for="news${
+    newscontwrapper.childElementCount + 1
+  }LastName"><small>Newspaper ${
+    newscontwrapper.childElementCount + 1
+  } Last Name</small> </label>
+  <input type="text" class="form-control master-input" id="news${
+    newscontwrapper.childElementCount + 1
+  }LastName" placeholder="Newspaper ${
+    newscontwrapper.childElementCount + 1
+  } Last Name">
 </div>
 <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-  <label for="news${newscontwrapper.childElementCount + 1}Phone"><small>Newspaper ${newscontwrapper.childElementCount + 1} Phone</small> </label>
-  <input type="text" class="form-control master-input" id="news${newscontwrapper.childElementCount + 1}Phone" placeholder="Newspaper ${newscontwrapper.childElementCount + 1} Phone">
+  <label for="news${
+    newscontwrapper.childElementCount + 1
+  }Phone"><small>Newspaper ${
+    newscontwrapper.childElementCount + 1
+  } Phone</small> </label>
+  <input type="text" class="form-control master-input" id="news${
+    newscontwrapper.childElementCount + 1
+  }Phone" placeholder="Newspaper ${
+    newscontwrapper.childElementCount + 1
+  } Phone">
 </div>
 <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-  <label for="news${newscontwrapper.childElementCount + 1}AdFormat"><small>Newspaper ${newscontwrapper.childElementCount + 1} Ad Format</small> </label>
-  <input type="text" class="form-control master-input" id="news${newscontwrapper.childElementCount + 1}AdFormat" placeholder="Newspaper ${newscontwrapper.childElementCount + 1} Ad Format">
+  <label for="news${
+    newscontwrapper.childElementCount + 1
+  }AdFormat"><small>Newspaper ${
+    newscontwrapper.childElementCount + 1
+  } Ad Format</small> </label>
+  <input type="text" class="form-control master-input" id="news${
+    newscontwrapper.childElementCount + 1
+  }AdFormat" placeholder="Newspaper ${
+    newscontwrapper.childElementCount + 1
+  } Ad Format">
 </div>
 <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">  
-  <label for="news${newscontwrapper.childElementCount + 1}LeadTime"><small>Newspaper ${newscontwrapper.childElementCount + 1} Lead Time</small> </label>
-  <input type="text" class="form-control master-input" id="news${newscontwrapper.childElementCount + 1}LeadTime" placeholder="Newspaper ${newscontwrapper.childElementCount + 1} Lead Time">
+  <label for="news${
+    newscontwrapper.childElementCount + 1
+  }LeadTime"><small>Newspaper ${
+    newscontwrapper.childElementCount + 1
+  } Lead Time</small> </label>
+  <input type="text" class="form-control master-input" id="news${
+    newscontwrapper.childElementCount + 1
+  }LeadTime" placeholder="Newspaper ${
+    newscontwrapper.childElementCount + 1
+  } Lead Time">
 </div>
 <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-  <label for="news${newscontwrapper.childElementCount + 1}DayAdRuns"><small>Newspaper ${newscontwrapper.childElementCount + 1} Day Ad Runs</small> </label>
-  <input type="text" class="form-control master-input" id="news${newscontwrapper.childElementCount + 1}DayAdRuns" placeholder="Newspaper ${newscontwrapper.childElementCount + 1} Day Ad Runs">
+  <label for="news${
+    newscontwrapper.childElementCount + 1
+  }DayAdRuns"><small>Newspaper ${
+    newscontwrapper.childElementCount + 1
+  } Day Ad Runs</small> </label>
+  <input type="text" class="form-control master-input" id="news${
+    newscontwrapper.childElementCount + 1
+  }DayAdRuns" placeholder="Newspaper ${
+    newscontwrapper.childElementCount + 1
+  } Day Ad Runs">
 </div>
 <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-  <label for="news${newscontwrapper.childElementCount + 1}URL"><small>Newspaper ${newscontwrapper.childElementCount + 1} URL</small> </label>
-  <input type="text" class="form-control master-input" id="news${newscontwrapper.childElementCount + 1}URL" placeholder="Newspaper ${newscontwrapper.childElementCount + 1} URL">
+  <label for="news${
+    newscontwrapper.childElementCount + 1
+  }URL"><small>Newspaper ${
+    newscontwrapper.childElementCount + 1
+  } URL</small> </label>
+  <input type="text" class="form-control master-input" id="news${
+    newscontwrapper.childElementCount + 1
+  }URL" placeholder="Newspaper ${newscontwrapper.childElementCount + 1} URL">
 </div>
 <div class="w-100 d-flex flex-wrap flex-row justify-content-center align-items-center mb-2">
-<button type="button" class="btn btn-danger \ " id="deleteBtn${newscontwrapper.childElementCount + 1}">Delete Newspaper ${newscontwrapper.childElementCount + 1}</button>
+<button type="button" class="btn btn-danger \ " id="deleteBtn${
+    newscontwrapper.childElementCount + 1
+  }">Delete Newspaper ${newscontwrapper.childElementCount + 1}</button>
 </div>
 `;
   newscontwrapper.appendChild(newscont);
-  document.getElementById(`deleteBtn${newscontwrapper.childElementCount}`).addEventListener("click", (e) => {
-    e.target.parentNode.parentNode.remove();
-  }
-  )
-}
-)
-
-
+  document
+    .getElementById(`deleteBtn${newscontwrapper.childElementCount}`)
+    .addEventListener("click", (e) => {
+      e.target.parentNode.parentNode.remove();
+    });
+});
 
 // add event listner to the logout btn to redirect to index.html
 document.getElementById("logoutBtn").addEventListener("click", () => {
   window.location.href = "index.html";
+});
+
+// add event listner to id collectAudSignature that shows the element id audSigDiv
+document.getElementById("collectAudSignature").addEventListener("click", () => {
+  document.getElementById("audSigDiv").style.display = "block";
+});
+
+// new signature pad test //
+
+function audSignPad() {
+  const audCanvas = document.getElementById("audCanvas");
+  const audSignaturePad = new SignaturePad(audCanvas);
+  const audClearBtn = document.getElementById("audClearBtn");
+  const audSaveBtn = document.getElementById("signAudSub");
+
+  audClearBtn.addEventListener("click", (e) => {
+    audSignaturePad.clear();
+  });
+
+  audSaveBtn.addEventListener("click", (e) => {
+    // if there is is a signature in the canvas
+    if (audSignaturePad.isEmpty() === false) {
+     // save the signature as a data url
+      const audSigData = audSignaturePad.toDataURL("image/png");
+
+      // // *** THIS SENDS THE SIGNATURE TO THE SERVER ***
+
+      //           // convert audSigData to a blob
+      //           fetch(audSigData)
+      //             .then((res) => res.blob())
+      //             .then((blob) => {
+      //               // create a new file from the blob
+      //               const audSigFile = new File([blob], "audSig.png", {
+      //                 type: "image/png",
+      //               });
+      //               // create a new form data
+      //               const audSigFormData = new FormData();
+      //               // append the file to the form data
+      //               audSigFormData.append("audSig", audSigFile );
+      //               // send the form data to the server
+      //               fetch("http://localhost:3000/audSig", {
+      //                 method: "POST",
+      //                 body: audSigFormData,
+      //               })
+      //                 .then((res) => res.json())
+      //                 .then((data) => {
+      //                   console.log(data);
+      //                 }
+      //                 );
+      //             });
+
+      // *** END OF SERVER SEND ***
+
+      // convert audSigData to an image and append it to id audPadCont 
+      const audSigImg = document.createElement("img");
+      audSigImg.src = audSigData;
+      document.getElementById("audPadCont").appendChild(audSigImg);
+      // hide the signature pad
+
+
+
+    }
+  });
+   
+  
 }
-)
 
+audSignPad();
 
-
+// end new signature pad test //

@@ -8,6 +8,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="/pad.css">
+    <style>
+        .canvas {
+            border: 1px solid black;
+            background-color: white;
+            width: 100%;
+            height: 100%;
+
+        }
+
+    </style>
 </head>
 
 
@@ -204,8 +214,44 @@
                                             placeholder="Auditor Zip">
                                     </div>
                                 </div>
+                                <!-- collect signature button -->
+                                <div class="d-flex flex-wrap justify-content-center align-items-center">
+                                    <button type="button" class="btn btn-primary mb-3" id="collectAudSignature">Collect
+                                        Signature</button>
+                                </div>
+
+                                <div id="audSigDiv"
+                                    class="d-flex flex-wrap flex-row justify-content-evenly align-items-center border border-dark rounded py-3 mb-3"
+                                    style="display: none !important ">
+                                    <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
+                                        <label for="auditorSignatureName"><small>Auditor Signature
+                                                Name</small></label>
+                                        <input type="text" class="form-control master-input" id="auditorSignatureName"
+                                            placeholder="Auditor Signature Name">
+                                    </div>
+                                    <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
+                                        <label for="auditorSignatureTitle"><small>Auditor Signature
+                                                Title</small></label>
+                                        <input type="text" class="form-control master-input" id="auditorSignatureTitle"
+                                            placeholder="Auditor Signature Title">
+                                    </div>
+                                    <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
+                                        <div id="audPadCont">
+                                            <div class="signature-pad-form"  id="signForm">
+                                                <p class="text-center"><b>Signature</b></p>
+                                                <canvas id="audCanvas" height="100" width="300" class="border border-dark signature-pad" id="audPad"></canvas>
+                                                <p id="audClearBtn" class="clear-button">Clear</p>
+                                                <button class="btn btn-primary" id="signAudSub">Submit</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
                             </div>
                         </div>
+                        <!-- end auditor tab -->
+                        <!-- start treasurer tab -->
                         <div class="tab-pane fade" id="pills-treasurer" role="tabpanel"
                             aria-labelledby="pills-treasurer-tab">
                             <div class="d-flex flex-wrap justify-content-around align-items-center">
@@ -254,6 +300,42 @@
                                             placeholder="Treasurer Zip">
                                     </div>
                                 </div>
+
+                                <div class="d-flex flex-wrap justify-content-center align-items-center">
+                                    <button type="button" class="btn btn-primary mb-3" id="collectAudSignature">Collect
+                                        Signature</button>
+                                </div>
+
+                                <div id="audSigDiv"
+                                    class="d-flex flex-wrap flex-row justify-content-evenly align-items-center border border-dark rounded py-3 mb-3"
+                                   >
+                                    <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
+                                        <label for="treasurerSignatureName"><small>Treasurer Signature
+                                                Name</small></label>
+                                        <input type="text" class="form-control master-input" id="treasurerSignatureName"
+                                            placeholder="treasurer Signature Name">
+                                    </div>
+                                    <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
+                                        <label for="treasurerSignatureTitle"><small>Treasurer Signature
+                                                Title</small></label>
+                                        <input type="text" class="form-control master-input" id="treasurerSignatureTitle"
+                                            placeholder="treasurer Signature Title">
+                                    </div>
+                                    <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
+                                        <div id="padCont2">
+                                            <form class="signature-pad-form" action="#" method="POST" id="signForm">
+                                                <p class="text-center"><b>Signature</b></p>
+                                                <canvas height="100" width="300" class="signature-pad"></canvas>
+                                                <p><a href="#" class="clear-button">Clear</a></p>
+                                                <button id="signSub2" class="submit-button" type="submit">Save
+                                                    Signature</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
                             </div>
                         </div>
                         <div class="tab-pane fade" id="pills-attorney" role="tabpanel"
@@ -585,14 +667,13 @@
                         <div class="tab-pane fade" id="pills-sale" role="tabpanel" aria-labelledby="pills-sale-tab">
                             <div class="d-flex flex-wrap justify-content-around align-items-center">
 
-                                <div
-                                    class="d-flex flex-column flex-wrap border border-secondary rounded w-100 mx-5 py-3 px-3 bg-light"
+                                <div class="d-flex flex-column flex-wrap border border-secondary rounded w-100 mx-5 py-3 px-3 bg-light"
                                     stle="min-height: 240px">
                                     <div class="w-100 text-center mb-1">Sale Options
                                     </div>
 
                                     <div class="d-flex flex-row px-2 flex-wrap align-items-center justify-content-evenly"
-                                    style="min-height: 240px">
+                                        style="min-height: 240px">
                                         <div style="width: 150px">
                                             <div id="dynamicDiv" style="display: none;" class="border py-2 px-2">
                                                 <h6 class="text-center">Dynamic</h6>
@@ -614,7 +695,8 @@
                                             </div>
                                         </div>
 
-                                        <div style="width: 150px" class="d-flex px-3 flex-column align-items-center justify-content-center ">
+                                        <div style="width: 150px"
+                                            class="d-flex px-3 flex-column align-items-center justify-content-center ">
                                             <div class="form-check form-switch ">
                                                 <input class="form-check-input master-input" type="checkbox"
                                                     id="unsoldBatch">
@@ -627,18 +709,20 @@
                                                 <label class="form-check-label" for="dynamicEnding">Dynamic
                                                     Ending?</label>
                                             </div>
-                                            <div class="form-group mt-2" id="numBatchesDiv" >
+                                            <div class="form-group mt-2" id="numBatchesDiv">
                                                 <label for="numBatches" id="numbBatcheslabel"><small># of
                                                         Batches</small></label>
                                                 <input type="number" class="form-control master-input" id="numBatches"
                                                     placeholder="# of Batches">
                                             </div>
                                         </div>
-                                        <div style="width: 150px" class="d-flex px-2 flex-column align-items-center justify-content-center ">
+                                        <div style="width: 150px"
+                                            class="d-flex px-2 flex-column align-items-center justify-content-center ">
 
                                             <div id="unsoldbatchesdiv" style="display: none" class="border py-2 p1-2">
                                                 <h6 class="text-center">Unsold Batches</h6>
-                                                <div class="form-group mx-2 my-2" id="unsoldStartBatchDiv" style="width: 225px;">
+                                                <div class="form-group mx-2 my-2" id="unsoldStartBatchDiv"
+                                                    style="width: 225px;">
                                                     <label for="unsoldStartBatch"
                                                         id="unsoldStartBatchlabel"><small>Unsold
                                                             Batch
@@ -646,7 +730,8 @@
                                                     <input type="datetime-local" class="form-control master-input"
                                                         id="unsoldStartBatch">
                                                 </div>
-                                                <div class="form-group mx-2 my-2" id="unsoldEndBatchDiv" style="width: 225px;">
+                                                <div class="form-group mx-2 my-2" id="unsoldEndBatchDiv"
+                                                    style="width: 225px;">
                                                     <label for="unsoldEndBatch" id="unsoldEndBatchlabel"><small>Unsold
                                                             Batch
                                                             End</small></label>
@@ -999,15 +1084,7 @@
                                     Review
                                 </button>
                             </div>
-                            <div id="padCont" style="display: none">
-                                <form class="signature-pad-form" action="#" method="POST" id="signForm">
-                                    <p><b>Signature</b></p>
-                                    <canvas height="100" width="300" class="signature-pad"></canvas>
-                                    <p><a href="#" class="clear-button">Clear</a></p>
-                                    <button id="signSub" class="submit-button" type="submit">Save
-                                        Signature</button>
-                                </form>
-                            </div>
+
                             <!-- submit button -->
                             <div class="d-flex justify-content-center">
                                 <button type="button" id="finalsubbtn" class="btn btn-success mx-5 mb-3"
@@ -1126,7 +1203,7 @@
             <div id="newTest">
 
             </div>
-
+            <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.0.0/dist/signature_pad.umd.min.js"></script>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
                 integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
                 crossorigin="anonymous"></script>
