@@ -996,6 +996,31 @@ function clear() {
     localStorage.removeItem("treasSigData");
   }
 
+
+// remove all elements with the classname "masterfile - signature"
+  let masterfileSignature = document.getElementsByClassName(
+    "masterfile - signature"
+  );
+  while (masterfileSignature.length > 0) {
+    masterfileSignature[0].parentNode.removeChild(masterfileSignature[0]);
+  }
+
+ // if the audSigDiv is displayed on the dom then change the style of the dom element audSigDiv to display none !important
+  if (document.getElementById("audSigDiv").style.display === "block") {
+    // click the id collectTreasSignature
+    document.getElementById("collectTreasSignature").click();
+  }
+
+  // if the treasSigDiv is displayed on the dom then change the style of the dom element treasSigDiv to display none !important
+  if (document.getElementById("treasSigDiv").style.display === "block") {
+   // click the id collectAudSignature
+    document.getElementById("collectAudSignature").click();
+  }
+
+
+
+
+
   // remove all elements with the classname badge
   let badge = document.getElementsByClassName("badge");
   while (badge.length > 0) {
@@ -1515,10 +1540,13 @@ function audSignPad() {
       // // Rebinds all event handlers
       // signaturePad.on();
 
-      // convert audSigData to an image and append it to id audPadCont
+      // convert audSigData to an image and append it to id audPadCont with the class name "masterfile - signature"
       const audSigImg = document.createElement("img");
       audSigImg.src = audSigData;
+      audSigImg.className = "masterfile - signature";
       document.getElementById("augSigImgCont").appendChild(audSigImg);
+
+      
 
       // hide the signature pad
       document.getElementById("audPadCont").style.display = "none";
@@ -1563,6 +1591,7 @@ function treasSignPad() {
       // convert treasSigData to an image and append it to id treasPadCont
       const treasSigImg = document.createElement("img");
       treasSigImg.src = treasSigData;
+      treasSigImg.className = "masterfile - signature";
       document.getElementById("treasSigImgCont").appendChild(treasSigImg);
 
       // hide the signature pad
