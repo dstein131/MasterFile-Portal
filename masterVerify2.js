@@ -1459,14 +1459,27 @@ function audSignPad() {
   const audClearBtn = document.getElementById("audClearBtn");
   const audSaveBtn = document.getElementById("signAudSub");
   audSignaturePad.addEventListener("beginStroke", () => {
+
+
     // stop the page from scrolling when the user is drawing
-    document.body.style.overflow = "hidden";
+    // only if the page in mobile or tablet mode
+   
+    if (window.innerWidth < 992) {
+      document.body.style.overflow = "hidden";
+    }
   });
+
   audSignaturePad.addEventListener("endStroke", () => {
     // allow the page to scroll again
-    document.body.style.overflow = "auto";
+    // only if the page in mobile or tablet mode
+    if (window.innerWidth < 992) {
+      document.body.style.overflow = "auto";
+    }
   });
+
   
+
+
 
 
 
