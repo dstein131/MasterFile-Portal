@@ -434,6 +434,9 @@ const states = {
   },
 };
 
+
+
+
 let batchAmount = 0;
 let masterFieldsVerify = {};
 let newValues = {};
@@ -960,6 +963,14 @@ document.getElementById("reviewBtn").addEventListener("click", function () {
   compareObjects(masterFields, masterFieldsVerify);
 });
 
+
+
+
+
+
+
+
+
 // ********** DOWNLOAD JSON FILE **********
 // create a function that will take the object masterFieldsVerify, convert it to a json object then download it
 function downloadObjectAsJson(exportObj, exportName) {
@@ -977,6 +988,8 @@ function downloadObjectAsJson(exportObj, exportName) {
 // add an event listener to the id finalsubbtn that will download the object masterFieldsVerify as a json file
 document.getElementById("finalsubbtn").addEventListener("click", (e) => {
   downloadObjectAsJson(masterFieldsVerify, "masterFieldsVerify");
+
+
 });
 
 // add an event listen to the id reviewBtn that when clicked, if there are no checkboxes then enable the submit button
@@ -1653,3 +1666,4 @@ treasSignPad();
 audSignPad();
 
 // end new signature pad test //
+
