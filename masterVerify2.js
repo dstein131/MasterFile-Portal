@@ -133,6 +133,9 @@ const states = {
   
   CO: {
     name: "Colorado",
+    cities: [
+      "Arvada", "Aurora", "Boulder", "Broomfield", "Castle Rock", "Centennial", "Colorado Springs", "Denver", "Englewood", "Fort Collins", "Golden", "Grand Junction", "Greeley", "Lakewood", "Littleton", "Longmont", "Loveland", "Parker", "Pueblo", "Thornton", "Westminster", "Wheat Ridge"
+    ],
     counties: [
       "Adams", "Alamosa", "Arapahoe", "Archuleta", "Baca", "Bent", "Boulder", "Broomfield", "Chaffee", "Cheyenne", "Clear Creek", "Conejos", "Costilla", "Crowley", "Custer", "Delta", "Denver", "Dolores", "Douglas", "Eagle", "El Paso", "Elbert", "Fremont", "Garfield", "Gilpin", "Grand", "Gunnison", "Hinsdale", "Huerfano", "Jackson", "Jefferson", "Kiowa", "Kit Carson", "Lake", "La Plata", "Larimer", "Las Animas", "Lincoln", "Logan", "Mesa", "Mineral", "Moffat", "Montezuma", "Montrose", "Morgan", "Otero", "Ouray", "Park", "Phillips", "Pitkin", "Prowers", "Pueblo", "Rio Blanco", "Rio Grande", "Routt", "Saguache", "San Juan", "San Miguel", "Sedgwick", "Summit", "Teller", "Washington", "Weld", "Yuma",
     ],
@@ -140,18 +143,27 @@ const states = {
   
   FL: {
     name: "Florida",
+    cities: [
+      "Alachua", "Altamonte Springs", "Apopka", "Aventura", "Bartow", "Boca Raton", "Boynton Beach", "Bradenton", "Brandon", "Cape Coral", "Clearwater", "Clermont", "Cocoa", "Coral Gables", "Coral Springs", "Daytona Beach", "Deerfield Beach", "Delray Beach", "Deltona", "Doral", "Dunedin", "Fort Lauderdale", "Fort Myers", "Fort Pierce", "Fort Walton Beach", "Gainesville", "Greenacres", "Hialeah", "Hollywood", "Homestead", "Jacksonville", "Jupiter", "Kissimmee", "Lake Worth", "Lakeland", "Largo", "Lauderhill", "Leesburg", "Margate", "Melbourne", "Miami", "Miami Beach", "Miami Gardens", "Miami Lakes", "Miramar", "Naples", "New Port Richey", "North Miami", "North Miami Beach", "North Port", "Ocala", "Orlando", "Palm Bay", "Palm Beach Gardens", "Palm Coast", "Palm Harbor", "Pembroke Pines", "Pensacola", "Pompano Beach", "Port Charlotte", "Port Orange", "Port St. Lucie", "Punta Gorda", "Riverview", "Royal Palm Beach", "Saint Augustine", "Saint Cloud", "Saint Petersburg", "Sanford", "Sarasota", "Seminole", "Spring Hill", "Stuart", "Sunrise", "Tallahassee", "Tamarac", "Tampa", "Tarpon Springs", "Temple Terrace", "Titusville", "Vero Beach", "West Palm Beach", "Weston", "Winter Garden", "Winter Haven", "Winter Park", "Winter Springs",
+    ],
     counties: [
       "Alachua", "Baker", "Bay", "Bradford", "Brevard", "Broward", "Calhoun", "Charlotte", "Citrus", "Clay", "Collier", "Columbia", "DeSoto", "Dixie", "Duval", "Escambia", "Flagler", "Franklin", "Gadsden", "Gilchrist", "Glades", "Gulf", "Hamilton", "Hardee", "Hendry", "Hernando", "Highlands", "Hillsborough", "Holmes", "Indian River", "Jackson", "Jefferson", "Lafayette", "Lake", "Lee", "Leon", "Levy", "Liberty", "Madison", "Manatee", "Marion", "Martin", "Miami-Dade", "Monroe", "Nassau", "Okaloosa", "Okeechobee", "Orange", "Osceola", "Palm Beach", "Pasco", "Pinellas", "Polk", "Putnam", "Santa Rosa", "Sarasota", "Seminole", "St. Johns", "St. Lucie", "Sumter", "Suwannee", "Taylor", "Union", "Volusia", "Wakulla", "Walton", "Washington",
     ],
   },
   IN: {
     name: "Indiana",
+    cities: [
+      "Anderson", "Bloomington", "Carmel", "Columbus", "Elkhart", "Evansville", "Fishers", "Fort Wayne", "Gary", "Greenwood", "Hammond", "Indianapolis", "Jeffersonville", "Kokomo", "Lafayette", "Lawrence", "Merrillville", "Mishawaka", "Muncie", "Noblesville", "Portage", "Richmond", "South Bend", "Terre Haute", "Valparaiso", "West Lafayette",
+    ],
     counties: [
       "Adams", "Allen", "Bartholomew", "Benton", "Blackford", "Boone", "Brown", "Carroll", "Cass", "Clark", "Clay", "Clinton", "Crawford", "Daviess", "Dearborn", "Decatur", "De Kalb", "Delaware", "Dubois", "Elkhart", "Fayette", "Floyd", "Fountain", "Franklin", "Fulton", "Gibson", "Grant", "Greene", "Hamilton", "Hancock", "Harrison", "Hendricks", "Henry", "Howard", "Huntington", "Jackson", "Jasper", "Jay", "Jefferson", "Jennings", "Johnson", "Knox", "Kosciusko", "La Porte", "Lagrange", "Lake", "Lawrence", "Madison", "Marion", "Marshall", "Martin", "Miami", "Monroe", "Montgomery", "Morgan", "Newton", "Noble", "Ohio", "Orange", "Owen", "Parke", "Perry", "Pike", "Porter", "Posey", "Pulaski", "Putnam", "Randolph", "Ripley", "Rush", "St. Joseph", "Scott", "Shelby", "Spencer", "Starke", "Steuben", "Sullivan", "Switzerland", "Tippecanoe", "Tipton", "Union", "Vanderburgh", "Vermillion", "Vigo", "Wabash", "Warren", "Warrick", "Washington", "Wayne", "Wells", "White", "Whitley",
     ],
   },
   LA: {
     name: "Louisiana",
+    cities: [
+      "Alexandria", "Baton Rouge", "Bossier City", "Chalmette", "Harvey", "Kenner", "Lafayette", "Lake Charles", "Metairie", "New Orleans", "Shreveport", "Slidell", "Westwego",
+    ],
     counties: [
       "Acadia", "Allen", "Ascension", "Assumption", "Avoyelles", "Beauregard", "Bienville", "Bossier", "Caddo", "Calcasieu", "Caldwell", "Cameron", "Catahoula", "Claiborne", "Concordia", "De Soto", "East Baton Rouge", "East Carroll", "East Feliciana", "Evangeline", "Franklin", "Grant", "Iberia", "Iberville", "Jackson", "Jefferson", "Jefferson Davis", "Lafayette", "Lafourche", "La Salle", "Lincoln", "Livingston", "Madison", "Morehouse", "Natchitoches", "Orleans", "Ouachita", "Plaquemines", "Pointe Coupee", "Rapides", "Red River", "Richland", "Sabine", "St. Bernard", "St. Charles", "St. Helena", "St. James", "St. John the Baptist", "St. Landry", "St. Martin", "St. Mary", "St. Tammany", "Tangipahoa", "Tensas", "Terrebonne", "Union", "Vermilion", "Vernon", "Washington", "Webster", "West Baton Rouge", "West Carroll", "West Feliciana", "Winn",
     ],
@@ -171,6 +183,7 @@ let newsCont = 1;
 // ********** INITIAL EVENT LISTENERS **********
 
 
+
 // set all select elements with the id that contains "state" or "State" and add the option from the states object, looping through and adding the state name as the value and the state abbreviation as the text
 document.querySelectorAll("select[id*='state'], select[id*='State']").forEach((el) => {
   for (let state in states) {
@@ -181,6 +194,29 @@ document.querySelectorAll("select[id*='state'], select[id*='State']").forEach((e
     el.add(option);
   }
 });
+
+// add an event listener to all select elements with the id that contains "state" or "State"
+document.querySelectorAll("select[id*='state'], select[id*='State']").forEach((el) => {
+  el.addEventListener("change", (e) => {
+    // get the id of the city select element that matches the id of the state select element but has "city" or "City" in the id
+    let citySelect = document.querySelector(`select[id*='${e.target.id.replace("state", "city").replace("State", "City")}']`);
+    // clear the city select element
+    citySelect.innerHTML = "";
+    // add the default option
+    let option = document.createElement("option");
+    option.value = "";
+    option.text = "Select a City";
+    citySelect.add(option);
+    // loop through the cities array in the states object and add the city as the value and the city as the text
+    states[e.target.value].cities.forEach((city) => {
+      let option = document.createElement("option");
+      option.value = city;
+      option.text = city;
+      citySelect.add(option);
+    });
+  });
+});
+
 
 // clear audSigData and treasSigData from local storage if it exists
 if (localStorage.getItem("audSigData")) {
@@ -228,6 +264,8 @@ document.querySelectorAll(".master-input").forEach((el) => {
     }
   });
 });
+
+
 
 document.getElementById("saleMethod").addEventListener("change", (e) => {
   // if the value of saleMethod is "Online" then show the dom element id enddatediv, else hide it
