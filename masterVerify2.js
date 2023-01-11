@@ -1675,6 +1675,14 @@ function darkMode(e) {
       cardHeaders2[i].classList.add("border-light");
     }
 
+    // add border-light to everthing with the classname "innerBord"
+    let innerBord = document.querySelectorAll(".innerBord");
+    for (let i = 0; i < innerBord.length; i++) {
+      innerBord[i].classList.remove("border-dark");
+      innerBord[i].classList.add("border-light");
+    }
+
+
     // set darkState to true
     darkState = true;
 
@@ -1760,8 +1768,14 @@ function darkMode(e) {
           logout[i].classList.remove("btn-outline-light");
           logout[i].classList.add("btn-outline-dark");
         }
-        
 
+ // add border-dark to everthing with the classname "innerBord"
+  let innerBord = document.querySelectorAll(".innerBord");
+  for (let i = 0; i < innerBord.length; i++) {
+    innerBord[i].classList.remove("border-light");
+    innerBord[i].classList.add("border-dark");
+  }
+  
 
     // set darkState to false
     darkState = false;
