@@ -179,6 +179,7 @@ let masterFieldsVerify = {};
 let newValues = {};
 let addContAmount = 0;
 let newsCont = 1;
+let darkState = false;
 
 // ********** INITIAL EVENT LISTENERS **********
 
@@ -1582,4 +1583,168 @@ for (let i = 0; i < zipInputs.length; i++) {
 
 
 
+// ********** CREATE A DARK MODE **********
+
+// function to create a dark mode
+function darkMode(e) {
+  // if the checkbox is checked
+  if (e.target.checked) {
+ // change the class of the body to bg-dark
+    document.body.classList.remove("bg-light");
+    document.body.classList.add("bg-dark");
+    // change the class of the text
+    document.body.classList.remove("text-dark"); 
+    document.body.classList.add("text-light");
+    // change all class of border-dark to border-light
+    let borders = document.querySelectorAll("input, select, textarea");
+    for (let i = 0; i < borders.length; i++) {
+      borders[i].classList.remove("border-dark");
+      borders[i].classList.add("border-light");
+    }
+    // change all the inputs to bg-dark and text-light
+    let inputs = document.querySelectorAll("input, select, textarea");
+    for (let i = 0; i < inputs.length; i++) {
+      inputs[i].classList.remove("bg-light");
+      inputs[i].classList.add("bg-dark");
+      inputs[i].classList.remove("text-dark");
+      inputs[i].classList.add("text-light");
+    }
+
+    // change all labels to text-light
+    let labels = document.querySelectorAll("label");
+    for (let i = 0; i < labels.length; i++) {
+      labels[i].classList.remove("text-dark");
+      labels[i].classList.add("text-light");
+    }
+
+    // change the card header to bg-dark and text-light
+    let cardHeaders = document.querySelectorAll(".card-header");
+    for (let i = 0; i < cardHeaders.length; i++) {
+      cardHeaders[i].classList.remove("bg-light");
+      cardHeaders[i].classList.add("bg-dark");
+      cardHeaders[i].classList.remove("text-dark");
+      cardHeaders[i].classList.add("text-light");
+    }
+
+    // change the card body to bg-dark and text-light
+    let cardBodies = document.querySelectorAll(".card-body");
+    for (let i = 0; i < cardBodies.length; i++) {
+      cardBodies[i].classList.remove("bg-light");
+      cardBodies[i].classList.add("bg-dark");
+      cardBodies[i].classList.remove("text-dark");
+      cardBodies[i].classList.add("text-light");
+    }
+
+    // // change the class of all divs to bg-dark and text-light
+    // let divs = document.querySelectorAll("div");
+    // for (let i = 0; i < divs.length; i++) {
+    //   divs[i].classList.remove("bg-light");
+    //   divs[i].classList.add("bg-dark");
+    //   divs[i].classList.remove("text-dark");
+    //   divs[i].classList.add("text-light");
+    // }
+
+    // add border-light to the card
+    let cards = document.querySelectorAll(".card");
+    for (let i = 0; i < cards.length; i++) {
+      cards[i].classList.add("border-light");
+    }
+
+    // add border-light to the card header
+    let cardHeaders2 = document.querySelectorAll(".card-header");
+    for (let i = 0; i < cardHeaders2.length; i++) {
+      cardHeaders2[i].classList.add("border-light");
+    }
+
+    // set darkState to true
+    darkState = true;
+
+  }
+  // if the checkbox is not checked
+  else {
+    // change the class of the body
+    document.body.classList.remove("bg-dark");
+   
+    // change the class of the text
+    document.body.classList.remove("text-light");
+   
+    // change all class of border-light to border-dark
+    let borders = document.querySelectorAll("input, select, textarea");
+    for (let i = 0; i < borders.length; i++) {
+      borders[i].classList.remove("border-light");
+  
+    }
+    // change all the inputs to bg-light and text-dark
+    let inputs = document.querySelectorAll("input, select, textarea");
+    for (let i = 0; i < inputs.length; i++) {
+      inputs[i].classList.remove("bg-dark");
+     
+      inputs[i].classList.remove("text-light");
+     
+    }
+
+    // change all labels to text-dark
+    let labels = document.querySelectorAll("label");
+    for (let i = 0; i < labels.length; i++) {
+      labels[i].classList.remove("text-light");
+    
+    }
+
+    // change the card header to bg-light and text-dark
+    let cardHeaders = document.querySelectorAll(".card-header");
+    for (let i = 0; i < cardHeaders.length; i++) {
+      cardHeaders[i].classList.remove("bg-dark");
+     
+      cardHeaders[i].classList.remove("text-light");
+      
+    }
+
+    
+    let cardBodies = document.querySelectorAll(".card-body");
+    for (let i = 0; i < cardBodies.length; i++) {
+      cardBodies[i].classList.remove("bg-dark");
+     
+      cardBodies[i].classList.remove("text-light");
+    
+    }
+
+    // // change the class of all divs
+    // let divs = document.querySelectorAll("div");
+    // for (let i = 0; i < divs.length; i++) {
+    //   divs[i].classList.remove("bg-dark");
+  
+    //   divs[i].classList.remove("text-light");
+   
+    // }
+
+    // add border-dark to the card
+    let cards = document.querySelectorAll(".card");
+    for (let i = 0; i < cards.length; i++) {
+      cards[i].classList.add("border-dark");
+    }
+
+    // add border-dark to the card header
+    let cardHeaders2 = document.querySelectorAll(".card-header");
+    for (let i = 0; i < cardHeaders2.length; i++) {
+      cardHeaders2[i].classList.add("border-dark");
+    }
+
+    // set darkState to false
+    darkState = false;
+
+
+  }
+
+
+
+
+
+
+
+
+  }
+
+
+// add an event listener to the checkbox that calls the function darkMode
+document.getElementById("darkMode").addEventListener("change", darkMode);
 
