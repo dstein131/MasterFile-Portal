@@ -3,13 +3,13 @@ let masterFields = {
   countyName: "Adams",
   countyStreetAddress: "200 S 3rd St",
   countyCity: "West Union",
-  countyState: "Indiana",
+  countyState: "IN",
   countyZip: "52175",
   auditorFirstName: "Jill",
   auditorLastName: "Smith",
   auditorStreetAddress: "200 S 3rd St",
   auditorCity: "West Union",
-  auditorState: "Indiana",
+  auditorState: "IN",
   auditorZip: "52175",
   auditorPhone: "563-422-1234",
   auditorEmail: "jsmith@gmail.com",
@@ -17,7 +17,7 @@ let masterFields = {
   treasurerLastName: "Doe",
   treasurerStreetAddress: "200 S 3rd St",
   treasurerCity: "West Union",
-  treasurerState: "Indiana",
+  treasurerState: "IN",
   treasurerZip: "52175",
   treasurerPhone: "563-422-1234",
   treasurerEmail: "jdoe@gmail.com",
@@ -27,7 +27,7 @@ let masterFields = {
   attorneyEmail: "Bjones@gmail.com",
   attorneyStreetAddress: "200 S 3rd St",
   attorneyCity: "West Union",
-  attorneyState: "Indiana",
+  attorneyState: "IN",
   attorneyZip: "52175",
   assessorFirstName: "Mike",
   assessorLastName: "Davis",
@@ -35,7 +35,7 @@ let masterFields = {
   assessorEmail: "mdavis@gmail.com",
   assessorStreetAddress: "200 S 3rd St",
   assessorCity: "West Union",
-  assessorState: "Indiana",
+  assessorState: "IN",
   assessorZip: "52175",
   commissioner1FirstName: "Michael",
   commissioner1LastName: "Johnson",
@@ -43,7 +43,7 @@ let masterFields = {
   commissioner1Email: "md@sdasd.net",
   commissioner1StreetAddress: "200 S 3rd St",
   commissioner1City: "West Union",
-  commissioner1State: "Indiana",
+  commissioner1State: "IN",
   commissioner1Zip: "52175",
   commissioner2FirstName: "Griffin",
   commissioner2LastName: "Anderson",
@@ -51,7 +51,7 @@ let masterFields = {
   commissioner2Email: "yes@no.com",
   commissioner2StreetAddress: "200 S 3rd St",
   commissioner2City: "West Union",
-  commissioner2State: "Indiana",
+  commissioner2State: "IN",
   commissioner2Zip: "52175",
   commissioner3FirstName: "David",
   commissioner3LastName: "Reed",
@@ -59,12 +59,12 @@ let masterFields = {
   commissioner3Email: "1234@4543.edu",
   commissioner3StreetAddress: "200 S 3rd St",
   commissioner3City: "West Union",
-  commissioner3State: "Indiana",
+  commissioner3State: "IN",
   commissioner3Zip: "52175",
   courtHouseName: "Adams County Courthouse",
   courtSteetAddress: "200 S 3rd St",
   courtCity: "West Union",
-  courtState: "Indiana",
+  courtState: "IN",
   courtZip: "52175",
   courtType: "Circuit",
   clerkFirstName: "John",
@@ -73,7 +73,7 @@ let masterFields = {
   clerkEmail: "clerk@hellokitty.org",
   clerkStreetAddress: "200 S 3rd St",
   clerkCity: "West Union",
-  clerkState: "Indiana",
+  clerkState: "IN",
   clerkZip: "52175",
   compSys: "LOW",
   countyWebUrl: "www.adamscounty.org",
@@ -102,7 +102,7 @@ let masterFields = {
   sheriffEmail: "jd@iamlaw.ru",
   sheriffStreetAddress: "200 S 3rd St",
   sheriffCity: "West Union",
-  sheriffState: "Indiana",
+  sheriffState: "IN",
   sheriffZip: "52175",
   sheriffAddContactFirstName: "John",
   sheriffAddContactLastName: "Doe",
@@ -112,11 +112,11 @@ let masterFields = {
   sheriffAddContactEmail: "depbigguy@hellokitty.net",
   sheriffAddContactStreetAddress: "200 S 3rd St",
   sheriffAddContactCity: "West Union",
-  sheriffAddContactState: "Indiana",
+  sheriffAddContactState: "IN",
   sheriffAddContactZip: "52175",
   paymentStreetAddress: "200 S 3rd St",
   paymentCity: "West Union",
-  paymentState: "Indiana",
+  paymentState: "IN",
   paymentZip: "52175",
   paymentCutoffDateTime: "2023-01-01T12:43:44",
   unsoldBatch: "",
@@ -161,6 +161,19 @@ let masterFieldsVerify = {};
 let newValues = {};
 let addContAmount = 0;
 let newsCont = 1;
+
+
+// set all select elements with the id that contains "state" or "State" and add the option from the states object, looping through and adding the state name as the value and the state abbreviation as the text
+document.querySelectorAll("select[id*='state'], select[id*='State']").forEach((el) => {
+  for (let state in states) {
+    let option = document.createElement("option");
+    option.value = state
+    // set the text of the option to the state name value
+    option.text = states[state].name;
+    el.add(option);
+  }
+});
+
 
 // clear audSigData and treasSigData from local storage if it exists
 if (localStorage.getItem("audSigData")) {
@@ -1643,93 +1656,4 @@ for (let i = 0; i < zipInputs.length; i++) {
 
 // *** END VALIDATE ZIP *** //
 
-// *** VALIDATE STATE *** //
-
-// function to validate state
-function validateState(e) {
-  let fullStates = ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"];
-  let validStates = ["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"];
-
-  // if the input id contains "state" or "State" and the value is not empty
-  if (e.target.id.includes("state") || e.target.id.includes("State") && e.target.value !== "") {
-    // check if the state is two characters long
-    if (e.target.value.length === 2) {
-      // if the state is two characters long set the value to uppercase
-      e.target.value = e.target.value.toUpperCase();
-      // check that the state is a valid state
-
-      // create an array of valid states
-      // if the state is not in the array of valid states
-      if (!validStates.includes(e.target.value)) {
-        // set the background color of the input to red
-        e.target.style.backgroundColor = "red";
-        // set the value of the input to an empty string
-        e.target.value = "";
-        // set the placeholder of the input to "Invalid State" in white bold text
-        e.target.value = "Invalid State";
-        e.target.style.color = "white";
-        e.target.style.fontWeight = "bold";
-        // add the class of invalid to the input
-        e.target.classList.add("invalid");
-        // set the focus to the input
-        e.target.focus();
-      }
-      // if the state is in the array of valid states
-      else {
-        // set the background color of the input to white
-        e.target.style.backgroundColor = "white";
-        // set the color of the input to black
-        e.target.style.color = "black";
-        // set the font weight of the input to normal
-        e.target.style.fontWeight = "normal";
-        // remove the class of invalid from the input
-        e.target.classList.remove("invalid");
-        // convert the state to a full state name
-        e.target.value = fullStates[validStates.indexOf(e.target.value)];
-      }
-    }
-    // if the state is not two characters long
-    else {
-      // set the value to first letter uppercase and the rest lowercase
-      e.target.value = e.target.value.charAt(0).toUpperCase() + e.target.value.slice(1).toLowerCase();
-      // check that the state in the validStates array
-      // if the state is not in the array of valid states
-      if (!fullStates.includes(e.target.value)) {
-        // set the background color of the input to red
-        e.target.style.backgroundColor = "red";
-        // set the value of the input to an empty string
-        e.target.value = "";
-        // set the placeholder of the input to "Invalid State" in white bold text
-        e.target.value = "Invalid State";
-        e.target.style.color = "white";
-        e.target.style.fontWeight = "bold";
-        // add the class of invalid to the input
-        e.target.classList.add("invalid");
-        // set the focus to the input
-        e.target.focus();
-      }
-      // if the state is in the array of valid states
-      else {
-        // set the background color of the input to white
-        e.target.style.backgroundColor = "white";
-        // set the color of the input to black
-        e.target.style.color = "black";
-        // set the font weight of the input to normal
-        e.target.style.fontWeight = "normal";
-        // remove the class of invalid from the input
-        e.target.classList.remove("invalid");
-        // convert the state to a two letter state abbreviation
-        e.target.value = validStates[fullStates.indexOf(e.target.value)];
-      }
-    }
-  }
-}
-
-// add an event lister to all inputs that contain "state" or "State" in the id that calls the function validateState
-let stateInputs = document.querySelectorAll("input[id*='state'], input[id*='State']");
-for (let i = 0; i < stateInputs.length; i++) {
-  stateInputs[i].addEventListener("blur", validateState);
-}
-
-// *** END VALIDATE STATE *** //
 
