@@ -1601,6 +1601,25 @@ function darkMode(e) {
       borders[i].classList.remove("border-dark");
       borders[i].classList.add("border-light");
     }
+
+    // add a light border to the card header
+    let cHead = document.querySelectorAll(".card-header");
+    for (let i = 0; i < cHead.length; i++) {
+      cHead[i].classList.remove("border-dark");
+      cHead[i].classList.add("border-light");
+    }
+
+    // change the logout button to btn-outline-light from btn-outline-dark
+    let logout = document.querySelectorAll(".btn-outline-dark");
+    for (let i = 0; i < logout.length; i++) {
+      logout[i].classList.remove("btn-outline-dark");
+      logout[i].classList.add("btn-outline-light");
+    }
+
+
+
+
+
     // change all the inputs to bg-dark and text-light
     let inputs = document.querySelectorAll("input, select, textarea");
     for (let i = 0; i < inputs.length; i++) {
@@ -1688,7 +1707,7 @@ function darkMode(e) {
     for (let i = 0; i < card3.length; i++) {
       card3[i].classList.remove("border-white");
     }
-    
+
     // change all labels to text-dark
     let labels = document.querySelectorAll("label");
     for (let i = 0; i < labels.length; i++) {
@@ -1734,6 +1753,15 @@ function darkMode(e) {
     for (let i = 0; i < cardHeaders2.length; i++) {
       cardHeaders2[i].classList.add("border-dark");
     }
+
+       // change the logout button to btn-outline-light from btn-outline-dark
+       let logout = document.querySelectorAll(".btn-outline-light");
+        for (let i = 0; i < logout.length; i++) {
+          logout[i].classList.remove("btn-outline-light");
+          logout[i].classList.add("btn-outline-dark");
+        }
+        
+
 
     // set darkState to false
     darkState = false;
