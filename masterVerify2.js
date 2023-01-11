@@ -1683,12 +1683,18 @@ function printData () {
   const printData = document.createElement("div");
   printData.className = "printData";
   // add a h1 element to the printData div with the text "Masterfile" + the county key value from the masterFields object and today's date
-  printData.innerHTML = `<h1>Masterfile - ${masterFields.countyName} - ${new Date().toLocaleDateString()}</h1>`;
+  printData.innerHTML = `<h1>Masterfile - ${masterFields.countyName} County - ${new Date().toLocaleDateString()}</h1>`;
 
   
   // create html in the printData div for each key in the masterFields object it's corresponding label and value
+  
+  // sort the masterFields object keys
+  
+
   for (let key in masterFields) {
+    // sort the keys in the masterFields 
     let theLabels = document.getElementsByTagName("label");
+
     for (let i = 0; i < theLabels.length; i++) {
       if (theLabels[i].htmlFor === key) {
         printData.innerHTML += `<p><strong>${theLabels[i].innerText}</strong>: ${masterFields[key]}</p>`;
