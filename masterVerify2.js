@@ -1724,6 +1724,58 @@ function printData () {
 
 // add event listener to the id printScreenBtn that calls the function printData
 document.getElementById("printScreenBtn").addEventListener("click", printData);
+
+// *** END PRINT DATA *** //
+
+// *** VALIDATE EMAIL *** //
+
+// function to validate email
+function validateEmail(e) {
+  // get the value of the input
+  let email = e.target.value;
+  // if the value is not empty
+  if (email !== "") {
+    // create a regular expression to test the email
+    let emailRegEx = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    // if the email does not match the regular expression
+    if (!emailRegEx.test(email)) {
+   // set the background color of the input to red
+      e.target.style.backgroundColor = "red";
+      // set the value of the input to an empty string
+      e.target.value = "";
+      // set the placeholder of the input to "Invalid Email" in white bold text
+      e.target.value = "Invalid Email";
+      e.target.style.color = "white";
+      e.target.style.fontWeight = "bold";
+      // add the class of invalid to the input
+      e.target.classList.add("invalid");
+      // set the focus to the input
+
+      e.target.focus();
+
+    }
+
+    // if the email does match the regular expression
+    else {
+      // set the background color of the input to white
+      e.target.style.backgroundColor = "white";
+      // set the color of the input to black
+      e.target.style.color = "black";
+      // set the font weight of the input to normal
+      e.target.style.fontWeight = "normal";
+      // remove the class of invalid from the input
+      e.target.classList.remove("invalid");
+    }
+  }
+}
+
+
+
   
+// add an event lister to all input type of "email" that calls the function validateEmail
+let emailInputs = document.querySelectorAll("input[type='email']");
+for (let i = 0; i < emailInputs.length; i++) {
+  emailInputs[i].addEventListener("blur", validateEmail);
+}
 
   
