@@ -103,9 +103,19 @@
                                 data-bs-target="#pills-review" type="button" role="tab" aria-controls="pills-review"
                                 aria-selected="false"><b>Review</b></button>
                         </li>
-                        <button type="button" class="btn btn-sm btn-outline-danger ms-2" id="clearBtn">
+                        <!-- <button type="button" class="btn btn-sm btn-outline-danger ms-2" id="clearBtn">
                             Reset
-                        </button>
+                        </button> -->
+                       
+                            <button class="btn btn-sm btn-outline-success dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                              Options
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                              <li><a class="dropdown-item" id="clearBtn" href="">Reset Fields</a></li>
+                              <li><a class="dropdown-item" href="">Download Masterfile</a></li>
+                              <li><a class="dropdown-item" href="/countyselect.html">Change County</a></li>
+                            </ul>
+                          
                         <button type="button" class="btn btn-sm btn-outline-dark ms-2" id="logoutBtn">
                             Logout
                         </button>
