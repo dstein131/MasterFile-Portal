@@ -160,11 +160,15 @@ const states = {
 };
 
 
+// ********** GLOBAL VARIABLES **********
+
 let batchAmount = 0;
 let masterFieldsVerify = {};
 let newValues = {};
 let addContAmount = 0;
 let newsCont = 1;
+
+// ********** INITIAL EVENT LISTENERS **********
 
 
 // set all select elements with the id that contains "state" or "State" and add the option from the states object, looping through and adding the state name as the value and the state abbreviation as the text
@@ -177,7 +181,6 @@ document.querySelectorAll("select[id*='state'], select[id*='State']").forEach((e
     el.add(option);
   }
 });
-
 
 // clear audSigData and treasSigData from local storage if it exists
 if (localStorage.getItem("audSigData")) {
@@ -247,119 +250,11 @@ let saleStart = new Date(masterFields.salestartdatetime).toLocaleString(
 );
 let saleEnd = new Date(masterFields.saleenddatetime).toLocaleString("en-US");
 
-// previous data modal filler //
-document.getElementById("previousDataModalBody").innerHTML = `
-        <div class="border px-2 py-2 mb-2">
-        <h5>County Information</h5>
-        <div>County Code: ${masterFields.countyCode}</div>
-        <div>County Name: ${masterFields.countyName}</div>
-        <div>County Street Address: ${masterFields.countyStreetAddress}</div>
-        <div>County City: ${masterFields.countyCity}</div>
-        <div>County State: ${masterFields.countyState}</div>
-        <div>County Zip: ${masterFields.countyZip}</div>
-        </div>
+// ********** END INITIAL EVENT LISTENERS **********
 
-        <div class="border px-2 py-2 mb-2">
-        <h5>Auditor Information</h5>
-        <div>Auditor First Name: ${masterFields.auditorFirstName}</div>
-        <div>Auditor Last Name: ${masterFields.auditorLastName}</div>
-        <div>Auditor Phone: ${masterFields.auditorPhone}</div>
-        <div>Auditor Email: ${masterFields.auditorEmail}</div>
-        </div>
 
-        <div class="border px-2 py-2 mb-2">
-        <h5>Treasurer Information</h5>
-        <div>Treasurer First Name: ${masterFields.treasurerFirstName}</div>
-        <div>Treasurer Last Name: ${masterFields.treasurerLastName}</div>
-        <div>Treasurer Phone: ${masterFields.treasurerPhone}</div>
-        <div>Treasurer Email: ${masterFields.treasurerEmail}</div>
-        </div>
+// ********** REVIEW MODAL **********
 
-        <div class="border px-2 py-2 mb-2">
-        <h5>Attorney Information</h5>
-        <div>Attorney First Name: ${masterFields.attorneyFirstName}</div>
-        <div>Attorney Last Name: ${masterFields.attorneyLastName}</div>
-        <div>Attorney Phone: ${masterFields.attorneyPhone}</div>
-        <div>Attorney Email: ${masterFields.attorneyEmail}</div>
-        </div>
-
-        <div class="border px-2 py-2 mb-2">
-        <h5>Assessor Information</h5>
-        <div>Assessor First Name: ${masterFields.assessorFirstName}</div>
-        <div>Assessor Last Name: ${masterFields.assessorLastName}</div>
-        <div>Assessor Phone: ${masterFields.assessorPhone}</div>
-        <div>Assessor Email: ${masterFields.assessorEmail}</div>
-        </div>
-
-        <div class="border px-2 py-2 mb-2">
-        <h5>Commissioner Information</h5>
-        <div>Commissioner 1 First Name: ${masterFields.commissioner1FirstName}</div>
-        <div>Commissioner 1 Last Name: ${masterFields.commissioner1LastName}</div>
-        <div>Commissioner 1 Phone: ${masterFields.commissioner1Phone}</div>
-        <div>Commissioner 2 First Name: ${masterFields.commissioner2FirstName}</div>
-        <div>Commissioner 2 Last Name: ${masterFields.commissioner2LastName}</div>
-        <div>Commissioner 2 Phone: ${masterFields.commissioner2Phone}</div>
-        <div>Commissioner 3 First Name: ${masterFields.commissioner3FirstName}</div>
-        <div>Commissioner 3 Last Name: ${masterFields.commissioner3LastName}</div>
-        <div>Commissioner 3 Phone: ${masterFields.commissioner3Phone}</div>
-        </div>
-
-        <div class="border px-2 py-2 mb-2">
-        <h5>Court House Information</h5>
-        <div>Court House Name: ${masterFields.courtHouseName}</div>
-        <div>Court Type: ${masterFields.courtType}</div>
-        <div>Court Location: ${masterFields.courtLocation}</div>
-        <div>Presiding Judge First Name: ${masterFields.presidingJudgeFirstName}</div>
-        <div>Presiding Judge Last Name: ${masterFields.presidingJudgeLastName}</div>
-        <div>Presiding Judge Phone: ${masterFields.presidingJudgePhone}</div>
-        </div>
-
-        <div class="border px-2 py-2 mb-2">
-        <h5>Sale Information</h5>
-        <div>Sale Method: ${masterFields.saleMethod}</div>
-        <div>Sale Start Date: ${masterFields.salestartdatetime}</div>
-        <div>Sale End Date: ${masterFields.saleenddatetime}</div>
-        <div>Sale Location: ${masterFields.salelocation}</div>
-        </div>
-
-        <div class="border px-2 py-2 mb-2">
-        <h5>Newspaper 1 Information</h5>
-        <div>Newspaper 1 Name: ${masterFields.newspaper1Name}</div>
-        <div>Newspaper 1 Contact First Name: ${masterFields.newspaper1ContactFirstName}</div>
-        <div>Newspaper 1 Contact Last Name: ${masterFields.newspaper1ContactLastName}</div>
-        <div>Newspaper 1 Phone: ${masterFields.newspaper1Phone}</div>
-        <div>Newspaper 1 Ad Format: ${masterFields.newspaper1AdFormat}</div>
-        <div>Newspaper 1 Lead Time: ${masterFields.newspaper1LeadTime}</div>
-        <div>Newspaper 1 Day Ad Runs: ${masterFields.newspaper1DayAdRuns}</div>
-        <div>Newspaper 1 URL: ${masterFields.newspaper1URL}</div>
-        </div>
-
-        <div class="border px-2 py-2 mb-2">
-        <h5>Newspaper 2 Information</h5>
-        <div>Newspaper 2 Name: ${masterFields.newspaper2Name}</div>
-        <div>Newspaper 2 Contact First Name: ${masterFields.newspaper2ContactFirstName}</div>
-        <div>Newspaper 2 Contact Last Name: ${masterFields.newspaper2ContactLastName}</div>
-        <div>Newspaper 2 Phone: ${masterFields.newspaper2Phone}</div>
-        <div>Newspaper 2 Ad Format: ${masterFields.newspaper2AdFormat}</div>
-        <div>Newspaper 2 Lead Time: ${masterFields.newspaper2LeadTime}</div>
-        <div>Newspaper 2 Day Ad Runs: ${masterFields.newspaper2DayAdRuns}</div>
-        <div>Newspaper 2 URL: ${masterFields.newspaper2URL}</div>
-        </div>
-
-        <div class="border px-2 py-2 mb-2">
-        <h5>Additional Contact Info</h5>
-        <div>Additional Contact 1 First Name: ${masterFields.addcont1firstname}</div>
-        <div>Additional Contact 1 Last Name: ${masterFields.addcont1lastname}</div>
-        <div>Additional Contact 1 Title: ${masterFields.addcont1title}</div>
-        <div>Additional Contact 1 Phone: ${masterFields.addcont1phone}</div>
-        <div>Additional Contact 1 Email: ${masterFields.addcont1email}</div>
-        <div>Additional Contact 2 First Name: ${masterFields.addcont2firstname}</div>
-        <div>Additional Contact 2 Last Name: ${masterFields.addcont2lastname}</div>
-        <div>Additional Contact 2 Title: ${masterFields.addcont2title}</div>
-        <div>Additional Contact 2 Phone: ${masterFields.addcont2phone}</div>
-        <div>Additional Contact 2 Email: ${masterFields.addcont2email}</div>
-        </div>
-`;
 
 // add an event listener to the button with the id of "reviewBtn" that will set the masterFieldsVerify object to the values of the dom elements with the same id as the keys in the masterFieldsVerify object //
 document.getElementById("reviewBtn").addEventListener("click", function () {
@@ -368,41 +263,6 @@ document.getElementById("reviewBtn").addEventListener("click", function () {
     masterFieldsVerify[drop[i].id] = drop[i].value;
   }
   console.log(masterFieldsVerify);
-
-  // function addMasterFields() {
-  //   // loops through masterFieldsVerify and adds them to the dom element id newTest
-  //   // compares the value of masterFieldsVerify to the value of masterFields
-  //   // if there is an item that does exists in masterfieldsVerify but not masterfields, make the background of the div green
-  //   // if the values are different, make the background of the div yellow
-
-  //   // sort masterfieldsVerify by key
-  //   masterFieldsVerify = Object.keys(masterFieldsVerify)
-  //     .sort()
-  //     .reduce((r, k) => ((r[k] = masterFieldsVerify[k]), r), {})
-  //   console.log(masterFieldsVerify)
-
-  //   // clear the dom element id "reviewModal"
-  //   document.getElementById("reviewModal").innerHTML = ""
-
-  //   for (let key in masterFieldsVerify) {
-  //     if (masterFieldsVerify[key] === masterFields[key]) {
-  //       document.getElementById("reviewModal").innerHTML += `
-  //       <div class="border px-2 py-2 mb-2">
-  //       <div>${key}: ${masterFieldsVerify[key]}</div>
-  //       </div>
-  //       `
-  //     } else {
-  //       document.getElementById("reviewModal").innerHTML += `
-  //       <div class="border px-2 py-2 mb-2" style="background-color: yellow;">
-  //       <div>${key}: ${masterFieldsVerify[key]}</div>
-  //       </div>
-  //       `
-  //     }
-  //   }
-
-  // }
-
-  // addMasterFields()
 
   // *** REVIEW MODAL *** //
 
@@ -656,8 +516,6 @@ document.getElementById("reviewBtn").addEventListener("click", function () {
     }
   }
 
-  // if there is an audd
-
   // compare the two objects masterFields and masterFieldsVerify and return the differences
   function compareObjects(obj1, obj2) {
     let differences = {};
@@ -666,8 +524,6 @@ document.getElementById("reviewBtn").addEventListener("click", function () {
         differences[key] = obj2[key];
       }
     }
-
-    console.log(differences);
 
     // if a value in the differences object is undefined then remove it from the differences object
     for (let key in differences) {
@@ -691,18 +547,12 @@ document.getElementById("reviewBtn").addEventListener("click", function () {
     document.getElementById("finalsubbtn").style.display = "block";
   });
 
-  // // add an event listener to the button signSub that shows the dom element finalsubbutn
-  // document.getElementById("signSub").addEventListener("click", (e) => {
-  //   document.getElementById("finalsubbtn").style.display = "block";
-  // });
-
   compareObjects(masterFields, masterFieldsVerify);
 });
 
 
 
-
-
+// ********** END OF REVIEW MODAL **********
 
 
 
@@ -736,6 +586,8 @@ document.getElementById("reviewBtn").addEventListener("click", (e) => {
   }
 });
 
+
+// ********** CLEAR ALL **********
 // create clear function that will revert the dom to its original state
 function clear() {
   if (localStorage.getItem("audSigData")) {
@@ -772,10 +624,6 @@ function clear() {
     document.getElementById("collectAudSignature").click();
   }
 
-
-
-
-
   // remove all elements with the classname badge
   let badge = document.getElementsByClassName("badge");
   while (badge.length > 0) {
@@ -805,10 +653,19 @@ function clear() {
   document.getElementById("pills-home-tab").click();
 }
 
+
+
 // add an event listener to the id clearBtn that will call the clear function
 document.getElementById("clearBtn").addEventListener("click", (e) => {
   clear();
 });
+
+// ********** END CLEAR ALL **********
+
+
+
+
+// ********** CHANGING SALE METHOD **********
 
 // add an event listener to the id saleMethod that if it's value is "Online" then set the value of the id's saleStreetAddress, saleCity, saleState, saleZip to the value of "Online - Zeus"
 
@@ -829,6 +686,11 @@ document.getElementById("saleMethod").addEventListener("change", (e) => {
 if (masterFields.saleMethod === "Online") {
   document.getElementById("enddatediv").style.display = "block";
 }
+
+// ********** END CHANGING SALE METHOD **********
+
+
+// ********** ADD ADDITIONAL CONTACTS **********
 
 // add an event listen to the id addcontBtn that will add a new container to the dom id addcontwrapper
 // add the numinical id's for each id of each input field
@@ -992,6 +854,12 @@ document.getElementById("addcontBtn").addEventListener("click", (e) => {
     });
 });
 
+// ********** END OF ADDITIONAL CONTACTS **********
+
+
+
+// ********** START OF BATCHES **********
+
 // add an event listner to the id numBatches and take it's value and store it in the variable batchAmount
 
 document.getElementById("numBatches").addEventListener("change", (e) => {
@@ -1028,6 +896,11 @@ document.getElementById("numBatches").addEventListener("change", (e) => {
   }
 });
 
+// ********** END OF BATCHES **********
+
+
+// ********** START OF UNSOLD BATCHES **********
+
 // add an event listen to id unsoldBatch and show the dom id unsoldBatchDiv if the target is checked
 // hide the dom id unsoldBatchDiv if the target is not checked
 
@@ -1039,6 +912,12 @@ document.getElementById("unsoldBatch").addEventListener("change", (e) => {
   }
 });
 
+// ********** END OF UNSOLD BATCHES **********
+
+
+
+// ********** START OF DYNAMIC ENDING **********
+
 // add an event listener to the id dynamicEnding and show the dom id dynamicDiv if the target is checked
 
 document.getElementById("dynamicEnding").addEventListener("change", (e) => {
@@ -1048,6 +927,12 @@ document.getElementById("dynamicEnding").addEventListener("change", (e) => {
     document.getElementById("dynamicDiv").style.display = "none";
   }
 });
+
+// ********** END OF DYNAMIC ENDING **********
+
+
+
+// ********** START OF ADDITIONAL NEWSPAPERS **********
 
 // add an event listern to the id addnewsBtn that will add a new container to the dom with the id newscontwrapper
 // add the numinical id's for each id of each input field
@@ -1173,10 +1058,24 @@ document.getElementById("addnewsBtn").addEventListener("click", () => {
     });
 });
 
+// ********** END OF ADD NEWSPAPER CONTAINER **********
+
+
+
+// ********** LOGOUT **********
+
+
 // add event listner to the logout btn to redirect to index.html
 document.getElementById("logoutBtn").addEventListener("click", () => {
   window.location.href = "index.html";
 });
+
+// ********** END OF LOGOUT **********
+
+
+// ********** SIGNATURES **********
+
+// ********** AUDITOR SIGNATURE **********
 
 // add event listner to id collectAudSignature that shows the element id audSigDiv
 document.getElementById("collectAudSignature").addEventListener("click", () => {
@@ -1333,6 +1232,12 @@ function audSignPad() {
   });
 }
 
+// ********** END OF AUDITOR SIGNATURE PAD **********
+
+
+
+// ********** TREASURER SIGNATURE PAD **********
+
 function treasSignPad() {
   const treasCanvas = document.getElementById("treasCanvas");
   const treasSignaturePad = new SignaturePad(treasCanvas);
@@ -1401,9 +1306,16 @@ treasSignPad();
 
 audSignPad();
 
-// end new signature pad test //
+// ********** END OF TREASURER SIGNATURE PAD **********
 
-// *** PRINT DATA *** //
+// ********** END OF SIGNATURES **********
+
+
+
+
+
+// ********** PRINT DATA **********
+
 
 function printData () {
   let printLabels = []
@@ -1447,16 +1359,14 @@ function printData () {
 
 }
 
-
-
 }
 
-// *** END PRINT DATA *** //
+// ********** END OF PRINT DATA **********
 
 
 
 
-
+// ********** VALIDATE EMAIL **********
 
 // add event listener to the id printScreenBtn that calls the function printData
 document.getElementById("printScreenBtn").addEventListener("click", printData);
@@ -1514,45 +1424,14 @@ for (let i = 0; i < emailInputs.length; i++) {
   emailInputs[i].addEventListener("blur", validateEmail);
 }
 
-// *** END VALIDATE EMAIL *** //
-
-// *** CONVERT PHONE *** //
-
-// function to convert phone
-// function convertPhone(e) {
-//   // if the input is not empty
-//  if (e.target.value !== "") {
-//  // see if the value starts with a 1
-//     if (e.target.value.charAt(0) === "1") {
-//       // if the value starts with a 1 remove the first character
-//       e.target.value = e.target.value.slice(1);
-//       // if the next character is a - remove it
-//       if (e.target.value.charAt(0) === "-") {
-//         e. target.value = e.target.value.slice(1);
-//       }
-//     }
-    
-//   }
-// }
-
-
-// // add an event listener to all inputs with id that contains "phone" or "Phone" that calls the function convertPhone
-// let phoneInputsValid = document.querySelectorAll("input[id*='phone'], input[id*='Phone']");
-// for (let i = 0; i < phoneInputsValid.length; i++) {
-//   phoneInputsValid[i].addEventListener("blur", convertPhone);
-// }
-
-// *** END CONVERT PHONE *** //
+// ********** END OF VALIDATE EMAIL **********
 
 
 
 
-
-// *** VALIDATE PHONE *** //
+// ********** VALIDATE PHONE **********
 
 // function to validate phone
-
-
 
 function validatePhone(e) {
 
@@ -1611,9 +1490,10 @@ for (let i = 0; i < phoneInputs.length; i++) {
 
 
 
-// *** END VALIDATE PHONE *** //
+// ********** END OF VALIDATE PHONE **********
 
-// *** VALIDATE ZIP *** //
+
+// ********** VALIDATE ZIP **********
 
 // function to validate zip
 function validateZip(e) {
@@ -1658,6 +1538,8 @@ for (let i = 0; i < zipInputs.length; i++) {
 }
 
 
-// *** END VALIDATE ZIP *** //
+// ********** END OF VALIDATE ZIP **********
+
+
 
 
