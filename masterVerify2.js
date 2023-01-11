@@ -1778,4 +1778,101 @@ for (let i = 0; i < emailInputs.length; i++) {
   emailInputs[i].addEventListener("blur", validateEmail);
 }
 
-  
+// *** END VALIDATE EMAIL *** //
+
+// *** CONVERT PHONE *** //
+
+// function to convert phone
+// function convertPhone(e) {
+//   // if the input is not empty
+//  if (e.target.value !== "") {
+//  // see if the value starts with a 1
+//     if (e.target.value.charAt(0) === "1") {
+//       // if the value starts with a 1 remove the first character
+//       e.target.value = e.target.value.slice(1);
+//       // if the next character is a - remove it
+//       if (e.target.value.charAt(0) === "-") {
+//         e. target.value = e.target.value.slice(1);
+//       }
+//     }
+    
+//   }
+// }
+
+
+// // add an event listener to all inputs with id that contains "phone" or "Phone" that calls the function convertPhone
+// let phoneInputsValid = document.querySelectorAll("input[id*='phone'], input[id*='Phone']");
+// for (let i = 0; i < phoneInputsValid.length; i++) {
+//   phoneInputsValid[i].addEventListener("blur", convertPhone);
+// }
+
+// *** END CONVERT PHONE *** //
+
+
+
+
+
+// *** VALIDATE PHONE *** //
+
+// function to validate phone
+
+
+
+function validatePhone(e) {
+
+  if (e.target.value !== "") {
+    // see if the value starts with a 1
+       if (e.target.value.charAt(0) === "1") {
+         // if the value starts with a 1 remove the first character
+         e.target.value = e.target.value.slice(1);
+         // if the next character is a - remove it
+         if (e.target.value.charAt(0) === "-") {
+           e. target.value = e.target.value.slice(1);
+         }
+       }
+       
+     }
+
+
+ // if there are any inputs with id that contains "phone" or "Phone" in the id and the value is not empty
+  if (e.target.id.includes("phone") || e.target.id.includes("Phone") && e.target.value !== "") {
+    // create a regular expression to test the phone number
+    let phoneRegEx = /^\d{3}-\d{3}-\d{4}$/;
+    // if the phone number does not match the regular expression
+    if (!phoneRegEx.test(e.target.value)) {
+      // set the background color of the input to red
+      e.target.style.backgroundColor = "red";
+      // set the value of the input to an empty string
+      e.target.value = "";
+      // set the placeholder of the input to "Invalid Phone" in white bold text
+      e.target.value = "Invalid Phone";
+      e.target.style.color = "white";
+      e.target.style.fontWeight = "bold";
+      // add the class of invalid to the input
+      e.target.classList.add("invalid");
+      // set the focus to the input
+      e.target.focus();
+    }
+    // if the phone number does match the regular expression
+    else {
+      // set the background color of the input to white
+      e.target.style.backgroundColor = "white";
+      // set the color of the input to black
+      e.target.style.color = "black";
+      // set the font weight of the input to normal
+      e.target.style.fontWeight = "normal";
+      // remove the class of invalid from the input
+      e.target.classList.remove("invalid");
+    }
+  }
+}
+
+// add an event lister to all inputs that contain "phone" or "Phone" in the id that calls the function validatePhone
+let phoneInputs = document.querySelectorAll("input[id*='phone'], input[id*='Phone']");
+for (let i = 0; i < phoneInputs.length; i++) {
+  phoneInputs[i].addEventListener("blur", validatePhone);
+}
+
+
+
+// *** END VALIDATE PHONE *** //
