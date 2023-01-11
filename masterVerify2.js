@@ -1667,3 +1667,53 @@ audSignPad();
 
 // end new signature pad test //
 
+function printData () {
+  let printLabels = []
+
+  // for each key in the masterFields object search the dom and grab the innerText of the label for it's key and push it to the printLabels array
+  for (let key in masterFields) {
+    labels = document.getElementsByTagName("label");
+    for (let i = 0; i < labels.length; i++) {
+      if (labels[i].htmlFor === key) {
+        printLabels.push(labels[i].innerText);
+      }
+    }
+
+  // create a new div element with the class name printData
+  const printData = document.createElement("div");
+  printData.className = "printData";
+  // add a h1 element to the printData div with the text "Masterfile" + the county key value from the masterFields object and today's date
+  printData.innerHTML = `<h1>Masterfile - ${masterFields.countyName} - ${new Date().toLocaleDateString()}</h1>`;
+
+  
+  // create html in the printData div for each key in the masterFields object it's corresponding label and value
+  for (let key in masterFields) {
+    let theLabels = document.getElementsByTagName("label");
+    for (let i = 0; i < theLabels.length; i++) {
+      if (theLabels[i].htmlFor === key) {
+        printData.innerHTML += `<p><strong>${theLabels[i].innerText}</strong>: ${masterFields[key]}</p>`;
+      }
+    }
+  }
+
+  // open a new window and print the printData div
+  let printWindow = window.open();
+  printWindow.document.write(printData.innerHTML);
+  printWindow.print();
+  printWindow.close();
+
+}
+
+  console.log (printLabels);
+
+
+}
+
+
+
+
+// add event listener to the id printScreenBtn that calls the function printData
+document.getElementById("printScreenBtn").addEventListener("click", printData);
+  
+
+  
