@@ -1922,3 +1922,5 @@ for (let i = 0; i < zipInputs.length; i++) {
 }
 
 
+// *** END VALIDATE ZIP *** //
+
