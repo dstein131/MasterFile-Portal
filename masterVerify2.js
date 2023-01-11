@@ -1644,10 +1644,10 @@ function darkMode(e) {
     //   divs[i].classList.add("text-light");
     // }
 
-    // add border-light to the card
+    // add border-white to the card
     let cards = document.querySelectorAll(".card");
     for (let i = 0; i < cards.length; i++) {
-      cards[i].classList.add("border-light");
+      cards[i].classList.add("border-white");
     }
 
     // add border-light to the card header
@@ -1683,6 +1683,12 @@ function darkMode(e) {
      
     }
 
+    // remove border-white from the card
+    let card3 = document.querySelectorAll(".card");
+    for (let i = 0; i < card3.length; i++) {
+      card3[i].classList.remove("border-white");
+    }
+    
     // change all labels to text-dark
     let labels = document.querySelectorAll("label");
     for (let i = 0; i < labels.length; i++) {
