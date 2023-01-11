@@ -2012,3 +2012,5 @@ for (let i = 0; i < stateInputs.length; i++) {
   stateInputs[i].addEventListener("blur", validateState);
 }
 
+// *** END VALIDATE STATE *** //
+
