@@ -1684,6 +1684,8 @@ function printData () {
   printData.className = "printData";
   // add a h1 element to the printData div with the text "Masterfile" + the county key value from the masterFields object and today's date
   printData.innerHTML = `<h1>Masterfile - ${masterFields.countyName} County - ${new Date().toLocaleDateString()}</h1>`;
+  // change the page title to the county name
+  document.title = masterFields.countyName;
 
   
   // create html in the printData div for each key in the masterFields object it's corresponding label and value
@@ -1705,6 +1707,7 @@ function printData () {
   // open a new window and print the printData div
   let printWindow = window.open();
   printWindow.document.write(printData.innerHTML);
+  printWindow.document.title = masterFields.countyName;
   printWindow.print();
   printWindow.close();
 
