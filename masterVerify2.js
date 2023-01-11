@@ -586,6 +586,8 @@ document.getElementById("reviewBtn").addEventListener("click", (e) => {
   }
 });
 
+// ********** END OF DOWNLOAD JSON FILE **********
+
 
 // ********** CLEAR ALL **********
 // create clear function that will revert the dom to its original state
