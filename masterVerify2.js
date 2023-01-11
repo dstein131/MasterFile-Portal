@@ -1513,7 +1513,7 @@ function audSignPad() {
       //               // append the file to the form data
       //               audSigFormData.append("audSig", audSigFile );
       //               // send the form data to the server
-      //               fetch("http://localhost:3000/audSig", {
+      //               fetch("http://WHATEVER.ORG", {
       //                 method: "POST",
       //                 body: audSigFormData,
       //               })
@@ -1667,6 +1667,8 @@ audSignPad();
 
 // end new signature pad test //
 
+// *** PRINT DATA *** //
+
 function printData () {
   let printLabels = []
 
@@ -1690,13 +1692,9 @@ function printData () {
   
   // create html in the printData div for each key in the masterFields object it's corresponding label and value
   
-  // sort the masterFields object keys
-  
 
   for (let key in masterFields) {
-    // sort the keys in the masterFields 
     let theLabels = document.getElementsByTagName("label");
-
     for (let i = 0; i < theLabels.length; i++) {
       if (theLabels[i].htmlFor === key) {
         printData.innerHTML += `<p><strong>${theLabels[i].innerText}</strong>: ${masterFields[key]}</p>`;
@@ -1713,10 +1711,13 @@ function printData () {
 
 }
 
-  console.log (printLabels);
 
 
 }
+
+// *** END PRINT DATA *** //
+
+
 
 
 
