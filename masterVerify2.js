@@ -1876,3 +1876,49 @@ for (let i = 0; i < phoneInputs.length; i++) {
 
 
 // *** END VALIDATE PHONE *** //
+
+// *** VALIDATE ZIP *** //
+
+// function to validate zip
+function validateZip(e) {
+  // if the input id contains "zip" or "Zip" and the value is not empty
+  if (e.target.id.includes("zip") || e.target.id.includes("Zip") && e.target.value !== "") {
+    // create a regular expression to test the zip code
+    let zipRegEx = /^\d{5}$/;
+    // if the zip code does not match the regular expression
+    if (!zipRegEx.test(e.target.value)) {
+      // set the background color of the input to red
+      e.target.style.backgroundColor = "red";
+      // set the value of the input to an empty string
+      e.target.value = "";
+      // set the placeholder of the input to "Invalid Zip" in white bold text
+      e.target.value = "Invalid Zip";
+      e.target.style.color = "white";
+      e.target.style.fontWeight = "bold";
+      // add the class of invalid to the input
+      e.target.classList.add("invalid");
+      // set the focus to the input
+      e.target.focus();
+    }
+    // if the zip code does match the regular expression
+    else {
+
+      // set the background color of the input to white
+      e.target.style.backgroundColor = "white";
+      // set the color of the input to black
+      e.target.style.color = "black";
+      // set the font weight of the input to normal
+      e.target.style.fontWeight = "normal";
+      // remove the class of invalid from the input
+      e.target.classList.remove("invalid");
+    }
+  }
+}
+
+// add an event lister to all inputs that contain "zip" or "Zip" in the id that calls the function validateZip
+let zipInputs = document.querySelectorAll("input[id*='zip'], input[id*='Zip']");
+for (let i = 0; i < zipInputs.length; i++) {
+  zipInputs[i].addEventListener("blur", validateZip);
+}
+
+
