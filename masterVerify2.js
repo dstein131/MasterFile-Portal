@@ -1428,10 +1428,8 @@ function validateEmail(e) {
     if (!emailRegEx.test(email)) {
    // set the background color of the input to red
       e.target.style.backgroundColor = "red";
-      // set the value of the input to an empty string
-      e.target.value = "";
-      // set the placeholder of the input to "Invalid Email" in white bold text
-      e.target.value = "Invalid Email";
+  
+ 
       e.target.style.color = "white";
       e.target.style.fontWeight = "bold";
       // add the class of invalid to the input
@@ -1499,9 +1497,7 @@ function validatePhone(e) {
       // set the background color of the input to red
       e.target.style.backgroundColor = "red";
       // set the value of the input to an empty string
-      e.target.value = "";
-      // set the placeholder of the input to "Invalid Phone" in white bold text
-      e.target.value = "Invalid Phone";
+  
       e.target.style.color = "white";
       e.target.style.fontWeight = "bold";
       // add the class of invalid to the input
@@ -1546,10 +1542,7 @@ function validateZip(e) {
     if (!zipRegEx.test(e.target.value)) {
       // set the background color of the input to red
       e.target.style.backgroundColor = "red";
-      // set the value of the input to an empty string
-      e.target.value = "";
-      // set the placeholder of the input to "Invalid Zip" in white bold text
-      e.target.value = "Invalid Zip";
+     
       e.target.style.color = "white";
       e.target.style.fontWeight = "bold";
       // add the class of invalid to the input
@@ -1616,10 +1609,6 @@ function darkMode(e) {
       logout[i].classList.add("btn-outline-light");
     }
 
-
-
-
-
     // change all the inputs to bg-dark and text-light
     let inputs = document.querySelectorAll("input, select, textarea");
     for (let i = 0; i < inputs.length; i++) {
@@ -1653,15 +1642,6 @@ function darkMode(e) {
       cardBodies[i].classList.remove("text-dark");
       cardBodies[i].classList.add("text-light");
     }
-
-    // // change the class of all divs to bg-dark and text-light
-    // let divs = document.querySelectorAll("div");
-    // for (let i = 0; i < divs.length; i++) {
-    //   divs[i].classList.remove("bg-light");
-    //   divs[i].classList.add("bg-dark");
-    //   divs[i].classList.remove("text-dark");
-    //   divs[i].classList.add("text-light");
-    // }
 
     // add border-white to the card
     let cards = document.querySelectorAll(".card");
@@ -1699,13 +1679,11 @@ function darkMode(e) {
     let borders = document.querySelectorAll("input, select, textarea");
     for (let i = 0; i < borders.length; i++) {
       borders[i].classList.remove("border-light");
-  
     }
     // change all the inputs to bg-light and text-dark
     let inputs = document.querySelectorAll("input, select, textarea");
     for (let i = 0; i < inputs.length; i++) {
       inputs[i].classList.remove("bg-dark");
-     
       inputs[i].classList.remove("text-light");
      
     }
@@ -1720,7 +1698,6 @@ function darkMode(e) {
     let labels = document.querySelectorAll("label");
     for (let i = 0; i < labels.length; i++) {
       labels[i].classList.remove("text-light");
-    
     }
 
     // change the card header to bg-light and text-dark
@@ -1740,15 +1717,6 @@ function darkMode(e) {
       cardBodies[i].classList.remove("text-light");
     
     }
-
-    // // change the class of all divs
-    // let divs = document.querySelectorAll("div");
-    // for (let i = 0; i < divs.length; i++) {
-    //   divs[i].classList.remove("bg-dark");
-  
-    //   divs[i].classList.remove("text-light");
-   
-    // }
 
     // add border-dark to the card
     let cards = document.querySelectorAll(".card");
@@ -1775,20 +1743,13 @@ function darkMode(e) {
     innerBord[i].classList.remove("border-light");
     innerBord[i].classList.add("border-dark");
   }
-  
+
 
     // set darkState to false
     darkState = false;
 
 
   }
-
-
-
-
-
-
-
 
   }
 
