@@ -1312,7 +1312,7 @@ function treasSignPad() {
   const treasSigLabel = document.querySelector("label[for='treasurerSignature']");
   // append a badge next to the label element
   treasSigLabel.innerHTML += " <span class='badge badge-success'>Signed</span>";
-  
+
 
       // click the button id "collectTreasSignature" to hide the signature pad
       document.getElementById("collectTreasSignature").click();
@@ -1440,162 +1440,162 @@ function printData() {
         <h3 class="text-center mt-1">Masterfile - ${masterFields.countyName} County - ${new Date().toLocaleDateString()}
         </h3>
         <div class="masterfile d-flex flex-column  flex-wrap">
-          <div id="printCountyDiv" class="mx-2 my-2 d-flex flex-column flex-wrap border border-dark rounded">
+          <div id="printCountyDiv" class="mx-2 my-2 py-2 d-flex flex-column flex-wrap border border-dark rounded">
             <h4 class="text-center">County</h4>
-            <div class="" ><b>County Name:</b> ${masterFields.countyName}</b></div>
-            <div class="" ><b>County Code:</b>  ${masterFields.countyCode}</b></div>
-            <div class="" ><b>County Street Address:</b>  ${masterFields.countyStreetAddress}</b></div>
-            <div class="" ><b>County City:</b>  ${masterFields.countyCity}</b></div>
-            <div class="" ><b>County State:</b>  ${masterFields.countyState}</b></div>
-            <div class="" ><b>County Zip:</b>  ${masterFields.countyZip}</b></div>
+            <div class="px-2" ><b>County Name:</b> ${masterFields.countyName}</b></div>
+            <div class="px-2" ><b>County Code:</b>  ${masterFields.countyCode}</b></div>
+            <div class="px-2" ><b>County Street Address:</b>  ${masterFields.countyStreetAddress}</b></div>
+            <div class="px-2" ><b>County City:</b>  ${masterFields.countyCity}</b></div>
+            <div class="px-2" ><b>County State:</b>  ${masterFields.countyState}</b></div>
+            <div class="px-2" ><b>County Zip:</b>  ${masterFields.countyZip}</b></div>
           </div>
-          <div id="printAuditorDiv" class="mx-2 my-2 d-flex flex-column flex-wrap border border-dark rounded">
+          <div id="printAuditorDiv" class="mx-2 my-2 py-2 d-flex flex-column flex-wrap border border-dark rounded">
             <h4 class="text-center">Auditor</h4>
-            <div class="" ><b>Auditor First Name:</b>  ${masterFields.auditorFirstName}</b></div>
-            <div class="" ><b>Auditor Last Name:</b>  ${masterFields.auditorLastName}</b></div>
-            <div class="" ><b>Auditor Street Address:</b>  ${masterFields.auditorStreetAddress}</b></div>
-            <div class="" ><b>Auditor City:</b>  ${masterFields.auditorCity}</b></div>
-            <div class="" ><b>Auditor State:</b>  ${masterFields.auditorState}</b></div>
-            <div class="" ><b>Auditor Zip:</b>  ${masterFields.auditorZip}</b></div>
-            <div class="" ><b>Auditor Phone:</b>  ${masterFields.auditorPhone}</b></div>
-            <div class="" ><b>Auditor Email:</b>  ${masterFields.auditorEmail}</b></div>
+            <div class="px-2" ><b>Auditor First Name:</b>  ${masterFields.auditorFirstName}</b></div>
+            <div class="px-2" ><b>Auditor Last Name:</b>  ${masterFields.auditorLastName}</b></div>
+            <div class="px-2" ><b>Auditor Street Address:</b>  ${masterFields.auditorStreetAddress}</b></div>
+            <div class="px-2" ><b>Auditor City:</b>  ${masterFields.auditorCity}</b></div>
+            <div class="px-2" ><b>Auditor State:</b>  ${masterFields.auditorState}</b></div>
+            <div class="px-2" ><b>Auditor Zip:</b>  ${masterFields.auditorZip}</b></div>
+            <div class="px-2" ><b>Auditor Phone:</b>  ${masterFields.auditorPhone}</b></div>
+            <div class="px-2" ><b>Auditor Email:</b>  ${masterFields.auditorEmail}</b></div>
           </div>
-          <div id="printTreasurerDiv" class="mx-2 my-2 d-flex flex-column flex-wrap border border-dark rounded">
+          <div id="printTreasurerDiv" class="mx-2 my-2 py-2 d-flex flex-column flex-wrap border border-dark rounded">
             <h4 class="text-center">Treasurer</h4>
-            <div class="" ><b>Treasurer First Name:</b>  ${masterFields.treasurerFirstName}</b></div>
-            <div class="" ><b>Treasurer Last Name:</b>  ${masterFields.treasurerLastName}</b></div>
-            <div class="" ><b>Treasurer Street Address:</b>  ${masterFields.treasurerStreetAddress}</b></div>
-            <div class="" ><b>Treasurer City:</b>  ${masterFields.treasurerCity}</b></div>
-            <div class="" ><b>Treasurer State:</b>  ${masterFields.treasurerState}</b></div>
-            <div class="" ><b>Treasurer Zip:</b>  ${masterFields.treasurerZip}</b></div>
-            <div class="" ><b>Treasurer Phone:</b>  ${masterFields.treasurerPhone}</b></div>
-            <div class="" ><b>Treasurer Email:</b>  ${masterFields.treasurerEmail}</b></div>
+            <div class="px-2" ><b>Treasurer First Name:</b>  ${masterFields.treasurerFirstName}</b></div>
+            <div class="px-2" ><b>Treasurer Last Name:</b>  ${masterFields.treasurerLastName}</b></div>
+            <div class="px-2" ><b>Treasurer Street Address:</b>  ${masterFields.treasurerStreetAddress}</b></div>
+            <div class="px-2" ><b>Treasurer City:</b>  ${masterFields.treasurerCity}</b></div>
+            <div class="px-2" ><b>Treasurer State:</b>  ${masterFields.treasurerState}</b></div>
+            <div class="px-2" ><b>Treasurer Zip:</b>  ${masterFields.treasurerZip}</b></div>
+            <div class="px-2" ><b>Treasurer Phone:</b>  ${masterFields.treasurerPhone}</b></div>
+            <div class="px-2" ><b>Treasurer Email:</b>  ${masterFields.treasurerEmail}</b></div>
           </div>
-          <div id="printAttorneyDiv" class="mx-2 my-2 d-flex flex-column flex-wrap border border-dark rounded">
+          <div id="printAttorneyDiv" class="mx-2 my-2 py-2 d-flex flex-column flex-wrap border border-dark rounded">
             <h4 class="text-center">Attorney</h4>
-            <div class="" ><b>Attorney First Name:</b>  ${masterFields.attorneyFirstName}</b></div>
-            <div class="" ><b>Attorney Last Name:</b>  ${masterFields.attorneyLastName}</b></div>
-            <div class="" ><b>Attorney Street Address:</b>  ${masterFields.attorneyStreetAddress}</b></div>
-            <div class="" ><b>Attorney City:</b>  ${masterFields.attorneyCity}</b></div>
-            <div class="" ><b>Attorney State:</b>  ${masterFields.attorneyState}</b></div>
-            <div class="" ><b>Attorney Zip:</b>  ${masterFields.attorneyZip}</b></div>
-            <div class="" ><b>Attorney Phone:</b>  ${masterFields.attorneyPhone}</b></div>
-            <div class="" ><b>Attorney Email:</b>  ${masterFields.attorneyEmail}</b></div>
+            <div class="px-2" ><b>Attorney First Name:</b>  ${masterFields.attorneyFirstName}</b></div>
+            <div class="px-2" ><b>Attorney Last Name:</b>  ${masterFields.attorneyLastName}</b></div>
+            <div class="px-2" ><b>Attorney Street Address:</b>  ${masterFields.attorneyStreetAddress}</b></div>
+            <div class="px-2" ><b>Attorney City:</b>  ${masterFields.attorneyCity}</b></div>
+            <div class="px-2" ><b>Attorney State:</b>  ${masterFields.attorneyState}</b></div>
+            <div class="px-2" ><b>Attorney Zip:</b>  ${masterFields.attorneyZip}</b></div>
+            <div class="px-2" ><b>Attorney Phone:</b>  ${masterFields.attorneyPhone}</b></div>
+            <div class="px-2" ><b>Attorney Email:</b>  ${masterFields.attorneyEmail}</b></div>
           </div>
-          <div id="printAssessorDiv" class="mx-2 my-2 d-flex flex-column flex-wrap border border-dark rounded">
+          <div id="printAssessorDiv" class="mx-2 my-2 py-2 d-flex flex-column flex-wrap border border-dark rounded">
             <h4 class="text-center">Assessor</h4>
-            <div class="" ><b>Assessor First Name:</b>  ${masterFields.assessorFirstName}</b></div>
-            <div class="" ><b>Assessor Last Name:</b>  ${masterFields.assessorLastName}</b></div>
-            <div class="" ><b>Assessor Street Address:</b>  ${masterFields.assessorStreetAddress}</b></div>
-            <div class="" ><b>Assessor City:</b>  ${masterFields.assessorCity}</b></div>
-            <div class="" ><b>Assessor State:</b>  ${masterFields.assessorState}</b></div>
-            <div class="" ><b>Assessor Zip:</b>  ${masterFields.assessorZip}</b></div>
-            <div class="" ><b>Assessor Phone:</b>  ${masterFields.assessorPhone}</b></div>
-            <div class="" ><b>Assessor Email:</b>  ${masterFields.assessorEmail}</b></div>
+            <div class="px-2" ><b>Assessor First Name:</b>  ${masterFields.assessorFirstName}</b></div>
+            <div class="px-2" ><b>Assessor Last Name:</b>  ${masterFields.assessorLastName}</b></div>
+            <div class="px-2" ><b>Assessor Street Address:</b>  ${masterFields.assessorStreetAddress}</b></div>
+            <div class="px-2" ><b>Assessor City:</b>  ${masterFields.assessorCity}</b></div>
+            <div class="px-2" ><b>Assessor State:</b>  ${masterFields.assessorState}</b></div>
+            <div class="px-2" ><b>Assessor Zip:</b>  ${masterFields.assessorZip}</b></div>
+            <div class="px-2" ><b>Assessor Phone:</b>  ${masterFields.assessorPhone}</b></div>
+            <div class="px-2" ><b>Assessor Email:</b>  ${masterFields.assessorEmail}</b></div>
           </div>
-          <div id="printCommissionerDiv" class="mx-2 my-2 d-flex flex-column flex-wrap border border-dark rounded">
+          <div id="printCommissionerDiv" class="mx-2 my-2 py-2 d-flex flex-column flex-wrap border border-dark rounded">
             <h4 class="text-center">Commissioner</h4>
-            <div class="" ><b>Commissioner 1 First Name:</b>  ${masterFields.commissioner1FirstName}</b></div>
-            <div class="" ><b>Commissioner 1 Last Name:</b>  ${masterFields.commissioner1LastName}</b></div>
-            <div class="" ><b>Commissioner 1 Street Address:</b>  ${masterFields.commissioner1StreetAddress}</b></div>
-            <div class="" ><b>Commissioner 1 City:</b>  ${masterFields.commissioner1City}</b></div>
-            <div class="" ><b>Commissioner 1 State:</b>  ${masterFields.commissioner1State}</b></div>
-            <div class="" ><b>Commissioner 1 Zip:</b>  ${masterFields.commissioner1Zip}</b></div>
-            <div class="" ><b>Commissioner 1 Phone:</b>  ${masterFields.commissioner1Phone}</b></div>
-            <div class="" ><b>Commissioner 1 Email:</b>  ${masterFields.commissioner1Email}</b></div>
-            <div class="" ><b>Commissioner 2 First Name:</b>  ${masterFields.commissioner2FirstName}</b></div>
-            <div class="" ><b>Commissioner 2 Last Name:</b>  ${masterFields.commissioner2LastName}</b></div>
-            <div class="" ><b>Commissioner 2 Street Address:</b>  ${masterFields.commissioner2StreetAddress}</b></div>
-            <div class="" ><b>Commissioner 2 City:</b>  ${masterFields.commissioner2City}</b></div>
-            <div class="" ><b>Commissioner 2 State:</b>  ${masterFields.commissioner2State}</b></div>
-            <div class="" ><b>Commissioner 2 Zip:</b>  ${masterFields.commissioner2Zip}</b></div>
-            <div class="" ><b>Commissioner 2 Phone:</b>  ${masterFields.commissioner2Phone}</b></div>
-            <div class="" ><b>Commissioner 2 Email:</b>  ${masterFields.commissioner2Email}</b></div>
-            <div class="" ><b>Commissioner 3 First Name:</b>  ${masterFields.commissioner3FirstName}</b></div>
-            <div class="" ><b>Commissioner 3 Last Name:</b>  ${masterFields.commissioner3LastName}</b></div>
-            <div class="" ><b>Commissioner 3 Street Address:</b>  ${masterFields.commissioner3StreetAddress}</b></div>
-            <div class="" ><b>Commissioner 3 City:</b>  ${masterFields.commissioner3City}</b></div>
-            <div class="" ><b>Commissioner 3 State:</b>  ${masterFields.commissioner3State}</b></div>
-            <div class="" ><b>Commissioner 3 Zip:</b>  ${masterFields.commissioner3Zip}</b></div>
-            <div class="" ><b>Commissioner 3 Phone:</b>  ${masterFields.commissioner3Phone}</b></div>
-            <div class="" ><b>Commissioner 3 Email:</b>  ${masterFields.commissioner3Email}</b></div>
+            <div class="px-2" ><b>Commissioner 1 First Name:</b>  ${masterFields.commissioner1FirstName}</b></div>
+            <div class="px-2" ><b>Commissioner 1 Last Name:</b>  ${masterFields.commissioner1LastName}</b></div>
+            <div class="px-2" ><b>Commissioner 1 Street Address:</b>  ${masterFields.commissioner1StreetAddress}</b></div>
+            <div class="px-2" ><b>Commissioner 1 City:</b>  ${masterFields.commissioner1City}</b></div>
+            <div class="px-2" ><b>Commissioner 1 State:</b>  ${masterFields.commissioner1State}</b></div>
+            <div class="px-2" ><b>Commissioner 1 Zip:</b>  ${masterFields.commissioner1Zip}</b></div>
+            <div class="px-2" ><b>Commissioner 1 Phone:</b>  ${masterFields.commissioner1Phone}</b></div>
+            <div class="px-2" ><b>Commissioner 1 Email:</b>  ${masterFields.commissioner1Email}</b></div>
+            <div class="px-2" ><b>Commissioner 2 First Name:</b>  ${masterFields.commissioner2FirstName}</b></div>
+            <div class="px-2" ><b>Commissioner 2 Last Name:</b>  ${masterFields.commissioner2LastName}</b></div>
+            <div class="px-2" ><b>Commissioner 2 Street Address:</b>  ${masterFields.commissioner2StreetAddress}</b></div>
+            <div class="px-2" ><b>Commissioner 2 City:</b>  ${masterFields.commissioner2City}</b></div>
+            <div class="px-2" ><b>Commissioner 2 State:</b>  ${masterFields.commissioner2State}</b></div>
+            <div class="px-2" ><b>Commissioner 2 Zip:</b>  ${masterFields.commissioner2Zip}</b></div>
+            <div class="px-2" ><b>Commissioner 2 Phone:</b>  ${masterFields.commissioner2Phone}</b></div>
+            <div class="px-2" ><b>Commissioner 2 Email:</b>  ${masterFields.commissioner2Email}</b></div>
+            <div class="px-2" ><b>Commissioner 3 First Name:</b>  ${masterFields.commissioner3FirstName}</b></div>
+            <div class="px-2" ><b>Commissioner 3 Last Name:</b>  ${masterFields.commissioner3LastName}</b></div>
+            <div class="px-2" ><b>Commissioner 3 Street Address:</b>  ${masterFields.commissioner3StreetAddress}</b></div>
+            <div class="px-2" ><b>Commissioner 3 City:</b>  ${masterFields.commissioner3City}</b></div>
+            <div class="px-2" ><b>Commissioner 3 State:</b>  ${masterFields.commissioner3State}</b></div>
+            <div class="px-2" ><b>Commissioner 3 Zip:</b>  ${masterFields.commissioner3Zip}</b></div>
+            <div class="px-2" ><b>Commissioner 3 Phone:</b>  ${masterFields.commissioner3Phone}</b></div>
+            <div class="px-2" ><b>Commissioner 3 Email:</b>  ${masterFields.commissioner3Email}</b></div>
           </div>
 
-          <div id="printCourtDiv" class="mx-2 my-2 d-flex flex-column flex-wrap border border-dark rounded">
+          <div id="printCourtDiv" class="mx-2 my-2 py-2 d-flex flex-column flex-wrap border border-dark rounded">
             <h4 class="text-center">Court</h4>
-            <div class="" ><b>Courthouse Name:</b>  ${masterFields.courtHouseName}</b></div>
-            <div class="" ><b>Courthouse Street Address:</b>  ${masterFields.courtSteetAddress}</b></div>
-            <div class="" ><b>Courthouse City:</b>  ${masterFields.courtCity}</b></div>
-            <div class="" ><b>Courthouse State:</b>  ${masterFields.courtState}</b></div>
-            <div class="" ><b>Courthouse Zip:</b>  ${masterFields.courtZip}</b></div>
-            <div class="" ><b>Courthouse Type:</b>  ${masterFields.courtType}</b></div>
+            <div class="px-2" ><b>Courthouse Name:</b>  ${masterFields.courtHouseName}</b></div>
+            <div class="px-2" ><b>Courthouse Street Address:</b>  ${masterFields.courtSteetAddress}</b></div>
+            <div class="px-2" ><b>Courthouse City:</b>  ${masterFields.courtCity}</b></div>
+            <div class="px-2" ><b>Courthouse State:</b>  ${masterFields.courtState}</b></div>
+            <div class="px-2" ><b>Courthouse Zip:</b>  ${masterFields.courtZip}</b></div>
+            <div class="px-2" ><b>Courthouse Type:</b>  ${masterFields.courtType}</b></div>
           </div>
 
-          <div id="printJudgeDiv" class="mx-2 my-2 d-flex flex-column flex-wrap border border-dark rounded">
+          <div id="printJudgeDiv" class="mx-2 my-2 py-2 d-flex flex-column flex-wrap border border-dark rounded">
             <h4 class="text-center">Judge</h4>
-            <div class="" ><b>Judge First Name:</b>  ${masterFields.presidingJudgeFirstName}</b></div>
-            <div class="" ><b>Judge Last Name:</b>  ${masterFields.presidingJudgeLastName}</b></div>
-            <div class="" ><b>Judge Phone:</b>  ${masterFields.presidingJudgePhone}</b></div>
-            <div class="" ><b>Judge Email:</b>  ${masterFields.presidingJudgeEmail}</b></div>
+            <div class="px-2" ><b>Judge First Name:</b>  ${masterFields.presidingJudgeFirstName}</b></div>
+            <div class="px-2" ><b>Judge Last Name:</b>  ${masterFields.presidingJudgeLastName}</b></div>
+            <div class="px-2" ><b>Judge Phone:</b>  ${masterFields.presidingJudgePhone}</b></div>
+            <div class="px-2" ><b>Judge Email:</b>  ${masterFields.presidingJudgeEmail}</b></div>
           </div>
 
-          <div id="printClerkDiv" class="mx-2 my-2 d-flex flex-column flex-wrap border border-dark rounded">
+          <div id="printClerkDiv" class="mx-2 my-2 py-2 d-flex flex-column flex-wrap border border-dark rounded">
             <h4 class="text-center">Clerk</h4>
-            <div class="" ><b>Clerk First Name:</b>  ${masterFields.clerkFirstName}</b></div>
-            <div class="" ><b>Clerk Last Name:</b>  ${masterFields.clerkLastName}</b></div>
-            <div class="" ><b>Clerk Street Address:</b>  ${masterFields.clerkStreetAddress}</b></div>
-            <div class="" ><b>Clerk City:</b>  ${masterFields.clerkCity}</b></div>
-            <div class="" ><b>Clerk State:</b>  ${masterFields.clerkState}</b></div>
-            <div class="" ><b>Clerk Zip:</b>  ${masterFields.clerkZip}</b></div>
-            <div class="" ><b>Clerk Phone:</b>  ${masterFields.clerkPhone}</b></div>
-            <div class="" ><b>Clerk Email:</b>  ${masterFields.clerkEmail}</b></div>
+            <div class="px-2" ><b>Clerk First Name:</b>  ${masterFields.clerkFirstName}</b></div>
+            <div class="px-2" ><b>Clerk Last Name:</b>  ${masterFields.clerkLastName}</b></div>
+            <div class="px-2" ><b>Clerk Street Address:</b>  ${masterFields.clerkStreetAddress}</b></div>
+            <div class="px-2" ><b>Clerk City:</b>  ${masterFields.clerkCity}</b></div>
+            <div class="px-2" ><b>Clerk State:</b>  ${masterFields.clerkState}</b></div>
+            <div class="px-2" ><b>Clerk Zip:</b>  ${masterFields.clerkZip}</b></div>
+            <div class="px-2" ><b>Clerk Phone:</b>  ${masterFields.clerkPhone}</b></div>
+            <div class="px-2" ><b>Clerk Email:</b>  ${masterFields.clerkEmail}</b></div>
           </div>
 
-          <div id="printSheriffDiv" class="mx-2 my-2 d-flex flex-column flex-wrap border border-dark rounded">
+          <div id="printSheriffDiv" class="mx-2 my-2 py-2 d-flex flex-column flex-wrap border border-dark rounded">
             <h4 class="text-center">Sheriff</h4>
-            <div class="" ><b>Sheriff First Name:</b>  ${masterFields.sheriffFirstName}</b></div>
-            <div class="" ><b>Sheriff Last Name:</b>  ${masterFields.sheriffLastName}</b></div>
-            <div class="" ><b>Sheriff Street Address:</b>  ${masterFields.sheriffStreetAddress}</b></div>
-            <div class="" ><b>Sheriff City:</b>  ${masterFields.sheriffCity}</b></div>
-            <div class="" ><b>Sheriff State:</b>  ${masterFields.sheriffState}</b></div>
-            <div class="" ><b>Sheriff Zip:</b>  ${masterFields.sheriffZip}</b></div>
-            <div class="" ><b>Sheriff Phone:</b>  ${masterFields.sheriffPhone}</b></div>
-            <div class="" ><b>Sheriff Email:</b>  ${masterFields.sheriffEmail}</b></div>
-            <div class="" ><b>Sheriff Additional Contact Firt Name:</b>  ${masterFields.sheriffAddContactFirstName}</b></div>
-            <div class="" ><b>Sheriff Additional Contact Last Name:</b>  ${masterFields.sheriffAddContactLastName}</b></div>
-            <div class="" ><b>Sheriff Additional Contact Title:</b>  ${masterFields.sheriffAddContactTitle}</b></div>
-            <div class="" ><b>Sheriff Additional Contact Organization:</b>  ${masterFields.sheriffAddContactOrganization}</b></div>
-            <div class="" ><b>Sheriff Additional Contact Phone:</b>  ${masterFields.sheriffAddContactPhone}</b></div>
-            <div class="" ><b>Sheriff Additional Contact Email:</b>  ${masterFields.sheriffAddContactEmail}</b></div>
-            <div class="" ><b>Sheriff Additional Contact Street Address:</b>  ${masterFields.sheriffAddContactStreetAddress}</b></div>
-            <div class="" ><b>Sheriff Additional Contact City:</b>  ${masterFields.sheriffAddContactCity}</b></div>
-            <div class="" ><b>Sheriff Additional Contact State:</b>  ${masterFields.sheriffAddContactState}</b></div>
-            <div class="" ><b>Sheriff Additional Contact Zip:</b>  ${masterFields.sheriffAddContactZip}</b></div>
+            <div class="px-2" ><b>Sheriff First Name:</b>  ${masterFields.sheriffFirstName}</b></div>
+            <div class="px-2" ><b>Sheriff Last Name:</b>  ${masterFields.sheriffLastName}</b></div>
+            <div class="px-2" ><b>Sheriff Street Address:</b>  ${masterFields.sheriffStreetAddress}</b></div>
+            <div class="px-2" ><b>Sheriff City:</b>  ${masterFields.sheriffCity}</b></div>
+            <div class="px-2" ><b>Sheriff State:</b>  ${masterFields.sheriffState}</b></div>
+            <div class="px-2" ><b>Sheriff Zip:</b>  ${masterFields.sheriffZip}</b></div>
+            <div class="px-2" ><b>Sheriff Phone:</b>  ${masterFields.sheriffPhone}</b></div>
+            <div class="px-2" ><b>Sheriff Email:</b>  ${masterFields.sheriffEmail}</b></div>
+            <div class="px-2" ><b>Sheriff Additional Contact Firt Name:</b>  ${masterFields.sheriffAddContactFirstName}</b></div>
+            <div class="px-2" ><b>Sheriff Additional Contact Last Name:</b>  ${masterFields.sheriffAddContactLastName}</b></div>
+            <div class="px-2" ><b>Sheriff Additional Contact Title:</b>  ${masterFields.sheriffAddContactTitle}</b></div>
+            <div class="px-2" ><b>Sheriff Additional Contact Organization:</b>  ${masterFields.sheriffAddContactOrganization}</b></div>
+            <div class="px-2" ><b>Sheriff Additional Contact Phone:</b>  ${masterFields.sheriffAddContactPhone}</b></div>
+            <div class="px-2" ><b>Sheriff Additional Contact Email:</b>  ${masterFields.sheriffAddContactEmail}</b></div>
+            <div class="px-2" ><b>Sheriff Additional Contact Street Address:</b>  ${masterFields.sheriffAddContactStreetAddress}</b></div>
+            <div class="px-2" ><b>Sheriff Additional Contact City:</b>  ${masterFields.sheriffAddContactCity}</b></div>
+            <div class="px-2" ><b>Sheriff Additional Contact State:</b>  ${masterFields.sheriffAddContactState}</b></div>
+            <div class="px-2" ><b>Sheriff Additional Contact Zip:</b>  ${masterFields.sheriffAddContactZip}</b></div>
           </div>
 
-          <div id="printWebsiteDiv" class="mx-2 my-2 d-flex flex-column flex-wrap border border-dark rounded">
+          <div id="printWebsiteDiv" class="mx-2 my-2 py-2 d-flex flex-column flex-wrap border border-dark rounded">
             <h4 class="text-center">Website</h4>
-            <div class="" ><b>Tax Billing System:</b>  ${masterFields.compSys}</b></div>
-            <div class="" ><b>Website URL:</b>  ${masterFields.countyWebUrl}</b></div>
+            <div class="px-2" ><b>Tax Billing System:</b>  ${masterFields.compSys}</b></div>
+            <div class="px-2" ><b>Website URL:</b>  ${masterFields.countyWebUrl}</b></div>
           </div>
        
 
 
-          <div id="printSaleDiv" class="mx-2 my-2 d-flex flex-column flex-wrap border border-dark rounded">
+          <div id="printSaleDiv" class="mx-2 my-2 py-2 d-flex flex-column flex-wrap border border-dark rounded">
             <h4 class="text-center">Sale</h4>
-            <div class="" ><b>Sale Method:</b>  ${masterFields.saleMethod}</b></div>
-            <div class="" ><b>Sale Start Date:</b>  ${masterFields.salestartdatetime}</b></div>
-            <div class="" ><b>Sale End Date:</b>  ${masterFields.saleenddatetime}</b></div>
-            <div class="" ><b>Sale Street Address:</b>  ${masterFields.saleStreetAddress}</b></div>
-            <div class="" ><b>Sale City:</b>  ${masterFields.saleCity}</b></div>
-            <div class="" ><b>Sale State:</b>  ${masterFields.saleState}</b></div>
-            <div class="" ><b>Sale Zip:</b>  ${masterFields.saleZip}</b></div>
-            <div class="" ><b>Unsold Batches?:</b>  ${masterFields.unsoldBatch}</b></div>
-            <div class="" ><b>Unsold Batches Start Date:</b>  ${masterFields.unsoldStartBatch}</b></div>
-            <div class="" ><b>Unsold Batches End Date:</b>  ${masterFields.unsoldEndBatch}</b></div>
-            <div class="" ><b>Dynamic Ending?:</b>  ${masterFields.dynamicEnding}</b></div>
-            <div class="" ><b>Dynamic Ending Within Minutes:</b>  ${masterFields.withinMinutes}</b></div>
-            <div class="" ><b>Dynamic Ending Extend Minutes:</b>  ${masterFields.extendMinutes}</b></div>
+            <div class="px-2" ><b>Sale Method:</b>  ${masterFields.saleMethod}</b></div>
+            <div class="px-2" ><b>Sale Start Date:</b>  ${masterFields.salestartdatetime}</b></div>
+            <div class="px-2" ><b>Sale End Date:</b>  ${masterFields.saleenddatetime}</b></div>
+            <div class="px-2" ><b>Sale Street Address:</b>  ${masterFields.saleStreetAddress}</b></div>
+            <div class="px-2" ><b>Sale City:</b>  ${masterFields.saleCity}</b></div>
+            <div class="px-2" ><b>Sale State:</b>  ${masterFields.saleState}</b></div>
+            <div class="px-2" ><b>Sale Zip:</b>  ${masterFields.saleZip}</b></div>
+            <div class="px-2" ><b>Unsold Batches?:</b>  ${masterFields.unsoldBatch}</b></div>
+            <div class="px-2" ><b>Unsold Batches Start Date:</b>  ${masterFields.unsoldStartBatch}</b></div>
+            <div class="px-2" ><b>Unsold Batches End Date:</b>  ${masterFields.unsoldEndBatch}</b></div>
+            <div class="px-2" ><b>Dynamic Ending?:</b>  ${masterFields.dynamicEnding}</b></div>
+            <div class="px-2" ><b>Dynamic Ending Within Minutes:</b>  ${masterFields.withinMinutes}</b></div>
+            <div class="px-2" ><b>Dynamic Ending Extend Minutes:</b>  ${masterFields.extendMinutes}</b></div>
           </div>
 
 
