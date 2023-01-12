@@ -129,6 +129,16 @@ let masterFields = {
   unsoldEndBatch: "",
   withinMinutes: "",
   extendMinutes: "",
+  assessorEndTermDate: "2024-01-01",
+  treasurerEndTermDate: "2024-01-01",
+  clerkEndTermDate: "2024-01-01",
+  sheriffEndTermDate: "2024-01-01",
+  commissioner1EndTermDate: "2024-01-01",
+  commissioner2EndTermDate: "2024-01-01",
+  commissioner3EndTermDate: "2024-01-01",
+  presidingJudgeEndTermDate: "2024-01-01",
+  auditorEndTermDate: "2024-01-01",
+
 
 };
 
@@ -323,6 +333,7 @@ document.getElementById("reviewBtn").addEventListener("click", function () {
   <div id="verifycountyCity">County City: ${masterFieldsVerify.countyCity}</div>
   <div id="verifycountyState">County State: ${masterFieldsVerify.countyState}</div>
   <div id="verifycountyZip">County Zip: ${masterFieldsVerify.countyZip}</div>
+  <div id="verifyauditorEndTermDate">Auditor End Term Date: ${masterFieldsVerify.auditorEndTermDate}</div>
   </div>
 
   <div class="border px-2 py-2 mb-2">
@@ -335,6 +346,7 @@ document.getElementById("reviewBtn").addEventListener("click", function () {
   <div id="verifyauditorCity">Auditor City: ${masterFieldsVerify.auditorCity}</div>
   <div id="verifyauditorState">Auditor State: ${masterFieldsVerify.auditorState}</div>
   <div id="verifyauditorZip">Auditor Zip: ${masterFieldsVerify.auditorZip}</div>
+
  
   </div>
 
@@ -348,6 +360,7 @@ document.getElementById("reviewBtn").addEventListener("click", function () {
   <div id="verifytreasurerCity">Treasurer City: ${masterFieldsVerify.treasurerCity}</div>
   <div id="verifytreasurerState">Treasurer State: ${masterFieldsVerify.treasurerState}</div>
   <div id="verifytreasurerZip">Treasurer Zip: ${masterFieldsVerify.treasurerZip}</div>
+  <div id="verifytreasurerEndTermDate">Treasurer End Term Date: ${masterFieldsVerify.treasurerEndTermDate}</div>
   </div>
 
   <div class="border px-2 py-2 mb-2" id="attverdiv">
@@ -372,6 +385,7 @@ document.getElementById("reviewBtn").addEventListener("click", function () {
   <div id="verifyassessorCity">Assessor City: ${masterFieldsVerify.assessorCity}</div>
   <div id="verifyassessorState">Assessor State: ${masterFieldsVerify.assessorState}</div>
   <div id="verifyassessorZip">Assessor Zip: ${masterFieldsVerify.assessorZip}</div>
+  <div id="verifyassessorEndTermDate">Assessor End Term Date: ${masterFieldsVerify.assessorEndTermDate}</div>
   </div>
 
   <div class="border px-2 py-2 mb-2">
@@ -384,6 +398,7 @@ document.getElementById("reviewBtn").addEventListener("click", function () {
   <div id="verifycommissioner1City">Commissioner 1 City: ${masterFieldsVerify.commissioner1City}</div>
   <div id="verifycommissioner1State">Commissioner 1 State: ${masterFieldsVerify.commissioner1State}</div>
   <div id="verifycommissioner1Zip">Commissioner 1 Zip: ${masterFieldsVerify.commissioner1Zip}</div>
+  <div id="verifycommissioner1EndTermDate">Commissioner 1 End Term Date: ${masterFieldsVerify.commissioner1EndTermDate}</div>
   </div>
 
   <div class="border px-2 py-2 mb-2">
@@ -396,6 +411,7 @@ document.getElementById("reviewBtn").addEventListener("click", function () {
   <div id="verifycommissioner2City">Commissioner 2 City: ${masterFieldsVerify.commissioner2City}</div>
   <div id="verifycommissioner2State">Commissioner 2 State: ${masterFieldsVerify.commissioner2State}</div>
   <div id="verifycommissioner2Zip">Commissioner 2 Zip: ${masterFieldsVerify.commissioner2Zip}</div>
+  <div id="verifycommissioner2EndTermDate">Commissioner 2 End Term Date: ${masterFieldsVerify.commissioner2EndTermDate}</div>
   </div>
 
   <div class="border px-2 py-2 mb-2">
@@ -408,6 +424,7 @@ document.getElementById("reviewBtn").addEventListener("click", function () {
   <div id="verifycommissioner3City">Commissioner 3 City: ${masterFieldsVerify.commissioner3City}</div>
   <div id="verifycommissioner3State">Commissioner 3 State: ${masterFieldsVerify.commissioner3State}</div>
   <div id="verifycommissioner3Zip">Commissioner 3 Zip: ${masterFieldsVerify.commissioner3Zip}</div>
+  <div id="verifycommissioner3EndTermDate">Commissioner 3 End Term Date: ${masterFieldsVerify.commissioner3EndTermDate}</div>
   </div>
 
   <div class="border px-2 py-2 mb-2">
@@ -426,6 +443,7 @@ document.getElementById("reviewBtn").addEventListener("click", function () {
   <div id="verifypresidingJudgeLastName">Presiding Judge Last Name: ${masterFieldsVerify.presidingJudgeLastName}</div>
   <div id="verifypresidingJudgePhone">Presiding Judge Phone: ${masterFieldsVerify.presidingJudgePhone}</div>
   <div id="verifypresidingJudgeEmail">Presiding Judge Email: ${masterFieldsVerify.presidingJudgeEmail}</div>
+  <div id="verifypresidingJudgeEndTermDate">Presiding Judge Street Address: ${masterFieldsVerify.presidingJudgeStreetAddress}</div>
   </div>
 
   <div class="border px-2 py-2 mb-2">
@@ -438,6 +456,7 @@ document.getElementById("reviewBtn").addEventListener("click", function () {
   <div id="verifyclerkCity">Clerk City: ${masterFieldsVerify.clerkCity}</div>
   <div id="verifyclerkState">Clerk State: ${masterFieldsVerify.clerkState}</div>
   <div id="verifyclerkZip">Clerk Zip: ${masterFieldsVerify.clerkZip}</div>
+  <div id="verifyclerkEndTermDate">Clerk End Term Date: ${masterFieldsVerify.clerkEndTermDate}</div>
   </div>
 
   <div class="border px-2 py-2 mb-2">
@@ -450,6 +469,7 @@ document.getElementById("reviewBtn").addEventListener("click", function () {
   <div id="verifysheriffCity">Sheriff City: ${masterFieldsVerify.sheriffCity}</div>
   <div id="verifysheriffState">Sheriff State: ${masterFieldsVerify.sheriffState}</div>
   <div id="verifysheriffZip">Sheriff Zip: ${masterFieldsVerify.sheriffZip}</div>
+  <div id="verifysheriffEndTermDate">Sheriff End Term Date: ${masterFieldsVerify.sheriffEndTermDate}</div>
   </div>
 
   <div class="border px-2 py-2 mb-2">
