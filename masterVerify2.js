@@ -1437,7 +1437,7 @@ function printData() {
         </style>
       </head>
       <body>
-        <h3 class="text-center mt-1">Masterfile - ${masterFields.countyName} County - ${new Date().toLocaleDateString()}
+        <h3 class="text-center mt-1">Masterfile - ${masterFields.countyName} County - ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}
         </h3>
         <div class="masterfile d-flex flex-column  flex-wrap">
           <div id="printCountyDiv" class="mx-2 my-2 py-2 d-flex flex-column flex-wrap border border-dark rounded">
