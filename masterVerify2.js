@@ -1426,6 +1426,8 @@ function printData() {
 
 
 
+
+
   // write the html to the new window
   printWindow.document.write(`
     <html>
@@ -1460,6 +1462,7 @@ function printData() {
             <div class="px-2" ><b>Auditor Zip:</b>  ${masterFields.auditorZip}</b></div>
             <div class="px-2" ><b>Auditor Phone:</b>  ${masterFields.auditorPhone}</b></div>
             <div class="px-2" ><b>Auditor Email:</b>  ${masterFields.auditorEmail}</b></div>
+            <div class="px-2" ><b>Auditor Signature: <img src="./images/sig1.png" alt="Auditor Signature" width="200px"></b></div>
           </div>
           <div id="printTreasurerDiv" class="mx-2 my-2 py-2 d-flex flex-column flex-wrap border border-dark rounded">
             <h4 class="text-center">Treasurer</h4>
@@ -1471,6 +1474,7 @@ function printData() {
             <div class="px-2" ><b>Treasurer Zip:</b>  ${masterFields.treasurerZip}</b></div>
             <div class="px-2" ><b>Treasurer Phone:</b>  ${masterFields.treasurerPhone}</b></div>
             <div class="px-2" ><b>Treasurer Email:</b>  ${masterFields.treasurerEmail}</b></div>
+            <div class="px-2" ><b>Treasurer Signature: <img src="./images/sig2.png" alt="Treasurer Signature" width="200px"></b></div>
           </div>
           <div id="printAttorneyDiv" class="mx-2 my-2 py-2 d-flex flex-column flex-wrap border border-dark rounded">
             <h4 class="text-center">Attorney</h4>
