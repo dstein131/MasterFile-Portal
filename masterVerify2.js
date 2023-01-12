@@ -1307,6 +1307,13 @@ function treasSignPad() {
      
       // change the source of the image with the id "treasurerSignature" to the treasSigImg
       document.getElementById("treasurerSignature").src = treasSigData;
+
+  // get the label that is for="treasurerSignature"
+  const treasSigLabel = document.querySelector("label[for='treasurerSignature']");
+  // append a badge next to the label element
+  treasSigLabel.innerHTML += " <span class='badge badge-success'>Signed</span>";
+  
+
       // click the button id "collectTreasSignature" to hide the signature pad
       document.getElementById("collectTreasSignature").click();
 
