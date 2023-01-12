@@ -1424,7 +1424,7 @@ function printData() {
         <h3 class="text-center mt-1">Masterfile - ${masterFields.countyName} County - ${new Date().toLocaleDateString()}
         </h3>
         <div class="masterfile d-flex flex-column  flex-wrap">
-          <div id="printCountyDiv" class="mx-2 my-2 d-flex flex-column flex-wrap border border-dark rounded">
+          <div id="printCountyDiv" class="mx-2 px-2 py-2 my-2 d-flex flex-column flex-wrap border border-dark rounded">
             <h4 class="text-center">County</h4>
             <div class="" ><b>County Name:</b> ${masterFields.countyName}</b></div>
             <div class="" ><b>County Code:</b>  ${masterFields.countyCode}</b></div>
@@ -1433,7 +1433,7 @@ function printData() {
             <div class="" ><b>County State:</b>  ${masterFields.countyState}</b></div>
             <div class="" ><b>County Zip:</b>  ${masterFields.countyZip}</b></div>
           </div>
-          <div id="printAuditorDiv" class="mx-2 my-2 d-flex flex-column flex-wrap border border-dark rounded">
+          <div id="printAuditorDiv" class="mx-2 px-2 py-2 my-2 d-flex flex-column flex-wrap border border-dark rounded">
             <h4 class="text-center">Auditor</h4>
             <div class="" ><b>Auditor First Name:</b>  ${masterFields.auditorFirstName}</b></div>
             <div class="" ><b>Auditor Last Name:</b>  ${masterFields.auditorLastName}</b></div>
@@ -1444,7 +1444,7 @@ function printData() {
             <div class="" ><b>Auditor Phone:</b>  ${masterFields.auditorPhone}</b></div>
             <div class="" ><b>Auditor Email:</b>  ${masterFields.auditorEmail}</b></div>
           </div>
-          <div id="printTreasurerDiv" class="mx-2 my-2 d-flex flex-column flex-wrap border border-dark rounded">
+          <div id="printTreasurerDiv" class="mx-2 px-2 py-2 my-2 d-flex flex-column flex-wrap border border-dark rounded">
             <h4 class="text-center">Treasurer</h4>
             <div class="" ><b>Treasurer First Name:</b>  ${masterFields.treasurerFirstName}</b></div>
             <div class="" ><b>Treasurer Last Name:</b>  ${masterFields.treasurerLastName}</b></div>
@@ -1455,7 +1455,7 @@ function printData() {
             <div class="" ><b>Treasurer Phone:</b>  ${masterFields.treasurerPhone}</b></div>
             <div class="" ><b>Treasurer Email:</b>  ${masterFields.treasurerEmail}</b></div>
           </div>
-          <div id="printAttorneyDiv" class="mx-2 my-2 d-flex flex-column flex-wrap border border-dark rounded">
+          <div id="printAttorneyDiv" class="mx-2 px-2 py-2 my-2 d-flex flex-column flex-wrap border border-dark rounded">
             <h4 class="text-center">Attorney</h4>
             <div class="" ><b>Attorney First Name:</b>  ${masterFields.attorneyFirstName}</b></div>
             <div class="" ><b>Attorney Last Name:</b>  ${masterFields.attorneyLastName}</b></div>
@@ -1466,7 +1466,7 @@ function printData() {
             <div class="" ><b>Attorney Phone:</b>  ${masterFields.attorneyPhone}</b></div>
             <div class="" ><b>Attorney Email:</b>  ${masterFields.attorneyEmail}</b></div>
           </div>
-          <div id="printAssessorDiv" class="mx-2 my-2 d-flex flex-column flex-wrap border border-dark rounded">
+          <div id="printAssessorDiv" class="mx-2 px-2 py-2 my-2 d-flex flex-column flex-wrap border border-dark rounded">
             <h4 class="text-center">Assessor</h4>
             <div class="" ><b>Assessor First Name:</b>  ${masterFields.assessorFirstName}</b></div>
             <div class="" ><b>Assessor Last Name:</b>  ${masterFields.assessorLastName}</b></div>
@@ -1477,7 +1477,7 @@ function printData() {
             <div class="" ><b>Assessor Phone:</b>  ${masterFields.assessorPhone}</b></div>
             <div class="" ><b>Assessor Email:</b>  ${masterFields.assessorEmail}</b></div>
           </div>
-          <div id="printCommissionerDiv" class="mx-2 my-2 d-flex flex-column flex-wrap border border-dark rounded">
+          <div id="printCommissionerDiv" class="mx-2 px-2 py-2 my-2 d-flex flex-column flex-wrap border border-dark rounded">
             <h4 class="text-center">Commissioner</h4>
             <div class="" ><b>Commissioner 1 First Name:</b>  ${masterFields.commissioner1FirstName}</b></div>
             <div class="" ><b>Commissioner 1 Last Name:</b>  ${masterFields.commissioner1LastName}</b></div>
@@ -1505,7 +1505,7 @@ function printData() {
             <div class="" ><b>Commissioner 3 Email:</b>  ${masterFields.commissioner3Email}</b></div>
           </div>
 
-          <div id="printCourtDiv" class="mx-2 my-2 d-flex flex-column flex-wrap border border-dark rounded">
+          <div id="printCourtDiv" class="mx-2 px-2 py-2 my-2 d-flex flex-column flex-wrap border border-dark rounded">
             <h4 class="text-center">Court</h4>
             <div class="" ><b>Courthouse Name:</b>  ${masterFields.courtHouseName}</b></div>
             <div class="" ><b>Courthouse Street Address:</b>  ${masterFields.courtSteetAddress}</b></div>
@@ -1515,7 +1515,7 @@ function printData() {
             <div class="" ><b>Courthouse Type:</b>  ${masterFields.courtType}</b></div>
           </div>
 
-          <div id="printJudgeDiv" class="mx-2 my-2 d-flex flex-column flex-wrap border border-dark rounded">
+          <div id="printJudgeDiv" class="mx-2 px-2 py-2 my-2 d-flex flex-column flex-wrap border border-dark rounded">
             <h4 class="text-center">Judge</h4>
             <div class="" ><b>Judge First Name:</b>  ${masterFields.presidingJudgeFirstName}</b></div>
             <div class="" ><b>Judge Last Name:</b>  ${masterFields.presidingJudgeLastName}</b></div>
@@ -1523,7 +1523,7 @@ function printData() {
             <div class="" ><b>Judge Email:</b>  ${masterFields.presidingJudgeEmail}</b></div>
           </div>
 
-          <div id="printClerkDiv" class="mx-2 my-2 d-flex flex-column flex-wrap border border-dark rounded">
+          <div id="printClerkDiv" class="mx-2 px-2 py-2 my-2 d-flex flex-column flex-wrap border border-dark rounded">
             <h4 class="text-center">Clerk</h4>
             <div class="" ><b>Clerk First Name:</b>  ${masterFields.clerkFirstName}</b></div>
             <div class="" ><b>Clerk Last Name:</b>  ${masterFields.clerkLastName}</b></div>
@@ -1535,7 +1535,7 @@ function printData() {
             <div class="" ><b>Clerk Email:</b>  ${masterFields.clerkEmail}</b></div>
           </div>
 
-          <div id="printSheriffDiv" class="mx-2 my-2 d-flex flex-column flex-wrap border border-dark rounded">
+          <div id="printSheriffDiv" class="mx-2 px-2 py-2 my-2 d-flex flex-column flex-wrap border border-dark rounded">
             <h4 class="text-center">Sheriff</h4>
             <div class="" ><b>Sheriff First Name:</b>  ${masterFields.sheriffFirstName}</b></div>
             <div class="" ><b>Sheriff Last Name:</b>  ${masterFields.sheriffLastName}</b></div>
@@ -1557,7 +1557,7 @@ function printData() {
             <div class="" ><b>Sheriff Additional Contact Zip:</b>  ${masterFields.sheriffAddContactZip}</b></div>
           </div>
 
-          <div id="printWebsiteDiv" class="mx-2 my-2 d-flex flex-column flex-wrap border border-dark rounded">
+          <div id="printWebsiteDiv" class="mx-2 px-2 py-2 my-2 d-flex flex-column flex-wrap border border-dark rounded">
             <h4 class="text-center">Website</h4>
             <div class="" ><b>Tax Billing System:</b>  ${masterFields.compSys}</b></div>
             <div class="" ><b>Website URL:</b>  ${masterFields.countyWebUrl}</b></div>
@@ -1565,7 +1565,7 @@ function printData() {
        
 
 
-          <div id="printSaleDiv" class="mx-2 my-2 d-flex flex-column flex-wrap border border-dark rounded">
+          <div id="printSaleDiv" class="mx-2 px-2 my-2 d-flex flex-column flex-wrap border border-dark rounded">
             <h4 class="text-center">Sale</h4>
             <div class="" ><b>Sale Method:</b>  ${masterFields.saleMethod}</b></div>
             <div class="" ><b>Sale Start Date:</b>  ${masterFields.salestartdatetime}</b></div>
