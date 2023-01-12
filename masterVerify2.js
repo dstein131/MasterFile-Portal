@@ -1,3 +1,6 @@
+sig1 = "/images/sig1.png";
+sig2 = "/images/sig2.png";
+
 let masterFields = {
   countyCode: "01",
   countyName: "Adams",
@@ -126,6 +129,7 @@ let masterFields = {
   unsoldEndBatch: "",
   withinMinutes: "",
   extendMinutes: "",
+
 };
 
 const states = {
@@ -1242,18 +1246,20 @@ function audSignPad() {
       // // Rebinds all event handlers
       // signaturePad.on();
 
-      // convert audSigData to an image and append it to id audPadCont with the class name "masterfile - signature"
-      const audSigImg = document.createElement("img");
-      audSigImg.src = audSigData;
-      audSigImg.className = "masterfile - signature";
-      document.getElementById("augSigImgCont").appendChild(audSigImg);
+        // convert AudSigData to an image and replace the image with the id "auditorSignature" with the new image
+        document.getElementById("auditorSignature").src = audSigData;
+
 
       // clear the signature pad
       audSignaturePad.clear();
 
+      // click the id "collectAudSignature" to hide the signature pad
+      document.getElementById("collectAudSignature").click();
+
+
 
       // hide the signature pad
-      document.getElementById("audPadCont").style.display = "none";
+      // document.getElementById("audPadCont").style.display = "none";
 
       // // *** THIS DOWNLOADS THE SIGNATURE ***
       // // download the signature as a png
@@ -1298,16 +1304,19 @@ function treasSignPad() {
       // save the data URL to local storage
       localStorage.setItem("treasSigData", treasSigData);
 
-      // convert treasSigData to an image and append it to id treasPadCont
-      const treasSigImg = document.createElement("img");
-      treasSigImg.src = treasSigData;
-      treasSigImg.className = "masterfile - signature";
-      document.getElementById("treasSigImgCont").appendChild(treasSigImg);
+     
+      // change the source of the image with the id "treasurerSignature" to the treasSigImg
+      document.getElementById("treasurerSignature").src = treasSigData;
+      // click the button id "collectTreasSignature" to hide the signature pad
+      document.getElementById("collectTreasSignature").click();
+
+
+      
 
       // clear the signature pad
       treasSignaturePad.clear();
       // hide the signature pad
-      document.getElementById("treasPadCont").style.display = "none";
+      // document.getElementById("treasPadCont").style.display = "none";
 
       // // download the signature as a png
       // // create a link element
