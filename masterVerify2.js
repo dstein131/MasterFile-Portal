@@ -97,7 +97,7 @@ let masterFields = {
   saleenddatetime: "2023-05-01T14:04:03",
   saleStreetAddress: "Online - Zeus",
   saleCity: "Online - Zeus",
-  saleState: "Online - Zeus",
+  saleState: "Online",
   saleZip: "Online - Zeus",
   sheriffFirstName: "Jane",
   sheriffLastName: "Doe",
@@ -172,6 +172,9 @@ const states = {
       "Acadia", "Allen", "Ascension", "Assumption", "Avoyelles", "Beauregard", "Bienville", "Bossier", "Caddo", "Calcasieu", "Caldwell", "Cameron", "Catahoula", "Claiborne", "Concordia", "De Soto", "East Baton Rouge", "East Carroll", "East Feliciana", "Evangeline", "Franklin", "Grant", "Iberia", "Iberville", "Jackson", "Jefferson", "Jefferson Davis", "Lafayette", "Lafourche", "La Salle", "Lincoln", "Livingston", "Madison", "Morehouse", "Natchitoches", "Orleans", "Ouachita", "Plaquemines", "Pointe Coupee", "Rapides", "Red River", "Richland", "Sabine", "St. Bernard", "St. Charles", "St. Helena", "St. James", "St. John the Baptist", "St. Landry", "St. Martin", "St. Mary", "St. Tammany", "Tangipahoa", "Tensas", "Terrebonne", "Union", "Vermilion", "Vernon", "Washington", "Webster", "West Baton Rouge", "West Carroll", "West Feliciana", "Winn",
     ],
   },
+  Online: {
+    name: "Online - Zeus",
+  }
 
 };
 
@@ -1983,3 +1986,31 @@ function darkMode(e) {
 
 // add an event listener to the checkbox that calls the function darkMode
 document.getElementById("darkMode").addEventListener("change", darkMode);
+
+function updateMasterFileDB() {
+// check if there are any new or changed key value pairs in the masterFieldsVerify Object from the masterFields Object
+  let newMasterFields = {};
+  for (let key in masterFieldsVerify) {
+    if (masterFieldsVerify[key] !== masterFields[key]) {
+      newMasterFields[key] = masterFieldsVerify[key];
+    }
+    // if it is a new key value pair
+    if (masterFields[key] === undefined) {
+      newMasterFields[key] = masterFieldsVerify[key];
+    }
+  }
+
+  console.log(newMasterFields)
+
+  // if there are any new or changed key value pairs
+  if (Object.keys(newMasterFields).length > 0) {
+    // alert there are new or changed key value pairs
+    alert("There are new or changed key value pairs in the master file. Please update the master file in the database.");
+  }
+
+}
+
+// add an event listener to the id "approveBtn" that calls the function updateMasterFileDB
+document.getElementById("approveBtn").addEventListener("click", updateMasterFileDB);
+
+
