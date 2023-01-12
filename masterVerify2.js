@@ -203,27 +203,27 @@ document.querySelectorAll("select[id*='state'], select[id*='State']").forEach((e
   }
 });
 
-// add an event listener to all select elements with the id that contains "state" or "State"
-document.querySelectorAll("select[id*='state'], select[id*='State']").forEach((el) => {
-  el.addEventListener("change", (e) => {
-    // get the id of the city select element that matches the id of the state select element but has "city" or "City" in the id
-    let citySelect = document.querySelector(`select[id*='${e.target.id.replace("state", "city").replace("State", "City")}']`);
-    // clear the city select element
-    citySelect.innerHTML = "";
-    // add the default option
-    let option = document.createElement("option");
-    option.value = "";
-    option.text = "Select a City";
-    citySelect.add(option);
-    // loop through the cities array in the states object and add the city as the value and the city as the text
-    states[e.target.value].cities.forEach((city) => {
-      let option = document.createElement("option");
-      option.value = city;
-      option.text = city;
-      citySelect.add(option);
-    });
-  });
-});
+// // add an event listener to all select elements with the id that contains "state" or "State"
+// document.querySelectorAll("select[id*='state'], select[id*='State']").forEach((el) => {
+//   el.addEventListener("change", (e) => {
+//     // get the id of the city select element that matches the id of the state select element but has "city" or "City" in the id
+//     let citySelect = document.querySelector(`select[id*='${e.target.id.replace("state", "city").replace("State", "City")}']`);
+//     // clear the city select element
+//     citySelect.innerHTML = "";
+//     // add the default option
+//     let option = document.createElement("option");
+//     option.value = "";
+//     option.text = "Select a City";
+//     citySelect.add(option);
+//     // loop through the cities array in the states object and add the city as the value and the city as the text
+//     states[e.target.value].cities.forEach((city) => {
+//       let option = document.createElement("option");
+//       option.value = city;
+//       option.text = city;
+//       citySelect.add(option);
+//     });
+//   });
+// });
 
 
 // clear audSigData and treasSigData from local storage if it exists
