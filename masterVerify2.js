@@ -1425,6 +1425,7 @@ function printData() {
   printWindow.document.title = `${masterFields.countyName} County Masterfile`;
 
 
+
   // write the html to the new window
   printWindow.document.write(`
     <html>
@@ -1437,8 +1438,8 @@ function printData() {
         </style>
       </head>
       <body>
-        <h3 class="text-center mt-1">Masterfile - ${masterFields.countyName} County - ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}
-        </h3>
+        <h5 class="text-center mt-1">Masterfile for ${masterFields.countyName} County as of ${new Date().toLocaleDateString()} at ${new Date().toLocaleTimeString()}
+        </h5>
         <div class="masterfile d-flex flex-column  flex-wrap">
           <div id="printCountyDiv" class="mx-2 my-2 py-2 d-flex flex-column flex-wrap border border-dark rounded">
             <h4 class="text-center">County</h4>
