@@ -1485,6 +1485,8 @@ function printData() {
             <div class="px-2" ><b>Auditor Zip:</b>  ${masterFields.auditorZip}</b></div>
             <div class="px-2" ><b>Auditor Phone:</b>  ${masterFields.auditorPhone}</b></div>
             <div class="px-2" ><b>Auditor Email:</b>  ${masterFields.auditorEmail}</b></div>
+            <div class="px-2" ><b>Auditor End Term Date:</b>  ${masterFields.auditorEndTermDate}</b></div>
+      
             <div class="px-2" ><b>Auditor Signature: <img src="./images/sig1.png" alt="Auditor Signature" width="200px"></b></div>
           </div>
           <div id="printTreasurerDiv" class="mx-2 my-2 py-2 d-flex flex-column flex-wrap border border-dark rounded">
@@ -1497,6 +1499,7 @@ function printData() {
             <div class="px-2" ><b>Treasurer Zip:</b>  ${masterFields.treasurerZip}</b></div>
             <div class="px-2" ><b>Treasurer Phone:</b>  ${masterFields.treasurerPhone}</b></div>
             <div class="px-2" ><b>Treasurer Email:</b>  ${masterFields.treasurerEmail}</b></div>
+            <div class="px-2" ><b>Treasurer End Term Date:</b>  ${masterFields.treasurerEndTermDate}</b></div>
             <div class="px-2" ><b>Treasurer Signature: <img src="./images/sig2.png" alt="Treasurer Signature" width="200px"></b></div>
           </div>
           <div id="printAttorneyDiv" class="mx-2 my-2 py-2 d-flex flex-column flex-wrap border border-dark rounded">
@@ -1520,7 +1523,9 @@ function printData() {
             <div class="px-2" ><b>Assessor Zip:</b>  ${masterFields.assessorZip}</b></div>
             <div class="px-2" ><b>Assessor Phone:</b>  ${masterFields.assessorPhone}</b></div>
             <div class="px-2" ><b>Assessor Email:</b>  ${masterFields.assessorEmail}</b></div>
+            <div class="px-2" ><b>Assessor End Term Date:</b>  ${masterFields.assessorEndTermDate}</b></div>
           </div>
+
           <div id="printCommissionerDiv" class="mx-2 my-2 py-2 d-flex flex-column flex-wrap border border-dark rounded">
             <h4 class="text-center">Commissioner</h4>
             <div class="px-2" ><b>Commissioner 1 First Name:</b>  ${masterFields.commissioner1FirstName}</b></div>
@@ -1531,6 +1536,7 @@ function printData() {
             <div class="px-2" ><b>Commissioner 1 Zip:</b>  ${masterFields.commissioner1Zip}</b></div>
             <div class="px-2" ><b>Commissioner 1 Phone:</b>  ${masterFields.commissioner1Phone}</b></div>
             <div class="px-2" ><b>Commissioner 1 Email:</b>  ${masterFields.commissioner1Email}</b></div>
+            <div class="px-2" ><b>Commissioner 1 End Term Date:</b>  ${masterFields.commissioner1EndTermDate}</b></div>
             <div class="px-2" ><b>Commissioner 2 First Name:</b>  ${masterFields.commissioner2FirstName}</b></div>
             <div class="px-2" ><b>Commissioner 2 Last Name:</b>  ${masterFields.commissioner2LastName}</b></div>
             <div class="px-2" ><b>Commissioner 2 Street Address:</b>  ${masterFields.commissioner2StreetAddress}</b></div>
@@ -1539,6 +1545,7 @@ function printData() {
             <div class="px-2" ><b>Commissioner 2 Zip:</b>  ${masterFields.commissioner2Zip}</b></div>
             <div class="px-2" ><b>Commissioner 2 Phone:</b>  ${masterFields.commissioner2Phone}</b></div>
             <div class="px-2" ><b>Commissioner 2 Email:</b>  ${masterFields.commissioner2Email}</b></div>
+            <div class="px-2" ><b>Commissioner 2 End Term Date:</b>  ${masterFields.commissioner2EndTermDate}</b></div>
             <div class="px-2" ><b>Commissioner 3 First Name:</b>  ${masterFields.commissioner3FirstName}</b></div>
             <div class="px-2" ><b>Commissioner 3 Last Name:</b>  ${masterFields.commissioner3LastName}</b></div>
             <div class="px-2" ><b>Commissioner 3 Street Address:</b>  ${masterFields.commissioner3StreetAddress}</b></div>
@@ -1547,6 +1554,7 @@ function printData() {
             <div class="px-2" ><b>Commissioner 3 Zip:</b>  ${masterFields.commissioner3Zip}</b></div>
             <div class="px-2" ><b>Commissioner 3 Phone:</b>  ${masterFields.commissioner3Phone}</b></div>
             <div class="px-2" ><b>Commissioner 3 Email:</b>  ${masterFields.commissioner3Email}</b></div>
+            <div class="px-2" ><b>Commissioner 3 End Term Date:</b>  ${masterFields.commissioner3EndTermDate}</b></div>
           </div>
 
           <div id="printCourtDiv" class="mx-2 my-2 py-2 d-flex flex-column flex-wrap border border-dark rounded">
@@ -1565,6 +1573,7 @@ function printData() {
             <div class="px-2" ><b>Judge Last Name:</b>  ${masterFields.presidingJudgeLastName}</b></div>
             <div class="px-2" ><b>Judge Phone:</b>  ${masterFields.presidingJudgePhone}</b></div>
             <div class="px-2" ><b>Judge Email:</b>  ${masterFields.presidingJudgeEmail}</b></div>
+            <div class="px-2" ><b>Judge End Term Date:</b>  ${masterFields.presidingJudgeEndTermDate}</b></div>
           </div>
 
           <div id="printClerkDiv" class="mx-2 my-2 py-2 d-flex flex-column flex-wrap border border-dark rounded">
@@ -1577,6 +1586,7 @@ function printData() {
             <div class="px-2" ><b>Clerk Zip:</b>  ${masterFields.clerkZip}</b></div>
             <div class="px-2" ><b>Clerk Phone:</b>  ${masterFields.clerkPhone}</b></div>
             <div class="px-2" ><b>Clerk Email:</b>  ${masterFields.clerkEmail}</b></div>
+            <div class="px-2" ><b>Clerk End Term Date:</b>  ${masterFields.clerkEndTermDate}</b></div>
           </div>
 
           <div id="printSheriffDiv" class="mx-2 my-2 py-2 d-flex flex-column flex-wrap border border-dark rounded">
@@ -1589,6 +1599,7 @@ function printData() {
             <div class="px-2" ><b>Sheriff Zip:</b>  ${masterFields.sheriffZip}</b></div>
             <div class="px-2" ><b>Sheriff Phone:</b>  ${masterFields.sheriffPhone}</b></div>
             <div class="px-2" ><b>Sheriff Email:</b>  ${masterFields.sheriffEmail}</b></div>
+            <div class="px-2" ><b>Sheriff End Term Date:</b>  ${masterFields.sheriffEndTermDate}</b></div>
             <div class="px-2" ><b>Sheriff Additional Contact Firt Name:</b>  ${masterFields.sheriffAddContactFirstName}</b></div>
             <div class="px-2" ><b>Sheriff Additional Contact Last Name:</b>  ${masterFields.sheriffAddContactLastName}</b></div>
             <div class="px-2" ><b>Sheriff Additional Contact Title:</b>  ${masterFields.sheriffAddContactTitle}</b></div>
