@@ -7,7 +7,7 @@
     <title>Master File Portal</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  
+
     <style>
         .canvas {
             border: 1px solid black;
@@ -106,16 +106,17 @@
                         <!-- <button type="button" class="btn btn-sm btn-outline-danger ms-2" id="clearBtn">
                             Reset
                         </button> -->
-                       
-                            <button class="btn btn-sm btn-outline-success dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                              Options
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                              <li><a class="dropdown-item" id="clearBtn">Reset Fields</a></li>
-                              <li><a class="dropdown-item" id="printScreenBtn" >Print Masterfile</a></li>
-                              <li><a class="dropdown-item" href="/countyselect.html">Change County</a></li>
-                            </ul>
-                          
+
+                        <button class="btn btn-sm btn-outline-success dropdown-toggle" type="button"
+                            id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            Options
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" id="clearBtn">Reset Fields</a></li>
+                            <li><a class="dropdown-item" id="printScreenBtn">Print Masterfile</a></li>
+                            <li><a class="dropdown-item" href="/countyselect.html">Change County</a></li>
+                        </ul>
+
                         <button type="button" class="btn btn-sm btn-outline-dark ms-2" id="logoutBtn">
                             Logout
                         </button>
@@ -125,7 +126,7 @@
                             <label class="form-check-label" for="flexSwitchCheckDefault">Dark Mode</label>
                         </div>
 
-                        
+
                     </ul>
                     <!-- previous data modal button-->
                     <!-- <button type="button" class="btn btn-sm btn-outline-info" id="predatamodalbut"
@@ -143,7 +144,8 @@
                         <div class="tab-pane fade show active" id="pills-county" role="tabpanel"
                             aria-labelledby="pills-county-tab">
                             <div class="d-flex flex-row flex-wrap justify-content-around align-items-center">
-                                <div class="innerBord d-flex flex-wrap flex-row justify-content-evenly align-items-center border border-dark rounded py-3 mb-3">
+                                <div
+                                    class="innerBord d-flex flex-wrap flex-row justify-content-evenly align-items-center border border-dark rounded py-3 mb-3">
                                     <h5 class="text-center w-100">County</h5>
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
                                         <label for="countyCode"><small> Code</small></label>
@@ -170,14 +172,14 @@
                                         <label for="countyState"><small>County State</small></label>
                                         <select type="text" class="form-control master-input" id="countyState"
                                             placeholder="County State">
-                                            </select>
-                                    
+                                        </select>
+
 
                                     </div>
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
                                         <label for="countyZip"><small>County Zip</small></label>
-                                        <input type="number" class="form-control master-input" maxlength="10" id="countyZip"
-                                            placeholder="County Zip">
+                                        <input type="number" class="form-control master-input" maxlength="10"
+                                            id="countyZip" placeholder="County Zip">
                                     </div>
                                 </div>
 
@@ -226,21 +228,30 @@
                                         <label for="auditorState"><small>Auditor State</small></label>
                                         <select class="form-control master-input" id="auditorState"
                                             placeholder="Auditor State">
-                                            </select>
+                                        </select>
                                     </div>
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
                                         <label for="auditorZip"><small>Auditor Zip</small></label>
-                                        <input type="text" class="form-control master-input" maxlength="10" id="auditorZip"
-                                            placeholder="Auditor Zip">
+                                        <input type="text" class="form-control master-input" maxlength="10"
+                                            id="auditorZip" placeholder="Auditor Zip">
                                     </div>
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-                                        <label for="auditorSignature"><small>Auditor Signature</small></label>
-                                        <img class="border" id="auditorSignature" src="./images/sig1.png" alt="" style="width: 300px; height: 100px">
+                                        <label for="auditorEndTermDate"><small>Auditor End Term Date</small></label>
+                                        <input type="date" class="form-control master-input" id="auditorEndTermDate"
+                                            placeholder="Auditor End Term Date">
                                     </div>
+                                    <div class="form-group col-md-6 mb-3" style="width: 300px">
+                                        <label for="auditorSignature"><small>Auditor Signature</small></label>
+                                        <img class="border" id="auditorSignature" src="./images/sig1.png" alt=""
+                                            style="width: 300px; height: 100px">
+                                    </div>
+
                                 </div>
+                                
                                 <!-- collect signature button -->
-                                <div class="d-flex flex-wrap justify-content-center align-items-center">
-                                    <button type="button" class="btn btn-primary mb-3" id="collectAudSignature">Collect
+
+                                <div class="d-flex flex-wrap justify-content-center align-items-center mb-3">
+                                    <button type="button" class="btn btn-primary " id="collectAudSignature">Collect
                                         Signature</button>
                                 </div>
 
@@ -248,33 +259,11 @@
                                     class="w-100 innerBord border border-dark rounded py-3 mb-3 d-flex flex-column align-items-center justify-content-around">
                                     <div class="d-flex flex-wrap flex-row justify-content-evenly align-items-center">
 
-                                        <!-- <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-                                            <label for="auditorSignatureFirstName"><small>Auditor Signature
-                                                    First Name</small></label>
-                                            <input type="text" class="form-control master-input"
-                                                id="auditorSignatureFirstName" placeholder="Auditor Signature First Name">
-                                        </div>
-
-                                        <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-                                            <label for="auditorSignatureLastName"><small>Auditor Signature
-                                                    Last Name</small></label>
-                                            <input type="text" class="form-control master-input"
-                                                id="auditorSignatureLastName" placeholder="Auditor Signature Last Name">
-                                        </div>
-
-                                        
-
-                                        <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
-                                            <label for="auditorSignatureTitle"><small>Auditor Signature
-                                                    Title</small></label>
-                                            <input type="text" class="form-control master-input"
-                                                id="auditorSignatureTitle" placeholder="Auditor Signature Title">
-                                        </div> -->
                                     </div>
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
                                         <div id="audPadCont">
                                             <div class="signature-pad-form" id="signForm">
-                                                <p class="text-center"><b>Signature</b></p>
+                                                <p class="text-center"><b>New Signature</b></p>
                                                 <canvas id="audCanvas" height="100" width="300"
                                                     class="border border-dark signature-pad" id="audPad"></canvas>
                                                 <div
@@ -337,16 +326,24 @@
                                         <label for="treasurerState"><small>Treasurer State</small></label>
                                         <select class="form-control master-input" id="treasurerState"
                                             placeholder="Treasurer State">
-                                            </select>
+                                        </select>
                                     </div>
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
                                         <label for="treasurerZip"><small>Treasurer Zip</small></label>
-                                        <input type="num" class="form-control master-input" maxlength="10" id="treasurerZip"
-                                            placeholder="Treasurer Zip">
+                                        <input type="num" class="form-control master-input" maxlength="10"
+                                            id="treasurerZip" placeholder="Treasurer Zip">
                                     </div>
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
+                                        <label for="treasurerEndTermDate"><small>Treasurer End Term
+                                                Date</small></label>
+                                        <input type="date" class="form-control master-input" id="treasurerEndTermDate"
+                                            placeholder="Treasurer End Term Date">
+                                    </div>
+                                    
+                                    <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
                                         <label for="treasurerSignature"><small>Treasurer Signature</small></label>
-                                        <img class="border" id="treasurerSignature" src="./images/sig2.png" alt="" style="width: 300px; height: 100px">
+                                        <img class="border" id="treasurerSignature" src="./images/sig2.png" alt=""
+                                            style="width: 300px; height: 100px">
                                     </div>
                                 </div>
 
@@ -387,7 +384,7 @@
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
                                         <div id="treasPadCont">
                                             <div class="signature-pad-form" id="signForm">
-                                                <p class="text-center"><b>Signature</b></p>
+                                                <p class="text-center"><b>New Signature</b></p>
                                                 <canvas id="treasCanvas" height="100" width="300"
                                                     class="border border-dark signature-pad" id="treasPad"></canvas>
                                                 <div
@@ -450,12 +447,12 @@
                                         <label for="attorneyState"><small>Attorney State</small></label>
                                         <select class="form-control master-input" id="attorneyState"
                                             placeholder="Attorney State">
-                                            </select>
+                                        </select>
                                     </div>
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
                                         <label for="attorneyZip"><small>Attorney Zip</small></label>
-                                        <input type="number" class="form-control master-input" maxlength="10" id="attorneyZip"
-                                            placeholder="Attorney Zip">
+                                        <input type="number" class="form-control master-input" maxlength="10"
+                                            id="attorneyZip" placeholder="Attorney Zip">
                                     </div>
                                 </div>
                             </div>
@@ -501,12 +498,12 @@
                                         <label for="assessor State"><small>Assessor State</small></label>
                                         <select class="form-control master-input" id="assessorState"
                                             placeholder="Assessor State">
-                                            </select>
+                                        </select>
                                     </div>
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
                                         <label for="assessor Zip"><small>Assessor Zip</small></label>
-                                        <input type="number" class="form-control master-input" maxlength="10" id="assessorZip"
-                                            placeholder="Assessor Zip">
+                                        <input type="number" class="form-control master-input" maxlength="10"
+                                            id="assessorZip" placeholder="Assessor Zip">
                                     </div>
                                 </div>
 
@@ -539,8 +536,8 @@
                                     </div>
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
                                         <label for="commissioner1Phone"><small>Commissioner 1 Phone</small></label>
-                                        <input type="text" class=" phone form-control master-input" id="commissioner1Phone"
-                                            placeholder="Commissioner 1 Phone">
+                                        <input type="text" class=" phone form-control master-input"
+                                            id="commissioner1Phone" placeholder="Commissioner 1 Phone">
                                     </div>
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
                                         <label for="commissioner1StreetAddress"><small>Commissioner 1 Street
@@ -557,16 +554,16 @@
                                         <label for="commissioner1State"><small>Commissioner 1 State</small></label>
                                         <select class="form-control master-input" id="commissioner1State"
                                             placeholder="Commissioner 1 State">
-                                            </select>
+                                        </select>
                                     </div>
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
                                         <label for="commissioner1Zip"><small>Commissioner 1 Zip</small></label>
-                                        <input type="number" class="form-control master-input" maxlength="10" id="commissioner1Zip"
-                                            placeholder="Commissioner 1 Zip">
+                                        <input type="number" class="form-control master-input" maxlength="10"
+                                            id="commissioner1Zip" placeholder="Commissioner 1 Zip">
                                     </div>
                                 </div>
                                 <div
-                                    class= " innerBord d-flex flex-wrap flex-row justify-content-evenly align-items-center border border-dark rounded py-3 mb-3">
+                                    class=" innerBord d-flex flex-wrap flex-row justify-content-evenly align-items-center border border-dark rounded py-3 mb-3">
                                     <h5 class="text-center w-100">Commissioner 2</h5>
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
                                         <label for="commissioner2FirstName"><small>Commissioner 2 First
@@ -605,12 +602,12 @@
                                         <label for="commissioner2State"><small>Commissioner 2 State</small></label>
                                         <select class="form-control master-input" id="commissioner2State"
                                             placeholder="Commissioner 2 State">
-                                            </select>
+                                        </select>
                                     </div>
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
                                         <label for="commissioner2Zip"><small>Commissioner 2 Zip</small></label>
-                                        <input type="number" class="form-control master-input" maxlength="10" id="commissioner2Zip"
-                                            placeholder="Commissioner 2 Zip">
+                                        <input type="number" class="form-control master-input" maxlength="10"
+                                            id="commissioner2Zip" placeholder="Commissioner 2 Zip">
                                     </div>
                                 </div>
                                 <div
@@ -635,8 +632,8 @@
                                     </div>
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
                                         <label for="commissioner3Phone"><small>Commissioner 3 Phone</small></label>
-                                        <input type="text" class="phone form-control master-input" id="commissioner3Phone"
-                                            placeholder="Commissioner 3 Phone">
+                                        <input type="text" class="phone form-control master-input"
+                                            id="commissioner3Phone" placeholder="Commissioner 3 Phone">
                                     </div>
 
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
@@ -654,12 +651,12 @@
                                         <label for="commissioner3State"><small>Commissioner 3 State</small></label>
                                         <select class="form-control master-input" id="commissioner3State"
                                             placeholder="Commissioner 3 State">
-                                            </select>
+                                        </select>
                                     </div>
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
                                         <label for="commissioner3Zip"><small>Commissioner 3 Zip</small></label>
-                                        <input type="number" class="form-control master-input" maxlength="10" id="commissioner3Zip"
-                                            placeholder="Commissioner 3 Zip">
+                                        <input type="number" class="form-control master-input" maxlength="10"
+                                            id="commissioner3Zip" placeholder="Commissioner 3 Zip">
                                     </div>
                                 </div>
                             </div>
@@ -701,12 +698,12 @@
                                         <label for="courtState"><small>Court State</small></label>
                                         <select class="form-control master-input" id="courtState"
                                             placeholder="Court State">
-                                            </select>
+                                        </select>
                                     </div>
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
                                         <label for="courtZip"><small>Court Zip</small></label>
-                                        <input type="number" class="form-control master-input" maxlength="10" id="courtZip"
-                                            placeholder="Court Zip">
+                                        <input type="number" class="form-control master-input" maxlength="10"
+                                            id="courtZip" placeholder="Court Zip">
                                     </div>
                                 </div>
                                 <div
@@ -727,8 +724,8 @@
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
                                         <label for="presidingJudgePhone"><small>Presiding Judge
                                                 Phone</small></label>
-                                        <input type="text" class="phone form-control master-input" id="presidingJudgePhone"
-                                            placeholder="Presiding Judge Phone">
+                                        <input type="text" class="phone form-control master-input"
+                                            id="presidingJudgePhone" placeholder="Presiding Judge Phone">
                                     </div>
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
                                         <label for="presidingJudgeEmail"><small>Presiding Judge
@@ -862,7 +859,7 @@
                                         <label for="saleState" id="saleStatelabel"><small>Sale State</small></label>
                                         <select class="form-control master-input" id="saleState"
                                             placeholder="Sale State">
-                                            </select>
+                                        </select>
                                     </div>
                                     <div class="form-group col-md-6 mx-2 my-2" id="saleLocDiv" style="width: 300px">
                                         <label for="saleZip" id="saleZiplabel"><small>Sale Zip</small></label>
@@ -889,13 +886,13 @@
                                                 State</small></label>
                                         <select class="form-control master-input" id="paymentState"
                                             placeholder="Payment State">
-                                            </select>
+                                        </select>
                                     </div>
                                     <div class="form-group col-md-6 mx-2 my-2" id="paymentZipDiv" style="width: 300px">
                                         <label for="paymentZip" id="paymentZiplabel"><small>Payment
                                                 Zip</small></label>
-                                        <input type="number" class="form-control master-input" maxlength="10" id="paymentZip"
-                                            placeholder="Payment Zip">
+                                        <input type="number" class="form-control master-input" maxlength="10"
+                                            id="paymentZip" placeholder="Payment Zip">
                                     </div>
                                     <div class="form-group col-md-6 mx-2 my-2" id="paymentCutoffDateTimeDiv"
                                         style="width: 300px">
@@ -981,12 +978,12 @@
                                         <label for="sheriffState"><small>Sheriff State</small></label>
                                         <select class="form-control master-input" id="sheriffState"
                                             placeholder="Sheriff State">
-                                            </select>
+                                        </select>
                                     </div>
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
                                         <label for="sheriffZip"><small>Sheriff Zip</small></label>
-                                        <input type="number" class="form-control master-input" maxlength="10" id="sheriffZip"
-                                            placeholder="Sheriff Zip">
+                                        <input type="number" class="form-control master-input" maxlength="10"
+                                            id="sheriffZip" placeholder="Sheriff Zip">
                                     </div>
                                 </div>
                             </div>
@@ -1029,14 +1026,14 @@
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
                                         <label for="sheriffAddContactPhone"><small>Sheriff Additional Contact
                                                 Phone</small></label>
-                                        <input type="text" class=" phone form-control master-input" id="sheriffAddContactPhone"
-                                            placeholder="Sheriff Additional Contact Phone">
+                                        <input type="text" class=" phone form-control master-input"
+                                            id="sheriffAddContactPhone" placeholder="Sheriff Additional Contact Phone">
                                     </div>
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
                                         <label for="sheriffAddContactEmail"><small>Sheriff Additional Contact
                                                 Email</small></label>
-                                        <input type="email" class="form-control master-input" id="sheriffAddContactEmail"
-                                            placeholder="Sheriff Additional Contact Email">
+                                        <input type="email" class="form-control master-input"
+                                            id="sheriffAddContactEmail" placeholder="Sheriff Additional Contact Email">
                                     </div>
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
                                         <label for="sheriffAddContactStreetAddress"><small>Sheriff Additional
@@ -1057,13 +1054,13 @@
                                                 State</small></label>
                                         <select class="form-control master-input" id="sheriffAddContactState"
                                             placeholder="Sheriff Additional Contact State">
-                                            </select>
+                                        </select>
                                     </div>
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
                                         <label for="sheriffAddContactZip"><small>Sheriff Additional Contact
                                                 Zip</small></label>
-                                        <input type="number" class="form-control master-input"  maxlength="10" id="sheriffAddContactZip"
-                                            placeholder="Sheriff Additional Contact Zip">
+                                        <input type="number" class="form-control master-input" maxlength="10"
+                                            id="sheriffAddContactZip" placeholder="Sheriff Additional Contact Zip">
                                     </div>
                                 </div>
                             </div>
@@ -1108,12 +1105,12 @@
                                         <label for="clerkState"><small>Clerk State</small></label>
                                         <select class="form-control master-input" id="clerkState"
                                             placeholder="Clerk State">
-                                            </select>
+                                        </select>
                                     </div>
                                     <div class="form-group col-md-6 mx-2 my-2" style="width: 300px">
                                         <label for="clerkZip"><small>Clerk Zip</small></label>
-                                        <input type="number" class="form-control master-input" maxlength="10" id="clerkZip"
-                                            placeholder="Clerk Zip">
+                                        <input type="number" class="form-control master-input" maxlength="10"
+                                            id="clerkZip" placeholder="Clerk Zip">
                                     </div>
                                 </div>
                             </div>
@@ -1262,43 +1259,55 @@
 
             <div id="printdata" class="d-none">
                 <div class="container d-flex flexwrap align-items-center justify-content-center">
-                    <div id="printCountyData" class="d-flex flex-column align-items-center justify-content-center border-2">
+                    <div id="printCountyData"
+                        class="d-flex flex-column align-items-center justify-content-center border-2">
                         <h6 class="text-center">County</h6>
                     </div>
-                    <div id="printAuditorDiv" class="d-flex flex-column align-items-center justify-content-center border-2">
+                    <div id="printAuditorDiv"
+                        class="d-flex flex-column align-items-center justify-content-center border-2">
                         <h6 class="text-center">Auditor</h6>
                     </div>
-                    <div id="printTreasurerDiv" class="d-flex flex-column align-items-center justify-content-center border-2">
+                    <div id="printTreasurerDiv"
+                        class="d-flex flex-column align-items-center justify-content-center border-2">
                         <h6 class="text-center">Treasurer</h6>
                     </div>
-                    <div id="printAttorneyDiv" class="d-flex flex-column align-items-center justify-content-center border-2">
+                    <div id="printAttorneyDiv"
+                        class="d-flex flex-column align-items-center justify-content-center border-2">
                         <h6 class="text-center">Attorney</h6>
                     </div>
-                    <div id="printAssesorDiv" class="d-flex flex-column align-items-center justify-content-center border-2">
+                    <div id="printAssesorDiv"
+                        class="d-flex flex-column align-items-center justify-content-center border-2">
                         <h6 class="text-center">Assessor</h6>
                     </div>
-                    <div id="printCommissionerDiv" class="d-flex flex-column align-items-center justify-content-center border-2">
+                    <div id="printCommissionerDiv"
+                        class="d-flex flex-column align-items-center justify-content-center border-2">
                         <h6 class="text-center">Commissioner</h6>
                     </div>
-                    <div id="printCourtDiv" class="d-flex flex-column align-items-center justify-content-center border-2">
+                    <div id="printCourtDiv"
+                        class="d-flex flex-column align-items-center justify-content-center border-2">
                         <h6 class="text-center">Court</h6>
                     </div>
-                    <div id="printSheriffDiv" class="d-flex flex-column align-items-center justify-content-center border-2">
+                    <div id="printSheriffDiv"
+                        class="d-flex flex-column align-items-center justify-content-center border-2">
                         <h6 class="text-center">Sheriff</h6>
                     </div>
-                    <div id="printSaleDiv" class="d-flex flex-column align-items-center justify-content-center border-2">
+                    <div id="printSaleDiv"
+                        class="d-flex flex-column align-items-center justify-content-center border-2">
                         <h6 class="text-center">Sale</h6>
                     </div>
-                    <div id="printClerkDiv" class="d-flex flex-column align-items-center justify-content-center border-2">
+                    <div id="printClerkDiv"
+                        class="d-flex flex-column align-items-center justify-content-center border-2">
                         <h6 class="text-center">Clerk</h6>
                     </div>
                     <div id="printWebDiv" class="d-flex flex-column align-items-center justify-content-center border-2">
                         <h6 class="text-center">Web</h6>
                     </div>
-                    <div id="printNewspaperDiv" class="d-flex flex-column align-items-center justify-content-center border-2">
+                    <div id="printNewspaperDiv"
+                        class="d-flex flex-column align-items-center justify-content-center border-2">
                         <h6 class="text-center">Newspaper</h6>
                     </div>
-                    <div id="printAddContactDiv" class="d-flex flex-column align-items-center justify-content-center border-2">
+                    <div id="printAddContactDiv"
+                        class="d-flex flex-column align-items-center justify-content-center border-2">
                         <h6 class="text-center">Additional Contacts</h6>
                     </div>
 
@@ -1315,22 +1324,25 @@
 
 
                 </div>
-            
+
             </div>
 
 
 
 
 
-                <!-- use version 0.19.1 -->
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js" integrity="sha512-r22gChDnGvBylk90+2e/ycr3RVrDi8DIOkIGNhJlKfuyQM4tIRAI062MaV8sfjQKYVGjOBaZBOA87z+IhZE9DA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>            <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.0.0/dist/signature_pad.umd.min.js"></script>
+            <!-- use version 0.19.1 -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"
+                integrity="sha512-r22gChDnGvBylk90+2e/ycr3RVrDi8DIOkIGNhJlKfuyQM4tIRAI062MaV8sfjQKYVGjOBaZBOA87z+IhZE9DA=="
+                crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.0.0/dist/signature_pad.umd.min.js"></script>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
                 integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
                 crossorigin="anonymous"></script>
             <script src="/masterVerify2.js"></script>
             <script src="/statecitypop.js"></script>
-          
-           
+
+
 
         </div>
     </div>
