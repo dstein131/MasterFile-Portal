@@ -1794,6 +1794,15 @@ function validatePhone(e) {
        
      }
 
+     // if the valie is 10 characters long and does not start with a 1 and has no - in the 4th or 8th position
+      if (e.target.value.length === 10 && e.target.value.charAt(0) !== "1" && e.target.value.charAt(3) !== "-" && e.target.value.charAt(7) !== "-") {
+        // add a - in the 4th position
+        e.target.value = e.target.value.slice(0, 3) + "-" + e.target.value.slice(3);
+        // add a - in the 8th position
+        e.target.value = e.target.value.slice(0, 7) + "-" + e.target.value.slice(7);
+      }
+      
+
 
  // if there are any inputs with id that contains "phone" or "Phone" in the id and the value is not empty
   if (e.target.id.includes("phone") || e.target.id.includes("Phone") && e.target.value !== "") {
