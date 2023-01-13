@@ -4,5 +4,3 @@ document.getElementById("loginBtn").addEventListener("click", function() {
 // redirect to countselect.html
     window.location.href = "countyselect.html";
 });
-
-
