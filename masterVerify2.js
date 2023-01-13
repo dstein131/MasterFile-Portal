@@ -1688,13 +1688,59 @@ function validateEmail(e) {
     // if the email does not match the regular expression
     if (!emailRegEx.test(email)) {
    // set the background color of the input to red
-      e.target.style.backgroundColor = "red";
-  
+      e.target.style.backgroundColor = "#ffcccb";
+     
  
       e.target.style.color = "white";
       e.target.style.fontWeight = "bold";
       // add the class of invalid to the input
       e.target.classList.add("invalid");
+
+
+      // create a toast element
+      let toast = document.createElement("div");
+      // set the innerHTML of the toast element
+      toast.innerHTML = `<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+      <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          
+          <strong class="me-auto">Error</strong>
+          <small>Just now</small>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+          Invalid Email. Please use the format name@domain.com.
+        </div>
+      </div>
+    </div>`
+
+      // set the toast to top-50 start-50 translate-middle" of the target input
+      toast.style.top = "50%";
+      toast.style.left = "50%";
+      toast.style.transform = "translate(-50%, -50%)";
+
+
+
+      // append the toast element to the dom and position it over the input
+      e.target.parentNode.appendChild(toast);
+     
+
+
+
+
+
+    // trigger the toast
+    let myToast = new bootstrap.Toast(document.getElementById("liveToast"));
+    myToast.show();
+
+
+
+
+
+
+
+
+
       // set the focus to the input
 
       e.target.focus();
